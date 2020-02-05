@@ -1,13 +1,6 @@
-<<<<<<< 130e5e464b1f9bed551798b9010f3713de746b48
-# IV_VesselDetection
-Fast and Automated Vessel Detection Algorithms for Robotic IV Insertion Platform
-=======
 # UNet: semantic segmentation with PyTorch
 
-![input and output for a random image in the test dataset](https://framapic.org/OcE8HlU6me61/KNTt8GFQzxDR.png)
-
-
-Customized implementation of the [U-Net](https://arxiv.org/abs/1505.04597) in PyTorch for Kaggle's [Carvana Image Masking Challenge](https://www.kaggle.com/c/carvana-image-masking-challenge) from high definition images.
+Customized implementation of the [U-Net](https://arxiv.org/abs/1505.04597) in PyTorch.
 
 This model was trained from scratch with 5000 images (no data augmentation) and scored a [dice coefficient](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient) of 0.988423 (511 out of 735) on over 100k test images. This score could be improved with more training, data augmentation, fine tuning, playing with CRF post-processing, and applying more weights on the edges of the masks.
 
@@ -99,4 +92,3 @@ This assumes you use bilinear up-sampling, and not transposed convolution in the
 Original paper by Olaf Ronneberger, Philipp Fischer, Thomas Brox: [https://arxiv.org/abs/1505.04597](https://arxiv.org/abs/1505.04597)
 
 ![network architecture](https://i.imgur.com/jeDVpqF.png)
->>>>>>> 1st commit
