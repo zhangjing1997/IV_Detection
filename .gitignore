@@ -1,0 +1,12 @@
+*.pyc
+*.vscode
+*.ipynb_checkpoints
+data/
+runs/
+__pycache__/
+checkpoints/
+*.pth
+*.jpg
+submit.py
+SUBMISSION*
+venv/
