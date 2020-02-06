@@ -18,7 +18,7 @@ from torch.utils.data import DataLoader, random_split
 
 dir_img = 'data/imgs/'
 dir_mask = 'data/masks/'
-dir_checkpoint = 'checkpoints/'
+dir_checkpoint = 'checkpoints/train_2/'
 
 
 def train_net(net,
@@ -56,52 +56,58 @@ def train_net(net,
         criterion = nn.CrossEntropyLoss()
     else:
         criterion = nn.BCEWithLogitsLoss()
-
+    
+    epoch_loss_list = []
+    val_score_list = []
+    num_batches_per_epoch = len(dataset) // batch_size
     for epoch in range(epochs):
         net.train()
 
         epoch_loss = 0
-        with tqdm(total=n_train, desc=f'Epoch {epoch + 1}/{epochs}', unit='img') as pbar:
-            for batch in train_loader:
-                imgs = batch['image'] # N x C x W x H
-                true_masks = batch['mask']
-                assert imgs.shape[1] == net.n_channels, \
-                    f'Network has been defined with {net.n_channels} input channels, ' \
-                    f'but loaded images have {imgs.shape[1]} channels. Please check that ' \
-                    'the images are loaded correctly.'
+        for batch in train_loader:
+            imgs = batch['image'] # N x C x W x H
+            true_masks = batch['mask']
+            assert imgs.shape[1] == net.n_channels, \
+                f'Network has been defined with {net.n_channels} input channels, ' \
+                f'but loaded images have {imgs.shape[1]} channels. Please check that ' \
+                'the images are loaded correctly.'
 
-                imgs = imgs.to(device=device, dtype=torch.float32)
-                mask_type = torch.float32 if net.n_classes == 1 else torch.long
-                true_masks = true_masks.to(device=device, dtype=mask_type)
+            imgs = imgs.to(device=device, dtype=torch.float32)
+            mask_type = torch.float32 if net.n_classes == 1 else torch.long
+            true_masks = true_masks.to(device=device, dtype=mask_type)
 
-                masks_pred = net(imgs) #network feedforward
-                loss = criterion(masks_pred, true_masks) #calculate loss
-                batch_loss = loss.item() #extract batch loss from torch tensor
-                #training update
-                optimizer.zero_grad()
-                loss.backward()
-                optimizer.step()
+            masks_pred = net(imgs) #network feedforward
+            loss = criterion(masks_pred, true_masks) #calculate loss
+            epoch_loss += loss.item() # extract batch loss from torch tensor
 
-                pbar.set_postfix(**{'loss (batch)': batch_loss})
-                writer.add_scalar('Loss/train', batch_loss, global_step) # write to tensorboard every batch(step)
-                epoch_loss += batch_loss
-                pbar.update(imgs.shape[0])
-                
-                global_step += 1
-                #do evaluation per 10 batches
-                if global_step % (len(dataset) // (10 * batch_size)) == 0:
-                    val_score = eval_net(net, val_loader, device, n_val)
-                    if net.n_classes > 1:
-                        logging.info('Validation cross entropy: {}'.format(val_score))
-                        writer.add_scalar('Loss/test', val_score, global_step)
-                    else:
-                        logging.info('Validation Dice Coeff: {}'.format(val_score))
-                        writer.add_scalar('Dice/test', val_score, global_step)
+            optimizer.zero_grad() #training update
+            loss.backward()
+            optimizer.step()
+            
+            global_step += 1
+            # write images to tensoboard every 10 batches
+            if global_step % (len(dataset) // (10 * batch_size)) == 0:
+                writer.add_images('images', imgs, global_step)
+                if net.n_classes == 1:
+                    writer.add_images('masks/true', true_masks, global_step)
+                    writer.add_images('masks/pred', torch.sigmoid(masks_pred) > 0.5, global_step)
+        
+        # write and save train loss to tensorboard every epoch
+        epoch_loss_avg = epoch_loss / num_batches_per_epoch
+        epoch_loss_list.append(epoch_loss_avg) # avg losss per epoch
+        writer.add_scalar('Loss/train', epoch_loss_avg, epoch)
+        print(f'Training Cross Entropy Loss: {epoch_loss_avg}')
 
-                    writer.add_images('images', imgs, global_step)
-                    if net.n_classes == 1:
-                        writer.add_images('masks/true', true_masks, global_step)
-                        writer.add_images('masks/pred', torch.sigmoid(masks_pred) > 0.5, global_step)
+        # write and save val score to tensorboard every epoch
+        val_score = eval_net(net, val_loader, device, n_val)
+        val_score_list.append(val_score)
+        if net.n_classes > 1:
+            print(f'Validation Cross Entropy: {val_score}')
+            writer.add_scalar('Loss/test', val_score, epoch)
+        else:
+            print(f'Validation Dice Coeff: {val_score}')
+            writer.add_scalar('Dice/test', val_score, epoch)
+
 
         if save_cp:
             try:
@@ -111,8 +117,13 @@ def train_net(net,
                 pass
             #save checkpoints every 5 epochs
             if (epoch + 1) % 5 == 0:
-                torch.save(net.state_dict(), dir_checkpoint + f'CP_epoch{epoch + 1}.pth')
+                torch.save({
+                    'state_dict': net.state_dict(), 
+                    'loss_list': epoch_loss_list,
+                    'val_score_list': val_score_list}, dir_checkpoint + f'CP_epoch{epoch + 1}.pth')
                 logging.info(f'Checkpoint {epoch + 1} saved !')
+                epoch_loss_list = []
+                val_score_list = []
 
     writer.close()
 

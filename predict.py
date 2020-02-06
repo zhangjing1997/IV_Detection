@@ -18,6 +18,7 @@ def predict_img(net,
                 device,
                 scale_factor=1,
                 out_threshold=0.5):
+    """ do predict the mask of an input image (PIL format) """
     net.eval()
 
     img = torch.from_numpy(BasicDataset.preprocess(full_img, scale_factor))
@@ -26,14 +27,14 @@ def predict_img(net,
 
     with torch.no_grad():
         output = net(img) #feed-forward prediction
-        print(output.size())
+        # print(output.size())
 
         if net.n_classes > 1:
             probs = F.softmax(output, dim=1)
         else:
             probs = torch.sigmoid(output)
         probs = probs.squeeze(0) #cuda tensor
-        print(probs.size())
+        # print(probs.size())
         
         tf = transforms.Compose(
             [

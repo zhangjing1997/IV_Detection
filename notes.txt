@@ -17,9 +17,14 @@
 - 确定了training用的是binary crossentropy, eval用的是dice loss
 - torch.size() return [bs, channels, depth, height, width], 而pil_image.size return [width, height]。
 - 猜测原本predict.py文件中多写了一步resize，使得output mask和input image的size不匹配。
+- 将train.py中向tensorboard写images或者scalars的部分改成了每隔一个epoch写一次。
+- 从一个model set中找到score最大的model.pth
 
 ## Next:
+- draw training and validation loss
+- 下次在标注的时候，尽量给一个比较平滑的外边界，不要太在意边角。
 - 标多一些数据
 - 加augmentation
+- 尝试调整loss function
+- 加weight matrix以给边界上的点更高权重
 - 做一些当前performance的测试
-
