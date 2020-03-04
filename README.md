@@ -1,4 +1,4 @@
-# UNet: semantic segmentation with PyTorch
+# UNet (PyTorch) on Ultrasound (Gray) Images
 
 Customized implementation of the [U-Net](https://arxiv.org/abs/1505.04597) in PyTorch.
 

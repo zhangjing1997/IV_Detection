@@ -28,3 +28,8 @@
 - 加augmentation
 - 尝试调整loss function
 - 加weight matrix以给边界上的点更高权重
+
+
+fasterRCNN -- 1 
+Speed of Unet -- 2: 1. Pixel resolution + 
+Accuracy -- center -- elliptical -- compare with labelling ground truth
