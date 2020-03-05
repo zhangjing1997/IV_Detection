@@ -24,10 +24,11 @@
 - went through basic pipeline
 
 ## Next:
-- 标多一些数据; 下次在标注的时候，尽量给一个比较平滑的外边界，不要太在意边角。
+- 标多一些数据; 下次在标注的时候，尽量给一个比较平滑的外边界，不要太在意边角。label的区域可以比实际的多一圈。
 - 加augmentation
 - 尝试调整loss function
 - 加weight matrix以给边界上的点更高权重
+- 给prediction加上后处理 - 调用CV包去拟合一个elliptical shape。
 
 
 fasterRCNN -- 1 
