@@ -1,4 +1,4 @@
-# UNet (PyTorch) on Ultrasound (Gray) Images
+# UNet
 
 Customized implementation of the [U-Net](https://arxiv.org/abs/1505.04597) in PyTorch.
 
