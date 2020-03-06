@@ -6,7 +6,20 @@ The images look like the following one because the deoxygenated haemoglobin in v
 
 <p align="center"> <img src="./assets/sample.jpg" alt="drawing" height="40%" width="40%"/> </p>
 
+
 # Progress & Notes
+[Mid-term Report](https://docs.google.com/presentation/d/1ixdv6zaCGtkkfqN84M2ob_LZV4D6BFkfnUIeEUIfd7A/edit?usp=sharing)
+
+修改意见：
+- 介绍segmentation的网络结构时，放一个sample input和sample output
+- segmentation results visualization可以用如下形式：
+  ```
+              human_label  
+            /              \
+  input_img                   overlapped image (two color layers showing direct differernce)
+            \              / 
+              predicte_img
+  ```
 
 ## Segmentation - UNet
 ### Jan 30
