@@ -20,6 +20,7 @@ The images look like the following one because the deoxygenated haemoglobin in v
             \              / 
               predicte_img
   ```
+- add mathematical functions
 
 ## Segmentation - UNet
 ### Jan 30
