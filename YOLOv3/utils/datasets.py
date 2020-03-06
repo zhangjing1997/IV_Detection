@@ -47,8 +47,16 @@ class ImageFolder(Dataset):
         img = transforms.ToTensor()(Image.open(img_path))
         # Pad to square resolution
         img, _ = pad_to_square(img, 0)
+        # print(img.size())
+
+        # Handle images with less than three channels
+        if img.shape[0] == 1:
+            shape = [3]
+            shape.extend(list(img.shape[1:]))
+            img = img.expand(shape) # add two more channels by repeating
+        
         # Resize
-        img = resize(img, self.img_size)
+        img = resize(img, self.img_size)        
 
         return img_path, img
 
@@ -87,8 +95,8 @@ class ListDataset(Dataset):
 
         # Handle images with less than three channels
         if len(img.shape) != 3:
-            img = img.unsqueeze(0)
-            img = img.expand((3, img.shape[1:]))
+            img = img.unsqueeze(0) # insert one dimension in axis 0
+            img = img.expand((3, img.shape[1:])) # add two more channels by repeating
 
         _, h, w = img.shape
         h_factor, w_factor = (h, w) if self.normalized_labels else (1, 1)

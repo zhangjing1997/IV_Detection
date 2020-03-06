@@ -7,6 +7,7 @@ The images look like the following one because the deoxygenated haemoglobin in v
 ![sample input image](./assets/sample.jpg)
 
 # Progress & Notes
+
 ## Segmentation - UNet
 ### Jan 30
 - add 20 pairs of img-mask into 'data' directory
@@ -49,3 +50,16 @@ The images look like the following one because the deoxygenated haemoglobin in v
 
 ## Detection - YOLO
 ### Mar 5
+- 标了20张bounding box的数据，并在eda.ipynb中，将RectLabel生成的存有objects attributes的xml文件，读取出bounding box的位置信息，按照label_idx, xmin, xmax, ymin, ymax的format写到txt中
+- 根据原项目的customization instructions，初步完成yolo在本数据集上的训练和test。需要注意的是：cpu数量改为1，batch size改为1，epochs改为适量（20或30）。
+- datasets.ImageFolder中的image preprocessing默认接收的是3xWxH的图。暂时解决：用torch.tensor.expand增加了2个channel（其实就是channel-wise copy）
+
+### Next
+- 借用detect.py中plot bbox的部分代码，在ipynb中写个小的util function，反过来便于label是否正确。
+- 看能否将网络结构改成适用于gray image的，即channel size是1的。而不是将图片转换成3 channel。
+- 是否有必要根据一个model config来create model，因为config的customization只是num_classes的不同。而且，考虑到我们的项目只考虑一种class的objects。
+- 测试performance。
+- 细读代码。
+
+## Idea of Later Further Modification
+- 有没有可能设计loss让网络直接学target edge，从而实现end-to-end。

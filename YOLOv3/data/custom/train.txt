@@ -1,1 +1,16 @@
-data/custom/images/train.jpg
+data/custom/images/0.jpg
+data/custom/images/1.jpg
+data/custom/images/10.jpg
+data/custom/images/11.jpg
+data/custom/images/13.jpg
+data/custom/images/14.jpg
+data/custom/images/15.jpg
+data/custom/images/16.jpg
+data/custom/images/18.jpg
+data/custom/images/19.jpg
+data/custom/images/2.jpg
+data/custom/images/3.jpg
+data/custom/images/6.jpg
+data/custom/images/7.jpg
+data/custom/images/8.jpg
+data/custom/images/9.jpg

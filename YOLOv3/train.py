@@ -22,15 +22,18 @@ from torchvision import transforms
 from torch.autograd import Variable
 import torch.optim as optim
 
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--epochs", type=int, default=100, help="number of epochs")
-    parser.add_argument("--batch_size", type=int, default=8, help="size of each image batch")
+    parser.add_argument("--epochs", type=int, default=10, help="number of epochs")
+    parser.add_argument("--batch_size", type=int, default=1, help="size of each image batch")
     parser.add_argument("--gradient_accumulations", type=int, default=2, help="number of gradient accums before step")
     parser.add_argument("--model_def", type=str, default="config/yolov3.cfg", help="path to model definition file")
     parser.add_argument("--data_config", type=str, default="config/coco.data", help="path to data config file")
     parser.add_argument("--pretrained_weights", type=str, help="if specified starts from checkpoint model")
-    parser.add_argument("--n_cpu", type=int, default=8, help="number of cpu threads to use during batch generation")
+    parser.add_argument("--n_cpu", type=int, default=1, help="number of cpu threads to use during batch generation")
     parser.add_argument("--img_size", type=int, default=416, help="size of each image dimension")
     parser.add_argument("--checkpoint_interval", type=int, default=1, help="interval between saving model weights")
     parser.add_argument("--evaluation_interval", type=int, default=1, help="interval evaluations on validation set")
@@ -39,7 +42,7 @@ if __name__ == "__main__":
     opt = parser.parse_args()
     print(opt)
 
-    logger = Logger("logs")
+    # logger = Logger("logs")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -96,6 +99,7 @@ if __name__ == "__main__":
     for epoch in range(opt.epochs):
         model.train()
         start_time = time.time()
+
         for batch_i, (_, imgs, targets) in enumerate(dataloader):
             batches_done = len(dataloader) * epoch + batch_i
 
@@ -133,7 +137,7 @@ if __name__ == "__main__":
                         if name != "grid_size":
                             tensorboard_log += [(f"{name}_{j+1}", metric)]
                 tensorboard_log += [("loss", loss.item())]
-                logger.list_of_scalars_summary(tensorboard_log, batches_done)
+                # logger.list_of_scalars_summary(tensorboard_log, batches_done)
 
             log_str += AsciiTable(metric_table).table
             log_str += f"\nTotal loss {loss.item()}"
@@ -143,7 +147,8 @@ if __name__ == "__main__":
             time_left = datetime.timedelta(seconds=epoch_batches_left * (time.time() - start_time) / (batch_i + 1))
             log_str += f"\n---- ETA {time_left}"
 
-            print(log_str)
+            if batch_i == len(dataloader) - 1:
+                print(log_str)
 
             model.seen += imgs.size(0)
 
@@ -165,7 +170,7 @@ if __name__ == "__main__":
                 ("val_mAP", AP.mean()),
                 ("val_f1", f1.mean()),
             ]
-            logger.list_of_scalars_summary(evaluation_metrics, epoch)
+            # logger.list_of_scalars_summary(evaluation_metrics, epoch)
 
             # Print class APs and mAP
             ap_table = [["Index", "Class name", "AP"]]
