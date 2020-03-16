@@ -1,19 +1,20 @@
 #!/bin/bash
 
 NUM_CLASSES=$1
+NUM_CHNNELS=$1
 
 echo "
 [net]
 # Testing
 #batch=1
 #subdivisions=1
-
+NUM_CLASSES
 # Training
 batch=16
 subdivisions=1
 width=416
 height=416
-channels=3
+channels=$NUM_CHANNELS
 momentum=0.9
 decay=0.0005
 angle=0

@@ -4,7 +4,7 @@ build
 .git
 *.egg-info
 dist
-output
+output/*.png
 data/coco
 data/custom/images/*.jpg
 data/custom/labels/*.txt
@@ -13,4 +13,4 @@ backup
 weights/*.weights
 weights/darknet*
 __pycache__
-checkpoints
+checkpoints/*.pth

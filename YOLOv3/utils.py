@@ -2,27 +2,84 @@ from __future__ import division
 import math
 import time
 import tqdm
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
+import tensorflow as tf
 
-def to_cpu(tensor):
-    return tensor.detach().cpu()
+#### -------- Parse Utils: for Model & Data Config --------
+def parse_model_config(path):
+    """Parses the yolo-v3 layer configuration file and returns module definitions"""
+    file = open(path, 'r')
+    lines = file.read().split('\n')
+    lines = [x for x in lines if x and not x.startswith('#')] # pass through comments
+    lines = [x.rstrip().lstrip() for x in lines] # get rid of fringe whitespaces
+    module_defs = []
+    for line in lines:
+        if line.startswith('['): # This marks the start of a new block
+            module_defs.append({})
+            module_defs[-1]['type'] = line[1:-1].rstrip()
+            if module_defs[-1]['type'] == 'convolutional':
+                module_defs[-1]['batch_normalize'] = 0
+        else:
+            key, value = line.split("=")
+            value = value.strip()
+            module_defs[-1][key.rstrip()] = value.strip()
 
+    return module_defs
+
+def parse_data_config(path):
+    """Parses the data configuration file"""
+    options = dict()
+    options['gpus'] = '0,1,2,3'
+    options['num_workers'] = '10'
+    with open(path, 'r') as fp:
+        lines = fp.readlines()
+        for line in lines:
+            line = line.strip()
+            if line == '' or line.startswith('#'):
+                continue
+            key, value = line.split('=')
+            options[key.strip()] = value.strip()
+    return options
 
 def load_classes(path):
     """
     Loads class labels at 'path'
     """
-    fp = open(path, "r")
-    names = fp.read().split("\n")[:-1]
+    with open(path, "r") as fp:
+        names = fp.read().split("\n")[:-1]
     return names
 
+#### -------- Tensorboard Utils --------
+class Logger(object):
+    def __init__(self, log_dir):
+        """Create a summary writer logging to log_dir."""
+        self.writer = tf.summary.FileWriter(log_dir)
+
+    def scalar_summary(self, tag, value, step):
+        """Log a scalar variable."""
+        summary = tf.Summary(value=[tf.Summary.Value(tag=tag, simple_value=value)])
+        self.writer.add_summary(summary, step)
+
+    def list_of_scalars_summary(self, tag_value_pairs, step):
+        """Log scalar variables."""
+        summary = tf.Summary(value=[tf.Summary.Value(tag=tag, simple_value=value) for tag, value in tag_value_pairs])
+        self.writer.add_summary(summary, step)
+
+#### -------- Model Training Utils --------
+def to_cpu(tensor):
+    """
+    gpu tensor to cpu tensor
+    """
+    return tensor.detach().cpu()
 
 def weights_init_normal(m):
     classname = m.__class__.__name__
@@ -42,6 +99,7 @@ def rescale_boxes(boxes, current_dim, original_shape):
     # Image height and width after padding is removed
     unpad_h = current_dim - pad_y
     unpad_w = current_dim - pad_x
+    # print(f"unpad_h: {unpad_h} unpad_w: {unpad_w}")
     # Rescale bounding boxes to dimension of original image
     boxes[:, 0] = ((boxes[:, 0] - pad_x // 2) / unpad_w) * orig_w
     boxes[:, 1] = ((boxes[:, 1] - pad_y // 2) / unpad_h) * orig_h
@@ -51,6 +109,9 @@ def rescale_boxes(boxes, current_dim, original_shape):
 
 
 def xywh2xyxy(x):
+    """
+    Transform "center + width/height" to "two vertex coordinates"
+    """
     y = x.new(x.shape)
     y[..., 0] = x[..., 0] - x[..., 2] / 2
     y[..., 1] = x[..., 1] - x[..., 3] / 2
@@ -223,29 +284,30 @@ def bbox_iou(box1, box2, x1y1x2y2=True):
     return iou
 
 
-def non_max_suppression(prediction, conf_thres=0.5, nms_thres=0.4):
+def non_max_suppression(prediction, conf_thres=0.6, nms_thres=0.4):
     """
     Removes detections with lower object confidence score than 'conf_thres' and performs
     Non-Maximum Suppression to further filter detections.
-    Returns detections with shape:
+    Returns detections with shape as a list:
         (x1, y1, x2, y2, object_conf, class_score, class_pred)
     """
 
     # From (center x, center y, width, height) to (x1, y1, x2, y2)
     prediction[..., :4] = xywh2xyxy(prediction[..., :4])
-    output = [None for _ in range(len(prediction))]
+    output = [None for _ in range(len(prediction))] # list placeholder with same length of prediction
+
     for image_i, image_pred in enumerate(prediction):
         # Filter out confidence scores below threshold
         image_pred = image_pred[image_pred[:, 4] >= conf_thres]
-        # If none are remaining => process next image
-        if not image_pred.size(0):
+        if not image_pred.size(0): # if none are remaining => process next image
             continue
-        # Object confidence times class confidence
-        score = image_pred[:, 4] * image_pred[:, 5:].max(1)[0]
-        # Sort by it
-        image_pred = image_pred[(-score).argsort()]
+
+        score = image_pred[:, 4] * image_pred[:, 5:].max(1)[0] # object confidence times class confidence
+        image_pred = image_pred[(-score).argsort()] # sort by it
+
         class_confs, class_preds = image_pred[:, 5:].max(1, keepdim=True)
         detections = torch.cat((image_pred[:, :5], class_confs.float(), class_preds.float()), 1)
+        
         # Perform non-maximum suppression
         keep_boxes = []
         while detections.size(0):

@@ -6,18 +6,13 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 import numpy as np
 
-from utils.parse_config import *
-from utils.utils import build_targets, to_cpu, non_max_suppression
-
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-
+from utils import parse_model_config, to_cpu, non_max_suppression, build_targets
 
 def create_modules(module_defs):
     """
     Constructs module list of layer blocks from module configuration in module_defs
     """
-    hyperparams = module_defs.pop(0)
+    hyperparams = module_defs.pop(0) # string.pop([index]) - pop last element if index not given
     output_filters = [int(hyperparams["channels"])]
     module_list = nn.ModuleList()
     for module_i, module_def in enumerate(module_defs):
@@ -27,18 +22,9 @@ def create_modules(module_defs):
             bn = int(module_def["batch_normalize"])
             filters = int(module_def["filters"])
             kernel_size = int(module_def["size"])
-            pad = (kernel_size - 1) // 2
-            modules.add_module(
-                f"conv_{module_i}",
-                nn.Conv2d(
-                    in_channels=output_filters[-1],
-                    out_channels=filters,
-                    kernel_size=kernel_size,
-                    stride=int(module_def["stride"]),
-                    padding=pad,
-                    bias=not bn,
-                ),
-            )
+            stride = int(module_def["stride"])
+            pad = (kernel_size - 1) // 2 # override given pad in config
+            modules.add_module(f"conv_{module_i}", nn.Conv2d(in_channels=output_filters[-1], out_channels=filters, kernel_size=kernel_size, stride=stride, padding=pad, bias=not bn))
             if bn:
                 modules.add_module(f"batch_norm_{module_i}", nn.BatchNorm2d(filters, momentum=0.9, eps=1e-5))
             if module_def["activation"] == "leaky":
@@ -47,10 +33,10 @@ def create_modules(module_defs):
         elif module_def["type"] == "maxpool":
             kernel_size = int(module_def["size"])
             stride = int(module_def["stride"])
+            pad = (kernel_size - 1) // 2 # override given pad in config
             if kernel_size == 2 and stride == 1:
                 modules.add_module(f"_debug_padding_{module_i}", nn.ZeroPad2d((0, 1, 0, 1)))
-            maxpool = nn.MaxPool2d(kernel_size=kernel_size, stride=stride, padding=int((kernel_size - 1) // 2))
-            modules.add_module(f"maxpool_{module_i}", maxpool)
+            modules.add_module(f"maxpool_{module_i}", nn.MaxPool2d(kernel_size=kernel_size, stride=stride, padding=pad))
 
         elif module_def["type"] == "upsample":
             upsample = Upsample(scale_factor=int(module_def["stride"]), mode="nearest")
@@ -69,13 +55,13 @@ def create_modules(module_defs):
             anchor_idxs = [int(x) for x in module_def["mask"].split(",")]
             # Extract anchors
             anchors = [int(x) for x in module_def["anchors"].split(",")]
-            anchors = [(anchors[i], anchors[i + 1]) for i in range(0, len(anchors), 2)]
-            anchors = [anchors[i] for i in anchor_idxs]
+            anchors = [(anchors[i], anchors[i + 1]) for i in range(0, len(anchors), 2)] # combine into [w,h] format
+            anchors = [anchors[i] for i in anchor_idxs] # extracted anchors
             num_classes = int(module_def["classes"])
             img_size = int(hyperparams["height"])
             # Define detection layer
-            yolo_layer = YOLOLayer(anchors, num_classes, img_size)
-            modules.add_module(f"yolo_{module_i}", yolo_layer)
+            modules.add_module(f"yolo_{module_i}", YOLOLayer(anchors, num_classes, img_size))
+        
         # Register module list and number of output filters
         module_list.append(modules)
         output_filters.append(filters)
@@ -101,6 +87,8 @@ class EmptyLayer(nn.Module):
 
     def __init__(self):
         super(EmptyLayer, self).__init__()
+    
+    # forward() 需要用到之前的layerouputs,所以是在Model的forward过程中单独写的
 
 
 class YOLOLayer(nn.Module):
@@ -117,20 +105,24 @@ class YOLOLayer(nn.Module):
         self.obj_scale = 1
         self.noobj_scale = 100
         self.metrics = {}
+
         self.img_dim = img_dim
         self.grid_size = 0  # grid size
+        self.stride = 0 # stride
 
     def compute_grid_offsets(self, grid_size, cuda=True):
         self.grid_size = grid_size
-        g = self.grid_size
-        FloatTensor = torch.cuda.FloatTensor if cuda else torch.FloatTensor
         self.stride = self.img_dim / self.grid_size
+        
+        FloatTensor = torch.cuda.FloatTensor if cuda else torch.FloatTensor # define type based on cuda
+
         # Calculate offsets for each grid
-        self.grid_x = torch.arange(g).repeat(g, 1).view([1, 1, g, g]).type(FloatTensor)
-        self.grid_y = torch.arange(g).repeat(g, 1).t().view([1, 1, g, g]).type(FloatTensor)
+        self.grid_x = torch.arange(grid_size).repeat(grid_size, 1).view([1, 1, grid_size, grid_size]).type(FloatTensor) # eg. [1,1,9,9]
+        self.grid_y = torch.arange(grid_size).repeat(grid_size, 1).t().view([1, 1, grid_size, grid_size]).type(FloatTensor) # eg. [1,1,9,9]
+
         self.scaled_anchors = FloatTensor([(a_w / self.stride, a_h / self.stride) for a_w, a_h in self.anchors])
-        self.anchor_w = self.scaled_anchors[:, 0:1].view((1, self.num_anchors, 1, 1))
-        self.anchor_h = self.scaled_anchors[:, 1:2].view((1, self.num_anchors, 1, 1))
+        self.anchor_w = self.scaled_anchors[:, 0:1].view((1, self.num_anchors, 1, 1)) # eg. [1,3,1,1]
+        self.anchor_h = self.scaled_anchors[:, 1:2].view((1, self.num_anchors, 1, 1)) # eg. [1,3,1,1]
 
     def forward(self, x, targets=None, img_dim=None):
 
@@ -141,13 +133,14 @@ class YOLOLayer(nn.Module):
 
         self.img_dim = img_dim
         num_samples = x.size(0)
-        grid_size = x.size(2)
+        grid_size = x.size(2) # 网络中前面传过来的feature map size - 我们期待的grid size
 
         prediction = (
             x.view(num_samples, self.num_anchors, self.num_classes + 5, grid_size, grid_size)
             .permute(0, 1, 3, 4, 2)
             .contiguous()
         )
+        # [N, Anchor, W, H, Classes]
 
         # Get outputs
         x = torch.sigmoid(prediction[..., 0])  # Center x
@@ -230,7 +223,6 @@ class YOLOLayer(nn.Module):
 
             return output, total_loss
 
-
 class Darknet(nn.Module):
     """YOLOv3 object detection model"""
 
@@ -238,28 +230,35 @@ class Darknet(nn.Module):
         super(Darknet, self).__init__()
         self.module_defs = parse_model_config(config_path)
         self.hyperparams, self.module_list = create_modules(self.module_defs)
-        self.yolo_layers = [layer[0] for layer in self.module_list if hasattr(layer[0], "metrics")]
+        self.yolo_layers = [layer[0] for layer in self.module_list if hasattr(layer[0], "metrics")] # extract yolo layers; 用layer[0]是因为一个module实际上可能有多个layers.
+
         self.img_size = img_size
-        self.seen = 0
+        self.seen = 0 # count how many images have been used for training
         self.header_info = np.array([0, 0, 0, self.seen, 0], dtype=np.int32)
 
     def forward(self, x, targets=None):
-        img_dim = x.shape[2]
+        img_dim = x.shape[2] # input image dimension
         loss = 0
         layer_outputs, yolo_outputs = [], []
         for i, (module_def, module) in enumerate(zip(self.module_defs, self.module_list)):
+            # torch internal layer -> forward directly
             if module_def["type"] in ["convolutional", "upsample", "maxpool"]:
                 x = module(x)
-            elif module_def["type"] == "route":
-                x = torch.cat([layer_outputs[int(layer_i)] for layer_i in module_def["layers"].split(",")], 1)
+            
+            # self-implemented layer -> 需要用到previous layer ouputs, 所以之前只是add了一个placeholder，这里才specify如何计算的。
+            elif module_def["type"] == "route": 
+                x = torch.cat([layer_outputs[int(layer_i)] for layer_i in module_def["layers"].split(",")], 1) # concatenate on channel dimension
             elif module_def["type"] == "shortcut":
                 layer_i = int(module_def["from"])
-                x = layer_outputs[-1] + layer_outputs[layer_i]
+                x = layer_outputs[-1] + layer_outputs[layer_i] # residual connection: x + f(x)
+            
+            # self-implemented layer -> use the implemented loss computing apis
             elif module_def["type"] == "yolo":
                 x, layer_loss = module[0](x, targets, img_dim)
-                loss += layer_loss
+                loss += layer_loss # 结合多个yolo later loss
                 yolo_outputs.append(x)
             layer_outputs.append(x)
+        
         yolo_outputs = to_cpu(torch.cat(yolo_outputs, 1))
         return yolo_outputs if targets is None else (loss, yolo_outputs)
 
