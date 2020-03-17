@@ -96,6 +96,10 @@ The images look like the following one because the deoxygenated haemoglobin in v
   - 目前保存下来的图，其实会多了一些白色边框，是因为有些bbox超出了image本身的边长限制，从而在add生成的patches到plot上的时候自适应地加了白色边框。
     - 目前已经考虑了patch的坐标超出plot边界的情况，白色边框的效果稍微没有那么明显了。
 - 写一个对single image prediction的block
+
+### Mar 17
+- label完190张invivo的数据集。
+- 
   
 ### 初步结果
 <p align="center"> <img src="./assets/output_yolo.jpg" alt="drawing" height="80%" width="80%"/> </p>

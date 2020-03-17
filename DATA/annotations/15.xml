@@ -1,0 +1,30 @@
+<annotation>
+    <folder>Img_Invivo_with_label_yolo</folder>
+    <filename>15.jpg</filename>
+    <size>
+        <width>494</width>
+        <height>754</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>veins_seg</name>
+        <pixels>
+            <id>0</id>
+        </pixels>
+        <bndbox>
+            <xmin>291</xmin>
+            <ymin>33</ymin>
+            <xmax>381</xmax>
+            <ymax>97</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>veins_detect</name>
+        <bndbox>
+            <xmin>275</xmin>
+            <ymin>28</ymin>
+            <xmax>398</xmax>
+            <ymax>111</ymax>
+        </bndbox>
+    </object>
+</annotation>

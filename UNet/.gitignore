@@ -1,7 +1,7 @@
 *.pyc
 *.vscode
 *.ipynb_checkpoints
-data/
+data/*.jpg
 runs/
 __pycache__/
 checkpoints/
