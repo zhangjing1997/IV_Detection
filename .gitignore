@@ -1,3 +1,4 @@
-DATA/imgs
-DATA/annotations
-DATA/masks
+.vscode
+*.ipynb_checkpoints
+DATA/*.jpg
+DATA/*.xml
