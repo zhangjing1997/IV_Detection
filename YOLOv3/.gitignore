@@ -1,5 +1,6 @@
 
 .DS_Store
+__pycache__
 build
 .git
 *.egg-info
@@ -9,8 +10,7 @@ data/coco
 data/custom/images/*/*.jpg
 data/custom/labels/*/*.txt
 data/custom/labels/*/*.xml
+checkpoints/*/*.pth
 backup
 weights/*.weights
 weights/darknet*
-__pycache__
-checkpoints/*.pth

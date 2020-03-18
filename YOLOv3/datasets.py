@@ -62,11 +62,14 @@ class ImageFolder(Dataset):
 
 
 class ListDataset(Dataset):
-    def __init__(self, list_path, img_size=416, augment=True, multiscale=True, normalized_labels=True):
+    def __init__(self, dataset_name, list_path, img_size=416, augment=True, multiscale=True, normalized_labels=True):
         with open(list_path, "r") as file:
-            self.img_files = file.readlines()
-
-        self.label_files = [path.replace("images", "labels").replace(".png", ".txt").replace(".jpg", ".txt") for path in self.img_files] # get corresponding label file names
+            # eg. 0.jpg -> data/custom/images/{dataset_name}/0.jpg
+            lines = [x.strip() for x in file.readlines()]
+            self.img_files = [f'data/custom/images/{dataset_name}/' + x for x in lines]
+            self.label_files = [f'data/custom/labels/{dataset_name}/' + x[:-4] + '.txt' for x in lines]
+        
+        # self.label_files = [path.replace("images", "labels").replace(".png", ".txt").replace(".jpg", ".txt") for path in self.img_files] # get corresponding label file names
         self.img_size = img_size
         self.max_objects = 100
         self.augment = augment
@@ -77,31 +80,21 @@ class ListDataset(Dataset):
         self.batch_count = 0
 
     def __getitem__(self, index):
-
-        # ---------
-        #  Image
-        # ---------
-
-        img_path = self.img_files[index % len(self.img_files)].rstrip()        
+        ### --- get image ---
+        img_path = self.img_files[index % len(self.img_files)] 
         # img = transforms.ToTensor()(Image.open(img_path).convert('RGB')) 
         img = transforms.ToTensor()(Image.open(img_path)) # extract image as PyTorch tensor
-
         # # Handle images with less than 3 channels
         # if len(img.shape) != 3:
         #     img = img.unsqueeze(0) # insert one dimension in axis 0
         #     img = img.expand((3, img.shape[1:])) # add two more channels by repeating
-
         _, h, w = img.shape
         h_factor, w_factor = (h, w) if self.normalized_labels else (1, 1)
         img, pad = pad_to_square(img, 0) # pad to square resolution
         _, padded_h, padded_w = img.shape
 
-        # ---------
-        #  Label
-        # ---------
-
-        label_path = self.label_files[index % len(self.img_files)].rstrip()
-
+        ### --- get label ---
+        label_path = self.label_files[index % len(self.img_files)] 
         targets = None
         if os.path.exists(label_path):
             boxes = torch.from_numpy(np.loadtxt(label_path).reshape(-1, 5))

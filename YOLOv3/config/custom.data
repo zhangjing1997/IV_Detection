@@ -1,4 +1,11 @@
+[phantom_20]
 classes = 1
-train = data/custom/train.txt
-valid = data/custom/valid.txt
+train = data/custom/train_valid/phantom_20/train.txt
+valid = data/custom/train_valid/phantom_20/valid.txt
+names = data/custom/classes.names
+
+[invivo_91]
+classes = 1
+train = data/custom/train_valid/invivo_91/train.txt
+valid = data/custom/train_valid/invivo_91/valid.txt
 names = data/custom/classes.names

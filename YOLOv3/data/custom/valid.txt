@@ -1,4 +1,0 @@
-data/custom/images/12.jpg
-data/custom/images/17.jpg
-data/custom/images/4.jpg
-data/custom/images/5.jpg

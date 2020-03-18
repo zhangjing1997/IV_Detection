@@ -1,8 +1,8 @@
 from __future__ import division
 
 from yolo_model import Darknet
-from utils import *
-from datasets import *
+from utils import load_classes, parse_data_config, weights_init_normal
+from datasets import ListDataset
 from test import evaluate
 
 from terminaltables import AsciiTable
@@ -26,19 +26,22 @@ warnings.filterwarnings("ignore", category=UserWarning)
 if __name__ == "__main__":
     # Set and get args
     parser = argparse.ArgumentParser(description='Train YOLO on gray images with veins as targets', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+    parser.add_argument("--dataset_name", default="phantom_20", help="the name of dataset used for training")
+
+    parser.add_argument("--checkpoints_dir", default="checkpoints", help="parent directory of saving checkpoint weights")
+    parser.add_argument("--model_def", type=str, default="config/yolov3-custom.cfg", help="path to model definition file")
+    parser.add_argument("--data_config", type=str, default="config/custom.data", help="path to data config file")
     
+    parser.add_argument("--pretrained_weights", type=str, help="if specified starts from checkpoint model")
+    parser.add_argument("--checkpoint_interval", type=int, default=2, help="interval between saving model weights")
+    parser.add_argument("--evaluation_interval", type=int, default=1, help="interval evaluations on validation set")
+
     parser.add_argument("--img_size", type=int, default=416, help="size of each image dimension")
     parser.add_argument("--epochs", type=int, default=10, help="number of epochs")
     parser.add_argument("--batch_size", type=int, default=1, help="size of each image batch")
     parser.add_argument("--n_cpu", type=int, default=1, help="number of cpu threads to use during batch generation")
     parser.add_argument("--gradient_accumulations", type=int, default=2, help="number of gradient accums before step")
-
-    parser.add_argument("--model_def", type=str, default="config/yolov3.cfg", help="path to model definition file")
-    parser.add_argument("--data_config", type=str, default="config/coco.data", help="path to data config file")
-    parser.add_argument("--pretrained_weights", type=str, help="if specified starts from checkpoint model")
-    parser.add_argument("--checkpoint_interval", type=int, default=1, help="interval between saving model weights")
-    parser.add_argument("--evaluation_interval", type=int, default=1, help="interval evaluations on validation set")
-    
     parser.add_argument("--compute_map", default=False, help="if True computes mAP every tenth batch")
     parser.add_argument("--multiscale_training", default=True, help="allow for multi-scale training")
 
@@ -46,14 +49,12 @@ if __name__ == "__main__":
     print(opt)
 
     # logger = Logger("logs")
-
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-    os.makedirs("output", exist_ok=True)
-    os.makedirs("checkpoints", exist_ok=True)
+    checkpoint_dir = opt.checkpoints_dir + '/' + opt.dataset_name
+    os.makedirs(checkpoint_dir, exist_ok=True)
 
     # Get data configuration
-    data_config = parse_data_config(opt.data_config)
+    data_config = parse_data_config(opt.dataset_name, opt.data_config)
     train_path = data_config["train"] # data/custom/train.txt
     valid_path = data_config["valid"] # data/custom/valid.txt
     class_names = load_classes(data_config["names"]) # data/custom/classes.names
@@ -70,7 +71,8 @@ if __name__ == "__main__":
             model.load_darknet_weights(opt.pretrained_weights) # load darknet backbone
 
     # Set dataloader
-    dataset = ListDataset(train_path, augment=True, multiscale=opt.multiscale_training)
+    print(f'train_path: {train_path}')
+    dataset = ListDataset(opt.dataset_name, train_path, augment=True, multiscale=opt.multiscale_training)
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=opt.batch_size, shuffle=True, num_workers=opt.n_cpu, pin_memory=True, collate_fn=dataset.collate_fn)
 
     # Set Optimization Config
@@ -138,7 +140,7 @@ if __name__ == "__main__":
         if epoch % opt.evaluation_interval == 0:
             print("\n---- Evaluating Model ----")
             # Evaluate the model on the validation set
-            precision, recall, AP, f1, ap_class = evaluate(model, path=valid_path, iou_thres=0.5, conf_thres=0.5, nms_thres=0.5, img_size=opt.img_size, batch_size=8)
+            precision, recall, AP, f1, ap_class = evaluate(model, dataset_name=opt.dataset_name, path=valid_path, iou_thres=0.5, conf_thres=0.5, nms_thres=0.5, img_size=opt.img_size, batch_size=8)
             evaluation_metrics = [
                 ("val_precision", precision.mean()),
                 ("val_recall", recall.mean()),
@@ -155,4 +157,4 @@ if __name__ == "__main__":
             print(f"---- mAP {AP.mean()}")
 
         if epoch % opt.checkpoint_interval == 0:
-            torch.save(model.state_dict(), f"checkpoints/yolov3_ckpt_%d.pth" % epoch)
+            torch.save(model.state_dict(), f"{checkpoint_dir}/yolov3_ckpt_%d.pth" % epoch)
