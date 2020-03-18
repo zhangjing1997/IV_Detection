@@ -72,44 +72,54 @@ The images look like the following one because the deoxygenated haemoglobin in v
 
 ## Detection - YOLO
 ### YOLO三大特点
-- 快。base版本：45frames/s; fast版本：155frames/s;
-- 准。mAP接近其他的SOTA methods，且less likely to get false positives.
-- generalize well from natural images to other domains like artwork.
-
+- fast. base version: 45 frames/s; fast version: 155 frames/s. (referred from YOLO paper)
+- accurate. mAP is close to other SOTA models and less likely to get false positives on background.
+- good generalization. it is less likely to break down when adapting into other domains like artwork.
 
 ### Mar 5
-- 标了20张bounding box的数据，并在eda.ipynb中，将RectLabel生成的存有objects attributes的xml文件，读取出bounding box的位置信息，按照label_idx, xmin, xmax, ymin, ymax的format写到txt中
-- 根据原项目的customization instructions，初步完成yolo在本数据集上的训练和test。需要注意的是：cpu数量改为1，batch size改为1，epochs改为适量（20或30）。
-- datasets.ImageFolder中的image preprocessing默认接收的是3xWxH的图。暂时解决：用torch.tensor.expand增加了2个channel（其实就是channel-wise copy）
+- labelled 20 samples - `phantom_20`
+- wrote a util function in `yolo_eda.ipynb` to extract data concerning bbox attributes in xml file into txt, following the format: label_idx, xmin, xmax, ymin, ymax
+- built yolo_detection pipeline by following the customization instructions given by the original readme.
+- preliminarily finish training and evaluation on the `phantom_20` dataset.
+  - mofidy `n_cpu` into 1.
+  - modify `batch_size` into 1.
+  - modify `epochs` into an approproate number, like 20 or 30.
+- the image preprocessing defined in the customized dataset `datasets.ImageFolder` accept images of 3xWxH by default.
+  - temporary solution: used `torch.tensor.expand` to add two more channels, whichs is actually channel-wise copy.
 
 ### Mar 15
-- 看论文，check网络结构。看能否将网络结构改成适用于gray image的，即channel size是1的。而不是将图片转换成3 channel。
-  - 应该是要把yolov3-custom.cfg的channels从3换成1。
-  - 改过来后，如果training没问题，再把tensorboard改成pytorch自身的tensorboard utils。
+- checked network strcuture and training loss from yolo/yolov2/yolov3 papers while referring the code
+- thoroughly understood the whole training pipeline and how does detect.py uses the trained model to demo the results
+- modified the network to adapt to training on gray images directly, instead of replicating 2 more channels like before
+  - just change the channel number in `yolov3-custom.cfg` from 3 to 1
+  - for later use, we could add a variable indicating channel number in `create_custom_model.sh` and replace corresponding hardcoded number into this variable.
 
 ### Mar 16
-- 重新create yolo custom config,再运行training，过一遍代码修改，看gray image的效果。
-  - 出现了一个object有多个detection box的情况：通过提高conf_thres和降低nms_thres来解决的。
-- 解决输出图片的size和original image shape不一致的问题。
-  - check过，发现是因为plot show image and add bbox之后存下来的图确实可能会和原图大小不一，所以就在detect.py中加了一个后处理。
-  - 即，check存下来的图的size，如果和input_img的size不一致，就resize并且保存覆盖掉之前的图。
-  - 目前保存下来的图，其实会多了一些白色边框，是因为有些bbox超出了image本身的边长限制，从而在add生成的patches到plot上的时候自适应地加了白色边框。
-    - 目前已经考虑了patch的坐标超出plot边界的情况，白色边框的效果稍微没有那么明显了。
-- 写一个对single image prediction的block
+- recreate yolo custom config using the modified `create_custom_model.sh` and train without pretrained weights (for 3 channels), then check the results demo.
+  - problem: some image samples got one more bbox on the same one target vein.
+  - solution: increase `conf_thres` from 0.8 to 0.85 and decrease `nms_thres` from 0.4 to 0.35.
+- tried to solve the inconsistency between input image size and saved output image size
+  - problem: originally, (504, 747) vs. (254, 269).
+  - solution: by checking the code in `detect.py`, found it probably due to using matplotlib to add bbox as matplotlib.patches to pyplot; -> so, just resize the saved ouput image to input image size and replace the old one.
+  - but acutal problem: guessed the real reason is that some predicted bbox exceeds the image edges, which made matplotlib adaptively add white paddings around the plot while adding the created patches for the bboxes.
+  - solution: modify the patches' coordinates by considering edges exceeding situations and the white paddings are not that obvious. But, they still exist.
+- wrote a sinle image prediction code block in `eda_yolo.ipynb`
 
 ### Mar 17
-- label完190张invivo的数据集。
-- 
+- finished labelling 91 invivo image samples from its original dataset with 190 samples.
+- built a raw labelled data preprocessing pipeline for unet and yolo, which will help quickly replicate on another dataset with two methods.
   
 ### 初步结果
 <p align="center"> <img src="./assets/output_yolo.jpg" alt="drawing" height="80%" width="80%"/> </p>
 
 ### Next
-- label 200张的数据集，分别用于seg和detection，训练，测试性能。
-- 测试performance - efficiency vs. accuracy。搭好性能对比的框架。
+- trained both unet and yolo on invivo_91
+- evaluated them into demo results and check
+- write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy
+- If necessary, consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils.
+- **Post-Processing - Active Contour**:
+  - find active contour code on github, etc.
+  - understand and try to modify them for our own use
+  - if effective, use it to refine the vein edges on our segmentation(unet) and detection(yolo) methods to finalize a whole project demo.
 
-## Post-Processing - Active Contour
-基于unet和yolo做的结果，分别调active contour的包，去得到最终refine的vein edges。
-
-## Idea of Later Further Modification
-- 有没有可能设计loss让网络直接学target edge，从而实现end-to-end。
+- If time allows, consider designing a specified loss to directlt learn the target edge, which fits the end-to-end thoughts in deep learning.
