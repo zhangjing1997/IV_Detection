@@ -6,9 +6,9 @@ build
 dist
 output/*.png
 data/coco
-data/custom/images/*.jpg
-data/custom/labels/*.txt
-data/custom/labels/*.xml
+data/custom/images/*/*.jpg
+data/custom/labels/*/*.txt
+data/custom/labels/*/*.xml
 backup
 weights/*.weights
 weights/darknet*

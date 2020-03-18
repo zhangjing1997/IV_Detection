@@ -1,5 +1,4 @@
 .vscode
 *.ipynb_checkpoints
-DATA/masks/*.jpg
-DATA/imgs/*.jpg
-DATA/annotations/*.xml
+DATA/*/*/*.jpg
+DATA/*/*/*.xml
