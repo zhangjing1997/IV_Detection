@@ -71,7 +71,7 @@ The images look like the following one because the deoxygenated haemoglobin in v
 
 
 ## Detection - YOLO
-### YOLO三大特点
+### Why YOLO
 - fast. base version: 45 frames/s; fast version: 155 frames/s. (referred from YOLO paper)
 - accurate. mAP is close to other SOTA models and less likely to get false positives on background.
 - good generalization. it is less likely to break down when adapting into other domains like artwork.
@@ -109,7 +109,7 @@ The images look like the following one because the deoxygenated haemoglobin in v
 - finished labelling 91 invivo image samples from its original dataset with 190 samples.
 - built a raw labelled data preprocessing pipeline for unet and yolo, which will help quickly replicate on another dataset with two methods.
   
-### 初步结果
+### Current Result
 <p align="center"> <img src="./assets/output_yolo.jpg" alt="drawing" height="80%" width="80%"/> </p>
 
 ### Next
@@ -121,5 +121,4 @@ The images look like the following one because the deoxygenated haemoglobin in v
   - find active contour code on github, etc.
   - understand and try to modify them for our own use
   - if effective, use it to refine the vein edges on our segmentation(unet) and detection(yolo) methods to finalize a whole project demo.
-
-- If time allows, consider designing a specified loss to directlt learn the target edge, which fits the end-to-end thoughts in deep learning.
+- **If time allows**, consider designing a specified loss to directlt learn the target edge, which fits the end-to-end thoughts in deep learning.
