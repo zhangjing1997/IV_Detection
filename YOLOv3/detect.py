@@ -1,9 +1,4 @@
 from __future__ import division
-
-from yolo_model import Darknet
-from utils import load_classes, rescale_boxes, non_max_suppression
-from datasets import ImageFolder
-
 import os
 import sys
 import time
@@ -14,39 +9,48 @@ random.seed(400)
 
 from PIL import Image
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+from matplotlib.ticker import NullLocator
 
 import torch
 from torch.utils.data import DataLoader
 from torchvision import datasets
 from torch.autograd import Variable
 
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-from matplotlib.ticker import NullLocator
+from yolo_model import Darknet
+from utils import load_classes, rescale_boxes, non_max_suppression, Logger
+from datasets import ImageFolder
 
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--image_folder", type=str, default="data/samples", help="path to dataset")
-    parser.add_argument("--output_dir", default="output/phantom_20", help="directory of saving test results")
 
-    parser.add_argument("--model_def", type=str, default="config/yolov3.cfg", help="path to model definition file")
+    parser.add_argument("--dataset_name", default="phantom_20", help="the name of dataset used for test")
+    parser.add_argument("--output_dir", default="output", help="parent directory of saving test results")
+    parser.add_argument("--image_folder", type=str, default="data/samples", help="path to dataset")
+
+    parser.add_argument("--model_def", type=str, default="config/yolov3-custom.cfg", help="path to model definition file")
     parser.add_argument("--weights_path", type=str, default="weights/yolov3.weights", help="path to weights file")
     parser.add_argument("--checkpoint_model", type=str, help="path to checkpoint model")
-
-    parser.add_argument("--class_path", type=str, default="data/coco.names", help="path to class label file")
+    parser.add_argument("--class_path", type=str, default="data/custom/classes.names", help="path to class label file")
+    
+    parser.add_argument("--img_size", type=int, default=416, help="size of each image dimension")
+    parser.add_argument("--n_cpu", type=int, default=1, help="number of cpu threads to use during batch generation")
+    parser.add_argument("--batch_size", type=int, default=1, help="size of the batches")
     parser.add_argument("--conf_thres", type=float, default=0.85, help="object confidence threshold")
     parser.add_argument("--nms_thres", type=float, default=0.35, help="iou thresshold for non-maximum suppression")
-    parser.add_argument("--batch_size", type=int, default=1, help="size of the batches")
-    parser.add_argument("--n_cpu", type=int, default=1, help="number of cpu threads to use during batch generation")
-    parser.add_argument("--img_size", type=int, default=416, help="size of each image dimension")
-    opt = parser.parse_args()
-    print(opt)
 
+    opt = parser.parse_args()
+
+    ckpt_str = opt.weights_path.split('/')[2][:-4]
+    sys.stdout = Logger(f'logs/detect/{opt.dataset_name}_{ckpt_str}.log') # logfile to save this script printing
+    print(opt)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    os.makedirs(opt.output_dir, exist_ok=True)
+    output_dir = opt.output_dir + '/' + opt.dataset_name
+    os.makedirs(output_dir, exist_ok=True)
 
     #### ----- Set up model and dataloader -----
     model = Darknet(opt.model_def, img_size=opt.img_size).to(device)
@@ -128,11 +132,11 @@ if __name__ == "__main__":
         plt.gca().xaxis.set_major_locator(NullLocator())
         plt.gca().yaxis.set_major_locator(NullLocator())
         filename = path.split("/")[-1].split(".")[0]
-        fig.savefig(f"output/{filename}.png", bbox_inches="tight", pad_inches=0.0)
+        fig.savefig(f"{output_dir}/{filename}.jpg", bbox_inches="tight", pad_inches=0.0)
         plt.close(fig)
 
         # Added: Check saved image size and resize + replace if necessary
-        img_output = Image.open(f"output/{filename}.png")
+        img_output = Image.open(f"{output_dir}/{filename}.jpg")
         if img_output.size != img_input.size:
             img_output = img_output.resize(img_input.size)
-            img_output.save(f"output/{filename}.png")
+            img_output.save(f"{output_dir}/{filename}.jpg")

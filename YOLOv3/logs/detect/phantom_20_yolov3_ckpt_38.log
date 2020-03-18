@@ -1,0 +1,105 @@
+Namespace(batch_size=1, checkpoint_model=None, class_path='data/custom/classes.names', conf_thres=0.85, dataset_name='phantom_20', image_folder='data/custom/images/phantom_20', img_size=416, model_def='config/yolov3-custom.cfg', n_cpu=1, nms_thres=0.35, output_dir='output', weights_path='checkpoints/phantom_20/yolov3_ckpt_38.pth')
+
+Performing object detection:
+	+ Batch 0, Inference Time: 0:00:01.683564
+	+ Batch 1, Inference Time: 0:00:00.035302
+	+ Batch 2, Inference Time: 0:00:00.035069
+	+ Batch 3, Inference Time: 0:00:00.034117
+	+ Batch 4, Inference Time: 0:00:00.034003
+	+ Batch 5, Inference Time: 0:00:00.033949
+	+ Batch 6, Inference Time: 0:00:00.026813
+	+ Batch 7, Inference Time: 0:00:00.025175
+	+ Batch 8, Inference Time: 0:00:00.026018
+	+ Batch 9, Inference Time: 0:00:00.025607
+	+ Batch 10, Inference Time: 0:00:00.025203
+	+ Batch 11, Inference Time: 0:00:00.025284
+	+ Batch 12, Inference Time: 0:00:00.026247
+	+ Batch 13, Inference Time: 0:00:00.025479
+	+ Batch 14, Inference Time: 0:00:00.025316
+	+ Batch 15, Inference Time: 0:00:00.025248
+	+ Batch 16, Inference Time: 0:00:00.026158
+	+ Batch 17, Inference Time: 0:00:00.025508
+	+ Batch 18, Inference Time: 0:00:00.025170
+	+ Batch 19, Inference Time: 0:00:00.025312
+
+Saving images:
+(0) Image: 'data/custom/images/phantom_20/0.jpg'
+	+ Label: vein, obj_conf: 0.98075, cls_conf: 0.99986
+	+ Label: vein, obj_conf: 0.96179, cls_conf: 0.99920
+	+ Label: vein, obj_conf: 0.90770, cls_conf: 0.99947
+(1) Image: 'data/custom/images/phantom_20/1.jpg'
+	+ Label: vein, obj_conf: 0.97377, cls_conf: 0.99985
+	+ Label: vein, obj_conf: 0.96752, cls_conf: 0.99983
+	+ Label: vein, obj_conf: 0.95764, cls_conf: 0.99951
+(2) Image: 'data/custom/images/phantom_20/10.jpg'
+	+ Label: vein, obj_conf: 0.97299, cls_conf: 0.99978
+	+ Label: vein, obj_conf: 0.96796, cls_conf: 0.99975
+	+ Label: vein, obj_conf: 0.94704, cls_conf: 0.99932
+(3) Image: 'data/custom/images/phantom_20/11.jpg'
+	+ Label: vein, obj_conf: 0.97159, cls_conf: 0.99960
+	+ Label: vein, obj_conf: 0.95777, cls_conf: 0.99924
+	+ Label: vein, obj_conf: 0.93842, cls_conf: 0.99956
+(4) Image: 'data/custom/images/phantom_20/12.jpg'
+	+ Label: vein, obj_conf: 0.97979, cls_conf: 0.99976
+	+ Label: vein, obj_conf: 0.95982, cls_conf: 0.99929
+	+ Label: vein, obj_conf: 0.93490, cls_conf: 0.99953
+(5) Image: 'data/custom/images/phantom_20/13.jpg'
+	+ Label: vein, obj_conf: 0.97910, cls_conf: 0.99975
+	+ Label: vein, obj_conf: 0.95958, cls_conf: 0.99932
+	+ Label: vein, obj_conf: 0.93727, cls_conf: 0.99955
+(6) Image: 'data/custom/images/phantom_20/14.jpg'
+	+ Label: vein, obj_conf: 0.97430, cls_conf: 0.99973
+	+ Label: vein, obj_conf: 0.95895, cls_conf: 0.99925
+	+ Label: vein, obj_conf: 0.94756, cls_conf: 0.99970
+(7) Image: 'data/custom/images/phantom_20/15.jpg'
+	+ Label: vein, obj_conf: 0.97432, cls_conf: 0.99975
+	+ Label: vein, obj_conf: 0.95992, cls_conf: 0.99923
+	+ Label: vein, obj_conf: 0.94480, cls_conf: 0.99971
+(8) Image: 'data/custom/images/phantom_20/16.jpg'
+	+ Label: vein, obj_conf: 0.97432, cls_conf: 0.99975
+	+ Label: vein, obj_conf: 0.95992, cls_conf: 0.99923
+	+ Label: vein, obj_conf: 0.94480, cls_conf: 0.99971
+(9) Image: 'data/custom/images/phantom_20/17.jpg'
+	+ Label: vein, obj_conf: 0.97581, cls_conf: 0.99977
+	+ Label: vein, obj_conf: 0.95862, cls_conf: 0.99924
+	+ Label: vein, obj_conf: 0.94184, cls_conf: 0.99970
+(10) Image: 'data/custom/images/phantom_20/18.jpg'
+	+ Label: vein, obj_conf: 0.97906, cls_conf: 0.99981
+	+ Label: vein, obj_conf: 0.95993, cls_conf: 0.99921
+	+ Label: vein, obj_conf: 0.93542, cls_conf: 0.99967
+(11) Image: 'data/custom/images/phantom_20/19.jpg'
+	+ Label: vein, obj_conf: 0.97906, cls_conf: 0.99981
+	+ Label: vein, obj_conf: 0.95993, cls_conf: 0.99921
+	+ Label: vein, obj_conf: 0.93542, cls_conf: 0.99967
+(12) Image: 'data/custom/images/phantom_20/2.jpg'
+	+ Label: vein, obj_conf: 0.97355, cls_conf: 0.99984
+	+ Label: vein, obj_conf: 0.96776, cls_conf: 0.99983
+	+ Label: vein, obj_conf: 0.95827, cls_conf: 0.99953
+(13) Image: 'data/custom/images/phantom_20/3.jpg'
+	+ Label: vein, obj_conf: 0.98021, cls_conf: 0.99986
+	+ Label: vein, obj_conf: 0.97458, cls_conf: 0.99984
+	+ Label: vein, obj_conf: 0.94844, cls_conf: 0.99927
+(14) Image: 'data/custom/images/phantom_20/4.jpg'
+	+ Label: vein, obj_conf: 0.97985, cls_conf: 0.99985
+	+ Label: vein, obj_conf: 0.97494, cls_conf: 0.99983
+	+ Label: vein, obj_conf: 0.95358, cls_conf: 0.99937
+(15) Image: 'data/custom/images/phantom_20/5.jpg'
+	+ Label: vein, obj_conf: 0.97985, cls_conf: 0.99985
+	+ Label: vein, obj_conf: 0.97494, cls_conf: 0.99983
+	+ Label: vein, obj_conf: 0.95358, cls_conf: 0.99937
+(16) Image: 'data/custom/images/phantom_20/6.jpg'
+	+ Label: vein, obj_conf: 0.97588, cls_conf: 0.99979
+	+ Label: vein, obj_conf: 0.97192, cls_conf: 0.99979
+	+ Label: vein, obj_conf: 0.95964, cls_conf: 0.99951
+(17) Image: 'data/custom/images/phantom_20/7.jpg'
+	+ Label: vein, obj_conf: 0.97270, cls_conf: 0.99980
+	+ Label: vein, obj_conf: 0.97058, cls_conf: 0.99974
+	+ Label: vein, obj_conf: 0.95600, cls_conf: 0.99946
+(18) Image: 'data/custom/images/phantom_20/8.jpg'
+	+ Label: vein, obj_conf: 0.97188, cls_conf: 0.99979
+	+ Label: vein, obj_conf: 0.96547, cls_conf: 0.99968
+	+ Label: vein, obj_conf: 0.95231, cls_conf: 0.99937
+(19) Image: 'data/custom/images/phantom_20/9.jpg'
+	+ Label: vein, obj_conf: 0.97186, cls_conf: 0.99978
+	+ Label: vein, obj_conf: 0.96654, cls_conf: 0.99966
+	+ Label: vein, obj_conf: 0.94842, cls_conf: 0.99927

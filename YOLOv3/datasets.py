@@ -44,7 +44,7 @@ class ImageFolder(Dataset):
 
     def __getitem__(self, index):
         img_path = self.files[index % len(self.files)]
-        img = transforms.ToTensor()(Image.open(img_path)) # extract image as PyTorch tensor: C x H x W
+        img = transforms.ToTensor()(Image.open(img_path).convert('L')) # extract image as PyTorch tensor: 1 x H x W
         img, _ = pad_to_square(img, 0) # pad to square resolution
 
         # # Handle images with less than 3 channels
@@ -82,8 +82,8 @@ class ListDataset(Dataset):
     def __getitem__(self, index):
         ### --- get image ---
         img_path = self.img_files[index % len(self.img_files)] 
-        # img = transforms.ToTensor()(Image.open(img_path).convert('RGB')) 
-        img = transforms.ToTensor()(Image.open(img_path)) # extract image as PyTorch tensor
+        img = transforms.ToTensor()(Image.open(img_path).convert('L'))
+        # img = transforms.ToTensor()(Image.open(img_path))
         # # Handle images with less than 3 channels
         # if len(img.shape) != 3:
         #     img = img.unsqueeze(0) # insert one dimension in axis 0

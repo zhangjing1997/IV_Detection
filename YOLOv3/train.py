@@ -1,17 +1,11 @@
 from __future__ import division
-
-from yolo_model import Darknet
-from utils import load_classes, parse_data_config, weights_init_normal
-from datasets import ListDataset
-from test import evaluate
-
-from terminaltables import AsciiTable
-
 import os
 import sys
 import time
 import datetime
 import argparse
+
+from terminaltables import AsciiTable
 
 import torch
 from torch.utils.data import DataLoader
@@ -19,6 +13,11 @@ from torchvision import datasets
 from torchvision import transforms
 from torch.autograd import Variable
 import torch.optim as optim
+
+from yolo_model import Darknet
+from utils import load_classes, parse_data_config, weights_init_normal, Logger
+from datasets import ListDataset
+from test import evaluate
 
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -46,18 +45,19 @@ if __name__ == "__main__":
     parser.add_argument("--multiscale_training", default=True, help="allow for multi-scale training")
 
     opt = parser.parse_args()
-    print(opt)
 
-    # logger = Logger("logs")
+    sys.stdout = Logger(f'logs/train/{opt.dataset_name}_{opt.epochs}ep_{opt.batch_size}bs.log') # logfile to save this script printing
+    print(opt)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     checkpoint_dir = opt.checkpoints_dir + '/' + opt.dataset_name
     os.makedirs(checkpoint_dir, exist_ok=True)
 
     # Get data configuration
     data_config = parse_data_config(opt.dataset_name, opt.data_config)
-    train_path = data_config["train"] # data/custom/train.txt
-    valid_path = data_config["valid"] # data/custom/valid.txt
-    class_names = load_classes(data_config["names"]) # data/custom/classes.names
+    train_path = data_config["train"]
+    valid_path = data_config["valid"]
+    class_names = load_classes(data_config["names"])
+    print(f' train_path: {train_path}\n valid_path: {valid_path}\n class_names: {data_config["names"]}')
 
     # Initiate model
     model = Darknet(opt.model_def).to(device)
@@ -71,7 +71,6 @@ if __name__ == "__main__":
             model.load_darknet_weights(opt.pretrained_weights) # load darknet backbone
 
     # Set dataloader
-    print(f'train_path: {train_path}')
     dataset = ListDataset(opt.dataset_name, train_path, augment=True, multiscale=opt.multiscale_training)
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=opt.batch_size, shuffle=True, num_workers=opt.n_cpu, pin_memory=True, collate_fn=dataset.collate_fn)
 

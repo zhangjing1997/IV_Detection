@@ -5,12 +5,12 @@ build
 .git
 *.egg-info
 dist
-output/*.png
 data/coco
 data/custom/images/*/*.jpg
 data/custom/labels/*/*.txt
 data/custom/labels/*/*.xml
 checkpoints/*/*.pth
+output/*/*.jpg
 backup
 weights/*.weights
 weights/darknet*

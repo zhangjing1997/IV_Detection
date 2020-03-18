@@ -1,0 +1,280 @@
+Namespace(batch_size=1, checkpoint_model=None, class_path='data/custom/classes.names', conf_thres=0.85, dataset_name='invivo_91', image_folder='data/custom/images/invivo_91', img_size=416, model_def='config/yolov3-custom.cfg', n_cpu=1, nms_thres=0.35, output_dir='output', weights_path='checkpoints/invivo_91/yolov3_ckpt_34.pth')
+
+Performing object detection:
+	+ Batch 0, Inference Time: 0:00:01.674002
+	+ Batch 1, Inference Time: 0:00:00.034535
+	+ Batch 2, Inference Time: 0:00:00.033914
+	+ Batch 3, Inference Time: 0:00:00.033849
+	+ Batch 4, Inference Time: 0:00:00.033809
+	+ Batch 5, Inference Time: 0:00:00.033840
+	+ Batch 6, Inference Time: 0:00:00.033858
+	+ Batch 7, Inference Time: 0:00:00.033671
+	+ Batch 8, Inference Time: 0:00:00.024886
+	+ Batch 9, Inference Time: 0:00:00.025488
+	+ Batch 10, Inference Time: 0:00:00.025326
+	+ Batch 11, Inference Time: 0:00:00.025089
+	+ Batch 12, Inference Time: 0:00:00.024968
+	+ Batch 13, Inference Time: 0:00:00.026266
+	+ Batch 14, Inference Time: 0:00:00.025791
+	+ Batch 15, Inference Time: 0:00:00.025439
+	+ Batch 16, Inference Time: 0:00:00.025196
+	+ Batch 17, Inference Time: 0:00:00.026344
+	+ Batch 18, Inference Time: 0:00:00.025212
+	+ Batch 19, Inference Time: 0:00:00.024963
+	+ Batch 20, Inference Time: 0:00:00.024955
+	+ Batch 21, Inference Time: 0:00:00.025961
+	+ Batch 22, Inference Time: 0:00:00.025415
+	+ Batch 23, Inference Time: 0:00:00.025007
+	+ Batch 24, Inference Time: 0:00:00.025057
+	+ Batch 25, Inference Time: 0:00:00.025895
+	+ Batch 26, Inference Time: 0:00:00.025471
+	+ Batch 27, Inference Time: 0:00:00.025135
+	+ Batch 28, Inference Time: 0:00:00.024991
+	+ Batch 29, Inference Time: 0:00:00.025698
+	+ Batch 30, Inference Time: 0:00:00.025287
+	+ Batch 31, Inference Time: 0:00:00.025142
+	+ Batch 32, Inference Time: 0:00:00.024916
+	+ Batch 33, Inference Time: 0:00:00.025879
+	+ Batch 34, Inference Time: 0:00:00.025446
+	+ Batch 35, Inference Time: 0:00:00.025062
+	+ Batch 36, Inference Time: 0:00:00.026016
+	+ Batch 37, Inference Time: 0:00:00.026448
+	+ Batch 38, Inference Time: 0:00:00.031478
+	+ Batch 39, Inference Time: 0:00:00.028405
+	+ Batch 40, Inference Time: 0:00:00.025204
+	+ Batch 41, Inference Time: 0:00:00.025163
+	+ Batch 42, Inference Time: 0:00:00.025703
+	+ Batch 43, Inference Time: 0:00:00.025645
+	+ Batch 44, Inference Time: 0:00:00.025362
+	+ Batch 45, Inference Time: 0:00:00.025362
+	+ Batch 46, Inference Time: 0:00:00.026012
+	+ Batch 47, Inference Time: 0:00:00.025625
+	+ Batch 48, Inference Time: 0:00:00.025131
+	+ Batch 49, Inference Time: 0:00:00.024447
+	+ Batch 50, Inference Time: 0:00:00.025963
+	+ Batch 51, Inference Time: 0:00:00.025650
+	+ Batch 52, Inference Time: 0:00:00.025250
+	+ Batch 53, Inference Time: 0:00:00.025041
+	+ Batch 54, Inference Time: 0:00:00.025869
+	+ Batch 55, Inference Time: 0:00:00.025440
+	+ Batch 56, Inference Time: 0:00:00.025208
+	+ Batch 57, Inference Time: 0:00:00.025141
+	+ Batch 58, Inference Time: 0:00:00.025857
+	+ Batch 59, Inference Time: 0:00:00.025445
+	+ Batch 60, Inference Time: 0:00:00.025141
+	+ Batch 61, Inference Time: 0:00:00.025175
+	+ Batch 62, Inference Time: 0:00:00.025881
+	+ Batch 63, Inference Time: 0:00:00.025425
+	+ Batch 64, Inference Time: 0:00:00.025061
+	+ Batch 65, Inference Time: 0:00:00.025016
+	+ Batch 66, Inference Time: 0:00:00.025911
+	+ Batch 67, Inference Time: 0:00:00.025476
+	+ Batch 68, Inference Time: 0:00:00.025077
+	+ Batch 69, Inference Time: 0:00:00.025015
+	+ Batch 70, Inference Time: 0:00:00.025858
+	+ Batch 71, Inference Time: 0:00:00.025427
+	+ Batch 72, Inference Time: 0:00:00.025167
+	+ Batch 73, Inference Time: 0:00:00.025182
+	+ Batch 74, Inference Time: 0:00:00.025754
+	+ Batch 75, Inference Time: 0:00:00.025339
+	+ Batch 76, Inference Time: 0:00:00.025072
+	+ Batch 77, Inference Time: 0:00:00.025176
+	+ Batch 78, Inference Time: 0:00:00.025749
+	+ Batch 79, Inference Time: 0:00:00.025265
+	+ Batch 80, Inference Time: 0:00:00.025270
+	+ Batch 81, Inference Time: 0:00:00.025304
+	+ Batch 82, Inference Time: 0:00:00.025697
+	+ Batch 83, Inference Time: 0:00:00.025333
+	+ Batch 84, Inference Time: 0:00:00.025167
+	+ Batch 85, Inference Time: 0:00:00.025500
+	+ Batch 86, Inference Time: 0:00:00.025497
+	+ Batch 87, Inference Time: 0:00:00.025125
+	+ Batch 88, Inference Time: 0:00:00.025188
+	+ Batch 89, Inference Time: 0:00:00.025411
+
+Saving images:
+(0) Image: 'data/custom/images/invivo_91/0.jpg'
+	+ Label: vein, obj_conf: 0.85832, cls_conf: 0.99909
+(1) Image: 'data/custom/images/invivo_91/1.jpg'
+	+ Label: vein, obj_conf: 0.93314, cls_conf: 0.99965
+(2) Image: 'data/custom/images/invivo_91/100.jpg'
+	+ Label: vein, obj_conf: 0.99260, cls_conf: 0.99995
+(3) Image: 'data/custom/images/invivo_91/101.jpg'
+	+ Label: vein, obj_conf: 0.95991, cls_conf: 0.99976
+(4) Image: 'data/custom/images/invivo_91/102.jpg'
+	+ Label: vein, obj_conf: 0.97137, cls_conf: 0.99974
+(5) Image: 'data/custom/images/invivo_91/103.jpg'
+	+ Label: vein, obj_conf: 0.97305, cls_conf: 0.99985
+(6) Image: 'data/custom/images/invivo_91/104.jpg'
+	+ Label: vein, obj_conf: 0.96526, cls_conf: 0.99979
+(7) Image: 'data/custom/images/invivo_91/105.jpg'
+	+ Label: vein, obj_conf: 0.97856, cls_conf: 0.99988
+(8) Image: 'data/custom/images/invivo_91/106.jpg'
+	+ Label: vein, obj_conf: 0.98621, cls_conf: 0.99987
+(9) Image: 'data/custom/images/invivo_91/107.jpg'
+	+ Label: vein, obj_conf: 0.97418, cls_conf: 0.99980
+(10) Image: 'data/custom/images/invivo_91/108.jpg'
+	+ Label: vein, obj_conf: 0.97591, cls_conf: 0.99972
+(11) Image: 'data/custom/images/invivo_91/109.jpg'
+	+ Label: vein, obj_conf: 0.97070, cls_conf: 0.99936
+(12) Image: 'data/custom/images/invivo_91/110.jpg'
+	+ Label: vein, obj_conf: 0.96970, cls_conf: 0.99951
+(13) Image: 'data/custom/images/invivo_91/111.jpg'
+	+ Label: vein, obj_conf: 0.92306, cls_conf: 0.99883
+	+ Label: vein, obj_conf: 0.90329, cls_conf: 0.99951
+(14) Image: 'data/custom/images/invivo_91/113.jpg'
+	+ Label: vein, obj_conf: 0.97698, cls_conf: 0.99962
+	+ Label: vein, obj_conf: 0.95473, cls_conf: 0.99968
+(15) Image: 'data/custom/images/invivo_91/115.jpg'
+	+ Label: vein, obj_conf: 0.97661, cls_conf: 0.99986
+	+ Label: vein, obj_conf: 0.97401, cls_conf: 0.99985
+(16) Image: 'data/custom/images/invivo_91/116.jpg'
+	+ Label: vein, obj_conf: 0.96604, cls_conf: 0.99973
+	+ Label: vein, obj_conf: 0.96009, cls_conf: 0.99972
+(17) Image: 'data/custom/images/invivo_91/117.jpg'
+	+ Label: vein, obj_conf: 0.96993, cls_conf: 0.99933
+	+ Label: vein, obj_conf: 0.96574, cls_conf: 0.99927
+	+ Label: vein, obj_conf: 0.87980, cls_conf: 0.99828
+(18) Image: 'data/custom/images/invivo_91/12.jpg'
+	+ Label: vein, obj_conf: 0.97647, cls_conf: 0.99979
+(19) Image: 'data/custom/images/invivo_91/122.jpg'
+	+ Label: vein, obj_conf: 0.98306, cls_conf: 0.99988
+(20) Image: 'data/custom/images/invivo_91/123.jpg'
+	+ Label: vein, obj_conf: 0.97759, cls_conf: 0.99972
+(21) Image: 'data/custom/images/invivo_91/124.jpg'
+	+ Label: vein, obj_conf: 0.98350, cls_conf: 0.99978
+(22) Image: 'data/custom/images/invivo_91/125.jpg'
+	+ Label: vein, obj_conf: 0.95564, cls_conf: 0.99933
+(23) Image: 'data/custom/images/invivo_91/127.jpg'
+	+ Label: vein, obj_conf: 0.97621, cls_conf: 0.99980
+(24) Image: 'data/custom/images/invivo_91/128.jpg'
+	+ Label: vein, obj_conf: 0.96054, cls_conf: 0.99972
+(25) Image: 'data/custom/images/invivo_91/129.jpg'
+	+ Label: vein, obj_conf: 0.93677, cls_conf: 0.99971
+(26) Image: 'data/custom/images/invivo_91/131.jpg'
+	+ Label: vein, obj_conf: 0.98583, cls_conf: 0.99985
+(27) Image: 'data/custom/images/invivo_91/132.jpg'
+	+ Label: vein, obj_conf: 0.98470, cls_conf: 0.99988
+(28) Image: 'data/custom/images/invivo_91/133.jpg'
+	+ Label: vein, obj_conf: 0.98437, cls_conf: 0.99988
+(29) Image: 'data/custom/images/invivo_91/135.jpg'
+	+ Label: vein, obj_conf: 0.98437, cls_conf: 0.99990
+(30) Image: 'data/custom/images/invivo_91/14.jpg'
+	+ Label: vein, obj_conf: 0.86155, cls_conf: 0.99958
+(31) Image: 'data/custom/images/invivo_91/15.jpg'
+	+ Label: vein, obj_conf: 0.97163, cls_conf: 0.99956
+(32) Image: 'data/custom/images/invivo_91/151.jpg'
+	+ Label: vein, obj_conf: 0.98501, cls_conf: 0.99969
+(33) Image: 'data/custom/images/invivo_91/152.jpg'
+	+ Label: vein, obj_conf: 0.97676, cls_conf: 0.99991
+(34) Image: 'data/custom/images/invivo_91/153.jpg'
+	+ Label: vein, obj_conf: 0.94635, cls_conf: 0.99936
+(35) Image: 'data/custom/images/invivo_91/154.jpg'
+	+ Label: vein, obj_conf: 0.97962, cls_conf: 0.99981
+(36) Image: 'data/custom/images/invivo_91/157.jpg'
+	+ Label: vein, obj_conf: 0.98845, cls_conf: 0.99992
+(37) Image: 'data/custom/images/invivo_91/158.jpg'
+	+ Label: vein, obj_conf: 0.98443, cls_conf: 0.99984
+(38) Image: 'data/custom/images/invivo_91/159.jpg'
+	+ Label: vein, obj_conf: 0.94295, cls_conf: 0.99948
+(39) Image: 'data/custom/images/invivo_91/160.jpg'
+	+ Label: vein, obj_conf: 0.96457, cls_conf: 0.99954
+(40) Image: 'data/custom/images/invivo_91/18.jpg'
+	+ Label: vein, obj_conf: 0.96879, cls_conf: 0.99973
+(41) Image: 'data/custom/images/invivo_91/19.jpg'
+	+ Label: vein, obj_conf: 0.98536, cls_conf: 0.99993
+(42) Image: 'data/custom/images/invivo_91/20.jpg'
+	+ Label: vein, obj_conf: 0.96724, cls_conf: 0.99977
+(43) Image: 'data/custom/images/invivo_91/21.jpg'
+	+ Label: vein, obj_conf: 0.98408, cls_conf: 0.99971
+(44) Image: 'data/custom/images/invivo_91/22.jpg'
+	+ Label: vein, obj_conf: 0.96744, cls_conf: 0.99981
+(45) Image: 'data/custom/images/invivo_91/23.jpg'
+	+ Label: vein, obj_conf: 0.98744, cls_conf: 0.99978
+(46) Image: 'data/custom/images/invivo_91/24.jpg'
+	+ Label: vein, obj_conf: 0.97653, cls_conf: 0.99960
+(47) Image: 'data/custom/images/invivo_91/26.jpg'
+	+ Label: vein, obj_conf: 0.98643, cls_conf: 0.99991
+(48) Image: 'data/custom/images/invivo_91/27.jpg'
+	+ Label: vein, obj_conf: 0.97584, cls_conf: 0.99956
+(49) Image: 'data/custom/images/invivo_91/3.jpg'
+(50) Image: 'data/custom/images/invivo_91/30.jpg'
+	+ Label: vein, obj_conf: 0.96021, cls_conf: 0.99963
+(51) Image: 'data/custom/images/invivo_91/4.jpg'
+	+ Label: vein, obj_conf: 0.96925, cls_conf: 0.99979
+(52) Image: 'data/custom/images/invivo_91/41.jpg'
+	+ Label: vein, obj_conf: 0.97864, cls_conf: 0.99958
+(53) Image: 'data/custom/images/invivo_91/42.jpg'
+	+ Label: vein, obj_conf: 0.98321, cls_conf: 0.99994
+(54) Image: 'data/custom/images/invivo_91/43.jpg'
+	+ Label: vein, obj_conf: 0.98664, cls_conf: 0.99977
+(55) Image: 'data/custom/images/invivo_91/44.jpg'
+	+ Label: vein, obj_conf: 0.97388, cls_conf: 0.99991
+(56) Image: 'data/custom/images/invivo_91/45.jpg'
+	+ Label: vein, obj_conf: 0.97689, cls_conf: 0.99992
+(57) Image: 'data/custom/images/invivo_91/46.jpg'
+	+ Label: vein, obj_conf: 0.98479, cls_conf: 0.99996
+(58) Image: 'data/custom/images/invivo_91/47.jpg'
+	+ Label: vein, obj_conf: 0.97422, cls_conf: 0.99952
+(59) Image: 'data/custom/images/invivo_91/48.jpg'
+	+ Label: vein, obj_conf: 0.97973, cls_conf: 0.99994
+(60) Image: 'data/custom/images/invivo_91/49.jpg'
+	+ Label: vein, obj_conf: 0.99188, cls_conf: 0.99998
+(61) Image: 'data/custom/images/invivo_91/50.jpg'
+	+ Label: vein, obj_conf: 0.99130, cls_conf: 0.99998
+(62) Image: 'data/custom/images/invivo_91/54.jpg'
+	+ Label: vein, obj_conf: 0.98299, cls_conf: 0.99989
+(63) Image: 'data/custom/images/invivo_91/55.jpg'
+	+ Label: vein, obj_conf: 0.99054, cls_conf: 0.99983
+(64) Image: 'data/custom/images/invivo_91/56.jpg'
+	+ Label: vein, obj_conf: 0.98984, cls_conf: 0.99981
+(65) Image: 'data/custom/images/invivo_91/58.jpg'
+	+ Label: vein, obj_conf: 0.98698, cls_conf: 0.99978
+(66) Image: 'data/custom/images/invivo_91/59.jpg'
+	+ Label: vein, obj_conf: 0.99028, cls_conf: 0.99985
+(67) Image: 'data/custom/images/invivo_91/60.jpg'
+	+ Label: vein, obj_conf: 0.98508, cls_conf: 0.99990
+(68) Image: 'data/custom/images/invivo_91/61.jpg'
+	+ Label: vein, obj_conf: 0.97669, cls_conf: 0.99991
+(69) Image: 'data/custom/images/invivo_91/64.jpg'
+	+ Label: vein, obj_conf: 0.97281, cls_conf: 0.99988
+(70) Image: 'data/custom/images/invivo_91/68.jpg'
+	+ Label: vein, obj_conf: 0.98928, cls_conf: 0.99995
+(71) Image: 'data/custom/images/invivo_91/69.jpg'
+	+ Label: vein, obj_conf: 0.99399, cls_conf: 0.99992
+(72) Image: 'data/custom/images/invivo_91/70.jpg'
+	+ Label: vein, obj_conf: 0.99115, cls_conf: 0.99987
+(73) Image: 'data/custom/images/invivo_91/79.jpg'
+	+ Label: vein, obj_conf: 0.98513, cls_conf: 0.99995
+(74) Image: 'data/custom/images/invivo_91/80.jpg'
+	+ Label: vein, obj_conf: 0.98199, cls_conf: 0.99965
+(75) Image: 'data/custom/images/invivo_91/84.jpg'
+	+ Label: vein, obj_conf: 0.98949, cls_conf: 0.99994
+(76) Image: 'data/custom/images/invivo_91/85.jpg'
+	+ Label: vein, obj_conf: 0.98742, cls_conf: 0.99995
+(77) Image: 'data/custom/images/invivo_91/86.jpg'
+	+ Label: vein, obj_conf: 0.98544, cls_conf: 0.99992
+(78) Image: 'data/custom/images/invivo_91/87.jpg'
+	+ Label: vein, obj_conf: 0.98187, cls_conf: 0.99994
+(79) Image: 'data/custom/images/invivo_91/88.jpg'
+	+ Label: vein, obj_conf: 0.98109, cls_conf: 0.99992
+(80) Image: 'data/custom/images/invivo_91/89.jpg'
+	+ Label: vein, obj_conf: 0.97918, cls_conf: 0.99989
+(81) Image: 'data/custom/images/invivo_91/90.jpg'
+	+ Label: vein, obj_conf: 0.99098, cls_conf: 0.99996
+(82) Image: 'data/custom/images/invivo_91/91.jpg'
+	+ Label: vein, obj_conf: 0.99024, cls_conf: 0.99986
+(83) Image: 'data/custom/images/invivo_91/92.jpg'
+	+ Label: vein, obj_conf: 0.99285, cls_conf: 0.99996
+(84) Image: 'data/custom/images/invivo_91/93.jpg'
+	+ Label: vein, obj_conf: 0.98002, cls_conf: 0.99981
+(85) Image: 'data/custom/images/invivo_91/95.jpg'
+	+ Label: vein, obj_conf: 0.99336, cls_conf: 0.99997
+(86) Image: 'data/custom/images/invivo_91/96.jpg'
+	+ Label: vein, obj_conf: 0.99661, cls_conf: 0.99999
+(87) Image: 'data/custom/images/invivo_91/97.jpg'
+	+ Label: vein, obj_conf: 0.99637, cls_conf: 0.99999
+(88) Image: 'data/custom/images/invivo_91/98.jpg'
+	+ Label: vein, obj_conf: 0.99516, cls_conf: 0.99997
+(89) Image: 'data/custom/images/invivo_91/99.jpg'
+	+ Label: vein, obj_conf: 0.99438, cls_conf: 0.99997

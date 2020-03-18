@@ -100,20 +100,31 @@ The images look like the following one because the deoxygenated haemoglobin in v
   - solution: increase `conf_thres` from 0.8 to 0.85 and decrease `nms_thres` from 0.4 to 0.35.
 - tried to solve the inconsistency between input image size and saved output image size
   - problem: originally, (504, 747) vs. (254, 269).
-  - solution: by checking the code in `detect.py`, found it probably due to using matplotlib to add bbox as matplotlib.patches to pyplot; -> so, just resize the saved ouput image to input image size and replace the old one.
+    - solution: by checking the code in `detect.py`, found it probably due to using matplotlib to add bbox as matplotlib.patches to pyplot; -> so, just resize the saved ouput image to input image size and replace the old one.
   - but acutal problem: guessed the real reason is that some predicted bbox exceeds the image edges, which made matplotlib adaptively add white paddings around the plot while adding the created patches for the bboxes.
-  - solution: modify the patches' coordinates by considering edges exceeding situations and the white paddings are not that obvious. But, they still exist.
+    - solution: modify the patches' coordinates by considering edges exceeding situations and the white paddings are not that obvious. But, they still exist.
+- improved the visualization of saving resulted image plots by choosing left_top or right_bottom corner to put text
 - wrote a sinle image prediction code block in `eda_yolo.ipynb`
 
 ### Mar 17
 - finished labelling 91 invivo image samples from its original dataset with 190 samples.
 - built a raw labelled data preprocessing pipeline for unet and yolo, which will help quickly replicate on another dataset with two methods.
-  
+
+### Mar 18
+- built a shared YOLO training pipeline by modifying/adapting codes in dataset processing and files/dir setup
+- retrain on phantom_20 and change `checkpoint_interval` from 1 to 2 and produce detect results into `ouput/phantom`
+- simutaneously redirect printing outputs on console produced by `train.py` and `detect.py` into appropriate log files
+- train yolo on invivo_91 and detect -> save model checkpoints and output image with bbox while also saving the print log on console into log files in `logs`
+  - problem: invivo_91 images are 3-channel.
+    - solution: unified the data processing pipeline by using `Image.open(path).convert('L')` in both `ImageFolder` and `ListDataset` in `datasets.py`. 
+  - problem: found `126.jpg` does not have labelled bbox but mask which cause training interrupted due to failure on building targets.
+    - solution: delete this sample and regenerate train.txt/valid.txt, which made invivo_91 actually has only 90 images rather than 90.
+
 ### Current Result
 <p align="center"> <img src="./assets/output_yolo.jpg" alt="drawing" height="80%" width="80%"/> </p>
 
 ### Next
-- trained both unet and yolo on invivo_91
+- train unet on invivo_91 and detect
 - evaluated them into demo results and check
 - write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy
 - If necessary, consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils.

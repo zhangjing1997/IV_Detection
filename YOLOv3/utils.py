@@ -1,4 +1,5 @@
 from __future__ import division
+import sys
 import math
 import time
 import tqdm
@@ -65,20 +66,36 @@ def load_classes(path):
     return names
 
 #### -------- Tensorboard Utils --------
+# class Logger(object):
+#     def __init__(self, log_dir):
+#         """Create a summary writer logging to log_dir."""
+#         self.writer = tf.summary.FileWriter(log_dir)
+
+#     def scalar_summary(self, tag, value, step):
+#         """Log a scalar variable."""
+#         summary = tf.Summary(value=[tf.Summary.Value(tag=tag, simple_value=value)])
+#         self.writer.add_summary(summary, step)
+
+#     def list_of_scalars_summary(self, tag_value_pairs, step):
+#         """Log scalar variables."""
+#         summary = tf.Summary(value=[tf.Summary.Value(tag=tag, simple_value=value) for tag, value in tag_value_pairs])
+#         self.writer.add_summary(summary, step)
+
 class Logger(object):
-    def __init__(self, log_dir):
-        """Create a summary writer logging to log_dir."""
-        self.writer = tf.summary.FileWriter(log_dir)
+    """
+    make pring statement simultaneously print onto console and into a logfile.
+    """
+    def __init__(self, logfile_name):
+        self.terminal = sys.stdout
+        self.log = open(logfile_name, "w")
 
-    def scalar_summary(self, tag, value, step):
-        """Log a scalar variable."""
-        summary = tf.Summary(value=[tf.Summary.Value(tag=tag, simple_value=value)])
-        self.writer.add_summary(summary, step)
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)  
 
-    def list_of_scalars_summary(self, tag_value_pairs, step):
-        """Log scalar variables."""
-        summary = tf.Summary(value=[tf.Summary.Value(tag=tag, simple_value=value) for tag, value in tag_value_pairs])
-        self.writer.add_summary(summary, step)
+    def flush(self):
+        # this flush method is needed for python 3 compatibility. this handles the flush command by doing nothing. you might want to specify some extra behavior here.
+        pass
 
 #### -------- Model Training Utils --------
 def to_cpu(tensor):
