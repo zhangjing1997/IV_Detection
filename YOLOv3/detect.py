@@ -28,8 +28,8 @@ warnings.filterwarnings("ignore", category=UserWarning)
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--dataset_name", default="phantom_20", help="the name of dataset used for test")
-    parser.add_argument("--output_dir", default="output", help="parent directory of saving test results")
+    parser.add_argument("--dataset_name", type=str, default="phantom_20", help="the name of dataset used for test")
+    parser.add_argument("--output_dir", type=str, default="output", help="parent directory of saving test results")
     parser.add_argument("--image_folder", type=str, default="data/samples", help="path to dataset")
 
     parser.add_argument("--model_def", type=str, default="config/yolov3-custom.cfg", help="path to model definition file")

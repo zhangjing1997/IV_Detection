@@ -60,10 +60,7 @@ The images look like the following one because the deoxygenated haemoglobin in v
 ### 初步结果
 <p align="center"> <img src="./assets/output_unet.jpg" alt="drawing" height="90%" width="90%"/> </p>
 
-### Next:
-- 标Img_Invivo的200张。尽量给一个比较平滑的外边界，不要太在意边角。label的区域可以比实际的多一圈。
-- 在新标的数据上，训练，完了统计evaluation performance。
-  
+### Next:  
 - 加augmentation
 - 尝试调整loss function
 - 加weight matrix以给边界上的点更高权重
@@ -119,14 +116,16 @@ The images look like the following one because the deoxygenated haemoglobin in v
     - solution: unified the data processing pipeline by using `Image.open(path).convert('L')` in both `ImageFolder` and `ListDataset` in `datasets.py`. 
   - problem: found `126.jpg` does not have labelled bbox but mask which cause training interrupted due to failure on building targets.
     - solution: delete this sample and regenerate train.txt/valid.txt, which made invivo_91 actually has only 90 images rather than 90.
+- train unet on invivo_91 by `train.py` and evaluate to produce results into `output` by `segment.py` and check
+  - modified large parts of UNet project codes, following the pipeline idea of YOLO
+
 
 ### Current Result
 <p align="center"> <img src="./assets/output_yolo.jpg" alt="drawing" height="80%" width="80%"/> </p>
 
 ### Next
-- train unet on invivo_91 and detect
-- evaluated them into demo results and check
-- write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy
+- write util function to produce img/visualization comparison among input vs. label vs. prediction
+- write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy -> using detect.py for YOLO and segment.py for UNet -> enrich printing info
 - If necessary, consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils.
 - **Post-Processing - Active Contour**:
   - find active contour code on github, etc.

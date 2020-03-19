@@ -1,0 +1,43 @@
+Namespace(batch_size=1, checkpoints_dir='checkpoints', dataset_name='invivo_91', down_scale=1.0, epochs=30, learning_rate=0.001, pretrained_weights=None, valid_ratio=0.2)
+ Using device cuda
+ Network:
+ 	1 input channels
+ 	1 output channels (classes)
+ 	Bilinear upscaling
+imgs_dir: data/imgs/invivo_91 masks_dir: data/masks/invivo_91
+n_val: 18 n_train: 72
+-----
+ Start training:
+epochs: 30 	 batch size: 1 	 learning rate: 0.001 	
+training size: 72 	 validation size: 18 	 checkpoints_dir: checkpoints 	 images downscale: 1.0
+-----
+epoch:  0 training loss(cross_entropy): 0.096693 	 validation score(dice coeff): 0.000000
+epoch:  1 training loss(cross_entropy): 0.038658 	 validation score(dice coeff): 0.123884
+epoch:  2 training loss(cross_entropy): 0.028498 	 validation score(dice coeff): 0.732618
+epoch:  3 training loss(cross_entropy): 0.023145 	 validation score(dice coeff): 0.567674
+epoch:  4 training loss(cross_entropy): 0.018655 	 validation score(dice coeff): 0.232164
+epoch:  5 training loss(cross_entropy): 0.015753 	 validation score(dice coeff): 0.006193
+epoch:  6 training loss(cross_entropy): 0.015090 	 validation score(dice coeff): 0.829695
+epoch:  7 training loss(cross_entropy): 0.011917 	 validation score(dice coeff): 0.766515
+epoch:  8 training loss(cross_entropy): 0.008649 	 validation score(dice coeff): 0.068381
+epoch:  9 training loss(cross_entropy): 0.010817 	 validation score(dice coeff): 0.071591
+epoch: 10 training loss(cross_entropy): 0.007825 	 validation score(dice coeff): 0.574047
+epoch: 11 training loss(cross_entropy): 0.011376 	 validation score(dice coeff): 0.630643
+epoch: 12 training loss(cross_entropy): 0.008568 	 validation score(dice coeff): 0.564814
+epoch: 13 training loss(cross_entropy): 0.006146 	 validation score(dice coeff): 0.553875
+epoch: 14 training loss(cross_entropy): 0.008963 	 validation score(dice coeff): 0.559578
+epoch: 15 training loss(cross_entropy): 0.005473 	 validation score(dice coeff): 0.700599
+epoch: 16 training loss(cross_entropy): 0.007596 	 validation score(dice coeff): 0.044581
+epoch: 17 training loss(cross_entropy): 0.008238 	 validation score(dice coeff): 0.526263
+epoch: 18 training loss(cross_entropy): 0.006847 	 validation score(dice coeff): 0.655596
+epoch: 19 training loss(cross_entropy): 0.006416 	 validation score(dice coeff): 0.630503
+epoch: 20 training loss(cross_entropy): 0.005175 	 validation score(dice coeff): 0.810896
+epoch: 21 training loss(cross_entropy): 0.005041 	 validation score(dice coeff): 0.495905
+epoch: 22 training loss(cross_entropy): 0.004370 	 validation score(dice coeff): 0.494037
+epoch: 23 training loss(cross_entropy): 0.006644 	 validation score(dice coeff): 0.807432
+epoch: 24 training loss(cross_entropy): 0.008654 	 validation score(dice coeff): 0.601119
+epoch: 25 training loss(cross_entropy): 0.004957 	 validation score(dice coeff): 0.569862
+epoch: 26 training loss(cross_entropy): 0.004280 	 validation score(dice coeff): 0.547031
+epoch: 27 training loss(cross_entropy): 0.004438 	 validation score(dice coeff): 0.611753
+epoch: 28 training loss(cross_entropy): 0.003801 	 validation score(dice coeff): 0.758421
+epoch: 29 training loss(cross_entropy): 0.009218 	 validation score(dice coeff): 0.559619

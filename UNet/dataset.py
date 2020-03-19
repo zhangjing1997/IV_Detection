@@ -1,5 +1,5 @@
+import os
 from os.path import splitext
-from os import listdir
 import numpy as np
 from glob import glob
 import torch
@@ -15,9 +15,8 @@ class BasicDataset(Dataset):
         self.scale = scale
         assert 0 < scale <= 1, 'Scale must be between 0 and 1'
 
-        self.ids = [splitext(file)[0] for file in listdir(imgs_dir)
-                    if not file.startswith('.')]
-        logging.info(f'Creating dataset with {len(self.ids)} examples')
+        self.ids = [splitext(file)[0] for file in os.listdir(imgs_dir) if file.endswith('.jpg')]
+        logging.info(f'creating dataset with {len(self.ids)} examples')
 
     def __len__(self):
         return len(self.ids)
@@ -27,30 +26,26 @@ class BasicDataset(Dataset):
         w, h = pil_img.size
         newW, newH = int(scale * w), int(scale * h)
         assert newW > 0 and newH > 0, 'Scale is too small'
-        pil_img = pil_img.resize((newW, newH))
+        pil_img = pil_img.resize((newW, newH)) # resize
 
-        img_nd = np.array(pil_img)
-
-        # WH to WHC
-        if len(img_nd.shape) == 2:
-            img_nd = np.expand_dims(img_nd, axis=2)
-        # WHC to CWH
-        img_trans = img_nd.transpose((2, 0, 1))
-        # normalization
+        img_np = np.array(pil_img) # pil image to numpy array
+        if len(img_np.shape) == 2:
+            img_np = np.expand_dims(img_np, axis=2) # HW to HWC
+        img_trans = img_np.transpose((2, 0, 1)) # HWC to CHW
         if img_trans.max() > 1:
-            img_trans = img_trans / 255
-
+            img_trans = img_trans / 255 # normalization
+        
         return img_trans
 
     def __getitem__(self, i):
         idx = self.ids[i]
-        mask_file = self.masks_dir + idx + '.jpg'
-        img_file = self.imgs_dir + idx + '.jpg'
+        mask_file = os.path.join(self.masks_dir, idx + '.jpg')
+        img_file = os.path.join(self.imgs_dir, idx + '.jpg')
         # assert len(mask_file) == 1, f'Either no mask or multiple masks found for the ID {idx}: {mask_file}'
         # assert len(img_file) == 1, f'Either no image or multiple images found for the ID {idx}: {img_file}'
 
         mask = Image.open(mask_file)
-        img = Image.open(img_file)
+        img = Image.open(img_file).convert('L')
 
         assert img.size == mask.size, f'Image and mask {idx} should be the same size, but are {img.size} and {mask.size}'
 

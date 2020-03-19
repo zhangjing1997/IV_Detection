@@ -2,10 +2,9 @@ import torch
 import torch.nn.functional as F
 from tqdm import tqdm
 
-from dice_loss import dice_coeff
+from utils import dice_coeff
 
-
-def eval_net(net, loader, device, n_val):
+def evaluate(net, loader, device, n_val):
     """Evaluation without the densecrf with the dice coefficient"""
     net.eval()
     tot = 0
@@ -19,8 +18,11 @@ def eval_net(net, loader, device, n_val):
             mask_type = torch.float32 if net.n_classes == 1 else torch.long
             true_masks = true_masks.to(device=device, dtype=mask_type)
 
-            masks_pred = net(imgs)
-
+            # model forward
+            with torch.no_grad():
+                masks_pred = net(imgs)
+            
+            # evaluation stats
             for true_mask, pred in zip(true_masks, masks_pred):
                 pred = (pred > 0.5).float()
                 if net.n_classes > 1:

@@ -1,0 +1,43 @@
+Namespace(batch_size=1, checkpoints_dir='checkpoints', dataset_name='phantom_20', down_scale=1.0, epochs=30, learning_rate=0.001, pretrained_weights=None, valid_ratio=0.2)
+ Using device cuda
+ Network:
+ 	1 input channels
+ 	1 output channels (classes)
+ 	Bilinear upscaling
+imgs_dir: data/imgs/phantom_20 masks_dir: data/masks/phantom_20
+n_val: 4 n_train: 16
+-----
+ Start training:
+epochs: 30 	 batch size: 1 	 learning rate: 0.001 	
+training size: 16 	 validation size: 4 	 checkpoints_dir: checkpoints 	 images downscale: 1.0
+-----
+epoch:  0 training loss(cross_entropy): 0.190234 validation score(dice coeff): 0.000000
+epoch:  1 training loss(cross_entropy): 0.075286 validation score(dice coeff): 0.000000
+epoch:  2 training loss(cross_entropy): 0.048165 validation score(dice coeff): 0.225616
+epoch:  3 training loss(cross_entropy): 0.027412 validation score(dice coeff): 0.789491
+epoch:  4 training loss(cross_entropy): 0.021421 validation score(dice coeff): 0.921056
+epoch:  5 training loss(cross_entropy): 0.018151 validation score(dice coeff): 0.926894
+epoch:  6 training loss(cross_entropy): 0.016328 validation score(dice coeff): 0.489581
+epoch:  7 training loss(cross_entropy): 0.034508 validation score(dice coeff): 0.899852
+epoch:  8 training loss(cross_entropy): 0.016351 validation score(dice coeff): 0.914132
+epoch:  9 training loss(cross_entropy): 0.014124 validation score(dice coeff): 0.915685
+epoch: 10 training loss(cross_entropy): 0.013095 validation score(dice coeff): 0.928618
+epoch: 11 training loss(cross_entropy): 0.012268 validation score(dice coeff): 0.924241
+epoch: 12 training loss(cross_entropy): 0.011484 validation score(dice coeff): 0.920479
+epoch: 13 training loss(cross_entropy): 0.011703 validation score(dice coeff): 0.919265
+epoch: 14 training loss(cross_entropy): 0.024325 validation score(dice coeff): 0.284579
+epoch: 15 training loss(cross_entropy): 0.023049 validation score(dice coeff): 0.920520
+epoch: 16 training loss(cross_entropy): 0.011944 validation score(dice coeff): 0.913460
+epoch: 17 training loss(cross_entropy): 0.010849 validation score(dice coeff): 0.932644
+epoch: 18 training loss(cross_entropy): 0.010555 validation score(dice coeff): 0.929529
+epoch: 19 training loss(cross_entropy): 0.010207 validation score(dice coeff): 0.928361
+epoch: 20 training loss(cross_entropy): 0.009979 validation score(dice coeff): 0.932464
+epoch: 21 training loss(cross_entropy): 0.009717 validation score(dice coeff): 0.931471
+epoch: 22 training loss(cross_entropy): 0.011401 validation score(dice coeff): 0.924775
+epoch: 23 training loss(cross_entropy): 0.009436 validation score(dice coeff): 0.929048
+epoch: 24 training loss(cross_entropy): 0.009538 validation score(dice coeff): 0.931928
+epoch: 25 training loss(cross_entropy): 0.009015 validation score(dice coeff): 0.913196
+epoch: 26 training loss(cross_entropy): 0.009020 validation score(dice coeff): 0.936159
+epoch: 27 training loss(cross_entropy): 0.008802 validation score(dice coeff): 0.933384
+epoch: 28 training loss(cross_entropy): 0.008810 validation score(dice coeff): 0.931856
+epoch: 29 training loss(cross_entropy): 0.008953 validation score(dice coeff): 0.929315

@@ -30,20 +30,18 @@ def evaluate(model, dataset_name, path, iou_thres, conf_thres, nms_thres, img_si
 
     labels = []
     sample_metrics = []  # List of tuples (TP, confs, pred)
-    for batch_i, (_, imgs, targets) in enumerate(tqdm.tqdm(dataloader, desc="Detecting objects")):
-
-        # Extract labels
-        labels += targets[:, 1].tolist()
-        # Rescale target
-        targets[:, 2:] = xywh2xyxy(targets[:, 2:])
-        targets[:, 2:] *= img_size
-
+    for batch_i, (_, imgs, targets) in enumerate(tqdm.tqdm(dataloader, desc="Validation round")):
         imgs = Variable(imgs.type(Tensor), requires_grad=False)
+        labels += targets[:, 1].tolist() # extract labels
+        targets[:, 2:] = xywh2xyxy(targets[:, 2:])
+        targets[:, 2:] *= img_size # rescale target
 
+        # model forward
         with torch.no_grad():
             outputs = model(imgs)
             outputs = non_max_suppression(outputs, conf_thres=conf_thres, nms_thres=nms_thres)
-
+        
+        # evaluation stats
         sample_metrics += get_batch_statistics(outputs, targets, iou_threshold=iou_thres)
 
     # Concatenate sample statistics
@@ -55,7 +53,7 @@ def evaluate(model, dataset_name, path, iou_thres, conf_thres, nms_thres, img_si
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset_name", default="phantom_20", help="the name of dataset used for test")
+    parser.add_argument("--dataset_name", type=str, default="phantom_20", help="the name of dataset used for test")
 
     parser.add_argument("--model_def", type=str, default="config/yolov3.cfg", help="path to model definition file")
     parser.add_argument("--data_config", type=str, default="config/coco.data", help="path to data config file")
