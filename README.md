@@ -119,11 +119,17 @@ The images look like the following one because the deoxygenated haemoglobin in v
 - train unet on invivo_91 by `train.py` and evaluate to produce results into `output` by `segment.py` and check
   - modified large parts of UNet project codes, following the pipeline idea of YOLO
 
+### Mar 19
+- preliminarily tested performance (prediction speed) on two datasets for YOLOv3 and UNet
+  - prediction speed -> time that the model spent on prediction only, without other post-processing
+
 
 ### Current Result
 <p align="center"> <img src="./assets/output_yolo.jpg" alt="drawing" height="80%" width="80%"/> </p>
 
 ### Next
+- test prediction accuracy - util function to compute validation score
+- elegant print logs & args
 - write util function to produce img/visualization comparison among input vs. label vs. prediction
 - write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy -> using detect.py for YOLO and segment.py for UNet -> enrich printing info
 - modify two sub-projects' readme -> mainly describe usages

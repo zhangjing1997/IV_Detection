@@ -1,63 +1,88 @@
 Namespace(dataset_name='phantom_20', image_folder='data/imgs', mask_threshold=0.5, output_dir='output', save_results=1, scale=1.0, viz=0, weights_path='checkpoints/phantom_20/unet_ckpt_26.pth')
+
+Performing segmentation on ---> data/imgs/phantom_20/5.jpg ...
+inference_time: 1.5886499881744385s
+saved predicted mask to ---> output/phantom_20/5.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/17.jpg ...
+inference_time: 0.00431370735168457s
+saved predicted mask to ---> output/phantom_20/17.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/8.jpg ...
+inference_time: 0.004323005676269531s
+saved predicted mask to ---> output/phantom_20/8.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/18.jpg ...
+inference_time: 0.004288911819458008s
+saved predicted mask to ---> output/phantom_20/18.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/14.jpg ...
+inference_time: 0.0043408870697021484s
+saved predicted mask to ---> output/phantom_20/14.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/9.jpg ...
+inference_time: 0.004302501678466797s
+saved predicted mask to ---> output/phantom_20/9.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/13.jpg ...
+inference_time: 0.0050811767578125s
+saved predicted mask to ---> output/phantom_20/13.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/4.jpg ...
+inference_time: 0.0042994022369384766s
+saved predicted mask to ---> output/phantom_20/4.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/19.jpg ...
+inference_time: 0.004282712936401367s
+saved predicted mask to ---> output/phantom_20/19.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/3.jpg ...
+inference_time: 0.004308223724365234s
+saved predicted mask to ---> output/phantom_20/3.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/15.jpg ...
+inference_time: 0.004292488098144531s
+saved predicted mask to ---> output/phantom_20/15.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/10.jpg ...
+inference_time: 0.0042955875396728516s
+saved predicted mask to ---> output/phantom_20/10.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/7.jpg ...
+inference_time: 0.004300594329833984s
+saved predicted mask to ---> output/phantom_20/7.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/0.jpg ...
+inference_time: 0.00429224967956543s
+saved predicted mask to ---> output/phantom_20/0.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/12.jpg ...
+inference_time: 0.004329204559326172s
+saved predicted mask to ---> output/phantom_20/12.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/2.jpg ...
+inference_time: 0.004310131072998047s
+saved predicted mask to ---> output/phantom_20/2.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/1.jpg ...
+inference_time: 0.004275083541870117s
+saved predicted mask to ---> output/phantom_20/1.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/11.jpg ...
+inference_time: 0.0043599605560302734s
+saved predicted mask to ---> output/phantom_20/11.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/6.jpg ...
+inference_time: 0.004277229309082031s
+saved predicted mask to ---> output/phantom_20/6.jpg
+
+Performing segmentation on ---> data/imgs/phantom_20/16.jpg ...
+inference_time: 0.004295825958251953s
+saved predicted mask to ---> output/phantom_20/16.jpg
+
+----- UNet Performance Summary on phantom_20 -----
 Using device cuda
-Loading model from: checkpoints/phantom_20/unet_ckpt_26.pth
-
-Segment image 5.jpg ...
-Mask saved to output/phantom_20/5.jpg
-
-Segment image 17.jpg ...
-Mask saved to output/phantom_20/17.jpg
-
-Segment image 8.jpg ...
-Mask saved to output/phantom_20/8.jpg
-
-Segment image 18.jpg ...
-Mask saved to output/phantom_20/18.jpg
-
-Segment image 14.jpg ...
-Mask saved to output/phantom_20/14.jpg
-
-Segment image 9.jpg ...
-Mask saved to output/phantom_20/9.jpg
-
-Segment image 13.jpg ...
-Mask saved to output/phantom_20/13.jpg
-
-Segment image 4.jpg ...
-Mask saved to output/phantom_20/4.jpg
-
-Segment image 19.jpg ...
-Mask saved to output/phantom_20/19.jpg
-
-Segment image 3.jpg ...
-Mask saved to output/phantom_20/3.jpg
-
-Segment image 15.jpg ...
-Mask saved to output/phantom_20/15.jpg
-
-Segment image 10.jpg ...
-Mask saved to output/phantom_20/10.jpg
-
-Segment image 7.jpg ...
-Mask saved to output/phantom_20/7.jpg
-
-Segment image 0.jpg ...
-Mask saved to output/phantom_20/0.jpg
-
-Segment image 12.jpg ...
-Mask saved to output/phantom_20/12.jpg
-
-Segment image 2.jpg ...
-Mask saved to output/phantom_20/2.jpg
-
-Segment image 1.jpg ...
-Mask saved to output/phantom_20/1.jpg
-
-Segment image 11.jpg ...
-Mask saved to output/phantom_20/11.jpg
-
-Segment image 6.jpg ...
-Mask saved to output/phantom_20/6.jpg
-
-Segment image 16.jpg ...
-Mask saved to output/phantom_20/16.jpg
+Using model: checkpoints/phantom_20/unet_ckpt_26.pth
+Total samples: 20
+Total inference time: 1.6712188720703125s 	 Average inference time: 0.08356094360351562s
+-----------------------

@@ -41,9 +41,8 @@ class ImageFolder(Dataset):
     def __init__(self, folder_path, img_size=416):
         self.files = sorted(glob.glob("%s/*.*" % folder_path))
         self.img_size = img_size
-
-    def __getitem__(self, index):
-        img_path = self.files[index % len(self.files)]
+    
+    def preprocess(self, img_path):
         img = transforms.ToTensor()(Image.open(img_path).convert('L')) # extract image as PyTorch tensor: 1 x H x W
         img, _ = pad_to_square(img, 0) # pad to square resolution
 
@@ -52,9 +51,13 @@ class ImageFolder(Dataset):
         #     shape = [3]
         #     shape.extend(list(img.shape[1:]))
         #     img = img.expand(shape) # add two more channels by repeating
-        
-        img = resize(img, self.img_size) # Resize -> 1 x 1 x 416 x 416
 
+        img = resize(img, self.img_size) # Resize -> 1 x 1 x 416 x 416
+        return img
+    
+    def __getitem__(self, index):
+        img_path = self.files[index % len(self.files)]
+        img = self.preprocess(img_path)
         return img_path, img
 
     def __len__(self):

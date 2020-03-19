@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 import argparse
 
 import numpy as np
@@ -13,56 +14,49 @@ from unet_model import UNet
 from dataset import BasicDataset
 from utils import plot_img_and_mask, Logger
 
-# def get_output_filenames(args):
-#     in_files = args.input
-#     out_files = []
-
-#     if not args.output: #如果没有定义output file名称的话，就主动设置成带有OUT的名称。
-#         for f in in_files:
-#             pathsplit = os.path.splitext(f)
-#             out_files.append("{}_OUT{}".format(pathsplit[0], pathsplit[1]))
-#     elif len(in_files) != len(args.output): #check先自定义的outputfile名称数量是否和inputfile名称数量一致
-#         logging.error("Input files and output files are not of the same length")
-#         raise SystemExit()
-#     else:
-#         out_files = args.output
-
-#     return out_files
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
 
 def mask_to_image(mask):
     return Image.fromarray((mask * 255).astype(np.uint8))
 
-def predict_img(net, img_path, device, scale_factor=1, out_threshold=0.5):
-    """ do predict the mask of an input image (PIL format) """
-    net.eval()
+def segment_img(img_path, net, device, scale_factor=1, out_threshold=0.5):
+    """ 
+    Segement out the mask (target vein region) of the input image (specified by image path) 
+    """
+    print(f"\nPerforming segmentation on ---> {img_path} ...")
 
     img = torch.from_numpy(BasicDataset.preprocess(Image.open(img_path).convert('L'), scale_factor))
     img = img.unsqueeze(0) # add dimension
     img = img.to(device=device, dtype=torch.float32)
 
+    begin_time = time.time()
     with torch.no_grad():
-        output = net(img) #feed-forward prediction
-        # print(output.size())
+        output = net(img)
+    end_time = time.time()
+    inference_time = end_time - begin_time
+    print(f'inference_time: {inference_time}s')
 
-        if net.n_classes > 1:
-            probs = F.softmax(output, dim=1)
-        else:
-            probs = torch.sigmoid(output)
-        probs = probs.squeeze(0) #cuda tensor
-        # print(probs.size())
-        
-        tf = transforms.Compose(
-            [
-                transforms.ToPILImage(),
-                # transforms.Resize(full_img.size[1]),
-                transforms.ToTensor()
-            ]
-        )
+    # transform to image numpy array
+    if net.n_classes > 1:
+        probs = F.softmax(output, dim=1)
+    else:
+        probs = torch.sigmoid(output)
+    probs = probs.squeeze(0) #cuda tensor
+    
+    tf = transforms.Compose(
+        [
+            transforms.ToPILImage(),
+            # transforms.Resize(full_img.size[1]),
+            transforms.ToTensor()
+        ]
+    )
+    probs = tf(probs.cpu())
+    full_mask = probs.squeeze().cpu().numpy()
+    if np.count_nonzero(full_mask) == 0:
+        print("No veins segmented out on this image!")
 
-        probs = tf(probs.cpu())
-        full_mask = probs.squeeze().cpu().numpy()
-
-    return full_mask > out_threshold
+    return full_mask > out_threshold, inference_time
 
 
 if __name__ == "__main__":
@@ -70,7 +64,6 @@ if __name__ == "__main__":
 
     parser.add_argument("--dataset_name", type=str, default="phantom_20", help="the name of dataset used for segementation")
     parser.add_argument('--weights_path', type=str, default='unet_ckpt_xx.pth', help="path to weights file")
-
     parser.add_argument('--image_folder', type=str, default='data/imgs', help='parent of image folder storing images to do segmentation')
     parser.add_argument('--output_dir', type=str, default='output', help='parent of path to parent saving segmentation results')
 
@@ -81,7 +74,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    ckpt_str = args.weights_path.split('/')[2][:-4]
+    ckpt_str = args.weights_path.split('/')[-1][:-4]
     logfile = f'logs/segment/{args.dataset_name}_{ckpt_str}.log'
     sys.stdout = Logger(logfile)
     print(args)
@@ -89,24 +82,36 @@ if __name__ == "__main__":
     output_dir = args.output_dir + '/' + args.dataset_name
     os.makedirs(output_dir, exist_ok=True)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(f'Using device {device}')
+    
     net = UNet(n_channels=1, n_classes=1).to(device)
     net.load_state_dict(torch.load(args.weights_path)['state_dict'])
-    print(f'Loading model from: {args.weights_path}')
+    net.eval()
 
+    inference_time_total = 0
+    count = 0
     image_folder = args.image_folder + '/' + args.dataset_name
     for i, fn in enumerate(os.listdir(image_folder)):
         if not fn.endswith('.jpg'):
             continue
-        print("\nSegment image {} ...".format(fn))
-        mask = predict_img(net=net, img_path=os.path.join(image_folder, fn), scale_factor=args.scale, out_threshold=args.mask_threshold, device=device)
+        count += 1
+        # single image prediction
+        img_path = os.path.join(image_folder, fn)
+        mask, inference_time = segment_img(img_path, net, device, args.scale, args.mask_threshold)
+        inference_time_total += inference_time
 
         if args.save_results:
-            out_fn = os.path.join(output_dir, fn)
-            mask_to_image(mask).save(out_fn)
-            print("Mask saved to {}".format(out_fn))
+            output_path = os.path.join(output_dir, fn)
+            mask_to_image(mask).save(output_path)
+            print(f"saved predicted mask to ---> {output_path}")
                 
         if args.viz:
             print("Visualizing results for image {}, close to continue ...".format(fn))
             img = Image.open(fn)
             plot_img_and_mask(img, mask)
+    
+    print(f'\n----- UNet Performance Summary on {args.dataset_name} -----')
+    print(f'Using device: {device}')
+    print(f'Using model: {args.weights_path}')
+    print(f'Total samples: {count}')
+    print(f'Total inference time: {inference_time_total}s \t Average inference time: {inference_time_total / count}s')
+    print('-----------------------')

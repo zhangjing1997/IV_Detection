@@ -5,7 +5,7 @@ from tqdm import tqdm
 from utils import dice_coeff
 
 def evaluate(net, loader, device, n_val):
-    """Evaluation without the densecrf with the dice coefficient"""
+    """Evaluate with the given model on the given dataloader, without the densecrf with the dice coefficient"""
     net.eval()
     tot = 0
 

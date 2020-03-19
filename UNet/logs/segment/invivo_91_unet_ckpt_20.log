@@ -1,273 +1,368 @@
-Namespace(dataset_name='invivo_91', image_folder='data/imgs', mask_threshold=0.5, output_dir='output', save_results=1, scale=1.0, viz=0, weights_path='checkpoints/invivo_91/unet_ckpt_20.pth')
-Using device cuda
-Loading model from: checkpoints/invivo_91/unet_ckpt_20.pth
-
-Segment image 59.jpg ...
-Mask saved to output/invivo_91/59.jpg
-
-Segment image 98.jpg ...
-Mask saved to output/invivo_91/98.jpg
-
-Segment image 68.jpg ...
-Mask saved to output/invivo_91/68.jpg
-
-Segment image 109.jpg ...
-Mask saved to output/invivo_91/109.jpg
-
-Segment image 44.jpg ...
-Mask saved to output/invivo_91/44.jpg
-
-Segment image 101.jpg ...
-Mask saved to output/invivo_91/101.jpg
-
-Segment image 122.jpg ...
-Mask saved to output/invivo_91/122.jpg
-
-Segment image 23.jpg ...
-Mask saved to output/invivo_91/23.jpg
-
-Segment image 97.jpg ...
-Mask saved to output/invivo_91/97.jpg
-
-Segment image 80.jpg ...
-Mask saved to output/invivo_91/80.jpg
-
-Segment image 103.jpg ...
-Mask saved to output/invivo_91/103.jpg
-
-Segment image 18.jpg ...
-Mask saved to output/invivo_91/18.jpg
-
-Segment image 41.jpg ...
-Mask saved to output/invivo_91/41.jpg
-
-Segment image 99.jpg ...
-Mask saved to output/invivo_91/99.jpg
-
-Segment image 90.jpg ...
-Mask saved to output/invivo_91/90.jpg
-
-Segment image 125.jpg ...
-Mask saved to output/invivo_91/125.jpg
-
-Segment image 58.jpg ...
-Mask saved to output/invivo_91/58.jpg
-
-Segment image 86.jpg ...
-Mask saved to output/invivo_91/86.jpg
-
-Segment image 14.jpg ...
-Mask saved to output/invivo_91/14.jpg
-
-Segment image 111.jpg ...
-Mask saved to output/invivo_91/111.jpg
-
-Segment image 92.jpg ...
-Mask saved to output/invivo_91/92.jpg
-
-Segment image 102.jpg ...
-Mask saved to output/invivo_91/102.jpg
-
-Segment image 100.jpg ...
-Mask saved to output/invivo_91/100.jpg
-
-Segment image 64.jpg ...
-Mask saved to output/invivo_91/64.jpg
-
-Segment image 108.jpg ...
-Mask saved to output/invivo_91/108.jpg
-
-Segment image 95.jpg ...
-Mask saved to output/invivo_91/95.jpg
-
-Segment image 105.jpg ...
-Mask saved to output/invivo_91/105.jpg
-
-Segment image 131.jpg ...
-Mask saved to output/invivo_91/131.jpg
-
-Segment image 79.jpg ...
-Mask saved to output/invivo_91/79.jpg
-
-Segment image 96.jpg ...
-Mask saved to output/invivo_91/96.jpg
-
-Segment image 56.jpg ...
-Mask saved to output/invivo_91/56.jpg
-
-Segment image 115.jpg ...
-Mask saved to output/invivo_91/115.jpg
-
-Segment image 45.jpg ...
-Mask saved to output/invivo_91/45.jpg
-
-Segment image 129.jpg ...
-Mask saved to output/invivo_91/129.jpg
-
-Segment image 133.jpg ...
-Mask saved to output/invivo_91/133.jpg
-
-Segment image 69.jpg ...
-Mask saved to output/invivo_91/69.jpg
-
-Segment image 87.jpg ...
-Mask saved to output/invivo_91/87.jpg
-
-Segment image 159.jpg ...
-Mask saved to output/invivo_91/159.jpg
-
-Segment image 70.jpg ...
-Mask saved to output/invivo_91/70.jpg
-
-Segment image 91.jpg ...
-Mask saved to output/invivo_91/91.jpg
-
-Segment image 128.jpg ...
-Mask saved to output/invivo_91/128.jpg
-
-Segment image 24.jpg ...
-Mask saved to output/invivo_91/24.jpg
-
-Segment image 110.jpg ...
-Mask saved to output/invivo_91/110.jpg
-
-Segment image 127.jpg ...
-Mask saved to output/invivo_91/127.jpg
-
-Segment image 135.jpg ...
-Mask saved to output/invivo_91/135.jpg
-
-Segment image 88.jpg ...
-Mask saved to output/invivo_91/88.jpg
-
-Segment image 84.jpg ...
-Mask saved to output/invivo_91/84.jpg
-
-Segment image 151.jpg ...
-Mask saved to output/invivo_91/151.jpg
-
-Segment image 4.jpg ...
-Mask saved to output/invivo_91/4.jpg
-
-Segment image 132.jpg ...
-Mask saved to output/invivo_91/132.jpg
-
-Segment image 61.jpg ...
-Mask saved to output/invivo_91/61.jpg
-
-Segment image 153.jpg ...
-Mask saved to output/invivo_91/153.jpg
-
-Segment image 89.jpg ...
-Mask saved to output/invivo_91/89.jpg
-
-Segment image 30.jpg ...
-Mask saved to output/invivo_91/30.jpg
-
-Segment image 154.jpg ...
-Mask saved to output/invivo_91/154.jpg
-
-Segment image 124.jpg ...
-Mask saved to output/invivo_91/124.jpg
-
-Segment image 113.jpg ...
-Mask saved to output/invivo_91/113.jpg
-
-Segment image 19.jpg ...
-Mask saved to output/invivo_91/19.jpg
-
-Segment image 22.jpg ...
-Mask saved to output/invivo_91/22.jpg
-
-Segment image 116.jpg ...
-Mask saved to output/invivo_91/116.jpg
-
-Segment image 55.jpg ...
-Mask saved to output/invivo_91/55.jpg
-
-Segment image 104.jpg ...
-Mask saved to output/invivo_91/104.jpg
-
-Segment image 3.jpg ...
-Mask saved to output/invivo_91/3.jpg
-
-Segment image 46.jpg ...
-Mask saved to output/invivo_91/46.jpg
-
-Segment image 152.jpg ...
-Mask saved to output/invivo_91/152.jpg
-
-Segment image 15.jpg ...
-Mask saved to output/invivo_91/15.jpg
-
-Segment image 43.jpg ...
-Mask saved to output/invivo_91/43.jpg
-
-Segment image 48.jpg ...
-Mask saved to output/invivo_91/48.jpg
-
-Segment image 47.jpg ...
-Mask saved to output/invivo_91/47.jpg
-
-Segment image 117.jpg ...
-Mask saved to output/invivo_91/117.jpg
-
-Segment image 42.jpg ...
-Mask saved to output/invivo_91/42.jpg
-
-Segment image 0.jpg ...
-Mask saved to output/invivo_91/0.jpg
-
-Segment image 123.jpg ...
-Mask saved to output/invivo_91/123.jpg
-
-Segment image 12.jpg ...
-Mask saved to output/invivo_91/12.jpg
-
-Segment image 50.jpg ...
-Mask saved to output/invivo_91/50.jpg
-
-Segment image 93.jpg ...
-Mask saved to output/invivo_91/93.jpg
-
-Segment image 106.jpg ...
-Mask saved to output/invivo_91/106.jpg
-
-Segment image 1.jpg ...
-Mask saved to output/invivo_91/1.jpg
-
-Segment image 27.jpg ...
-Mask saved to output/invivo_91/27.jpg
-
-Segment image 157.jpg ...
-Mask saved to output/invivo_91/157.jpg
-
-Segment image 60.jpg ...
-Mask saved to output/invivo_91/60.jpg
-
-Segment image 21.jpg ...
-Mask saved to output/invivo_91/21.jpg
-
-Segment image 85.jpg ...
-Mask saved to output/invivo_91/85.jpg
-
-Segment image 107.jpg ...
-Mask saved to output/invivo_91/107.jpg
-
-Segment image 160.jpg ...
-Mask saved to output/invivo_91/160.jpg
-
-Segment image 26.jpg ...
-Mask saved to output/invivo_91/26.jpg
-
-Segment image 54.jpg ...
-Mask saved to output/invivo_91/54.jpg
-
-Segment image 49.jpg ...
-Mask saved to output/invivo_91/49.jpg
-
-Segment image 20.jpg ...
-Mask saved to output/invivo_91/20.jpg
-
-Segment image 158.jpg ...
-Mask saved to output/invivo_91/158.jpg
+Namespace(dataset_name='invivo_91', image_folder='data/imgs', mask_threshold=0.5, output_dir='output', save_results=1, scale=1.0, viz=0, weights_path='checkpoints/phantom_20/unet_ckpt_20.pth')
+
+Performing segmentation on ---> data/imgs/invivo_91/59.jpg ...
+inference_time: 1.570450782775879s
+saved predicted mask to ---> output/invivo_91/59.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/98.jpg ...
+inference_time: 0.00431060791015625s
+saved predicted mask to ---> output/invivo_91/98.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/68.jpg ...
+inference_time: 0.004299640655517578s
+saved predicted mask to ---> output/invivo_91/68.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/109.jpg ...
+inference_time: 0.004395723342895508s
+saved predicted mask to ---> output/invivo_91/109.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/44.jpg ...
+inference_time: 0.004448413848876953s
+saved predicted mask to ---> output/invivo_91/44.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/101.jpg ...
+inference_time: 0.004366636276245117s
+saved predicted mask to ---> output/invivo_91/101.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/122.jpg ...
+inference_time: 0.004399538040161133s
+saved predicted mask to ---> output/invivo_91/122.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/23.jpg ...
+inference_time: 0.00430607795715332s
+saved predicted mask to ---> output/invivo_91/23.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/97.jpg ...
+inference_time: 0.004327535629272461s
+saved predicted mask to ---> output/invivo_91/97.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/80.jpg ...
+inference_time: 0.004287242889404297s
+saved predicted mask to ---> output/invivo_91/80.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/103.jpg ...
+inference_time: 0.004316568374633789s
+saved predicted mask to ---> output/invivo_91/103.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/18.jpg ...
+inference_time: 0.0043179988861083984s
+saved predicted mask to ---> output/invivo_91/18.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/41.jpg ...
+inference_time: 0.004319429397583008s
+saved predicted mask to ---> output/invivo_91/41.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/99.jpg ...
+inference_time: 0.0042955875396728516s
+saved predicted mask to ---> output/invivo_91/99.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/90.jpg ...
+inference_time: 0.004327297210693359s
+saved predicted mask to ---> output/invivo_91/90.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/125.jpg ...
+inference_time: 0.004313945770263672s
+saved predicted mask to ---> output/invivo_91/125.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/58.jpg ...
+inference_time: 0.004374980926513672s
+saved predicted mask to ---> output/invivo_91/58.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/86.jpg ...
+inference_time: 0.0044307708740234375s
+saved predicted mask to ---> output/invivo_91/86.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/14.jpg ...
+inference_time: 0.004301548004150391s
+saved predicted mask to ---> output/invivo_91/14.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/111.jpg ...
+inference_time: 0.0043048858642578125s
+saved predicted mask to ---> output/invivo_91/111.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/92.jpg ...
+inference_time: 0.004319906234741211s
+saved predicted mask to ---> output/invivo_91/92.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/102.jpg ...
+inference_time: 0.0043182373046875s
+saved predicted mask to ---> output/invivo_91/102.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/100.jpg ...
+inference_time: 0.004305601119995117s
+saved predicted mask to ---> output/invivo_91/100.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/64.jpg ...
+inference_time: 0.005122184753417969s
+saved predicted mask to ---> output/invivo_91/64.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/108.jpg ...
+inference_time: 0.004271507263183594s
+saved predicted mask to ---> output/invivo_91/108.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/95.jpg ...
+inference_time: 0.004269838333129883s
+saved predicted mask to ---> output/invivo_91/95.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/105.jpg ...
+inference_time: 0.004411935806274414s
+saved predicted mask to ---> output/invivo_91/105.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/131.jpg ...
+inference_time: 0.0042574405670166016s
+saved predicted mask to ---> output/invivo_91/131.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/79.jpg ...
+inference_time: 0.0042684078216552734s
+saved predicted mask to ---> output/invivo_91/79.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/96.jpg ...
+inference_time: 0.004286050796508789s
+saved predicted mask to ---> output/invivo_91/96.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/56.jpg ...
+inference_time: 0.004254341125488281s
+saved predicted mask to ---> output/invivo_91/56.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/115.jpg ...
+inference_time: 0.0042536258697509766s
+saved predicted mask to ---> output/invivo_91/115.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/45.jpg ...
+inference_time: 0.0042421817779541016s
+saved predicted mask to ---> output/invivo_91/45.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/129.jpg ...
+inference_time: 0.004342317581176758s
+saved predicted mask to ---> output/invivo_91/129.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/133.jpg ...
+inference_time: 0.004340410232543945s
+saved predicted mask to ---> output/invivo_91/133.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/69.jpg ...
+inference_time: 0.004259586334228516s
+saved predicted mask to ---> output/invivo_91/69.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/87.jpg ...
+inference_time: 0.004250288009643555s
+saved predicted mask to ---> output/invivo_91/87.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/159.jpg ...
+inference_time: 0.005728006362915039s
+saved predicted mask to ---> output/invivo_91/159.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/70.jpg ...
+inference_time: 0.004250288009643555s
+saved predicted mask to ---> output/invivo_91/70.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/91.jpg ...
+inference_time: 0.004323244094848633s
+saved predicted mask to ---> output/invivo_91/91.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/128.jpg ...
+inference_time: 0.004248857498168945s
+saved predicted mask to ---> output/invivo_91/128.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/24.jpg ...
+inference_time: 0.004254817962646484s
+saved predicted mask to ---> output/invivo_91/24.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/110.jpg ...
+inference_time: 0.004240751266479492s
+saved predicted mask to ---> output/invivo_91/110.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/127.jpg ...
+inference_time: 0.004358768463134766s
+saved predicted mask to ---> output/invivo_91/127.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/135.jpg ...
+inference_time: 0.0042324066162109375s
+saved predicted mask to ---> output/invivo_91/135.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/88.jpg ...
+inference_time: 0.00422215461730957s
+saved predicted mask to ---> output/invivo_91/88.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/84.jpg ...
+inference_time: 0.004244804382324219s
+saved predicted mask to ---> output/invivo_91/84.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/151.jpg ...
+inference_time: 0.0042421817779541016s
+saved predicted mask to ---> output/invivo_91/151.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/4.jpg ...
+inference_time: 0.004255056381225586s
+saved predicted mask to ---> output/invivo_91/4.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/132.jpg ...
+inference_time: 0.004243373870849609s
+saved predicted mask to ---> output/invivo_91/132.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/61.jpg ...
+inference_time: 0.00423741340637207s
+saved predicted mask to ---> output/invivo_91/61.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/153.jpg ...
+inference_time: 0.004257917404174805s
+saved predicted mask to ---> output/invivo_91/153.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/89.jpg ...
+inference_time: 0.004354000091552734s
+saved predicted mask to ---> output/invivo_91/89.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/30.jpg ...
+inference_time: 0.0043582916259765625s
+saved predicted mask to ---> output/invivo_91/30.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/154.jpg ...
+inference_time: 0.004236698150634766s
+saved predicted mask to ---> output/invivo_91/154.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/124.jpg ...
+inference_time: 0.004345893859863281s
+saved predicted mask to ---> output/invivo_91/124.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/113.jpg ...
+inference_time: 0.0042569637298583984s
+saved predicted mask to ---> output/invivo_91/113.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/19.jpg ...
+inference_time: 0.004259824752807617s
+saved predicted mask to ---> output/invivo_91/19.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/22.jpg ...
+inference_time: 0.0051500797271728516s
+saved predicted mask to ---> output/invivo_91/22.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/116.jpg ...
+inference_time: 0.004267215728759766s
+saved predicted mask to ---> output/invivo_91/116.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/55.jpg ...
+inference_time: 0.004242658615112305s
+saved predicted mask to ---> output/invivo_91/55.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/104.jpg ...
+inference_time: 0.006524085998535156s
+saved predicted mask to ---> output/invivo_91/104.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/3.jpg ...
+inference_time: 0.006696224212646484s
+saved predicted mask to ---> output/invivo_91/3.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/46.jpg ...
+inference_time: 0.004292011260986328s
+saved predicted mask to ---> output/invivo_91/46.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/152.jpg ...
+inference_time: 0.004281282424926758s
+saved predicted mask to ---> output/invivo_91/152.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/15.jpg ...
+inference_time: 0.004280805587768555s
+saved predicted mask to ---> output/invivo_91/15.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/43.jpg ...
+inference_time: 0.0042726993560791016s
+saved predicted mask to ---> output/invivo_91/43.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/48.jpg ...
+inference_time: 0.0043909549713134766s
+saved predicted mask to ---> output/invivo_91/48.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/47.jpg ...
+inference_time: 0.004260063171386719s
+saved predicted mask to ---> output/invivo_91/47.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/117.jpg ...
+inference_time: 0.005627632141113281s
+saved predicted mask to ---> output/invivo_91/117.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/42.jpg ...
+inference_time: 0.004239082336425781s
+saved predicted mask to ---> output/invivo_91/42.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/0.jpg ...
+inference_time: 0.004238128662109375s
+saved predicted mask to ---> output/invivo_91/0.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/123.jpg ...
+inference_time: 0.004279613494873047s
+saved predicted mask to ---> output/invivo_91/123.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/12.jpg ...
+inference_time: 0.004251956939697266s
+saved predicted mask to ---> output/invivo_91/12.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/50.jpg ...
+inference_time: 0.0042650699615478516s
+saved predicted mask to ---> output/invivo_91/50.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/93.jpg ...
+inference_time: 0.0042645931243896484s
+saved predicted mask to ---> output/invivo_91/93.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/106.jpg ...
+inference_time: 0.00425267219543457s
+saved predicted mask to ---> output/invivo_91/106.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/1.jpg ...
+inference_time: 0.004258394241333008s
+saved predicted mask to ---> output/invivo_91/1.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/27.jpg ...
+inference_time: 0.004349708557128906s
+saved predicted mask to ---> output/invivo_91/27.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/157.jpg ...
+inference_time: 0.004261493682861328s
+saved predicted mask to ---> output/invivo_91/157.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/60.jpg ...
+inference_time: 0.004370927810668945s
+saved predicted mask to ---> output/invivo_91/60.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/21.jpg ...
+inference_time: 0.004251003265380859s
+saved predicted mask to ---> output/invivo_91/21.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/85.jpg ...
+inference_time: 0.004241228103637695s
+saved predicted mask to ---> output/invivo_91/85.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/107.jpg ...
+inference_time: 0.004244327545166016s
+saved predicted mask to ---> output/invivo_91/107.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/160.jpg ...
+inference_time: 0.004242897033691406s
+saved predicted mask to ---> output/invivo_91/160.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/26.jpg ...
+inference_time: 0.004232883453369141s
+saved predicted mask to ---> output/invivo_91/26.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/54.jpg ...
+inference_time: 0.004256248474121094s
+saved predicted mask to ---> output/invivo_91/54.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/49.jpg ...
+inference_time: 0.00425410270690918s
+saved predicted mask to ---> output/invivo_91/49.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/20.jpg ...
+inference_time: 0.004230499267578125s
+saved predicted mask to ---> output/invivo_91/20.jpg
+
+Performing segmentation on ---> data/imgs/invivo_91/158.jpg ...
+inference_time: 0.004238605499267578s
+saved predicted mask to ---> output/invivo_91/158.jpg
+
+----- UNet Performance Summary on invivo_91 -----
+Using device: cuda
+Using model: checkpoints/phantom_20/unet_ckpt_20.pth
+Total samples: 90
+Total inference time: 1.9613299369812012s 	 Average inference time: 0.02179255485534668s
+-----------------------
