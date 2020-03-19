@@ -1,368 +1,368 @@
-Namespace(dataset_name='invivo_91', image_folder='data/imgs', mask_threshold=0.5, output_dir='output', save_results=1, scale=1.0, viz=0, weights_path='checkpoints/phantom_20/unet_ckpt_20.pth')
+Namespace(dataset_name='invivo_91', image_folder='data/imgs', mask_threshold=0.5, output_dir='output', save_results=1, scale=1.0, viz=0, weights_path='checkpoints/invivo_91/unet_ckpt_20.pth')
 
 Performing segmentation on ---> data/imgs/invivo_91/59.jpg ...
-inference_time: 1.570450782775879s
+inference_time: 1.576300859451294s
 saved predicted mask to ---> output/invivo_91/59.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/98.jpg ...
-inference_time: 0.00431060791015625s
+inference_time: 0.004340648651123047s
 saved predicted mask to ---> output/invivo_91/98.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/68.jpg ...
-inference_time: 0.004299640655517578s
+inference_time: 0.0043256282806396484s
 saved predicted mask to ---> output/invivo_91/68.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/109.jpg ...
-inference_time: 0.004395723342895508s
+inference_time: 0.004441499710083008s
 saved predicted mask to ---> output/invivo_91/109.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/44.jpg ...
-inference_time: 0.004448413848876953s
+inference_time: 0.004425525665283203s
 saved predicted mask to ---> output/invivo_91/44.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/101.jpg ...
-inference_time: 0.004366636276245117s
+inference_time: 0.00435638427734375s
 saved predicted mask to ---> output/invivo_91/101.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/122.jpg ...
-inference_time: 0.004399538040161133s
+inference_time: 0.004324436187744141s
 saved predicted mask to ---> output/invivo_91/122.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/23.jpg ...
-inference_time: 0.00430607795715332s
+inference_time: 0.004359722137451172s
 saved predicted mask to ---> output/invivo_91/23.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/97.jpg ...
-inference_time: 0.004327535629272461s
+inference_time: 0.004337787628173828s
 saved predicted mask to ---> output/invivo_91/97.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/80.jpg ...
-inference_time: 0.004287242889404297s
+inference_time: 0.004323482513427734s
 saved predicted mask to ---> output/invivo_91/80.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/103.jpg ...
-inference_time: 0.004316568374633789s
+inference_time: 0.004336357116699219s
 saved predicted mask to ---> output/invivo_91/103.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/18.jpg ...
-inference_time: 0.0043179988861083984s
+inference_time: 0.004645347595214844s
 saved predicted mask to ---> output/invivo_91/18.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/41.jpg ...
-inference_time: 0.004319429397583008s
+inference_time: 0.004339456558227539s
 saved predicted mask to ---> output/invivo_91/41.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/99.jpg ...
-inference_time: 0.0042955875396728516s
+inference_time: 0.004332780838012695s
 saved predicted mask to ---> output/invivo_91/99.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/90.jpg ...
-inference_time: 0.004327297210693359s
+inference_time: 0.004328489303588867s
 saved predicted mask to ---> output/invivo_91/90.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/125.jpg ...
-inference_time: 0.004313945770263672s
+inference_time: 0.00432586669921875s
 saved predicted mask to ---> output/invivo_91/125.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/58.jpg ...
-inference_time: 0.004374980926513672s
+inference_time: 0.0043904781341552734s
 saved predicted mask to ---> output/invivo_91/58.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/86.jpg ...
-inference_time: 0.0044307708740234375s
+inference_time: 0.004328727722167969s
 saved predicted mask to ---> output/invivo_91/86.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/14.jpg ...
-inference_time: 0.004301548004150391s
+inference_time: 0.004324913024902344s
 saved predicted mask to ---> output/invivo_91/14.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/111.jpg ...
-inference_time: 0.0043048858642578125s
+inference_time: 0.004332780838012695s
 saved predicted mask to ---> output/invivo_91/111.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/92.jpg ...
-inference_time: 0.004319906234741211s
+inference_time: 0.004395008087158203s
 saved predicted mask to ---> output/invivo_91/92.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/102.jpg ...
-inference_time: 0.0043182373046875s
+inference_time: 0.004407167434692383s
 saved predicted mask to ---> output/invivo_91/102.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/100.jpg ...
-inference_time: 0.004305601119995117s
+inference_time: 0.004325389862060547s
 saved predicted mask to ---> output/invivo_91/100.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/64.jpg ...
-inference_time: 0.005122184753417969s
+inference_time: 0.004394054412841797s
 saved predicted mask to ---> output/invivo_91/64.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/108.jpg ...
-inference_time: 0.004271507263183594s
+inference_time: 0.004326343536376953s
 saved predicted mask to ---> output/invivo_91/108.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/95.jpg ...
-inference_time: 0.004269838333129883s
+inference_time: 0.00432586669921875s
 saved predicted mask to ---> output/invivo_91/95.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/105.jpg ...
-inference_time: 0.004411935806274414s
+inference_time: 0.004317045211791992s
 saved predicted mask to ---> output/invivo_91/105.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/131.jpg ...
-inference_time: 0.0042574405670166016s
+inference_time: 0.004325151443481445s
 saved predicted mask to ---> output/invivo_91/131.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/79.jpg ...
-inference_time: 0.0042684078216552734s
+inference_time: 0.004326581954956055s
 saved predicted mask to ---> output/invivo_91/79.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/96.jpg ...
-inference_time: 0.004286050796508789s
+inference_time: 0.004317283630371094s
 saved predicted mask to ---> output/invivo_91/96.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/56.jpg ...
-inference_time: 0.004254341125488281s
+inference_time: 0.0043299198150634766s
 saved predicted mask to ---> output/invivo_91/56.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/115.jpg ...
-inference_time: 0.0042536258697509766s
+inference_time: 0.004317283630371094s
 saved predicted mask to ---> output/invivo_91/115.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/45.jpg ...
-inference_time: 0.0042421817779541016s
+inference_time: 0.004328012466430664s
 saved predicted mask to ---> output/invivo_91/45.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/129.jpg ...
-inference_time: 0.004342317581176758s
+inference_time: 0.004366636276245117s
 saved predicted mask to ---> output/invivo_91/129.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/133.jpg ...
-inference_time: 0.004340410232543945s
+inference_time: 0.004327058792114258s
 saved predicted mask to ---> output/invivo_91/133.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/69.jpg ...
-inference_time: 0.004259586334228516s
+inference_time: 0.004324913024902344s
 saved predicted mask to ---> output/invivo_91/69.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/87.jpg ...
-inference_time: 0.004250288009643555s
+inference_time: 0.004310131072998047s
 saved predicted mask to ---> output/invivo_91/87.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/159.jpg ...
-inference_time: 0.005728006362915039s
+inference_time: 0.0043182373046875s
 saved predicted mask to ---> output/invivo_91/159.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/70.jpg ...
-inference_time: 0.004250288009643555s
+inference_time: 0.00432896614074707s
 saved predicted mask to ---> output/invivo_91/70.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/91.jpg ...
-inference_time: 0.004323244094848633s
+inference_time: 0.004410505294799805s
 saved predicted mask to ---> output/invivo_91/91.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/128.jpg ...
-inference_time: 0.004248857498168945s
+inference_time: 0.0043315887451171875s
 saved predicted mask to ---> output/invivo_91/128.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/24.jpg ...
-inference_time: 0.004254817962646484s
+inference_time: 0.004335880279541016s
 saved predicted mask to ---> output/invivo_91/24.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/110.jpg ...
-inference_time: 0.004240751266479492s
+inference_time: 0.004335165023803711s
 saved predicted mask to ---> output/invivo_91/110.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/127.jpg ...
-inference_time: 0.004358768463134766s
+inference_time: 0.004374265670776367s
 saved predicted mask to ---> output/invivo_91/127.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/135.jpg ...
-inference_time: 0.0042324066162109375s
+inference_time: 0.004335165023803711s
 saved predicted mask to ---> output/invivo_91/135.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/88.jpg ...
-inference_time: 0.00422215461730957s
+inference_time: 0.0043523311614990234s
 saved predicted mask to ---> output/invivo_91/88.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/84.jpg ...
-inference_time: 0.004244804382324219s
+inference_time: 0.004335641860961914s
 saved predicted mask to ---> output/invivo_91/84.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/151.jpg ...
-inference_time: 0.0042421817779541016s
+inference_time: 0.004343986511230469s
 saved predicted mask to ---> output/invivo_91/151.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/4.jpg ...
-inference_time: 0.004255056381225586s
+inference_time: 0.004399299621582031s
 saved predicted mask to ---> output/invivo_91/4.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/132.jpg ...
-inference_time: 0.004243373870849609s
+inference_time: 0.004323005676269531s
 saved predicted mask to ---> output/invivo_91/132.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/61.jpg ...
-inference_time: 0.00423741340637207s
+inference_time: 0.004324197769165039s
 saved predicted mask to ---> output/invivo_91/61.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/153.jpg ...
-inference_time: 0.004257917404174805s
+inference_time: 0.004325389862060547s
 saved predicted mask to ---> output/invivo_91/153.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/89.jpg ...
-inference_time: 0.004354000091552734s
+inference_time: 0.004310131072998047s
 saved predicted mask to ---> output/invivo_91/89.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/30.jpg ...
-inference_time: 0.0043582916259765625s
+inference_time: 0.004335641860961914s
 saved predicted mask to ---> output/invivo_91/30.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/154.jpg ...
-inference_time: 0.004236698150634766s
+inference_time: 0.004307746887207031s
 saved predicted mask to ---> output/invivo_91/154.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/124.jpg ...
-inference_time: 0.004345893859863281s
+inference_time: 0.0050966739654541016s
 saved predicted mask to ---> output/invivo_91/124.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/113.jpg ...
-inference_time: 0.0042569637298583984s
+inference_time: 0.005051136016845703s
 saved predicted mask to ---> output/invivo_91/113.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/19.jpg ...
-inference_time: 0.004259824752807617s
+inference_time: 0.004354715347290039s
 saved predicted mask to ---> output/invivo_91/19.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/22.jpg ...
-inference_time: 0.0051500797271728516s
+inference_time: 0.0042688846588134766s
 saved predicted mask to ---> output/invivo_91/22.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/116.jpg ...
-inference_time: 0.004267215728759766s
+inference_time: 0.004270792007446289s
 saved predicted mask to ---> output/invivo_91/116.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/55.jpg ...
-inference_time: 0.004242658615112305s
+inference_time: 0.0042994022369384766s
 saved predicted mask to ---> output/invivo_91/55.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/104.jpg ...
-inference_time: 0.006524085998535156s
+inference_time: 0.0042552947998046875s
 saved predicted mask to ---> output/invivo_91/104.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/3.jpg ...
-inference_time: 0.006696224212646484s
+inference_time: 0.004251956939697266s
 saved predicted mask to ---> output/invivo_91/3.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/46.jpg ...
-inference_time: 0.004292011260986328s
+inference_time: 0.004309177398681641s
 saved predicted mask to ---> output/invivo_91/46.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/152.jpg ...
-inference_time: 0.004281282424926758s
+inference_time: 0.004317760467529297s
 saved predicted mask to ---> output/invivo_91/152.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/15.jpg ...
-inference_time: 0.004280805587768555s
+inference_time: 0.004267454147338867s
 saved predicted mask to ---> output/invivo_91/15.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/43.jpg ...
-inference_time: 0.0042726993560791016s
+inference_time: 0.004261970520019531s
 saved predicted mask to ---> output/invivo_91/43.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/48.jpg ...
-inference_time: 0.0043909549713134766s
+inference_time: 0.004254817962646484s
 saved predicted mask to ---> output/invivo_91/48.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/47.jpg ...
-inference_time: 0.004260063171386719s
+inference_time: 0.0043871402740478516s
 saved predicted mask to ---> output/invivo_91/47.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/117.jpg ...
-inference_time: 0.005627632141113281s
+inference_time: 0.004257917404174805s
 saved predicted mask to ---> output/invivo_91/117.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/42.jpg ...
-inference_time: 0.004239082336425781s
+inference_time: 0.004264116287231445s
 saved predicted mask to ---> output/invivo_91/42.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/0.jpg ...
-inference_time: 0.004238128662109375s
+inference_time: 0.004261016845703125s
 saved predicted mask to ---> output/invivo_91/0.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/123.jpg ...
-inference_time: 0.004279613494873047s
+inference_time: 0.004316806793212891s
 saved predicted mask to ---> output/invivo_91/123.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/12.jpg ...
-inference_time: 0.004251956939697266s
+inference_time: 0.004266500473022461s
 saved predicted mask to ---> output/invivo_91/12.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/50.jpg ...
-inference_time: 0.0042650699615478516s
+inference_time: 0.005718231201171875s
 saved predicted mask to ---> output/invivo_91/50.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/93.jpg ...
-inference_time: 0.0042645931243896484s
+inference_time: 0.004273653030395508s
 saved predicted mask to ---> output/invivo_91/93.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/106.jpg ...
-inference_time: 0.00425267219543457s
+inference_time: 0.004266262054443359s
 saved predicted mask to ---> output/invivo_91/106.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/1.jpg ...
-inference_time: 0.004258394241333008s
+inference_time: 0.004279613494873047s
 saved predicted mask to ---> output/invivo_91/1.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/27.jpg ...
-inference_time: 0.004349708557128906s
+inference_time: 0.0043010711669921875s
 saved predicted mask to ---> output/invivo_91/27.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/157.jpg ...
-inference_time: 0.004261493682861328s
+inference_time: 0.004251718521118164s
 saved predicted mask to ---> output/invivo_91/157.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/60.jpg ...
-inference_time: 0.004370927810668945s
+inference_time: 0.004343271255493164s
 saved predicted mask to ---> output/invivo_91/60.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/21.jpg ...
-inference_time: 0.004251003265380859s
+inference_time: 0.004364490509033203s
 saved predicted mask to ---> output/invivo_91/21.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/85.jpg ...
-inference_time: 0.004241228103637695s
+inference_time: 0.004255533218383789s
 saved predicted mask to ---> output/invivo_91/85.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/107.jpg ...
-inference_time: 0.004244327545166016s
+inference_time: 0.0042421817779541016s
 saved predicted mask to ---> output/invivo_91/107.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/160.jpg ...
-inference_time: 0.004242897033691406s
+inference_time: 0.004267692565917969s
 saved predicted mask to ---> output/invivo_91/160.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/26.jpg ...
-inference_time: 0.004232883453369141s
+inference_time: 0.004297018051147461s
 saved predicted mask to ---> output/invivo_91/26.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/54.jpg ...
-inference_time: 0.004256248474121094s
+inference_time: 0.0042629241943359375s
 saved predicted mask to ---> output/invivo_91/54.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/49.jpg ...
-inference_time: 0.00425410270690918s
+inference_time: 0.004282474517822266s
 saved predicted mask to ---> output/invivo_91/49.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/20.jpg ...
-inference_time: 0.004230499267578125s
+inference_time: 0.004268169403076172s
 saved predicted mask to ---> output/invivo_91/20.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/158.jpg ...
-inference_time: 0.004238605499267578s
+inference_time: 0.004277706146240234s
 saved predicted mask to ---> output/invivo_91/158.jpg
 
 ----- UNet Performance Summary on invivo_91 -----
 Using device: cuda
-Using model: checkpoints/phantom_20/unet_ckpt_20.pth
+Using model: checkpoints/invivo_91/unet_ckpt_20.pth
 Total samples: 90
-Total inference time: 1.9613299369812012s 	 Average inference time: 0.02179255485534668s
+Total inference time: 1.9640777111053467s 	 Average inference time: 0.021823085678948296s
 -----------------------

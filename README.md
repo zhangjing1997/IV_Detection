@@ -4,7 +4,8 @@ This project is an self-implemented submodule of Robotic IV Insertion Project af
 
 The images look like the following one because the deoxygenated haemoglobin in veins absorb infrared light more than surrounding tissues, which makes the veins appear as dark on a lighter background.
 
-<p align="center"> <img src="./assets/sample.jpg" alt="drawing" height="40%" width="40%"/> </p>
+<p align="center"> <img src="./assets/sample_phantom.jpg" alt="drawing" height="40%" width="40%"/> </p>
+<p align="center"> <img src="./assets/sample_invivo.jpg" alt="drawing" height="40%" width="40%"/> </p>
 
 
 # Progress & Notes
@@ -57,8 +58,12 @@ The images look like the following one because the deoxygenated haemoglobin in v
     - 做一些当前performance的测试
 - went through basic pipeline
 
-### 初步结果
-<p align="center"> <img src="./assets/output_unet.jpg" alt="drawing" height="90%" width="90%"/> </p>
+### Current Results - UNet
+<p align="center"> <img src="./assets/demo_unet_phantom_20.png" alt="drawing" height="80%" width="80%"/> </p>
+<p align="center"> <em></em> 12.jpg in phantom_20 </p>
+
+<p align="center"> <img src="./assets/demo_unet_invivo_91.png" alt="drawing" height="80%" width="80%"/> </p>
+<p align="center"> <em></em> 12.jpg in invivo_91 </p>
 
 ### Next:  
 - 加augmentation
@@ -124,8 +129,12 @@ The images look like the following one because the deoxygenated haemoglobin in v
   - prediction speed -> time that the model spent on prediction only, without other post-processing
 
 
-### Current Result
-<p align="center"> <img src="./assets/output_yolo.jpg" alt="drawing" height="80%" width="80%"/> </p>
+### Current Results - YOLOv3
+<p align="center"> <img src="./assets/demo_yolo_phantom_20.png" alt="drawing" height="70%" width="70%"/> </p>
+<p align="center"> <em></em> 0.jpg in phantom_20 </p>
+
+<p align="center"> <img src="./assets/demo_yolo_invivo_91.png" alt="drawing" height="70%" width="70%"/> </p>
+<p align="center"> <em></em> 0.jpg in invivo_91 </p>
 
 ### Next
 - test prediction accuracy - util function to compute validation score
