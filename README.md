@@ -126,6 +126,7 @@ The images look like the following one because the deoxygenated haemoglobin in v
 ### Next
 - write util function to produce img/visualization comparison among input vs. label vs. prediction
 - write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy -> using detect.py for YOLO and segment.py for UNet -> enrich printing info
+- modify two sub-projects' readme -> mainly describe usages
 - If necessary, consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils.
 - **Post-Processing - Active Contour**:
   - find active contour code on github, etc.
