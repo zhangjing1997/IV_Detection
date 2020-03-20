@@ -58,22 +58,21 @@ class DiceCoeff(Function):
         grad_input = grad_target = None
 
         if self.needs_input_grad[0]:
-            grad_input = grad_output * 2 * (target * self.union - self.inter) \
-                         / (self.union * self.union)
+            grad_input = grad_output * 2 * (target * self.union - self.inter) / (self.union * self.union)
         if self.needs_input_grad[1]:
             grad_target = None
 
         return grad_input, grad_target
 
-#类似与IOU的一种metric
-def dice_coeff(input, target):
-    """Dice coeff for batches"""
-    if input.is_cuda:
+## 类似于IOU的一种metric
+def dice_coeff(pred, target):
+    """Dice coeff for batch samples"""
+    if pred.is_cuda:
         s = torch.FloatTensor(1).cuda().zero_()
     else:
         s = torch.FloatTensor(1).zero_()
 
-    for i, c in enumerate(zip(input, target)):
-        s = s + DiceCoeff().forward(c[0], c[1])
+    for i, (pred_mask, target_mask) in enumerate(zip(pred, target)):
+        s = s + DiceCoeff().forward(pred_mask, target_mask)
 
     return s / (i + 1)

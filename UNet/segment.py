@@ -12,7 +12,7 @@ from torchvision import transforms
 
 from unet_model import UNet
 from dataset import BasicDataset
-from utils import plot_img_and_mask, Logger
+from utils import plot_img_and_mask, Logger, dice_coeff
 
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -87,16 +87,31 @@ if __name__ == "__main__":
     net.load_state_dict(torch.load(args.weights_path)['state_dict'])
     net.eval()
 
-    inference_time_total = 0
     count = 0
+    inference_time_total = 0.0
+    val_score_total = 0.0
     image_folder = args.image_folder + '/' + args.dataset_name
     for i, fn in enumerate(os.listdir(image_folder)):
         if not fn.endswith('.jpg'):
             continue
         count += 1
-        # single image prediction
+        # input image
         img_path = os.path.join(image_folder, fn)
+        target_path = img_path.replace('imgs', 'masks')
+        
+        # single image prediction
         mask, inference_time = segment_img(img_path, net, device, args.scale, args.mask_threshold)
+
+        # target mask
+        FloatTensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+        target = BasicDataset.preprocess(Image.open(target_path), args.scale)
+
+        # validation score computation
+        val_score = dice_coeff(FloatTensor(mask), FloatTensor(target).squeeze(0)).item()
+        print(f'validation_score (dice_coeff): {val_score}')
+        val_score_total += val_score
+
+        # prediction speed
         inference_time_total += inference_time
 
         if args.save_results:
@@ -113,5 +128,6 @@ if __name__ == "__main__":
     print(f'Using device: {device}')
     print(f'Using model: {args.weights_path}')
     print(f'Total samples: {count}')
-    print(f'Total inference time: {inference_time_total}s \t Average inference time: {inference_time_total / count}s')
+    print('Total inference time: {:.5f}s \t Average inference time: {:.5f}s \t Average val score: {:.3f}'.format(
+        inference_time_total, inference_time_total / count, val_score_total / count))
     print('-----------------------')

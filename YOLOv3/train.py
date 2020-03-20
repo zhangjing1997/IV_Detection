@@ -135,7 +135,7 @@ if __name__ == "__main__":
         ## -- Evaluate the model on the validation set
         if epoch % opt.evaluation_interval == 0:
             print("\n---- Evaluating Model ----")
-            precision, recall, AP, f1, ap_class = evaluate(model, dataset_name=opt.dataset_name, path=valid_path, iou_thres=0.5, conf_thres=0.5, nms_thres=0.5, img_size=opt.img_size, batch_size=8)
+            precision, recall, AP, f1, ap_class = evaluate(model, dataset_name=opt.dataset_name, list_path=valid_path, iou_thres=0.5, conf_thres=0.5, nms_thres=0.5, img_size=opt.img_size, batch_size=8)
             evaluation_metrics = [
                 ("val_precision", precision.mean()),
                 ("val_recall", recall.mean()),

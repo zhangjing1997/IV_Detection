@@ -137,10 +137,13 @@ The images look like the following one because the deoxygenated haemoglobin in v
 <p align="center"> <em></em> 0.jpg in invivo_91 </p>
 
 ### Next
+- write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy -> enrich printing info
+  - using detect.py for YOLO and segment.py for UNet
+  - 先算各自的val_score
+  - 再定一个统一的对比metric
 - test prediction accuracy - util function to compute validation score
 - elegant print logs & args
-- write util function to produce img/visualization comparison among input vs. label vs. prediction
-- write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy -> using detect.py for YOLO and segment.py for UNet -> enrich printing info
+- better visualization comparison: write util function to produce img/visualization comparison among input vs. label vs. prediction
 - modify two sub-projects' readme -> mainly describe usages
 - If necessary, consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils.
 - **Post-Processing - Active Contour**:

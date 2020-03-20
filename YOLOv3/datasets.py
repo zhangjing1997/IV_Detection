@@ -21,11 +21,9 @@ def pad_to_square(img, pad_value):
 
     return img, pad
 
-
 def resize(image, size):
     image = F.interpolate(image.unsqueeze(0), size=size, mode="nearest").squeeze(0)
     return image
-
 
 def random_resize(images, min_size=288, max_size=448):
     new_size = random.sample(list(range(min_size, max_size + 1, 32)), 1)[0]
@@ -37,7 +35,11 @@ def horisontal_flip(images, targets):
     targets[:, 2] = 1 - targets[:, 2]
     return images, targets
 
+
 class ImageFolder(Dataset):
+    """
+    only load images and image paths without labels.
+    """
     def __init__(self, folder_path, img_size=416):
         self.files = sorted(glob.glob("%s/*.*" % folder_path))
         self.img_size = img_size
@@ -46,7 +48,7 @@ class ImageFolder(Dataset):
         img = transforms.ToTensor()(Image.open(img_path).convert('L')) # extract image as PyTorch tensor: 1 x H x W
         img, _ = pad_to_square(img, 0) # pad to square resolution
 
-        # # Handle images with less than 3 channels
+        # # Deal with gray image as 3-channel image
         # if img.shape[0] == 1:
         #     shape = [3]
         #     shape.extend(list(img.shape[1:]))
@@ -65,6 +67,9 @@ class ImageFolder(Dataset):
 
 
 class ListDataset(Dataset):
+    """
+    load images, image paths and labels.
+    """
     def __init__(self, dataset_name, list_path, img_size=416, augment=True, multiscale=True, normalized_labels=True):
         with open(list_path, "r") as file:
             # eg. 0.jpg -> data/custom/images/{dataset_name}/0.jpg
@@ -81,13 +86,12 @@ class ListDataset(Dataset):
         self.min_size = self.img_size - 3 * 32
         self.max_size = self.img_size + 3 * 32
         self.batch_count = 0
-
-    def __getitem__(self, index):
+        self.num_samples = len(self.img_files)
+    
+    def preprocess(self, img_path, label_path):
         ### --- get image ---
-        img_path = self.img_files[index % len(self.img_files)] 
         img = transforms.ToTensor()(Image.open(img_path).convert('L'))
-        # img = transforms.ToTensor()(Image.open(img_path))
-        # # Handle images with less than 3 channels
+        # # Deal with gray image as 3-channel image
         # if len(img.shape) != 3:
         #     img = img.unsqueeze(0) # insert one dimension in axis 0
         #     img = img.expand((3, img.shape[1:])) # add two more channels by repeating
@@ -97,7 +101,6 @@ class ListDataset(Dataset):
         _, padded_h, padded_w = img.shape
 
         ### --- get label ---
-        label_path = self.label_files[index % len(self.img_files)] 
         targets = None
         if os.path.exists(label_path):
             boxes = torch.from_numpy(np.loadtxt(label_path).reshape(-1, 5))
@@ -114,7 +117,7 @@ class ListDataset(Dataset):
             x2 += pad[1] # padding_right
             y2 += pad[3] # padding_bottom
             
-            # Returns (x, y, w, h)
+            # Returns (new_x, new_y, new_w, new_h)
             boxes[:, 1] = ((x1 + x2) / 2) / padded_w
             boxes[:, 2] = ((y1 + y2) / 2) / padded_h
             boxes[:, 3] *= w_factor / padded_w
@@ -122,7 +125,13 @@ class ListDataset(Dataset):
 
             targets = torch.zeros((len(boxes), 6))
             targets[:, 1:] = boxes
+        
+        return img, targets
 
+    def __getitem__(self, index):
+        img_path = self.img_files[index % self.num_samples]
+        label_path = self.label_files[index % self.num_samples]
+        img, targets = self.preprocess(img_path, label_path)
         # Apply augmentations
         if self.augment:
             if np.random.random() < 0.5:

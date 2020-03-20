@@ -1,167 +1,250 @@
-Namespace(class_path='data/custom/classes.names', conf_thres=0.85, dataset_name='phantom_20', image_folder='data/custom/images/phantom_20', img_size=416, model_def='config/yolov3-custom.cfg', nms_thres=0.35, output_dir='output', weights_path='checkpoints/phantom_20/yolov3_ckpt_38.pth')
+Namespace(class_path='data/custom/classes.names', conf_thres=0.85, dataset_name='phantom_20', image_folder='data/custom/images/phantom_20', img_size=416, iou_thres=0.5, model_def='config/yolov3-custom.cfg', nms_thres=0.35, output_dir='output', save_plot=1, weights_path='checkpoints/phantom_20/yolov3_ckpt_38.pth')
 
-Performing object detection on ---> data/custom/images/phantom_20/5.jpg
-inference_time: 1.6989243030548096s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/5.jpg 	
+inference_time: 1.596590280532837s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 62.193, y1: 209.210, x2: 167.212, y2: 289.636, obj_conf: 0.97985, cls_conf: 0.99985
 	+ Label: vein, x1: 232.158, y1: 239.317, x2: 339.874, y2: 322.312, obj_conf: 0.97494, cls_conf: 0.99983
 	+ Label: vein, x1: 428.470, y1: 147.767, x2: 497.435, y2: 231.563, obj_conf: 0.95358, cls_conf: 0.99937
 saved image plot with detected bboxes into ---> output/phantom_20/5.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 101.635, y1: 116.508, x2: 160.120, y2: 161.297, iou: 0.75203
+	+ Label: vein, x1: 196.287, y1: 133.274, x2: 256.274, y2: 179.494, iou: 0.77935
+	+ Label: vein, x1: 305.613, y1: 82.291, x2: 344.019, y2: 128.956, iou: 0.76149
 
-Performing object detection on ---> data/custom/images/phantom_20/17.jpg
-inference_time: 0.03404808044433594s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/17.jpg 	
+inference_time: 0.034146785736083984s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 420.672, y1: 103.130, x2: 499.058, y2: 193.149, obj_conf: 0.97581, cls_conf: 0.99977
 	+ Label: vein, x1: -10.212, y1: 94.426, x2: 74.769, y2: 181.104, obj_conf: 0.95862, cls_conf: 0.99924
 	+ Label: vein, x1: 163.786, y1: 195.652, x2: 295.959, y2: 263.584, obj_conf: 0.94184, cls_conf: 0.99970
 saved image plot with detected bboxes into ---> output/phantom_20/17.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 301.270, y1: 57.433, x2: 344.923, y2: 107.563, iou: 0.86965
+	+ Label: vein, x1: 61.313, y1: 52.586, x2: 108.638, y2: 100.856, iou: 0.68305
+	+ Label: vein, x1: 158.211, y1: 108.958, x2: 231.818, y2: 146.788, iou: 0.70647
 
-Performing object detection on ---> data/custom/images/phantom_20/8.jpg
-inference_time: 0.034012556076049805s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/8.jpg 	
+inference_time: 0.03413200378417969s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 232.429, y1: 239.278, x2: 338.214, y2: 320.657, obj_conf: 0.97188, cls_conf: 0.99979
 	+ Label: vein, x1: 64.732, y1: 210.042, x2: 165.521, y2: 288.589, obj_conf: 0.96547, cls_conf: 0.99968
 	+ Label: vein, x1: 426.219, y1: 144.046, x2: 500.096, y2: 232.112, obj_conf: 0.95231, cls_conf: 0.99937
 saved image plot with detected bboxes into ---> output/phantom_20/8.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 196.438, y1: 133.253, x2: 255.349, y2: 178.572, iou: 0.82264
+	+ Label: vein, x1: 103.049, y1: 116.971, x2: 159.178, y2: 160.713, iou: 0.81399
+	+ Label: vein, x1: 304.359, y1: 80.218, x2: 345.500, y2: 129.262, iou: 0.78943
 
-Performing object detection on ---> data/custom/images/phantom_20/18.jpg
-inference_time: 0.03399991989135742s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/18.jpg 	
+inference_time: 0.03408694267272949s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 418.837, y1: 103.442, x2: 499.819, y2: 193.192, obj_conf: 0.97906, cls_conf: 0.99981
 	+ Label: vein, x1: -10.443, y1: 93.600, x2: 74.988, y2: 180.820, obj_conf: 0.95993, cls_conf: 0.99921
 	+ Label: vein, x1: 159.215, y1: 194.431, x2: 293.369, y2: 262.818, obj_conf: 0.93542, cls_conf: 0.99967
 saved image plot with detected bboxes into ---> output/phantom_20/18.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 300.248, y1: 57.606, x2: 345.346, y2: 107.588, iou: 0.82232
+	+ Label: vein, x1: 61.184, y1: 52.125, x2: 108.760, y2: 100.698, iou: 0.72522
+	+ Label: vein, x1: 155.666, y1: 108.277, x2: 230.376, y2: 146.362, iou: 0.66799
 
-Performing object detection on ---> data/custom/images/phantom_20/14.jpg
-inference_time: 0.03405356407165527s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/14.jpg 	
+inference_time: 0.03411602973937988s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 424.419, y1: 102.774, x2: 501.014, y2: 192.856, obj_conf: 0.97430, cls_conf: 0.99973
 	+ Label: vein, x1: -10.262, y1: 94.424, x2: 74.536, y2: 181.051, obj_conf: 0.95895, cls_conf: 0.99925
 	+ Label: vein, x1: 159.800, y1: 195.265, x2: 292.553, y2: 263.195, obj_conf: 0.94756, cls_conf: 0.99970
 saved image plot with detected bboxes into ---> output/phantom_20/14.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 303.356, y1: 57.234, x2: 346.012, y2: 107.400, iou: 0.79035
+	+ Label: vein, x1: 61.285, y1: 52.584, x2: 108.508, y2: 100.826, iou: 0.70119
+	+ Label: vein, x1: 155.992, y1: 108.742, x2: 229.921, y2: 146.572, iou: 0.69444
 
-Performing object detection on ---> data/custom/images/phantom_20/9.jpg
-inference_time: 0.03403210639953613s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/9.jpg 	
+inference_time: 0.0340580940246582s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 231.826, y1: 238.347, x2: 335.153, y2: 319.938, obj_conf: 0.97186, cls_conf: 0.99978
 	+ Label: vein, x1: 68.982, y1: 207.980, x2: 169.692, y2: 288.046, obj_conf: 0.96654, cls_conf: 0.99966
 	+ Label: vein, x1: 426.990, y1: 145.819, x2: 499.930, y2: 233.727, obj_conf: 0.94842, cls_conf: 0.99927
 saved image plot with detected bboxes into ---> output/phantom_20/9.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 196.103, y1: 132.734, x2: 253.645, y2: 178.172, iou: 0.79223
+	+ Label: vein, x1: 105.416, y1: 115.823, x2: 161.501, y2: 160.411, iou: 0.83801
+	+ Label: vein, x1: 304.788, y1: 81.206, x2: 345.408, y2: 130.161, iou: 0.82129
 
-Performing object detection on ---> data/custom/images/phantom_20/13.jpg
-inference_time: 0.03400826454162598s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/13.jpg 	
+inference_time: 0.03413653373718262s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 418.739, y1: 107.715, x2: 498.251, y2: 197.299, obj_conf: 0.97910, cls_conf: 0.99975
 	+ Label: vein, x1: -9.668, y1: 97.920, x2: 69.773, y2: 180.981, obj_conf: 0.95958, cls_conf: 0.99932
 	+ Label: vein, x1: 166.319, y1: 199.224, x2: 285.468, y2: 264.598, obj_conf: 0.93727, cls_conf: 0.99955
 saved image plot with detected bboxes into ---> output/phantom_20/13.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 300.193, y1: 59.986, x2: 344.473, y2: 109.875, iou: 0.80019
+	+ Label: vein, x1: 61.616, y1: 54.531, x2: 105.856, y2: 100.788, iou: 0.73121
+	+ Label: vein, x1: 159.622, y1: 110.947, x2: 225.975, y2: 147.353, iou: 0.61044
 
-Performing object detection on ---> data/custom/images/phantom_20/4.jpg
-inference_time: 0.03402590751647949s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/4.jpg 	
+inference_time: 0.03404521942138672s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 62.193, y1: 209.210, x2: 167.212, y2: 289.636, obj_conf: 0.97985, cls_conf: 0.99985
 	+ Label: vein, x1: 232.158, y1: 239.317, x2: 339.874, y2: 322.312, obj_conf: 0.97494, cls_conf: 0.99983
 	+ Label: vein, x1: 428.470, y1: 147.767, x2: 497.435, y2: 231.563, obj_conf: 0.95358, cls_conf: 0.99937
 saved image plot with detected bboxes into ---> output/phantom_20/4.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 101.635, y1: 116.508, x2: 160.120, y2: 161.297, iou: 0.84744
+	+ Label: vein, x1: 196.287, y1: 133.274, x2: 256.274, y2: 179.494, iou: 0.77316
+	+ Label: vein, x1: 305.613, y1: 82.291, x2: 344.019, y2: 128.956, iou: 0.80067
 
-Performing object detection on ---> data/custom/images/phantom_20/19.jpg
-inference_time: 0.03403425216674805s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/19.jpg 	
+inference_time: 0.03406834602355957s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 418.837, y1: 103.442, x2: 499.819, y2: 193.192, obj_conf: 0.97906, cls_conf: 0.99981
 	+ Label: vein, x1: -10.443, y1: 93.600, x2: 74.988, y2: 180.820, obj_conf: 0.95993, cls_conf: 0.99921
 	+ Label: vein, x1: 159.215, y1: 194.431, x2: 293.369, y2: 262.818, obj_conf: 0.93542, cls_conf: 0.99967
 saved image plot with detected bboxes into ---> output/phantom_20/19.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 300.248, y1: 57.606, x2: 345.346, y2: 107.588, iou: 0.89864
+	+ Label: vein, x1: 61.184, y1: 52.125, x2: 108.760, y2: 100.698, iou: 0.69319
+	+ Label: vein, x1: 155.666, y1: 108.277, x2: 230.376, y2: 146.362, iou: 0.70424
 
-Performing object detection on ---> data/custom/images/phantom_20/3.jpg
-inference_time: 0.03404545783996582s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/3.jpg 	
+inference_time: 0.03411221504211426s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 61.472, y1: 209.233, x2: 167.851, y2: 289.545, obj_conf: 0.98021, cls_conf: 0.99986
 	+ Label: vein, x1: 231.962, y1: 239.391, x2: 339.972, y2: 322.549, obj_conf: 0.97458, cls_conf: 0.99984
 	+ Label: vein, x1: 429.147, y1: 148.217, x2: 496.869, y2: 231.194, obj_conf: 0.94844, cls_conf: 0.99927
 saved image plot with detected bboxes into ---> output/phantom_20/3.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 101.233, y1: 116.521, x2: 160.475, y2: 161.246, iou: 0.85730
+	+ Label: vein, x1: 196.178, y1: 133.316, x2: 256.329, y2: 179.626, iou: 0.81673
+	+ Label: vein, x1: 305.990, y1: 82.541, x2: 343.703, y2: 128.751, iou: 0.70346
 
-Performing object detection on ---> data/custom/images/phantom_20/15.jpg
-inference_time: 0.03403878211975098s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/15.jpg 	
+inference_time: 0.034070730209350586s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 423.649, y1: 101.816, x2: 501.540, y2: 192.870, obj_conf: 0.97432, cls_conf: 0.99975
 	+ Label: vein, x1: -10.700, y1: 94.291, x2: 75.198, y2: 180.985, obj_conf: 0.95992, cls_conf: 0.99923
 	+ Label: vein, x1: 163.954, y1: 195.765, x2: 295.761, y2: 263.666, obj_conf: 0.94480, cls_conf: 0.99971
 saved image plot with detected bboxes into ---> output/phantom_20/15.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 302.928, y1: 56.701, x2: 346.305, y2: 107.408, iou: 0.89388
+	+ Label: vein, x1: 61.041, y1: 52.510, x2: 108.877, y2: 100.789, iou: 0.77811
+	+ Label: vein, x1: 158.305, y1: 109.020, x2: 231.708, y2: 146.834, iou: 0.71867
 
-Performing object detection on ---> data/custom/images/phantom_20/10.jpg
-inference_time: 0.034032344818115234s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/10.jpg 	
+inference_time: 0.03408193588256836s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 64.407, y1: 206.024, x2: 167.596, y2: 285.984, obj_conf: 0.97299, cls_conf: 0.99978
 	+ Label: vein, x1: 231.376, y1: 237.709, x2: 333.656, y2: 319.711, obj_conf: 0.96796, cls_conf: 0.99975
 	+ Label: vein, x1: 426.802, y1: 143.234, x2: 499.321, y2: 232.298, obj_conf: 0.94704, cls_conf: 0.99932
 saved image plot with detected bboxes into ---> output/phantom_20/10.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 102.868, y1: 114.734, x2: 160.333, y2: 159.263, iou: 0.82358
+	+ Label: vein, x1: 195.852, y1: 132.379, x2: 252.811, y2: 178.045, iou: 0.86578
+	+ Label: vein, x1: 304.684, y1: 79.766, x2: 345.069, y2: 129.366, iou: 0.87843
 
-Performing object detection on ---> data/custom/images/phantom_20/7.jpg
-inference_time: 0.034011125564575195s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/7.jpg 	
+inference_time: 0.03419184684753418s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 232.604, y1: 239.362, x2: 338.537, y2: 320.863, obj_conf: 0.97270, cls_conf: 0.99980
 	+ Label: vein, x1: 66.833, y1: 206.987, x2: 165.681, y2: 288.398, obj_conf: 0.97058, cls_conf: 0.99974
 	+ Label: vein, x1: 425.751, y1: 143.849, x2: 500.710, y2: 232.439, obj_conf: 0.95600, cls_conf: 0.99946
 saved image plot with detected bboxes into ---> output/phantom_20/7.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 196.536, y1: 133.299, x2: 255.529, y2: 178.687, iou: 0.87511
+	+ Label: vein, x1: 104.219, y1: 115.270, x2: 159.267, y2: 160.607, iou: 0.86689
+	+ Label: vein, x1: 304.098, y1: 80.109, x2: 345.843, y2: 129.444, iou: 0.84289
 
-Performing object detection on ---> data/custom/images/phantom_20/0.jpg
-inference_time: 0.03423190116882324s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/0.jpg 	
+inference_time: 0.034111738204956055s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 409.518, y1: 100.697, x2: 495.471, y2: 188.237, obj_conf: 0.98075, cls_conf: 0.99986
 	+ Label: vein, x1: -7.346, y1: 96.868, x2: 77.963, y2: 183.485, obj_conf: 0.96179, cls_conf: 0.99920
 	+ Label: vein, x1: 160.255, y1: 193.433, x2: 295.829, y2: 262.257, obj_conf: 0.90770, cls_conf: 0.99947
 saved image plot with detected bboxes into ---> output/phantom_20/0.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 295.058, y1: 56.077, x2: 342.925, y2: 104.828, iou: 0.74296
+	+ Label: vein, x1: 62.909, y1: 53.945, x2: 110.417, y2: 102.182, iou: 0.77502
+	+ Label: vein, x1: 156.245, y1: 107.722, x2: 231.746, y2: 146.050, iou: 0.69937
 
-Performing object detection on ---> data/custom/images/phantom_20/12.jpg
-inference_time: 0.03402876853942871s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/12.jpg 	
+inference_time: 0.03413558006286621s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 418.414, y1: 107.535, x2: 499.091, y2: 197.069, obj_conf: 0.97979, cls_conf: 0.99976
 	+ Label: vein, x1: -9.394, y1: 98.387, x2: 69.178, y2: 180.957, obj_conf: 0.95982, cls_conf: 0.99929
 	+ Label: vein, x1: 166.717, y1: 199.290, x2: 285.150, y2: 264.445, obj_conf: 0.93490, cls_conf: 0.99953
 saved image plot with detected bboxes into ---> output/phantom_20/12.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 300.012, y1: 59.886, x2: 344.941, y2: 109.747, iou: 0.84000
+	+ Label: vein, x1: 61.768, y1: 54.791, x2: 105.525, y2: 100.774, iou: 0.65689
+	+ Label: vein, x1: 159.844, y1: 110.984, x2: 225.799, y2: 147.268, iou: 0.53204
 
-Performing object detection on ---> data/custom/images/phantom_20/2.jpg
-inference_time: 0.03408980369567871s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/2.jpg 	
+inference_time: 0.0340876579284668s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 59.165, y1: 208.570, x2: 163.949, y2: 289.866, obj_conf: 0.97355, cls_conf: 0.99984
 	+ Label: vein, x1: 235.463, y1: 244.193, x2: 347.175, y2: 331.872, obj_conf: 0.96776, cls_conf: 0.99983
 	+ Label: vein, x1: 425.178, y1: 146.045, x2: 502.005, y2: 236.202, obj_conf: 0.95827, cls_conf: 0.99953
 saved image plot with detected bboxes into ---> output/phantom_20/2.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 99.949, y1: 116.151, x2: 158.302, y2: 161.425, iou: 0.85226
+	+ Label: vein, x1: 198.128, y1: 135.989, x2: 260.340, y2: 184.817, iou: 0.85223
+	+ Label: vein, x1: 303.779, y1: 81.331, x2: 346.564, y2: 131.540, iou: 0.87771
 
-Performing object detection on ---> data/custom/images/phantom_20/1.jpg
-inference_time: 0.03406167030334473s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/1.jpg 	
+inference_time: 0.03413558006286621s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 59.219, y1: 208.501, x2: 163.782, y2: 289.941, obj_conf: 0.97377, cls_conf: 0.99985
 	+ Label: vein, x1: 235.378, y1: 244.117, x2: 347.253, y2: 331.868, obj_conf: 0.96752, cls_conf: 0.99983
 	+ Label: vein, x1: 425.465, y1: 146.065, x2: 501.760, y2: 236.025, obj_conf: 0.95764, cls_conf: 0.99951
 saved image plot with detected bboxes into ---> output/phantom_20/1.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 99.979, y1: 116.113, x2: 158.209, y2: 161.466, iou: 0.82066
+	+ Label: vein, x1: 198.081, y1: 135.947, x2: 260.383, y2: 184.815, iou: 0.82041
+	+ Label: vein, x1: 303.939, y1: 81.343, x2: 346.427, y2: 131.441, iou: 0.83611
 
-Performing object detection on ---> data/custom/images/phantom_20/11.jpg
-inference_time: 0.033997535705566406s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/11.jpg 	
+inference_time: 0.03412747383117676s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 425.565, y1: 108.273, x2: 501.555, y2: 196.716, obj_conf: 0.97159, cls_conf: 0.99960
 	+ Label: vein, x1: -6.342, y1: 100.005, x2: 70.832, y2: 185.511, obj_conf: 0.95777, cls_conf: 0.99924
 	+ Label: vein, x1: 166.405, y1: 199.010, x2: 285.200, y2: 265.001, obj_conf: 0.93842, cls_conf: 0.99956
 saved image plot with detected bboxes into ---> output/phantom_20/11.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 303.995, y1: 60.297, x2: 346.313, y2: 109.550, iou: 0.85142
+	+ Label: vein, x1: 63.468, y1: 55.692, x2: 106.446, y2: 103.310, iou: 0.76041
+	+ Label: vein, x1: 159.670, y1: 110.827, x2: 225.826, y2: 147.577, iou: 0.55654
 
-Performing object detection on ---> data/custom/images/phantom_20/6.jpg
-inference_time: 0.034090280532836914s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/6.jpg 	
+inference_time: 0.03418588638305664s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 66.985, y1: 206.720, x2: 165.650, y2: 288.561, obj_conf: 0.97588, cls_conf: 0.99979
 	+ Label: vein, x1: 232.811, y1: 239.459, x2: 338.480, y2: 321.147, obj_conf: 0.97192, cls_conf: 0.99979
 	+ Label: vein, x1: 425.695, y1: 143.623, x2: 500.037, y2: 233.086, obj_conf: 0.95964, cls_conf: 0.99951
 saved image plot with detected bboxes into ---> output/phantom_20/6.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 104.304, y1: 115.121, x2: 159.250, y2: 160.698, iou: 0.81244
+	+ Label: vein, x1: 196.651, y1: 133.353, x2: 255.498, y2: 178.845, iou: 0.73324
+	+ Label: vein, x1: 304.067, y1: 79.983, x2: 345.468, y2: 129.804, iou: 0.85981
 
-Performing object detection on ---> data/custom/images/phantom_20/16.jpg
-inference_time: 0.034145355224609375s
-Saving image with bbox:
+Performing object detection on ---> data/custom/images/phantom_20/16.jpg 	
+inference_time: 0.034096717834472656s
+Saving image with bbox in original image size - ((747, 504)):
 	+ Label: vein, x1: 423.649, y1: 101.816, x2: 501.540, y2: 192.870, obj_conf: 0.97432, cls_conf: 0.99975
 	+ Label: vein, x1: -10.700, y1: 94.291, x2: 75.198, y2: 180.985, obj_conf: 0.95992, cls_conf: 0.99923
 	+ Label: vein, x1: 163.954, y1: 195.765, x2: 295.761, y2: 263.666, obj_conf: 0.94480, cls_conf: 0.99971
 saved image plot with detected bboxes into ---> output/phantom_20/16.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 302.928, y1: 56.701, x2: 346.305, y2: 107.408, iou: 0.89358
+	+ Label: vein, x1: 61.041, y1: 52.510, x2: 108.877, y2: 100.789, iou: 0.73906
+	+ Label: vein, x1: 158.305, y1: 109.020, x2: 231.708, y2: 146.834, iou: 0.64860
 
 ----- YOLOv3 Performance Summary on phantom_20 -----
-Using device : cuda
-Using model : checkpoints/phantom_20/yolov3_ckpt_38.pth
-Total inference time: 2.345911979675293s 	 Average inference time: 0.11729559898376465s
+Using device: cuda
+Using model: checkpoints/phantom_20/yolov3_ckpt_38.pth
+Total samples: 20 detected samples: 20
+Precision: 1.000 Recall: 1.000 AP: 1.000 f1: 1.000 ap_class: [0]
+Total inference time: 2.24472s
+Average inference time: 0.10689s Average prediction confidence: 0.962 Average iou: 0.780
 -----------------------
