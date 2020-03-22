@@ -14,7 +14,7 @@ sys.path.insert(0, '/home/joey/work/IV_Detection/UNet')
 
 from unet_model import UNet
 from dataset import BasicDataset
-from utils import plot_img_and_mask, Logger, dice_coeff
+from utils_unet import plot_img_and_mask, Logger, dice_coeff
 
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)

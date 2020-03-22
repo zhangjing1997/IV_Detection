@@ -4,7 +4,11 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 import numpy as np
 
-from utils import parse_model_config, to_cpu, non_max_suppression, build_targets
+import sys
+sys.path.insert(0, '/home/joey/work/IV_Detection/YOLOv3')
+# import utils
+from utils_yolo import non_max_suppression, build_targets, parse_model_config, to_cpu
+
 
 def create_modules(module_defs):
     """

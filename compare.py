@@ -1,6 +1,7 @@
 import os
 import sys
 import math
+import statistics
 
 import numpy as np
 from PIL import Image
@@ -8,34 +9,45 @@ import cv2
 
 import torch
 
-# sys.path.insert(0, './UNet/')
-# sys.path.insert(0, './YOLOv3/')
+from UNet.unet_model import UNet
+from UNet.segment import segment_img, mask_to_image
+from YOLOv3.yolo_model import Darknet
+from YOLOv3.detect import detect_img
 
-# from UNet.unet_model import UNet
-# from UNet.segment import segment_img, mask_to_image
-# from YOLOv3.detect import detect_img
-# from YOLOv3.yolo_model import Darknet
-
-from UNet import UNet, segment_img, mask_to_image
-from YOLOv3 import detect_img, Darknet
-
-def getCentroidsFromMaskImage(img_path):
+class Logger(object):
     """
-    input: path to a gray image that is binarized or just a mask image.
+    make pring statement simultaneously print onto console and into a logfile.
+    """
+    def __init__(self, logfile_name):
+        self.terminal = sys.stdout
+        self.log = open(logfile_name, "w")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)  
+
+    def flush(self):
+        # this flush method is needed for python 3 compatibility. this handles the flush command by doing nothing. you might want to specify some extra behavior here.
+        pass
+
+def getCentroidsFromMaskImage(pil_img):
+    """
+    input: a binarized or just a mask image in PIL format.
     output: a list of tuples storing the coordinates in pixel of the white regions' centroids.
     """
-    img = cv2.imread(img_path, 0) # 0 -> cv2.IMREAD_GRAYSCALE
+    img = cv2.cvtColor(np.array(pil_img.convert('RGB')), cv2.COLOR_RGB2BGR)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     _, contours, _ = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE) # find contours in the binary image
     centroids = []
     for c in contours:
         M = cv2.moments(c) # calculate moments for each contour
         cX = int(M["m10"] / M["m00"])
         cY = int(M["m01"] / M["m00"])
-        centroids.append((cX, cY))
+        centroid = (cX, cY)
+        centroids.append(centroid)
     
-    sorted(centroids, key=lambda x: x[0]) # sort centroids from left to right
-
-    return centroids
+    # sort centroids from left to right
+    return sorted(centroids, key=lambda x: x[0])
 
 def getCentroidsFromDetections(bboxes):
     """
@@ -49,11 +61,11 @@ def getCentroidsFromDetections(bboxes):
     for x1, y1, x2, y2, _, _, _ in bboxes:
         cX = (x1 + x2) / 2
         cY = (y1 + y2) / 2
-        centroids.append((cX, cY))
+        centroid = ((int)(cX.item()), (int)(cY.item()))
+        centroids.append(centroid)
     
-    sorted(centroids, key=lambda x: x[0]) # sort centroids from left to right
-
-    return centroids
+    # sort centroids from left to right
+    return sorted(centroids, key=lambda x: x[0])
 
 def euclideanDist(coord1, coord2):
     """
@@ -84,6 +96,7 @@ def computecentroidsDiff(centroids_target, centroids_pred):
 
 
 if __name__ == "__main__":
+    sys.stdout = Logger('log_compare.log')
     image_folder = 'UNet/data/imgs/phantom_20'
     target_folder = 'UNet/data/masks/phantom_20'
 
@@ -98,15 +111,19 @@ if __name__ == "__main__":
     model_yolo.load_state_dict(torch.load('YOLOv3/checkpoints/phantom_20/yolov3_ckpt_38.pth'))
     model_yolo.eval()
 
-    for i, fn in enumerate(os.listdir(image_folder)):
-        if not fn.endswith('.jpg'):
-            continue
+    unet_target_avgerror_list = []
+    yolo_target_avgerror_list = []
+    image_files = [x for x in os.listdir(image_folder) if x.endswith('.jpg')]
+    for i, fn in enumerate(image_files):
+        # if not fn.endswith('.jpg'):
+        #     continue
         # input image and target
         img_path = os.path.join(image_folder, fn)
         target_path = os.path.join(target_folder, fn)
-        centroids_target = getCentroidsFromMaskImage(target_path)
+        centroids_target = getCentroidsFromMaskImage(Image.open(target_path))
 
         # prediction
+        print('\n----------------------')
         mask, _ = segment_img(img_path, model_unet, device, scale_factor=1.0, out_threshold=0.5)
         _, detections_rescaled, _ = detect_img(img_path, model_yolo, device, 416, classes, conf_thres=0.85, nms_thres=0.35, output_dir='', save_plot=False)
 
@@ -115,12 +132,23 @@ if __name__ == "__main__":
         centroids_yolo = getCentroidsFromDetections(detections_rescaled)
 
         # compute error
-        unet_target_dist_list = computecentroidsDiff(centroids_unet, centroids_target)
-        yolo_target_dist_list = computecentroidsDiff(centroids_yolo, centroids_target)
+        unet_target_errors = computecentroidsDiff(centroids_unet, centroids_target)
+        yolo_target_errors = computecentroidsDiff(centroids_yolo, centroids_target)
 
         # logs: error and stats
         print(f'centroids_target: {centroids_target}')
         print(f'centroids_unet: {centroids_unet}')
         print(f'centroids_yolo: {centroids_yolo}')
-        print(f'unet_target_dist: {unet_target_dist_list}')
-        print(f'yolo_target_dist: {yolo_target_dist_list}')
+        print(f'unet_target_errors: {unet_target_errors}')
+        print(f'yolo_target_errors: {yolo_target_errors}')
+
+        if len(unet_target_errors) > 0:
+            unet_target_avgerror_list.append(statistics.mean(unet_target_errors))
+        
+        if len(yolo_target_errors) > 0:
+            yolo_target_avgerror_list.append(statistics.mean(yolo_target_errors))
+    
+    print('\n===================')
+    print(f'Average centroid prediction error')
+    print(f'\t unet: {statistics.mean(unet_target_avgerror_list)}')
+    print(f'\t yolo: {statistics.mean(yolo_target_avgerror_list)}')

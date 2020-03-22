@@ -20,7 +20,7 @@ from torch.autograd import Variable
 
 # sys.path.insert(0, '/home/joey/work/IV_Detection/YOLOv3')
 from yolo_model import Darknet
-from utils import load_classes, rescale_boxes, non_max_suppression, Logger, xywh2xyxy, get_batch_statistics, ap_per_class
+from utils_yolo import load_classes, rescale_boxes, non_max_suppression, Logger, xywh2xyxy, get_batch_statistics, ap_per_class
 from datasets import ImageFolder, ListDataset
 
 import warnings
@@ -39,7 +39,7 @@ def plot_img_and_bbox(img_path, detections, detect_size, class_names, output_dir
         print('No veins detected on this image!')
     else:
         # detections = rescale_boxes(detections, detect_size, img.shape[:2]) # rescale bbox into original image size
-        print(f"Saving image with bbox in original image size - ({img.shape[:2]}):")
+        print(f"Saving image with bbox in original image size - {img.shape[:2]}:")
         for x1, y1, x2, y2, obj_conf, cls_conf, cls_pred in detections:
             print("\t+ Label: %s, x1: %.3f, y1: %.3f, x2: %.3f, y2: %.3f, obj_conf: %.5f, cls_conf: %.5f" % 
                 (class_names[int(cls_pred)], x1, y1, x2, y2, obj_conf.item(), cls_conf.item()))
@@ -53,9 +53,9 @@ def plot_img_and_bbox(img_path, detections, detect_size, class_names, output_dir
             ax.add_patch(bbox)
             # add label
             if x1 > 0:
-                plt.text(x1, y1, s=classes[int(cls_pred)], color="white", verticalalignment="bottom", horizontalalignment='left', bbox={"color": color, "pad": 0})
+                plt.text(x1, y1, s=class_names[int(cls_pred)], color="white", verticalalignment="bottom", horizontalalignment='left', bbox={"color": color, "pad": 0})
             elif x2 < img.shape[1]:
-                plt.text(x2, y2, s=classes[int(cls_pred)], color="white", verticalalignment="top", horizontalalignment='right', bbox={"color": color, "pad": 0})
+                plt.text(x2, y2, s=class_names[int(cls_pred)], color="white", verticalalignment="top", horizontalalignment='right', bbox={"color": color, "pad": 0})
         
         plt.axis("off")
         plt.gca().xaxis.set_major_locator(NullLocator())
