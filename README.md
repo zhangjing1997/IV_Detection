@@ -4,8 +4,10 @@ This project is an self-implemented submodule of Robotic IV Insertion Project af
 
 The images look like the following one because the deoxygenated haemoglobin in veins absorb infrared light more than surrounding tissues, which makes the veins appear as dark on a lighter background.
 
-<p align="center"> <img src="./assets/sample_phantom.jpg" alt="drawing" height="40%" width="40%"/> </p>
-<p align="center"> <img src="./assets/sample_invivo.jpg" alt="drawing" height="40%" width="40%"/> </p>
+<p align="center"> 
+<img src="./assets/sample_phantom.jpg" alt="drawing" height="40%" width="40%"/>
+<img src="./assets/sample_invivo.jpg" alt="drawing" height="40%" width="40%"/>
+</p>
 
 
 # Progress & Notes
@@ -125,8 +127,14 @@ The images look like the following one because the deoxygenated haemoglobin in v
   - modified large parts of UNet project codes, following the pipeline idea of YOLO
 
 ### Mar 19
-- preliminarily tested performance (prediction speed) on two datasets for YOLOv3 and UNet
+- preliminarily tested performance on two datasets for UNet
   - prediction speed -> time that the model spent on prediction only, without other post-processing
+  - accuracy/powerfulness -> how good the model is predicting
+
+### Mar 20
+- basically tested performance on two datasets for YOLOv3
+  - prediction speed
+  - accuracy/powerfulness
 
 
 ### Current Results - YOLOv3
@@ -137,11 +145,10 @@ The images look like the following one because the deoxygenated haemoglobin in v
 <p align="center"> <em></em> 0.jpg in invivo_91 </p>
 
 ### Next
+- yolo和unet之间的对比 - 主要是性能，速度可以从之前的看出来。
 - write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy -> enrich printing info
   - using detect.py for YOLO and segment.py for UNet
-  - 先算各自的val_score
-  - 再定一个统一的对比metric
-- test prediction accuracy - util function to compute validation score
+  - 定一个统一的对比metric
 - elegant print logs & args
 - better visualization comparison: write util function to produce img/visualization comparison among input vs. label vs. prediction
 - modify two sub-projects' readme -> mainly describe usages

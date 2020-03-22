@@ -1,4 +1,3 @@
-from __future__ import division
 import os
 import sys
 import time
@@ -19,6 +18,7 @@ from torch.utils.data import DataLoader
 from torchvision import datasets
 from torch.autograd import Variable
 
+# sys.path.insert(0, '/home/joey/work/IV_Detection/YOLOv3')
 from yolo_model import Darknet
 from utils import load_classes, rescale_boxes, non_max_suppression, Logger, xywh2xyxy, get_batch_statistics, ap_per_class
 from datasets import ImageFolder, ListDataset
@@ -38,7 +38,7 @@ def plot_img_and_bbox(img_path, detections, detect_size, class_names, output_dir
     if detections is None:
         print('No veins detected on this image!')
     else:
-        detections = rescale_boxes(detections, detect_size, img.shape[:2]) # rescale bbox into original image size
+        # detections = rescale_boxes(detections, detect_size, img.shape[:2]) # rescale bbox into original image size
         print(f"Saving image with bbox in original image size - ({img.shape[:2]}):")
         for x1, y1, x2, y2, obj_conf, cls_conf, cls_pred in detections:
             print("\t+ Label: %s, x1: %.3f, y1: %.3f, x2: %.3f, y2: %.3f, obj_conf: %.5f, cls_conf: %.5f" % 
@@ -87,26 +87,29 @@ def detect_img(img_path, model, device, detect_size, class_names, conf_thres, nm
     """
     print(f'\nPerforming object detection on ---> {img_path} \t')
     FloatTensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+    img_np = np.array(Image.open(img_path))
     img = ImageFolder(folder_path='', img_size=detect_size).preprocess(img_path)
     img = img.unsqueeze(0).type(FloatTensor)
 
     begin_time = time.time()
     with torch.no_grad():
-        detections = model(img)
-        detections = non_max_suppression(detections, conf_thres, nms_thres)
+        outputs = model(img)
+        detections_list = non_max_suppression(outputs, conf_thres, nms_thres)
     end_time = time.time()
     # print(f'detections: {detections}')
 
     inference_time = end_time - begin_time
     print(f'inference_time: {inference_time}s')
 
-    if detections[0] is not None:
+    detections_rescaled = None
+    if detections_list[0] is not None:
         # it is a list due to the implementation of non_max_suppression that deal with batch samples
-        plot_img_and_bbox(img_path, detections[0].clone(), detect_size, class_names, output_dir, save_plot)
+        detections_rescaled = rescale_boxes(detections_list[0].clone(), detect_size, img_np.shape[:2])
+        plot_img_and_bbox(img_path, detections_rescaled, detect_size, class_names, output_dir, save_plot)
     else:
         print('No veins detected on this image!')
     
-    return detections, inference_time
+    return detections_list, detections_rescaled, inference_time
 
 
 if __name__ == "__main__":
@@ -159,7 +162,8 @@ if __name__ == "__main__":
         img_path = os.path.join(opt.image_folder, fn)
 
         # single image prediction -> plot bbox and save
-        detections, inference_time = detect_img(img_path, model, device, opt.img_size, classes, opt.conf_thres, opt.nms_thres, output_dir, opt.save_plot)
+        # detections_list is a list containting detections corresponded with samples
+        detections_list, detections_rescaled, inference_time = detect_img(img_path, model, device, opt.img_size, classes, opt.conf_thres, opt.nms_thres, output_dir, opt.save_plot)
 
         # label/targets
         label_path = img_path.replace('images', 'labels').replace('.jpg', '.txt')
@@ -172,14 +176,14 @@ if __name__ == "__main__":
         inference_time_total += inference_time
 
         # validation score computation
-        sample_metrics += get_batch_statistics(detections, targets, iou_threshold=opt.iou_thres)
+        sample_metrics += get_batch_statistics(detections_list, targets, iou_threshold=opt.iou_thres)
         ious = sample_metrics[-1][-1]
-        if detections[0] is not None:
+        if detections_list[0] is not None:
             count += 1
             print(f'Showing image with bbox in detected image size - ({opt.img_size}, {opt.img_size})')
             conf_list = []
             ious_list = []
-            for i, ((x1, y1, x2, y2, obj_conf, cls_conf, cls_pred), iou) in enumerate(zip(detections[0], ious)):
+            for i, ((x1, y1, x2, y2, obj_conf, cls_conf, cls_pred), iou) in enumerate(zip(detections_list[0], ious)):
                 conf_list.append(obj_conf.item())
                 ious_list.append(iou.item())
                 print("\t+ Label: %s, x1: %.3f, y1: %.3f, x2: %.3f, y2: %.3f, iou: %.5f" % (classes[int(cls_pred)], x1, y1, x2, y2, iou.item()))

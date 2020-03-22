@@ -2,6 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+# import sys
+# sys.path.insert(0, '/home/joey/work/IV_Detection/UNet')
+
 ### ----- Parts of the U-Net model -----
 class DoubleConv(nn.Module):
     """(convolution => [BN] => ReLU) * 2"""

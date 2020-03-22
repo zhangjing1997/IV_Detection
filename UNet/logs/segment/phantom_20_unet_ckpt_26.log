@@ -1,102 +1,102 @@
 Namespace(dataset_name='phantom_20', image_folder='data/imgs', mask_threshold=0.5, output_dir='output', save_results=1, scale=1.0, viz=0, weights_path='checkpoints/phantom_20/unet_ckpt_26.pth')
 
 Performing segmentation on ---> data/imgs/phantom_20/5.jpg ...
-inference_time: 1.5867114067077637s
+inference_time: 1.5756049156188965s
 validation_score (dice_coeff): 0.9670676589012146
 saved predicted mask to ---> output/phantom_20/5.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/17.jpg ...
-inference_time: 0.004308223724365234s
+inference_time: 0.004355430603027344s
 validation_score (dice_coeff): 0.9798932671546936
 saved predicted mask to ---> output/phantom_20/17.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/8.jpg ...
-inference_time: 0.004319190979003906s
+inference_time: 0.004349231719970703s
 validation_score (dice_coeff): 0.9809415936470032
 saved predicted mask to ---> output/phantom_20/8.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/18.jpg ...
-inference_time: 0.00432896614074707s
+inference_time: 0.004331827163696289s
 validation_score (dice_coeff): 0.972339928150177
 saved predicted mask to ---> output/phantom_20/18.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/14.jpg ...
-inference_time: 0.004294395446777344s
+inference_time: 0.004324913024902344s
 validation_score (dice_coeff): 0.979694664478302
 saved predicted mask to ---> output/phantom_20/14.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/9.jpg ...
-inference_time: 0.004298210144042969s
+inference_time: 0.004337310791015625s
 validation_score (dice_coeff): 0.9773865342140198
 saved predicted mask to ---> output/phantom_20/9.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/13.jpg ...
-inference_time: 0.004316806793212891s
+inference_time: 0.004325389862060547s
 validation_score (dice_coeff): 0.9632916450500488
 saved predicted mask to ---> output/phantom_20/13.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/4.jpg ...
-inference_time: 0.0043141841888427734s
+inference_time: 0.004328727722167969s
 validation_score (dice_coeff): 0.9720354080200195
 saved predicted mask to ---> output/phantom_20/4.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/19.jpg ...
-inference_time: 0.004307985305786133s
+inference_time: 0.005074739456176758s
 validation_score (dice_coeff): 0.9770801067352295
 saved predicted mask to ---> output/phantom_20/19.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/3.jpg ...
-inference_time: 0.004300832748413086s
+inference_time: 0.004275321960449219s
 validation_score (dice_coeff): 0.9793970584869385
 saved predicted mask to ---> output/phantom_20/3.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/15.jpg ...
-inference_time: 0.004342079162597656s
+inference_time: 0.004266500473022461s
 validation_score (dice_coeff): 0.9766615033149719
 saved predicted mask to ---> output/phantom_20/15.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/10.jpg ...
-inference_time: 0.00432586669921875s
+inference_time: 0.0042531490325927734s
 validation_score (dice_coeff): 0.9842287302017212
 saved predicted mask to ---> output/phantom_20/10.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/7.jpg ...
-inference_time: 0.004305362701416016s
+inference_time: 0.004244089126586914s
 validation_score (dice_coeff): 0.9783532023429871
 saved predicted mask to ---> output/phantom_20/7.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/0.jpg ...
-inference_time: 0.004316091537475586s
+inference_time: 0.004256010055541992s
 validation_score (dice_coeff): 0.9639521837234497
 saved predicted mask to ---> output/phantom_20/0.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/12.jpg ...
-inference_time: 0.004319190979003906s
+inference_time: 0.0042612552642822266s
 validation_score (dice_coeff): 0.9670482873916626
 saved predicted mask to ---> output/phantom_20/12.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/2.jpg ...
-inference_time: 0.004343271255493164s
+inference_time: 0.004260063171386719s
 validation_score (dice_coeff): 0.9858684539794922
 saved predicted mask to ---> output/phantom_20/2.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/1.jpg ...
-inference_time: 0.004305839538574219s
+inference_time: 0.00424647331237793s
 validation_score (dice_coeff): 0.9710443019866943
 saved predicted mask to ---> output/phantom_20/1.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/11.jpg ...
-inference_time: 0.0043218135833740234s
+inference_time: 0.00426793098449707s
 validation_score (dice_coeff): 0.9741401076316833
 saved predicted mask to ---> output/phantom_20/11.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/6.jpg ...
-inference_time: 0.004323482513427734s
+inference_time: 0.004243135452270508s
 validation_score (dice_coeff): 0.974750816822052
 saved predicted mask to ---> output/phantom_20/6.jpg
 
 Performing segmentation on ---> data/imgs/phantom_20/16.jpg ...
-inference_time: 0.004304647445678711s
+inference_time: 0.004278659820556641s
 validation_score (dice_coeff): 0.9808309674263
 saved predicted mask to ---> output/phantom_20/16.jpg
 
@@ -104,5 +104,5 @@ saved predicted mask to ---> output/phantom_20/16.jpg
 Using device: cuda
 Using model: checkpoints/phantom_20/unet_ckpt_26.pth
 Total samples: 20
-Total inference time: 1.66871s 	 Average inference time: 0.08344s 	 Average val score: 0.975
+Total inference time: 1.65789s 	 Average inference time: 0.08289s 	 Average val score: 0.975
 -----------------------
