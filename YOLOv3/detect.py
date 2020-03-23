@@ -7,7 +7,7 @@ import random
 random.seed(400)
 import statistics
 
-from PIL import Image
+from PIL import Image, ImageChops
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
@@ -25,6 +25,14 @@ from datasets import ImageFolder, ListDataset
 
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning) 
+
+# def trim(im):
+#     bg = Image.new(im.mode, im.size, im.getpixel((0,0)))
+#     diff = ImageChops.difference(im, bg)
+#     diff = ImageChops.add(diff, diff, 2.0, -100)
+#     bbox = diff.getbbox()
+#     if bbox:
+#         return im.crop(bbox)
 
 def plot_img_and_bbox(img_path, detections, detect_size, class_names, output_dir, save_plot=True):
     img_input = Image.open(img_path) # pil image
@@ -52,10 +60,10 @@ def plot_img_and_bbox(img_path, detections, detect_size, class_names, output_dir
             bbox = patches.Rectangle((x1_draw, y1_draw), x2_draw - x1_draw, y2_draw - y1_draw, linewidth=2, edgecolor=color, facecolor="none")
             ax.add_patch(bbox)
             # add label
-            if x1 > 0:
-                plt.text(x1, y1, s=class_names[int(cls_pred)], color="white", verticalalignment="bottom", horizontalalignment='left', bbox={"color": color, "pad": 0})
-            elif x2 < img.shape[1]:
-                plt.text(x2, y2, s=class_names[int(cls_pred)], color="white", verticalalignment="top", horizontalalignment='right', bbox={"color": color, "pad": 0})
+            # if x1 > 0:
+            #     plt.text(x1, y1, s=class_names[int(cls_pred)], color="white", verticalalignment="bottom", horizontalalignment='left', bbox={"color": color, "pad": 0})
+            # elif x2 < img.shape[1]:
+            #     plt.text(x2, y2, s=class_names[int(cls_pred)], color="white", verticalalignment="top", horizontalalignment='right', bbox={"color": color, "pad": 0})
         
         plt.axis("off")
         plt.gca().xaxis.set_major_locator(NullLocator())
@@ -86,7 +94,7 @@ def detect_img(img_path, model, device, detect_size, class_names, conf_thres, nm
         - class_names: a list of target class names
     """
     print(f'\nPerforming object detection on ---> {img_path} \t')
-    FloatTensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+    FloatTensor = torch.cuda.FloatTensor if device.type == 'cuda' else torch.FloatTensor
     img_np = np.array(Image.open(img_path))
     img = ImageFolder(folder_path='', img_size=detect_size).preprocess(img_path)
     img = img.unsqueeze(0).type(FloatTensor)
@@ -120,6 +128,7 @@ if __name__ == "__main__":
     parser.add_argument("--image_folder", type=str, default="data/samples", help="path to dataset")
     parser.add_argument("--save_plot", type=int, default=1, help="whether save plotted results")
 
+    parser.add_argument("--device", type=str, default="cuda", help="specify device: cuda or cpu")
     parser.add_argument("--model_def", type=str, default="config/yolov3-custom.cfg", help="path to model definition file")
     parser.add_argument("--weights_path", type=str, default="weights/yolov3.weights", help="path to weights file")
     parser.add_argument("--class_path", type=str, default="data/custom/classes.names", help="path to class label file")
@@ -135,7 +144,8 @@ if __name__ == "__main__":
     sys.stdout = Logger(f'logs/detect/{opt.dataset_name}_{ckpt_str}.log') # logfile to save this script printing
     print(opt)
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device(opt.device)
     output_dir = opt.output_dir + '/' + opt.dataset_name
     os.makedirs(output_dir, exist_ok=True)
 

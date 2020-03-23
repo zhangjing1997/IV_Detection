@@ -1,6 +1,10 @@
 # Locating Veins on Infrared(Gray) Images for IV Insertion with Two Approaches - Segementation(U-Net) | Detection(YOLO)
 
-This project is an self-implemented submodule of Robotic IV Insertion Project affiliated with a Duke Medical Lab, which has the similar idea as a paper Visual Vein-Finding for Robotics IV Insertion by R. D. Brewer and J. K. Salisbury. Genereally speaking, a fast and automated algorithm to find the precise vein edges on the captured infrared images can help suggest insertion points(region) for a human or robotic practitioner.
+This project serves as a frontend module of the Robotic IV Insertion Project maintained by Jing Zhang, under the supervision of a PHD student Guangshen Ma and a professor Dr. Daniel Buckland from Duke University, which has the similar idea as a paper Visual Vein-Finding for Robotics IV Insertion by R. D. Brewer and J. K. Salisbury.
+
+Genereally speaking, a fast and automated algorithm to find the precise vein edges on the captured infrared images can help suggest insertion points(region) for a human or robotic practitioner.
+
+Most of the implementation is based on [UNet](https://github.com/milesial/Pytorch-UNet) and [YOLOv3](https://github.com/eriklindernoren/PyTorch-YOLOv3), which are to locate veins from two perspectives: the former one is to segment out the target vein region, which is like pixel-wise classification; the later one is to put a rectangular bounding box around the target vein region. 
 
 The images look like the following one because the deoxygenated haemoglobin in veins absorb infrared light more than surrounding tissues, which makes the veins appear as dark on a lighter background.
 
@@ -10,13 +14,144 @@ The images look like the following one because the deoxygenated haemoglobin in v
 </p>
 
 
-# Progress & Notes
-### Last Meet
-- 从downsample image resolution的角度去看能否提升U-Net的速度
-- 确定了一个统一的metric来衡量算法的accuracy: 比较中心点差距
-- 在真实数据集上训练，并对于performance做统计对比分析。
-- 搞懂yolo代码，对model部分进行修改。 
+## Segmentation - UNet
+<p align="center"> <img src="./assets/demo_unet_phantom_20.png" alt="drawing" height="80%" width="80%"/> </p>
+<p align="center"> <em></em> 12.jpg in phantom_20 </p>
 
+<p align="center"> <img src="./assets/demo_unet_invivo_91.png" alt="drawing" height="80%" width="80%"/> </p>
+<p align="center"> <em></em> 12.jpg in invivo_91 </p>
+
+## Detection - YOLOv3
+### Why YOLO
+- fast. base version: 45 frames/s; fast version: 155 frames/s. (referred from YOLO paper)
+- accurate. mAP is close to other SOTA models and less likely to get false positives on background.
+- good generalization. it is less likely to break down when adapting into other domains like artwork.
+
+<p align="center"> <img src="./assets/demo_yolo_phantom_20.png" alt="drawing" height="70%" width="70%"/> </p>
+<p align="center"> <em></em> 0.jpg in phantom_20 </p>
+
+<p align="center"> <img src="./assets/demo_yolo_invivo_91.png" alt="drawing" height="70%" width="70%"/> </p>
+<p align="center"> <em></em> 0.jpg in invivo_91 </p>
+
+## Performance Test : unet vs. yolo
+#### Model Weights / Checkpoints
+```
+unet_phantom_ckpt = 'unet_ckpt_26.pth'
+yolo_phantom_ckpt = 'yolov3_ckpt_38.pth'
+
+unet_invivo_ckpt = 'unet_ckpt_20.pth'
+yolo_phantom_ckpt = 'yolov3_ckpt_34.pth'
+```
+
+### Run separately
+```
+----- UNet Performance Summary on phantom_20 -----
+Using device: cuda
+Using model: checkpoints/phantom_20/unet_ckpt_26.pth
+Total samples: 20
+Total inference time: 1.65789s 	 Average inference time: 0.08289s 	 Average val score: 0.975
+-----------------------
+
+----- UNet Performance Summary on phantom_20 -----
+Using device: cuda
+Using model: checkpoints/phantom_20/unet_ckpt_26.pth
+Total samples: 20
+Total inference time: 1.65789s 	 Average inference time: 0.08289s 	 Average val score: 0.975
+-----------------------
+```
+
+```
+----- YOLOv3 Performance Summary on phantom_20 -----
+Using device: cuda
+Using model: checkpoints/phantom_20/yolov3_ckpt_38.pth
+Total samples: 20 detected samples: 20
+Precision: 1.000 Recall: 1.000 AP: 1.000 f1: 1.000 ap_class: [0]
+Total inference time: 2.24476s
+Average inference time: 0.11224s Average prediction confidence: 0.962 Average iou: 0.780
+-----------------------
+
+----- YOLOv3 Performance Summary on invivo_91 -----
+Using device: cuda
+Using model: checkpoints/invivo_91/yolov3_ckpt_34.pth
+Total samples: 90 detected samples: 89
+Precision: 0.989 Recall: 0.979 AP: 0.979 f1: 0.984 ap_class: [0]
+Total inference time: 4.52317s
+Average inference time: 0.05026s Average prediction confidence: 0.975 Average iou: 0.793
+-----------------------
+```
+
+
+### Run together
+```
+Phantom_20
+
+Using device: cpu
+Dataset - phantom_20: UNet/data/imgs/phantom_20
+Total samples: 20
+Model Weights: 
+	- unet: UNet/checkpoints/phantom_20/unet_ckpt_26.pth
+	- yolo: YOLOv3/checkpoints/phantom_20/yolov3_ckpt_38.pth
+Average prediction speed/time (s): 
+	- unet: 2.6939
+	- yolo: 0.4372
+Average centroid prediction error: 
+	- unet: 1.99539
+	- yolo: 6.73612
+
+Using device: cuda
+Dataset - phantom_20: UNet/data/imgs/phantom_20
+Total samples: 20
+Model Weights: 
+  - unet: UNet/checkpoints/phantom_20/unet_ckpt_26.pth
+  - yolo: YOLOv3/checkpoints/phantom_20/yolov3_ckpt_38.pth
+Average prediction speed/time (s): 
+  - unet: 0.0808
+  - yolo: 0.0251
+Average centroid prediction error: 
+  - unet: 1.99539
+  - yolo: 6.73612
+```
+
+```
+Invivo_91
+
+Using device: cpu
+Dataset - invivo_91: UNet/data/imgs/invivo_91
+Total samples: 90
+Model Weights: 
+	- unet: UNet/checkpoints/invivo_91/unet_ckpt_20.pth
+	- yolo: YOLOv3/checkpoints/invivo_91/yolov3_ckpt_34.pth
+Average prediction speed/time (s): 
+	- unet: 2.5301
+	- yolo: 0.4533
+Average centroid prediction error: 
+	- unet: 4.12972
+	- yolo: 8.08504
+
+Using device: cuda
+Dataset - invivo_91: UNet/data/imgs/invivo_91
+Total samples: 90
+Model Weights: 
+	- unet: UNet/checkpoints/invivo_91/unet_ckpt_20.pth
+	- yolo: YOLOv3/checkpoints/invivo_91/yolov3_ckpt_34.pth
+Average prediction speed/time (s): 
+	- unet: 0.0232
+	- yolo: 0.0241
+Average centroid prediction error: 
+	- unet: 4.12972
+	- yolo: 8.08504
+```
+
+#### Analysis
+- YOLO's centroid prediction error is obviously greater than UNet.
+  - approximately twice on Invivo_91
+  - and 6 times on Phantom_20. 
+- Using cpu or cuda(gpu) does not really affect the prediction accuracy, but affect the prediction speed a lot.
+  - the prediction speed of using cuda is over 100 times faster than using cpu for UNet,
+  - and around 20 times faster than using cpu for YOLO.
+- In short, Unet can suggest a more accurate centroid while YOLO runs faster than UNet with cpu provideed only and almost same as Unet when using cuda.
+
+## Progress & Notes
 [Mid-term Report](https://docs.google.com/presentation/d/1ixdv6zaCGtkkfqN84M2ob_LZV4D6BFkfnUIeEUIfd7A/edit?usp=sharing)
 
 修改意见：
@@ -33,54 +168,38 @@ The images look like the following one because the deoxygenated haemoglobin in v
 - yolo的regression思想最好也通过简单的visualization来展现
 
 
-## Segmentation - UNet
-### Jan 30
-- add 20 pairs of img-mask into 'data' directory
-- modify the original n_channels = 3 to n_channels = 1 in train.py and predict.py when instantiating an U-Net
-- modify glob() in __getitem__ of BasicDataset so that one img to one mask
-- pip3 install future, tb-nightly (for torch.utils.tensorboard.SummaryWriter) - 'past module not installed'
-- batchsize目前看来只能是1，待研究其中的原因。
-- 解决了不能打开tensorboard的问题：运行diagnose_tensorboard.py文件，根据suggestions进行操作。- 实际上就是因为前面装了tb-nightly和pytorch内置的tensorboard冲突了。
-- 解决了working with remote jupyter notebook ipynb on local vscode:（推荐方法二）
-    - 方法一：
-        - 在remote server terminal上运行 jupyter notebook --no-browser --port=8889
-        - 在本地terminal运行 ssh -N -f -L localhost:8888:localhost:8889 joey@0.tcp.ngrok.io
-        - 在本地浏览器打开localhost:8888
-    - 方法二：
-        - 下载ms-python extension。安装之后，选择python运行环境。
+#### Jan 30
+- labelled the `phantom_20` dataset of 20 samples
+- go over the original code and adapt into our dataset or situation
+  - modify `n_channels = 3` to `n_channels = 1` in train.py and segment.py when instantiating U-Net
+  - modify glob() in `__getitem__` of BasicDataset so that one img to one mask
+  - batchsize seemed only to be 1.
+  - solved the problem that tensorboard could not be openned
+    - run `diagnose_tensorboard.py` and operate according to the printed suggestions.
+    - the reason behind was the confliction between `tb-nightly` and the integrated tensorboard in `pytorch` 
+- working with remote jupyter notebook ipynb on local vscode: (recommend the second method)
+  - method 1: 
+    - run `jupyter notebook --no-browser --port=8889` on remote server's console
+    - run `ssh -N -f -L localhost:8888:localhost:8889 joey@0.tcp.ngrok.io` on local console
+    - go to `localhost:8888` on local browser
+  - method 2：
+    - download ms-python extension
+    - choose proper virtual python environment
 
-### Feb 5
-- 确定了training用的是binary crossentropy, eval用的是dice loss
-- torch.size() return [bs, channels, depth, height, width], 而pil_image.size return [width, height]。
-- 猜测原本predict.py文件中多写了一步resize，使得output mask和input image的size不匹配。
-- 将train.py中向tensorboard写images或者scalars的部分改成了每隔一个epoch写一次。
-- 在ipyng中实现了：
-    - 从一个model set中找到score最大的model.pth
-    - draw training loss and validation score
-    - 做一些当前performance的测试
-- went through basic pipeline
+#### Feb 5
+- confirmed that the training loss is binary crossentropy and evaluation score is dice loss, which is like iou.
+- how to decide the dimension of "image":
+  - torch.size() --> [bs, channels, depth, height, width]
+  - pil_image.size --> [width, height]
+  - image_arr.shape --> [height, width]
+- modify the frequency of writing images/scalars into tensorboard during training into per epoch.
+- wrote in ipynb:
+  - find the best model weight from a set of model weights
+  - draw training loss and validation score
+  - single sample performance test
+- basically finished the whole pipeline: training & evaluation
 
-### Current Results - UNet
-<p align="center"> <img src="./assets/demo_unet_phantom_20.png" alt="drawing" height="80%" width="80%"/> </p>
-<p align="center"> <em></em> 12.jpg in phantom_20 </p>
-
-<p align="center"> <img src="./assets/demo_unet_invivo_91.png" alt="drawing" height="80%" width="80%"/> </p>
-<p align="center"> <em></em> 12.jpg in invivo_91 </p>
-
-### Next:  
-- 加augmentation
-- 尝试调整loss function
-- 加weight matrix以给边界上的点更高权重
-- 给prediction加上后处理 - 调用CV包去拟合一个elliptical shape
-
-
-## Detection - YOLO
-### Why YOLO
-- fast. base version: 45 frames/s; fast version: 155 frames/s. (referred from YOLO paper)
-- accurate. mAP is close to other SOTA models and less likely to get false positives on background.
-- good generalization. it is less likely to break down when adapting into other domains like artwork.
-
-### Mar 5
+#### Mar 5
 - labelled 20 samples - `phantom_20`
 - wrote a util function in `yolo_eda.ipynb` to extract data concerning bbox attributes in xml file into txt, following the format: label_idx, xmin, xmax, ymin, ymax
 - built yolo_detection pipeline by following the customization instructions given by the original readme.
@@ -91,14 +210,14 @@ The images look like the following one because the deoxygenated haemoglobin in v
 - the image preprocessing defined in the customized dataset `datasets.ImageFolder` accept images of 3xWxH by default.
   - temporary solution: used `torch.tensor.expand` to add two more channels, whichs is actually channel-wise copy.
 
-### Mar 15
+#### Mar 15
 - checked network strcuture and training loss from yolo/yolov2/yolov3 papers while referring the code
 - thoroughly understood the whole training pipeline and how does detect.py uses the trained model to demo the results
 - modified the network to adapt to training on gray images directly, instead of replicating 2 more channels like before
   - just change the channel number in `yolov3-custom.cfg` from 3 to 1
   - for later use, we could add a variable indicating channel number in `create_custom_model.sh` and replace corresponding hardcoded number into this variable.
 
-### Mar 16
+#### Mar 16
 - recreate yolo custom config using the modified `create_custom_model.sh` and train without pretrained weights (for 3 channels), then check the results demo.
   - problem: some image samples got one more bbox on the same one target vein.
   - solution: increase `conf_thres` from 0.8 to 0.85 and decrease `nms_thres` from 0.4 to 0.35.
@@ -110,11 +229,11 @@ The images look like the following one because the deoxygenated haemoglobin in v
 - improved the visualization of saving resulted image plots by choosing left_top or right_bottom corner to put text
 - wrote a sinle image prediction code block in `eda_yolo.ipynb`
 
-### Mar 17
+#### Mar 17
 - finished labelling 91 invivo image samples from its original dataset with 190 samples.
 - built a raw labelled data preprocessing pipeline for unet and yolo, which will help quickly replicate on another dataset with two methods.
 
-### Mar 18
+#### Mar 18
 - built a shared YOLO training pipeline by modifying/adapting codes in dataset processing and files/dir setup
 - retrain on phantom_20 and change `checkpoint_interval` from 1 to 2 and produce detect results into `ouput/phantom`
 - simutaneously redirect printing outputs on console produced by `train.py` and `detect.py` into appropriate log files
@@ -126,35 +245,39 @@ The images look like the following one because the deoxygenated haemoglobin in v
 - train unet on invivo_91 by `train.py` and evaluate to produce results into `output` by `segment.py` and check
   - modified large parts of UNet project codes, following the pipeline idea of YOLO
 
-### Mar 19
+#### Mar 19
 - preliminarily tested performance on two datasets for UNet
   - prediction speed -> time that the model spent on prediction only, without other post-processing
   - accuracy/powerfulness -> how good the model is predicting
 
-### Mar 20
+#### Mar 20
 - basically tested performance on two datasets for YOLOv3
   - prediction speed
   - accuracy/powerfulness
 
 
-### Current Results - YOLOv3
-<p align="center"> <img src="./assets/demo_yolo_phantom_20.png" alt="drawing" height="70%" width="70%"/> </p>
-<p align="center"> <em></em> 0.jpg in phantom_20 </p>
+#### Mar 21
+- wrote `compare.py` but spent a lot of time on debugging the import failure in the module under a package
+  - renamed the two packages' utils module name to avoid name confliction
+  - specify an absolute environment path for one of them
 
-<p align="center"> <img src="./assets/demo_yolo_invivo_91.png" alt="drawing" height="70%" width="70%"/> </p>
-<p align="center"> <em></em> 0.jpg in invivo_91 </p>
+#### Mar 22
+- basically finished the comparison between unet and yolo in terms of prediction speed and the accuracy of the predicted centroids
+
+### Next - UNet
+- 加augmentation
+- 尝试调整loss function
+- 加weight matrix以给边界上的点更高权重
+- consider downsampling image size to do prediction and rescale back for outputs
+
 
 ### Next
-- yolo和unet之间的对比 - 主要是性能，速度可以从之前的看出来。
-- write unify evaluation pipeline to compare the two methods: efficiency vs. accuracy -> enrich printing info
-  - using detect.py for YOLO and segment.py for UNet
-  - 定一个统一的对比metric
-- elegant print logs & args
-- better visualization comparison: write util function to produce img/visualization comparison among input vs. label vs. prediction
-- modify two sub-projects' readme -> mainly describe usages
-- If necessary, consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils.
 - **Post-Processing - Active Contour**:
   - find active contour code on github, etc.
   - understand and try to modify them for our own use
   - if effective, use it to refine the vein edges on our segmentation(unet) and detection(yolo) methods to finalize a whole project demo.
+- better visualization comparison: write util function to produce img/visualization comparison among input vs. label vs. prediction
+- modify two sub-projects' readme -> mainly describe usages
+- elegant print logs & args -> parser.args
+- **If necessary**, consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils -> show learning curve.
 - **If time allows**, consider designing a specified loss to directlt learn the target edge, which fits the end-to-end thoughts in deep learning.

@@ -65,6 +65,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Predict masks from input images', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument("--dataset_name", type=str, default="phantom_20", help="the name of dataset used for segementation")
+    parser.add_argument("--device", type=str, default="cuda", help="specify device: cuda or cpu")
     parser.add_argument('--weights_path', type=str, default='unet_ckpt_xx.pth', help="path to weights file")
     parser.add_argument('--image_folder', type=str, default='data/imgs', help='parent of image folder storing images to do segmentation')
     parser.add_argument('--output_dir', type=str, default='output', help='parent of path to parent saving segmentation results')
@@ -105,7 +106,8 @@ if __name__ == "__main__":
         mask, inference_time = segment_img(img_path, net, device, args.scale, args.mask_threshold)
 
         # target mask
-        FloatTensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+        # FloatTensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+        FloatTensor = torch.cuda.FloatTensor if args.device == 'cuda' else torch.FloatTensor
         target = BasicDataset.preprocess(Image.open(target_path), args.scale)
 
         # validation score computation

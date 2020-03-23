@@ -1,458 +1,458 @@
-Namespace(dataset_name='invivo_91', image_folder='data/imgs', mask_threshold=0.5, output_dir='output', save_results=1, scale=1.0, viz=0, weights_path='checkpoints/invivo_91/unet_ckpt_20.pth')
+Namespace(dataset_name='invivo_91', image_folder='data/imgs', mask_threshold=0.9, output_dir='output', save_results=1, scale=1.0, viz=0, weights_path='checkpoints/invivo_91/unet_ckpt_20.pth')
 
 Performing segmentation on ---> data/imgs/invivo_91/59.jpg ...
-inference_time: 1.5724971294403076s
-validation_score (dice_coeff): 0.951113224029541
+inference_time: 1.5772202014923096s
+validation_score (dice_coeff): 0.9373181462287903
 saved predicted mask to ---> output/invivo_91/59.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/98.jpg ...
-inference_time: 0.004385232925415039s
-validation_score (dice_coeff): 0.9908469915390015
+inference_time: 0.004396200180053711s
+validation_score (dice_coeff): 0.9925013184547424
 saved predicted mask to ---> output/invivo_91/98.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/68.jpg ...
-inference_time: 0.0043680667877197266s
-validation_score (dice_coeff): 0.9919334650039673
+inference_time: 0.00437474250793457s
+validation_score (dice_coeff): 0.9803869128227234
 saved predicted mask to ---> output/invivo_91/68.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/109.jpg ...
-inference_time: 0.004374504089355469s
-validation_score (dice_coeff): 0.9933316707611084
+inference_time: 0.004386425018310547s
+validation_score (dice_coeff): 0.9882840514183044
 saved predicted mask to ---> output/invivo_91/109.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/44.jpg ...
-inference_time: 0.004353046417236328s
-validation_score (dice_coeff): 0.9851309657096863
+inference_time: 0.004396200180053711s
+validation_score (dice_coeff): 0.9759112000465393
 saved predicted mask to ---> output/invivo_91/44.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/101.jpg ...
-inference_time: 0.004357814788818359s
-validation_score (dice_coeff): 0.9760421514511108
+inference_time: 0.0043871402740478516s
+validation_score (dice_coeff): 0.9864682555198669
 saved predicted mask to ---> output/invivo_91/101.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/122.jpg ...
-inference_time: 0.004368782043457031s
-validation_score (dice_coeff): 0.9901636242866516
+inference_time: 0.00436854362487793s
+validation_score (dice_coeff): 0.9822772145271301
 saved predicted mask to ---> output/invivo_91/122.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/23.jpg ...
-inference_time: 0.004399299621582031s
-validation_score (dice_coeff): 0.987101674079895
+inference_time: 0.004387378692626953s
+validation_score (dice_coeff): 0.9872553944587708
 saved predicted mask to ---> output/invivo_91/23.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/97.jpg ...
-inference_time: 0.004355192184448242s
-validation_score (dice_coeff): 0.9227466583251953
+inference_time: 0.00437474250793457s
+validation_score (dice_coeff): 0.9455996751785278
 saved predicted mask to ---> output/invivo_91/97.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/80.jpg ...
-inference_time: 0.004398345947265625s
-validation_score (dice_coeff): 0.9845924973487854
+inference_time: 0.004366874694824219s
+validation_score (dice_coeff): 0.9840794205665588
 saved predicted mask to ---> output/invivo_91/80.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/103.jpg ...
-inference_time: 0.0043642520904541016s
-validation_score (dice_coeff): 0.9908987283706665
+inference_time: 0.005217790603637695s
+validation_score (dice_coeff): 0.988815426826477
 saved predicted mask to ---> output/invivo_91/103.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/18.jpg ...
-inference_time: 0.0043659210205078125s
-validation_score (dice_coeff): 0.9833004474639893
+inference_time: 0.004381418228149414s
+validation_score (dice_coeff): 0.96856689453125
 saved predicted mask to ---> output/invivo_91/18.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/41.jpg ...
-inference_time: 0.004364490509033203s
-validation_score (dice_coeff): 0.9902618527412415
+inference_time: 0.00437617301940918s
+validation_score (dice_coeff): 0.9839795231819153
 saved predicted mask to ---> output/invivo_91/41.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/99.jpg ...
-inference_time: 0.004387617111206055s
-validation_score (dice_coeff): 0.9779685735702515
+inference_time: 0.004401206970214844s
+validation_score (dice_coeff): 0.9912713766098022
 saved predicted mask to ---> output/invivo_91/99.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/90.jpg ...
-inference_time: 0.004361629486083984s
-validation_score (dice_coeff): 0.9928579926490784
+inference_time: 0.004359006881713867s
+validation_score (dice_coeff): 0.998097836971283
 saved predicted mask to ---> output/invivo_91/90.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/125.jpg ...
-inference_time: 0.004355669021606445s
-validation_score (dice_coeff): 0.985468864440918
+inference_time: 0.004377603530883789s
+validation_score (dice_coeff): 0.9680343270301819
 saved predicted mask to ---> output/invivo_91/125.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/58.jpg ...
-inference_time: 0.004367351531982422s
-validation_score (dice_coeff): 0.9661853909492493
+inference_time: 0.004383563995361328s
+validation_score (dice_coeff): 0.9528167843818665
 saved predicted mask to ---> output/invivo_91/58.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/86.jpg ...
-inference_time: 0.004361391067504883s
-validation_score (dice_coeff): 0.9345715641975403
+inference_time: 0.00435328483581543s
+validation_score (dice_coeff): 0.9921395778656006
 saved predicted mask to ---> output/invivo_91/86.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/14.jpg ...
-inference_time: 0.004354715347290039s
-validation_score (dice_coeff): 0.9864969849586487
+inference_time: 0.004377841949462891s
+validation_score (dice_coeff): 0.970982551574707
 saved predicted mask to ---> output/invivo_91/14.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/111.jpg ...
-inference_time: 0.004354238510131836s
-validation_score (dice_coeff): 0.9131804704666138
+inference_time: 0.00437474250793457s
+validation_score (dice_coeff): 0.8414246439933777
 saved predicted mask to ---> output/invivo_91/111.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/92.jpg ...
-inference_time: 0.004370212554931641s
-validation_score (dice_coeff): 0.9862338900566101
+inference_time: 0.0043773651123046875s
+validation_score (dice_coeff): 0.992007315158844
 saved predicted mask to ---> output/invivo_91/92.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/102.jpg ...
-inference_time: 0.005148172378540039s
-validation_score (dice_coeff): 0.9838141798973083
+inference_time: 0.004375457763671875s
+validation_score (dice_coeff): 0.9751920104026794
 saved predicted mask to ---> output/invivo_91/102.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/100.jpg ...
-inference_time: 0.004324674606323242s
-validation_score (dice_coeff): 0.993923008441925
+inference_time: 0.004370212554931641s
+validation_score (dice_coeff): 0.9877046346664429
 saved predicted mask to ---> output/invivo_91/100.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/64.jpg ...
-inference_time: 0.004311084747314453s
-validation_score (dice_coeff): 0.992489755153656
+inference_time: 0.004369974136352539s
+validation_score (dice_coeff): 0.9857208132743835
 saved predicted mask to ---> output/invivo_91/64.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/108.jpg ...
-inference_time: 0.004308462142944336s
-validation_score (dice_coeff): 0.991994321346283
+inference_time: 0.005982875823974609s
+validation_score (dice_coeff): 0.9904935359954834
 saved predicted mask to ---> output/invivo_91/108.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/95.jpg ...
-inference_time: 0.0043032169342041016s
-validation_score (dice_coeff): 0.9736730456352234
+inference_time: 0.004374980926513672s
+validation_score (dice_coeff): 0.9836519360542297
 saved predicted mask to ---> output/invivo_91/95.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/105.jpg ...
-inference_time: 0.004306793212890625s
-validation_score (dice_coeff): 0.9941637516021729
+inference_time: 0.004358053207397461s
+validation_score (dice_coeff): 0.9912856221199036
 saved predicted mask to ---> output/invivo_91/105.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/131.jpg ...
-inference_time: 0.0043010711669921875s
-validation_score (dice_coeff): 0.788844108581543
+inference_time: 0.004364967346191406s
+validation_score (dice_coeff): 0.9676521420478821
 saved predicted mask to ---> output/invivo_91/131.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/79.jpg ...
-inference_time: 0.004297018051147461s
-validation_score (dice_coeff): 0.9878947734832764
+inference_time: 0.00434112548828125s
+validation_score (dice_coeff): 0.9777292013168335
 saved predicted mask to ---> output/invivo_91/79.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/96.jpg ...
-inference_time: 0.00429534912109375s
-validation_score (dice_coeff): 0.9851703643798828
+inference_time: 0.004363536834716797s
+validation_score (dice_coeff): 0.9869033098220825
 saved predicted mask to ---> output/invivo_91/96.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/56.jpg ...
-inference_time: 0.004297733306884766s
-validation_score (dice_coeff): 0.9771903157234192
+inference_time: 0.004382610321044922s
+validation_score (dice_coeff): 0.9572138786315918
 saved predicted mask to ---> output/invivo_91/56.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/115.jpg ...
-inference_time: 0.0043218135833740234s
-validation_score (dice_coeff): 0.8940379619598389
+inference_time: 0.004380226135253906s
+validation_score (dice_coeff): 0.9237390756607056
 saved predicted mask to ---> output/invivo_91/115.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/45.jpg ...
-inference_time: 0.0042877197265625s
-validation_score (dice_coeff): 0.9808467626571655
+inference_time: 0.004380702972412109s
+validation_score (dice_coeff): 0.964224636554718
 saved predicted mask to ---> output/invivo_91/45.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/129.jpg ...
-inference_time: 0.004316568374633789s
-validation_score (dice_coeff): 0.9128413200378418
+inference_time: 0.004359006881713867s
+validation_score (dice_coeff): 0.9250015616416931
 saved predicted mask to ---> output/invivo_91/129.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/133.jpg ...
-inference_time: 0.004309177398681641s
-validation_score (dice_coeff): 0.9926150441169739
+inference_time: 0.004337310791015625s
+validation_score (dice_coeff): 0.9955476522445679
 saved predicted mask to ---> output/invivo_91/133.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/69.jpg ...
-inference_time: 0.004316091537475586s
-validation_score (dice_coeff): 0.9806593656539917
+inference_time: 0.0043735504150390625s
+validation_score (dice_coeff): 0.9751473665237427
 saved predicted mask to ---> output/invivo_91/69.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/87.jpg ...
-inference_time: 0.00429987907409668s
-validation_score (dice_coeff): 0.9510647058486938
+inference_time: 0.004356861114501953s
+validation_score (dice_coeff): 0.9954642653465271
 saved predicted mask to ---> output/invivo_91/87.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/159.jpg ...
-inference_time: 0.0043010711669921875s
-validation_score (dice_coeff): 0.9548211693763733
+inference_time: 0.0043544769287109375s
+validation_score (dice_coeff): 0.9297083616256714
 saved predicted mask to ---> output/invivo_91/159.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/70.jpg ...
-inference_time: 0.004295825958251953s
-validation_score (dice_coeff): 0.9770594835281372
+inference_time: 0.004379749298095703s
+validation_score (dice_coeff): 0.9859490394592285
 saved predicted mask to ---> output/invivo_91/70.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/91.jpg ...
-inference_time: 0.004306316375732422s
-validation_score (dice_coeff): 0.986754298210144
+inference_time: 0.004353523254394531s
+validation_score (dice_coeff): 0.9946050643920898
 saved predicted mask to ---> output/invivo_91/91.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/128.jpg ...
-inference_time: 0.00429081916809082s
-validation_score (dice_coeff): 0.995151162147522
+inference_time: 0.00436091423034668s
+validation_score (dice_coeff): 0.9858790636062622
 saved predicted mask to ---> output/invivo_91/128.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/24.jpg ...
-inference_time: 0.004305124282836914s
-validation_score (dice_coeff): 0.9876330494880676
+inference_time: 0.004352092742919922s
+validation_score (dice_coeff): 0.9861000180244446
 saved predicted mask to ---> output/invivo_91/24.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/110.jpg ...
-inference_time: 0.004322528839111328s
-validation_score (dice_coeff): 0.9313506484031677
+inference_time: 0.00435185432434082s
+validation_score (dice_coeff): 0.9538682699203491
 saved predicted mask to ---> output/invivo_91/110.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/127.jpg ...
-inference_time: 0.004346132278442383s
-validation_score (dice_coeff): 0.9951845407485962
+inference_time: 0.00436854362487793s
+validation_score (dice_coeff): 0.9899407029151917
 saved predicted mask to ---> output/invivo_91/127.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/135.jpg ...
-inference_time: 0.0043010711669921875s
-validation_score (dice_coeff): 0.989471435546875
+inference_time: 0.004457235336303711s
+validation_score (dice_coeff): 0.9949390888214111
 saved predicted mask to ---> output/invivo_91/135.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/88.jpg ...
-inference_time: 0.004297018051147461s
-validation_score (dice_coeff): 0.994149923324585
+inference_time: 0.004351615905761719s
+validation_score (dice_coeff): 0.9967427253723145
 saved predicted mask to ---> output/invivo_91/88.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/84.jpg ...
-inference_time: 0.004289865493774414s
-validation_score (dice_coeff): 0.967018187046051
+inference_time: 0.004362583160400391s
+validation_score (dice_coeff): 0.9943808913230896
 saved predicted mask to ---> output/invivo_91/84.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/151.jpg ...
-inference_time: 0.004316568374633789s
-validation_score (dice_coeff): 0.9822772145271301
+inference_time: 0.004370927810668945s
+validation_score (dice_coeff): 0.9829222559928894
 saved predicted mask to ---> output/invivo_91/151.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/4.jpg ...
-inference_time: 0.004301309585571289s
-validation_score (dice_coeff): 0.9780325293540955
+inference_time: 0.004423856735229492s
+validation_score (dice_coeff): 0.9567546844482422
 saved predicted mask to ---> output/invivo_91/4.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/132.jpg ...
-inference_time: 0.004290342330932617s
-validation_score (dice_coeff): 0.9394532442092896
+inference_time: 0.004339694976806641s
+validation_score (dice_coeff): 0.9923433661460876
 saved predicted mask to ---> output/invivo_91/132.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/61.jpg ...
-inference_time: 0.004285573959350586s
-validation_score (dice_coeff): 0.9892171621322632
+inference_time: 0.004346609115600586s
+validation_score (dice_coeff): 0.9857669472694397
 saved predicted mask to ---> output/invivo_91/61.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/153.jpg ...
-inference_time: 0.004317283630371094s
+inference_time: 0.004348039627075195s
 validation_score (dice_coeff): 0.9363396167755127
 saved predicted mask to ---> output/invivo_91/153.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/89.jpg ...
-inference_time: 0.0042934417724609375s
-validation_score (dice_coeff): 0.9946821331977844
+inference_time: 0.004377126693725586s
+validation_score (dice_coeff): 0.9959163665771484
 saved predicted mask to ---> output/invivo_91/89.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/30.jpg ...
-inference_time: 0.004311800003051758s
-validation_score (dice_coeff): 0.9901788234710693
+inference_time: 0.0043697357177734375s
+validation_score (dice_coeff): 0.98531174659729
 saved predicted mask to ---> output/invivo_91/30.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/154.jpg ...
-inference_time: 0.0043714046478271484s
+inference_time: 0.004354238510131836s
 validation_score (dice_coeff): 0.9323608875274658
 saved predicted mask to ---> output/invivo_91/154.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/124.jpg ...
-inference_time: 0.004355192184448242s
-validation_score (dice_coeff): 0.9923049211502075
+inference_time: 0.004404544830322266s
+validation_score (dice_coeff): 0.9828139543533325
 saved predicted mask to ---> output/invivo_91/124.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/113.jpg ...
-inference_time: 0.004304170608520508s
-validation_score (dice_coeff): 0.8955695033073425
+inference_time: 0.00437164306640625s
+validation_score (dice_coeff): 0.8450708985328674
 saved predicted mask to ---> output/invivo_91/113.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/19.jpg ...
-inference_time: 0.004285097122192383s
-validation_score (dice_coeff): 0.9894005060195923
+inference_time: 0.004389047622680664s
+validation_score (dice_coeff): 0.9751465916633606
 saved predicted mask to ---> output/invivo_91/19.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/22.jpg ...
-inference_time: 0.004296541213989258s
-validation_score (dice_coeff): 0.9888538718223572
+inference_time: 0.004382133483886719s
+validation_score (dice_coeff): 0.978873074054718
 saved predicted mask to ---> output/invivo_91/22.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/116.jpg ...
-inference_time: 0.004319190979003906s
-validation_score (dice_coeff): 0.9214769601821899
+inference_time: 0.004383087158203125s
+validation_score (dice_coeff): 0.8831818699836731
 saved predicted mask to ---> output/invivo_91/116.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/55.jpg ...
-inference_time: 0.004290342330932617s
-validation_score (dice_coeff): 0.9783748984336853
+inference_time: 0.004370212554931641s
+validation_score (dice_coeff): 0.9603332877159119
 saved predicted mask to ---> output/invivo_91/55.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/104.jpg ...
-inference_time: 0.004306793212890625s
-validation_score (dice_coeff): 0.99196457862854
+inference_time: 0.004369020462036133s
+validation_score (dice_coeff): 0.982386589050293
 saved predicted mask to ---> output/invivo_91/104.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/3.jpg ...
-inference_time: 0.004296779632568359s
-validation_score (dice_coeff): 0.9881898164749146
+inference_time: 0.004369497299194336s
+validation_score (dice_coeff): 0.9575030207633972
 saved predicted mask to ---> output/invivo_91/3.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/46.jpg ...
-inference_time: 0.004330873489379883s
-validation_score (dice_coeff): 0.9855608940124512
+inference_time: 0.004365205764770508s
+validation_score (dice_coeff): 0.9690409302711487
 saved predicted mask to ---> output/invivo_91/46.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/152.jpg ...
-inference_time: 0.004302501678466797s
-validation_score (dice_coeff): 0.9861149191856384
+inference_time: 0.004364490509033203s
+validation_score (dice_coeff): 0.9788348078727722
 saved predicted mask to ---> output/invivo_91/152.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/15.jpg ...
-inference_time: 0.004307270050048828s
-validation_score (dice_coeff): 0.9914122223854065
+inference_time: 0.004354953765869141s
+validation_score (dice_coeff): 0.9759891033172607
 saved predicted mask to ---> output/invivo_91/15.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/43.jpg ...
-inference_time: 0.00430750846862793s
-validation_score (dice_coeff): 0.9905336499214172
+inference_time: 0.004362344741821289s
+validation_score (dice_coeff): 0.9847941398620605
 saved predicted mask to ---> output/invivo_91/43.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/48.jpg ...
-inference_time: 0.004798173904418945s
-validation_score (dice_coeff): 0.9909102916717529
+inference_time: 0.004392862319946289s
+validation_score (dice_coeff): 0.9704225659370422
 saved predicted mask to ---> output/invivo_91/48.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/47.jpg ...
-inference_time: 0.004296064376831055s
-validation_score (dice_coeff): 0.9560576677322388
+inference_time: 0.004363059997558594s
+validation_score (dice_coeff): 0.9406533241271973
 saved predicted mask to ---> output/invivo_91/47.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/117.jpg ...
-inference_time: 0.004290342330932617s
-validation_score (dice_coeff): 0.924761176109314
+inference_time: 0.004372596740722656s
+validation_score (dice_coeff): 0.911119818687439
 saved predicted mask to ---> output/invivo_91/117.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/42.jpg ...
-inference_time: 0.0043108463287353516s
-validation_score (dice_coeff): 0.9922425150871277
+inference_time: 0.004380702972412109s
+validation_score (dice_coeff): 0.9788341522216797
 saved predicted mask to ---> output/invivo_91/42.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/0.jpg ...
-inference_time: 0.004302978515625s
+inference_time: 0.004382133483886719s
 validation_score (dice_coeff): 0.9045092463493347
 saved predicted mask to ---> output/invivo_91/0.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/123.jpg ...
-inference_time: 0.004303455352783203s
-validation_score (dice_coeff): 0.9930160641670227
+inference_time: 0.004364728927612305s
+validation_score (dice_coeff): 0.9847726225852966
 saved predicted mask to ---> output/invivo_91/123.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/12.jpg ...
-inference_time: 0.004297971725463867s
-validation_score (dice_coeff): 0.9827243089675903
+inference_time: 0.004415273666381836s
+validation_score (dice_coeff): 0.9674466848373413
 saved predicted mask to ---> output/invivo_91/12.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/50.jpg ...
-inference_time: 0.00429534912109375s
-validation_score (dice_coeff): 0.9881640076637268
+inference_time: 0.004387855529785156s
+validation_score (dice_coeff): 0.9913942813873291
 saved predicted mask to ---> output/invivo_91/50.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/93.jpg ...
-inference_time: 0.00433039665222168s
-validation_score (dice_coeff): 0.9611545205116272
+inference_time: 0.004388093948364258s
+validation_score (dice_coeff): 0.9882006645202637
 saved predicted mask to ---> output/invivo_91/93.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/106.jpg ...
-inference_time: 0.004292726516723633s
-validation_score (dice_coeff): 0.9952151775360107
+inference_time: 0.0043599605560302734s
+validation_score (dice_coeff): 0.9931130409240723
 saved predicted mask to ---> output/invivo_91/106.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/1.jpg ...
-inference_time: 0.004332065582275391s
-validation_score (dice_coeff): 0.9631097912788391
+inference_time: 0.0043680667877197266s
+validation_score (dice_coeff): 0.9287521243095398
 saved predicted mask to ---> output/invivo_91/1.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/27.jpg ...
-inference_time: 0.004298210144042969s
-validation_score (dice_coeff): 0.9869362115859985
+inference_time: 0.004361391067504883s
+validation_score (dice_coeff): 0.9897094964981079
 saved predicted mask to ---> output/invivo_91/27.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/157.jpg ...
-inference_time: 0.004318714141845703s
-validation_score (dice_coeff): 0.9798395037651062
+inference_time: 0.004386186599731445s
+validation_score (dice_coeff): 0.9489854574203491
 saved predicted mask to ---> output/invivo_91/157.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/60.jpg ...
-inference_time: 0.004287242889404297s
-validation_score (dice_coeff): 0.9303946495056152
+inference_time: 0.004376649856567383s
+validation_score (dice_coeff): 0.9132127165794373
 saved predicted mask to ---> output/invivo_91/60.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/21.jpg ...
-inference_time: 0.004323244094848633s
-validation_score (dice_coeff): 0.9860209822654724
+inference_time: 0.004378795623779297s
+validation_score (dice_coeff): 0.9914141893386841
 saved predicted mask to ---> output/invivo_91/21.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/85.jpg ...
-inference_time: 0.0043866634368896484s
-validation_score (dice_coeff): 0.9851746559143066
+inference_time: 0.00436854362487793s
+validation_score (dice_coeff): 0.9930965900421143
 saved predicted mask to ---> output/invivo_91/85.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/107.jpg ...
-inference_time: 0.00430750846862793s
-validation_score (dice_coeff): 0.9952983260154724
+inference_time: 0.0043642520904541016s
+validation_score (dice_coeff): 0.99383544921875
 saved predicted mask to ---> output/invivo_91/107.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/160.jpg ...
-inference_time: 0.004288673400878906s
-validation_score (dice_coeff): 0.9817349910736084
+inference_time: 0.004363536834716797s
+validation_score (dice_coeff): 0.9568047523498535
 saved predicted mask to ---> output/invivo_91/160.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/26.jpg ...
-inference_time: 0.0043103694915771484s
-validation_score (dice_coeff): 0.9902230501174927
+inference_time: 0.004379749298095703s
+validation_score (dice_coeff): 0.9933685064315796
 saved predicted mask to ---> output/invivo_91/26.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/54.jpg ...
-inference_time: 0.0042989253997802734s
-validation_score (dice_coeff): 0.9605347514152527
+inference_time: 0.004378080368041992s
+validation_score (dice_coeff): 0.9461014866828918
 saved predicted mask to ---> output/invivo_91/54.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/49.jpg ...
-inference_time: 0.004298210144042969s
-validation_score (dice_coeff): 0.9869871735572815
+inference_time: 0.004374265670776367s
+validation_score (dice_coeff): 0.9911987781524658
 saved predicted mask to ---> output/invivo_91/49.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/20.jpg ...
-inference_time: 0.004293680191040039s
-validation_score (dice_coeff): 0.9648905992507935
+inference_time: 0.004416227340698242s
+validation_score (dice_coeff): 0.9289081692695618
 saved predicted mask to ---> output/invivo_91/20.jpg
 
 Performing segmentation on ---> data/imgs/invivo_91/158.jpg ...
-inference_time: 0.004298686981201172s
-validation_score (dice_coeff): 0.9879536628723145
+inference_time: 0.004373311996459961s
+validation_score (dice_coeff): 0.9717530012130737
 saved predicted mask to ---> output/invivo_91/158.jpg
 
 ----- UNet Performance Summary on invivo_91 -----
 Using device: cuda
 Using model: checkpoints/invivo_91/unet_ckpt_20.pth
 Total samples: 90
-Total inference time: 1.95842s 	 Average inference time: 0.02176s 	 Average val score: 0.972
+Total inference time: 1.96892s 	 Average inference time: 0.02188s 	 Average val score: 0.969
 -----------------------
