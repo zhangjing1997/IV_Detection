@@ -52,11 +52,11 @@ Total samples: 20
 Total inference time: 1.65789s 	 Average inference time: 0.08289s 	 Average val score: 0.975
 -----------------------
 
------ UNet Performance Summary on phantom_20 -----
+----- UNet Performance Summary on invivo_91 -----
 Using device: cuda
-Using model: checkpoints/phantom_20/unet_ckpt_26.pth
-Total samples: 20
-Total inference time: 1.65789s 	 Average inference time: 0.08289s 	 Average val score: 0.975
+Using model: checkpoints/invivo_91/unet_ckpt_20.pth
+Total samples: 90
+Total inference time: 1.96892s 	 Average inference time: 0.02188s 	 Average val score: 0.969
 -----------------------
 ```
 
