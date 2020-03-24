@@ -3,14 +3,15 @@ Namespace(dataset_name='phantom_20', device='cuda', unet_ckpt='unet_ckpt_26.pth'
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/5.jpg ...
-inference_time: 1.5148797035217285s
+inference_time: 1.5996363162994385s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/5.jpg 	
-inference_time: 0.03589963912963867s
+inference_time: 0.03558516502380371s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 62.193, y1: 209.210, x2: 167.212, y2: 289.636, obj_conf: 0.97985, cls_conf: 0.99985
 	+ Label: vein, x1: 232.158, y1: 239.317, x2: 339.874, y2: 322.312, obj_conf: 0.97494, cls_conf: 0.99983
 	+ Label: vein, x1: 428.470, y1: 147.767, x2: 497.435, y2: 231.563, obj_conf: 0.95358, cls_conf: 0.99937
+
 centroids_target: [(110, 249), (277, 279), (473, 186)]
 centroids_unet: [(111, 248), (282, 278), (472, 185)]
 centroids_yolo: [(114, 249), (286, 280), (462, 189)]
@@ -20,14 +21,15 @@ yolo_target_errors: [4.0, 9.055385138137417, 11.40175425099138]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/17.jpg ...
-inference_time: 0.005165815353393555s
+inference_time: 0.005182743072509766s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/17.jpg 	
-inference_time: 0.02467656135559082s
+inference_time: 0.027110576629638672s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 420.672, y1: 103.130, x2: 499.058, y2: 193.149, obj_conf: 0.97581, cls_conf: 0.99977
 	+ Label: vein, x1: -10.212, y1: 94.426, x2: 74.769, y2: 181.104, obj_conf: 0.95862, cls_conf: 0.99924
 	+ Label: vein, x1: 163.786, y1: 195.652, x2: 295.959, y2: 263.584, obj_conf: 0.94184, cls_conf: 0.99970
+
 centroids_target: [(31, 140), (229, 227), (466, 143)]
 centroids_unet: [(30, 139), (227, 225), (465, 144)]
 centroids_yolo: [(32, 137), (229, 229), (459, 148)]
@@ -37,14 +39,15 @@ yolo_target_errors: [3.1622776601683795, 2.0, 8.602325267042627]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/8.jpg ...
-inference_time: 0.005227088928222656s
+inference_time: 0.0052030086517333984s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/8.jpg 	
-inference_time: 0.023761510848999023s
+inference_time: 0.024715423583984375s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 232.429, y1: 239.278, x2: 338.214, y2: 320.657, obj_conf: 0.97188, cls_conf: 0.99979
 	+ Label: vein, x1: 64.732, y1: 210.042, x2: 165.521, y2: 288.589, obj_conf: 0.96547, cls_conf: 0.99968
 	+ Label: vein, x1: 426.219, y1: 144.046, x2: 500.096, y2: 232.112, obj_conf: 0.95231, cls_conf: 0.99937
+
 centroids_target: [(116, 245), (279, 277), (472, 185)]
 centroids_unet: [(112, 247), (280, 276), (472, 185)]
 centroids_yolo: [(115, 249), (285, 279), (463, 188)]
@@ -54,14 +57,15 @@ yolo_target_errors: [4.123105625617661, 6.324555320336759, 9.486832980505138]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/18.jpg ...
-inference_time: 0.005288839340209961s
+inference_time: 0.0052242279052734375s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/18.jpg 	
-inference_time: 0.024304628372192383s
+inference_time: 0.023723602294921875s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 418.837, y1: 103.442, x2: 499.819, y2: 193.192, obj_conf: 0.97906, cls_conf: 0.99981
 	+ Label: vein, x1: -10.443, y1: 93.600, x2: 74.988, y2: 180.820, obj_conf: 0.95993, cls_conf: 0.99921
 	+ Label: vein, x1: 159.215, y1: 194.431, x2: 293.369, y2: 262.818, obj_conf: 0.93542, cls_conf: 0.99967
+
 centroids_target: [(29, 139), (232, 224), (467, 143)]
 centroids_unet: [(30, 138), (227, 225), (465, 143)]
 centroids_yolo: [(32, 137), (226, 228), (459, 148)]
@@ -71,14 +75,15 @@ yolo_target_errors: [3.605551275463989, 7.211102550927978, 9.433981132056603]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/14.jpg ...
-inference_time: 0.005196332931518555s
+inference_time: 0.0052073001861572266s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/14.jpg 	
-inference_time: 0.024577617645263672s
+inference_time: 0.02443695068359375s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 424.419, y1: 102.774, x2: 501.014, y2: 192.856, obj_conf: 0.97430, cls_conf: 0.99973
 	+ Label: vein, x1: -10.262, y1: 94.424, x2: 74.536, y2: 181.051, obj_conf: 0.95895, cls_conf: 0.99925
 	+ Label: vein, x1: 159.800, y1: 195.265, x2: 292.553, y2: 263.195, obj_conf: 0.94756, cls_conf: 0.99970
+
 centroids_target: [(29, 140), (229, 227), (467, 145)]
 centroids_unet: [(30, 139), (226, 226), (466, 144)]
 centroids_yolo: [(32, 137), (226, 229), (462, 147)]
@@ -88,16 +93,17 @@ yolo_target_errors: [4.242640687119285, 3.605551275463989, 5.385164807134504]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/9.jpg ...
-inference_time: 0.005284547805786133s
+inference_time: 0.005578041076660156s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/9.jpg 	
-inference_time: 0.024397611618041992s
+inference_time: 0.025596141815185547s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 231.826, y1: 238.347, x2: 335.153, y2: 319.938, obj_conf: 0.97186, cls_conf: 0.99978
 	+ Label: vein, x1: 68.982, y1: 207.980, x2: 169.692, y2: 288.046, obj_conf: 0.96654, cls_conf: 0.99966
 	+ Label: vein, x1: 426.990, y1: 145.819, x2: 499.930, y2: 233.727, obj_conf: 0.94842, cls_conf: 0.99927
 we got more or less segemented regions than target regions
 we got more or less detectde bounding boxes than target regions
+
 centroids_target: [(110, 248), (280, 277), (293, 279), (472, 185)]
 centroids_unet: []
 centroids_yolo: []
@@ -107,14 +113,15 @@ yolo_target_errors: []
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/13.jpg ...
-inference_time: 0.0053098201751708984s
+inference_time: 0.005164623260498047s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/13.jpg 	
-inference_time: 0.024895429611206055s
+inference_time: 0.024075031280517578s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 418.739, y1: 107.715, x2: 498.251, y2: 197.299, obj_conf: 0.97910, cls_conf: 0.99975
 	+ Label: vein, x1: -9.668, y1: 97.920, x2: 69.773, y2: 180.981, obj_conf: 0.95958, cls_conf: 0.99932
 	+ Label: vein, x1: 166.319, y1: 199.224, x2: 285.468, y2: 264.598, obj_conf: 0.93727, cls_conf: 0.99955
+
 centroids_target: [(26, 142), (219, 224), (467, 143)]
 centroids_unet: [(27, 142), (221, 227), (467, 147)]
 centroids_yolo: [(30, 139), (225, 231), (458, 152)]
@@ -124,14 +131,15 @@ yolo_target_errors: [5.0, 9.219544457292887, 12.727922061357855]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/4.jpg ...
-inference_time: 0.005192279815673828s
+inference_time: 0.005316734313964844s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/4.jpg 	
-inference_time: 0.02402949333190918s
+inference_time: 0.024657487869262695s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 62.193, y1: 209.210, x2: 167.212, y2: 289.636, obj_conf: 0.97985, cls_conf: 0.99985
 	+ Label: vein, x1: 232.158, y1: 239.317, x2: 339.874, y2: 322.312, obj_conf: 0.97494, cls_conf: 0.99983
 	+ Label: vein, x1: 428.470, y1: 147.767, x2: 497.435, y2: 231.563, obj_conf: 0.95358, cls_conf: 0.99937
+
 centroids_target: [(110, 247), (282, 281), (473, 186)]
 centroids_unet: [(111, 248), (282, 278), (472, 185)]
 centroids_yolo: [(114, 249), (286, 280), (462, 189)]
@@ -141,14 +149,15 @@ yolo_target_errors: [4.47213595499958, 4.123105625617661, 11.40175425099138]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/19.jpg ...
-inference_time: 0.0052373409271240234s
+inference_time: 0.005175590515136719s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/19.jpg 	
-inference_time: 0.024618148803710938s
+inference_time: 0.024695873260498047s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 418.837, y1: 103.442, x2: 499.819, y2: 193.192, obj_conf: 0.97906, cls_conf: 0.99981
 	+ Label: vein, x1: -10.443, y1: 93.600, x2: 74.988, y2: 180.820, obj_conf: 0.95993, cls_conf: 0.99921
 	+ Label: vein, x1: 159.215, y1: 194.431, x2: 293.369, y2: 262.818, obj_conf: 0.93542, cls_conf: 0.99967
+
 centroids_target: [(28, 137), (227, 224), (467, 144)]
 centroids_unet: [(30, 138), (227, 225), (465, 143)]
 centroids_yolo: [(32, 137), (226, 228), (459, 148)]
@@ -158,14 +167,15 @@ yolo_target_errors: [4.0, 4.123105625617661, 8.94427190999916]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/3.jpg ...
-inference_time: 0.005360603332519531s
+inference_time: 0.00521087646484375s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/3.jpg 	
-inference_time: 0.024986743927001953s
+inference_time: 0.022272586822509766s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 61.472, y1: 209.233, x2: 167.851, y2: 289.545, obj_conf: 0.98021, cls_conf: 0.99986
 	+ Label: vein, x1: 231.962, y1: 239.391, x2: 339.972, y2: 322.549, obj_conf: 0.97458, cls_conf: 0.99984
 	+ Label: vein, x1: 429.147, y1: 148.217, x2: 496.869, y2: 231.194, obj_conf: 0.94844, cls_conf: 0.99927
+
 centroids_target: [(111, 248), (281, 279), (474, 185)]
 centroids_unet: [(111, 248), (282, 278), (472, 185)]
 centroids_yolo: [(114, 249), (285, 280), (463, 189)]
@@ -175,14 +185,15 @@ yolo_target_errors: [3.1622776601683795, 4.123105625617661, 11.704699910719626]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/15.jpg ...
-inference_time: 0.0052111148834228516s
+inference_time: 0.005159854888916016s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/15.jpg 	
-inference_time: 0.024279356002807617s
+inference_time: 0.02441883087158203s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 423.649, y1: 101.816, x2: 501.540, y2: 192.870, obj_conf: 0.97432, cls_conf: 0.99975
 	+ Label: vein, x1: -10.700, y1: 94.291, x2: 75.198, y2: 180.985, obj_conf: 0.95992, cls_conf: 0.99923
 	+ Label: vein, x1: 163.954, y1: 195.765, x2: 295.761, y2: 263.666, obj_conf: 0.94480, cls_conf: 0.99971
+
 centroids_target: [(30, 138), (224, 225), (464, 142)]
 centroids_unet: [(30, 139), (227, 226), (466, 144)]
 centroids_yolo: [(32, 137), (229, 229), (462, 147)]
@@ -192,14 +203,15 @@ yolo_target_errors: [2.23606797749979, 6.4031242374328485, 5.385164807134504]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/10.jpg ...
-inference_time: 0.005196094512939453s
+inference_time: 0.005156278610229492s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/10.jpg 	
-inference_time: 0.024955272674560547s
+inference_time: 0.02532482147216797s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 64.407, y1: 206.024, x2: 167.596, y2: 285.984, obj_conf: 0.97299, cls_conf: 0.99978
 	+ Label: vein, x1: 231.376, y1: 237.709, x2: 333.656, y2: 319.711, obj_conf: 0.96796, cls_conf: 0.99975
 	+ Label: vein, x1: 426.802, y1: 143.234, x2: 499.321, y2: 232.298, obj_conf: 0.94704, cls_conf: 0.99932
+
 centroids_target: [(116, 245), (278, 274), (473, 182)]
 centroids_unet: [(114, 245), (280, 275), (472, 184)]
 centroids_yolo: [(116, 246), (282, 278), (463, 187)]
@@ -209,14 +221,15 @@ yolo_target_errors: [1.0, 5.656854249492381, 11.180339887498949]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/7.jpg ...
-inference_time: 0.005201578140258789s
+inference_time: 0.005161762237548828s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/7.jpg 	
-inference_time: 0.0241849422454834s
+inference_time: 0.025148391723632812s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 232.604, y1: 239.362, x2: 338.537, y2: 320.863, obj_conf: 0.97270, cls_conf: 0.99980
 	+ Label: vein, x1: 66.833, y1: 206.987, x2: 165.681, y2: 288.398, obj_conf: 0.97058, cls_conf: 0.99974
 	+ Label: vein, x1: 425.751, y1: 143.849, x2: 500.710, y2: 232.439, obj_conf: 0.95600, cls_conf: 0.99946
+
 centroids_target: [(112, 248), (281, 277), (473, 186)]
 centroids_unet: [(112, 247), (280, 276), (472, 185)]
 centroids_yolo: [(116, 247), (285, 280), (463, 188)]
@@ -226,14 +239,15 @@ yolo_target_errors: [4.123105625617661, 5.0, 10.198039027185569]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/0.jpg ...
-inference_time: 0.0051953792572021484s
+inference_time: 0.005511045455932617s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/0.jpg 	
-inference_time: 0.024317502975463867s
+inference_time: 0.0247495174407959s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 409.518, y1: 100.697, x2: 495.471, y2: 188.237, obj_conf: 0.98075, cls_conf: 0.99986
 	+ Label: vein, x1: -7.346, y1: 96.868, x2: 77.963, y2: 183.485, obj_conf: 0.96179, cls_conf: 0.99920
 	+ Label: vein, x1: 160.255, y1: 193.433, x2: 295.829, y2: 262.257, obj_conf: 0.90770, cls_conf: 0.99947
+
 centroids_target: [(27, 135), (228, 224), (466, 145)]
 centroids_unet: [(29, 139), (227, 225), (465, 143)]
 centroids_yolo: [(35, 140), (228, 227), (452, 144)]
@@ -243,14 +257,15 @@ yolo_target_errors: [9.433981132056603, 3.0, 14.035668847618199]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/12.jpg ...
-inference_time: 0.005209922790527344s
+inference_time: 0.00557255744934082s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/12.jpg 	
-inference_time: 0.0251314640045166s
+inference_time: 0.024039030075073242s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 418.414, y1: 107.535, x2: 499.091, y2: 197.069, obj_conf: 0.97979, cls_conf: 0.99976
 	+ Label: vein, x1: -9.394, y1: 98.387, x2: 69.178, y2: 180.957, obj_conf: 0.95982, cls_conf: 0.99929
 	+ Label: vein, x1: 166.717, y1: 199.290, x2: 285.150, y2: 264.445, obj_conf: 0.93490, cls_conf: 0.99953
+
 centroids_target: [(25, 140), (219, 226), (469, 146)]
 centroids_unet: [(27, 142), (221, 227), (467, 147)]
 centroids_yolo: [(29, 139), (225, 231), (458, 152)]
@@ -260,14 +275,15 @@ yolo_target_errors: [4.123105625617661, 7.810249675906654, 12.529964086141668]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/2.jpg ...
-inference_time: 0.0052225589752197266s
+inference_time: 0.005178928375244141s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/2.jpg 	
-inference_time: 0.02457880973815918s
+inference_time: 0.024381399154663086s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 59.165, y1: 208.570, x2: 163.949, y2: 289.866, obj_conf: 0.97355, cls_conf: 0.99984
 	+ Label: vein, x1: 235.463, y1: 244.193, x2: 347.175, y2: 331.872, obj_conf: 0.96776, cls_conf: 0.99983
 	+ Label: vein, x1: 425.178, y1: 146.045, x2: 502.005, y2: 236.202, obj_conf: 0.95827, cls_conf: 0.99953
+
 centroids_target: [(106, 249), (285, 282), (475, 187)]
 centroids_unet: [(107, 248), (284, 281), (474, 188)]
 centroids_yolo: [(111, 249), (291, 288), (463, 191)]
@@ -277,14 +293,15 @@ yolo_target_errors: [5.0, 8.48528137423857, 12.649110640673518]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/1.jpg ...
-inference_time: 0.005662202835083008s
+inference_time: 0.0051844120025634766s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/1.jpg 	
-inference_time: 0.024709224700927734s
+inference_time: 0.024910449981689453s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 59.219, y1: 208.501, x2: 163.782, y2: 289.941, obj_conf: 0.97377, cls_conf: 0.99985
 	+ Label: vein, x1: 235.378, y1: 244.117, x2: 347.253, y2: 331.868, obj_conf: 0.96752, cls_conf: 0.99983
 	+ Label: vein, x1: 425.465, y1: 146.065, x2: 501.760, y2: 236.025, obj_conf: 0.95764, cls_conf: 0.99951
+
 centroids_target: [(104, 248), (287, 280), (476, 186)]
 centroids_unet: [(107, 248), (285, 282), (474, 188)]
 centroids_yolo: [(111, 249), (291, 287), (463, 191)]
@@ -294,14 +311,15 @@ yolo_target_errors: [7.0710678118654755, 8.06225774829855, 13.92838827718412]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/11.jpg ...
-inference_time: 0.005590200424194336s
+inference_time: 0.005193471908569336s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/11.jpg 	
-inference_time: 0.024470090866088867s
+inference_time: 0.024080753326416016s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 425.565, y1: 108.273, x2: 501.555, y2: 196.716, obj_conf: 0.97159, cls_conf: 0.99960
 	+ Label: vein, x1: -6.342, y1: 100.005, x2: 70.832, y2: 185.511, obj_conf: 0.95777, cls_conf: 0.99924
 	+ Label: vein, x1: 166.405, y1: 199.010, x2: 285.200, y2: 265.001, obj_conf: 0.93842, cls_conf: 0.99956
+
 centroids_target: [(28, 143), (218, 226), (468, 146)]
 centroids_unet: [(28, 142), (218, 227), (467, 147)]
 centroids_yolo: [(32, 142), (225, 232), (463, 152)]
@@ -311,14 +329,15 @@ yolo_target_errors: [4.123105625617661, 9.219544457292887, 7.810249675906654]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/6.jpg ...
-inference_time: 0.005239725112915039s
+inference_time: 0.005223751068115234s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/6.jpg 	
-inference_time: 0.025649547576904297s
+inference_time: 0.024484872817993164s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 66.985, y1: 206.720, x2: 165.650, y2: 288.561, obj_conf: 0.97588, cls_conf: 0.99979
 	+ Label: vein, x1: 232.811, y1: 239.459, x2: 338.480, y2: 321.147, obj_conf: 0.97192, cls_conf: 0.99979
 	+ Label: vein, x1: 425.695, y1: 143.623, x2: 500.037, y2: 233.086, obj_conf: 0.95964, cls_conf: 0.99951
+
 centroids_target: [(112, 249), (280, 278), (472, 186)]
 centroids_unet: [(112, 248), (280, 276), (472, 185)]
 centroids_yolo: [(116, 247), (285, 280), (462, 188)]
@@ -328,14 +347,15 @@ yolo_target_errors: [4.47213595499958, 5.385164807134504, 10.198039027185569]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/phantom_20/16.jpg ...
-inference_time: 0.005205631256103516s
+inference_time: 0.005797624588012695s
 
 Performing object detection on ---> UNet/data/imgs/phantom_20/16.jpg 	
-inference_time: 0.02455306053161621s
+inference_time: 0.024516820907592773s
 Saving image with bbox in original image size - (747, 504):
 	+ Label: vein, x1: 423.649, y1: 101.816, x2: 501.540, y2: 192.870, obj_conf: 0.97432, cls_conf: 0.99975
 	+ Label: vein, x1: -10.700, y1: 94.291, x2: 75.198, y2: 180.985, obj_conf: 0.95992, cls_conf: 0.99923
 	+ Label: vein, x1: 163.954, y1: 195.765, x2: 295.761, y2: 263.666, obj_conf: 0.94480, cls_conf: 0.99971
+
 centroids_target: [(29, 138), (228, 226), (466, 145)]
 centroids_unet: [(30, 139), (227, 226), (466, 144)]
 centroids_yolo: [(32, 137), (229, 229), (462, 147)]
@@ -350,8 +370,11 @@ Model Weights:
 	- unet: UNet/checkpoints/phantom_20/unet_ckpt_26.pth
 	- yolo: YOLOv3/checkpoints/phantom_20/yolov3_ckpt_38.pth
 Average prediction speed/time (s): 
-	- unet: 0.0808
+	- unet: 0.0850
 	- yolo: 0.0251
 Average centroid prediction error: 
 	- unet: 1.99539
 	- yolo: 6.73612
+Outliers ratio of centroid prediction errors: 
+	- unet: 0.07018
+	- yolo: 0.03509

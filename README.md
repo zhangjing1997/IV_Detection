@@ -40,7 +40,7 @@ unet_phantom_ckpt = 'unet_ckpt_26.pth'
 yolo_phantom_ckpt = 'yolov3_ckpt_38.pth'
 
 unet_invivo_ckpt = 'unet_ckpt_20.pth'
-yolo_phantom_ckpt = 'yolov3_ckpt_34.pth'
+yolo_invivo_ckpt = 'yolov3_ckpt_34.pth'
 ```
 
 ### Run separately
@@ -263,6 +263,15 @@ Average centroid prediction error:
 
 #### Mar 22
 - basically finished the comparison between unet and yolo in terms of prediction speed and the accuracy of the predicted centroids
+- added: compute the outlier ratio for the centroid errors. -> z-score method
+
+#### Mar 23
+- preliminarily built a ipynb to processing active contour based on detection result
+  - 调整active contour的参数，正确地逼近vein，必要的话，了解背后的原理和implementation
+  - 增加init的边界
+    - 考虑用unet的predicted centroid，定一个半径。
+  - 考虑change image brightness/contrast，来让vein更突出来
+
 
 ### Next - UNet
 - 加augmentation

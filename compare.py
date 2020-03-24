@@ -36,6 +36,17 @@ class Logger(object):
         # this flush method is needed for python 3 compatibility. this handles the flush command by doing nothing. you might want to specify some extra behavior here.
         pass
 
+def findOutliers(data, threshold):
+    """
+    Identify the outliers of a data given as a list, using the z-score method.
+    """
+    data_mean, data_std = statistics.mean(data), statistics.stdev(data)
+    cut_off = data_std * threshold
+    lower, upper = data_mean - cut_off, data_mean + cut_off
+    outliers = [x for x in data if x < lower or x > upper]
+
+    return outliers
+
 def getCentroidsFromMaskImage(pil_img, num_target_centroids=0, mode='pred'):
     """
     input: a binarized or just a mask image in PIL format.
@@ -110,7 +121,7 @@ if __name__ == "__main__":
     parser.add_argument("--device", type=str, default="cuda", help="specify device: cuda or cpu")
     opt = parser.parse_args()
 
-    logfile = 'compare' + '_' + opt.dataset_name + '_' + opt.device + '.log'
+    logfile = 'logs/compare' + '_' + opt.dataset_name + '_' + opt.device + '.log'
     sys.stdout = Logger(logfile)
     print(opt)
 
@@ -131,8 +142,8 @@ if __name__ == "__main__":
     model_yolo.load_state_dict(torch.load(yolo_path))
     model_yolo.eval()
 
-    unet_target_avgerror_list = []
-    yolo_target_avgerror_list = []
+    unet_target_errors_list = []
+    yolo_target_errors_list = []
     unet_infer_time_list = []
     yolo_infer_time_list = []
     image_files = [x for x in os.listdir(image_folder) if x.endswith('.jpg')] # only jpg files
@@ -158,18 +169,23 @@ if __name__ == "__main__":
         yolo_target_errors = computecentroidsDiff(centroids_yolo, centroids_target)
 
         # logs: error and stats
-        print(f'centroids_target: {centroids_target}')
+        print(f'\ncentroids_target: {centroids_target}')
         print(f'centroids_unet: {centroids_unet}')
         print(f'centroids_yolo: {centroids_yolo}')
         print(f'unet_target_errors: {unet_target_errors}')
         print(f'yolo_target_errors: {yolo_target_errors}')
 
         if len(unet_target_errors) > 0:
-            unet_target_avgerror_list.append(statistics.mean(unet_target_errors))
+            unet_target_errors_list.extend(unet_target_errors)
         
         if len(yolo_target_errors) > 0:
-            yolo_target_avgerror_list.append(statistics.mean(yolo_target_errors))
+            yolo_target_errors_list.extend(yolo_target_errors)
     
+    outliers_unet = findOutliers(unet_target_errors_list, 2)
+    outliers_yolo = findOutliers(yolo_target_errors_list, 2)
+    outliers_unet_ratio = len(outliers_unet) / len(unet_target_errors_list)
+    outliers_yolo_ratio = len(outliers_yolo) / len(yolo_target_errors_list)
+
     print('\n======== Summary ==========')
     print(f'Using device: {device}')
     print(f'Dataset - {opt.dataset_name}: {image_folder}')
@@ -181,5 +197,8 @@ if __name__ == "__main__":
     print('\t- unet: {:.4f}'.format(statistics.mean(unet_infer_time_list)))
     print('\t- yolo: {:.4f}'.format(statistics.mean(yolo_infer_time_list)))
     print(f'Average centroid prediction error: ')
-    print('\t- unet: {:.5f}'.format(statistics.mean(unet_target_avgerror_list)))
-    print('\t- yolo: {:.5f}'.format(statistics.mean(yolo_target_avgerror_list)))
+    print('\t- unet: {:.5f}'.format(statistics.mean(unet_target_errors_list)))
+    print('\t- yolo: {:.5f}'.format(statistics.mean(yolo_target_errors_list)))
+    print('Outliers ratio of centroid prediction errors: ')
+    print('\t- unet: {:.5f}'.format(outliers_unet_ratio))
+    print('\t- yolo: {:.5f}'.format(outliers_yolo_ratio))
