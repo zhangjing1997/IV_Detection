@@ -272,21 +272,22 @@ Average centroid prediction error:
     - 考虑用unet的predicted centroid，定一个半径。
   - 考虑change image brightness/contrast，来让vein更突出来
 
+#### Mar 24
+- finish the first version of my poster with the experiment results
 
-### Next - UNet
+
+### NEXT
+- modify two sub-projects' readme -> mainly describe usages
+
+### Future Work - UNet
 - 加augmentation
 - 尝试调整loss function
 - 加weight matrix以给边界上的点更高权重
 - consider downsampling image size to do prediction and rescale back for outputs
-
-
-### Next
+- better visualization comparison: write util function to produce img/visualization comparison among input vs. label vs. prediction
 - **Post-Processing - Active Contour**:
-  - find active contour code on github, etc.
+  - find self-implemented active contour code on github, etc.
   - understand and try to modify them for our own use
   - if effective, use it to refine the vein edges on our segmentation(unet) and detection(yolo) methods to finalize a whole project demo.
-- better visualization comparison: write util function to produce img/visualization comparison among input vs. label vs. prediction
-- modify two sub-projects' readme -> mainly describe usages
-- elegant print logs & args -> parser.args
 - **If necessary**, consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils -> show learning curve.
 - **If time allows**, consider designing a specified loss to directlt learn the target edge, which fits the end-to-end thoughts in deep learning.

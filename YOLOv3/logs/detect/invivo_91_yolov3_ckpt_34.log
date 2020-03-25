@@ -1,7 +1,7 @@
 Namespace(class_path='data/custom/classes.names', conf_thres=0.85, dataset_name='invivo_91', device='cuda', image_folder='data/custom/images/invivo_91', img_size=416, iou_thres=0.5, model_def='config/yolov3-custom.cfg', nms_thres=0.35, output_dir='output', save_plot=1, weights_path='checkpoints/invivo_91/yolov3_ckpt_34.pth')
 
 Performing object detection on ---> data/custom/images/invivo_91/59.jpg 	
-inference_time: 1.5929005146026611s
+inference_time: 1.587061882019043s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 226.078, y1: 25.722, x2: 366.209, y2: 113.560, obj_conf: 0.99028, cls_conf: 0.99985
 saved image plot with detected bboxes into ---> output/invivo_91/59.jpg
@@ -9,7 +9,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 195.733, y1: 14.191, x2: 273.046, y2: 62.654, iou: 0.74227
 
 Performing object detection on ---> data/custom/images/invivo_91/98.jpg 	
-inference_time: 0.03291821479797363s
+inference_time: 0.03272509574890137s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 43.299, y1: 1.357, x2: 174.589, y2: 71.861, obj_conf: 0.99516, cls_conf: 0.99997
 saved image plot with detected bboxes into ---> output/invivo_91/98.jpg
@@ -17,7 +17,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 94.889, y1: 0.749, x2: 167.325, y2: 39.648, iou: 0.87014
 
 Performing object detection on ---> data/custom/images/invivo_91/68.jpg 	
-inference_time: 0.03267192840576172s
+inference_time: 0.033893585205078125s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 41.383, y1: 27.133, x2: 174.785, y2: 109.504, obj_conf: 0.98928, cls_conf: 0.99995
 saved image plot with detected bboxes into ---> output/invivo_91/68.jpg
@@ -25,7 +25,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 93.832, y1: 14.970, x2: 167.433, y2: 60.416, iou: 0.84771
 
 Performing object detection on ---> data/custom/images/invivo_91/109.jpg 	
-inference_time: 0.03276944160461426s
+inference_time: 0.033342838287353516s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 162.461, y1: -2.711, x2: 258.528, y2: 46.649, obj_conf: 0.97070, cls_conf: 0.99936
 saved image plot with detected bboxes into ---> output/invivo_91/109.jpg
@@ -33,7 +33,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 160.634, y1: -1.496, x2: 213.636, y2: 25.737, iou: 0.77641
 
 Performing object detection on ---> data/custom/images/invivo_91/44.jpg 	
-inference_time: 0.03270840644836426s
+inference_time: 0.033419132232666016s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 146.815, y1: 37.460, x2: 298.063, y2: 133.355, obj_conf: 0.97388, cls_conf: 0.99991
 saved image plot with detected bboxes into ---> output/invivo_91/44.jpg
@@ -41,7 +41,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 152.001, y1: 20.667, x2: 235.449, y2: 73.575, iou: 0.75976
 
 Performing object detection on ---> data/custom/images/invivo_91/101.jpg 	
-inference_time: 0.03271484375s
+inference_time: 0.03337669372558594s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 148.172, y1: 0.638, x2: 251.516, y2: 53.694, obj_conf: 0.95991, cls_conf: 0.99976
 saved image plot with detected bboxes into ---> output/invivo_91/101.jpg
@@ -49,7 +49,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 152.750, y1: 0.352, x2: 209.767, y2: 29.625, iou: 0.88719
 
 Performing object detection on ---> data/custom/images/invivo_91/122.jpg 	
-inference_time: 0.032694101333618164s
+inference_time: 0.03333258628845215s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 126.060, y1: -2.404, x2: 243.189, y2: 58.166, obj_conf: 0.98306, cls_conf: 0.99988
 saved image plot with detected bboxes into ---> output/invivo_91/122.jpg
@@ -57,7 +57,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 140.550, y1: -1.326, x2: 205.173, y2: 32.092, iou: 0.71118
 
 Performing object detection on ---> data/custom/images/invivo_91/23.jpg 	
-inference_time: 0.03266453742980957s
+inference_time: 0.033383846282958984s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 207.596, y1: 32.225, x2: 333.109, y2: 110.263, obj_conf: 0.98744, cls_conf: 0.99978
 saved image plot with detected bboxes into ---> output/invivo_91/23.jpg
@@ -65,7 +65,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 185.536, y1: 17.779, x2: 254.784, y2: 60.835, iou: 0.81755
 
 Performing object detection on ---> data/custom/images/invivo_91/97.jpg 	
-inference_time: 0.03267478942871094s
+inference_time: 0.03336668014526367s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 5.616, y1: -4.286, x2: 139.820, y2: 70.990, obj_conf: 0.99637, cls_conf: 0.99999
 saved image plot with detected bboxes into ---> output/invivo_91/97.jpg
@@ -73,7 +73,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 74.098, y1: -2.365, x2: 148.142, y2: 39.167, iou: 0.78076
 
 Performing object detection on ---> data/custom/images/invivo_91/80.jpg 	
-inference_time: 0.032681941986083984s
+inference_time: 0.033326148986816406s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 172.577, y1: 8.311, x2: 306.091, y2: 93.912, obj_conf: 0.98199, cls_conf: 0.99965
 saved image plot with detected bboxes into ---> output/invivo_91/80.jpg
@@ -81,7 +81,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 166.215, y1: 4.585, x2: 239.878, y2: 51.813, iou: 0.77369
 
 Performing object detection on ---> data/custom/images/invivo_91/103.jpg 	
-inference_time: 0.03270840644836426s
+inference_time: 0.033357858657836914s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 160.459, y1: 0.991, x2: 267.520, y2: 56.012, obj_conf: 0.97305, cls_conf: 0.99985
 saved image plot with detected bboxes into ---> output/invivo_91/103.jpg
@@ -89,7 +89,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 159.529, y1: 0.547, x2: 218.597, y2: 30.903, iou: 0.76021
 
 Performing object detection on ---> data/custom/images/invivo_91/18.jpg 	
-inference_time: 0.032716989517211914s
+inference_time: 0.03344559669494629s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 246.890, y1: 34.237, x2: 366.178, y2: 117.327, obj_conf: 0.96879, cls_conf: 0.99973
 saved image plot with detected bboxes into ---> output/invivo_91/18.jpg
@@ -97,7 +97,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 207.215, y1: 18.889, x2: 273.029, y2: 64.732, iou: 0.85493
 
 Performing object detection on ---> data/custom/images/invivo_91/41.jpg 	
-inference_time: 0.032729148864746094s
+inference_time: 0.03345799446105957s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 122.663, y1: 26.060, x2: 260.782, y2: 119.968, obj_conf: 0.97864, cls_conf: 0.99958
 saved image plot with detected bboxes into ---> output/invivo_91/41.jpg
@@ -105,7 +105,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 138.676, y1: 14.378, x2: 214.880, y2: 66.189, iou: 0.84916
 
 Performing object detection on ---> data/custom/images/invivo_91/99.jpg 	
-inference_time: 0.032697439193725586s
+inference_time: 0.03338456153869629s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 94.897, y1: 1.106, x2: 227.147, y2: 70.847, obj_conf: 0.99438, cls_conf: 0.99997
 saved image plot with detected bboxes into ---> output/invivo_91/99.jpg
@@ -113,7 +113,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 123.357, y1: 0.610, x2: 196.322, y2: 39.088, iou: 0.74127
 
 Performing object detection on ---> data/custom/images/invivo_91/90.jpg 	
-inference_time: 0.03270077705383301s
+inference_time: 0.03333306312561035s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 301.809, y1: -2.388, x2: 426.809, y2: 57.272, obj_conf: 0.99098, cls_conf: 0.99996
 saved image plot with detected bboxes into ---> output/invivo_91/90.jpg
@@ -121,7 +121,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 237.515, y1: -1.318, x2: 306.481, y2: 31.598, iou: 0.80903
 
 Performing object detection on ---> data/custom/images/invivo_91/125.jpg 	
-inference_time: 0.032707929611206055s
+inference_time: 0.03338813781738281s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 165.556, y1: -2.075, x2: 258.152, y2: 46.579, obj_conf: 0.95564, cls_conf: 0.99933
 saved image plot with detected bboxes into ---> output/invivo_91/125.jpg
@@ -129,7 +129,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 162.341, y1: -1.145, x2: 213.428, y2: 25.699, iou: 0.82047
 
 Performing object detection on ---> data/custom/images/invivo_91/58.jpg 	
-inference_time: 0.0327000617980957s
+inference_time: 0.03336501121520996s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 218.608, y1: 23.778, x2: 364.879, y2: 125.940, obj_conf: 0.98698, cls_conf: 0.99978
 saved image plot with detected bboxes into ---> output/invivo_91/58.jpg
@@ -137,7 +137,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 191.611, y1: 13.119, x2: 272.313, y2: 69.484, iou: 0.84480
 
 Performing object detection on ---> data/custom/images/invivo_91/86.jpg 	
-inference_time: 0.03279566764831543s
+inference_time: 0.03334403038024902s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 342.251, y1: -2.125, x2: 466.123, y2: 63.597, obj_conf: 0.98544, cls_conf: 0.99992
 saved image plot with detected bboxes into ---> output/invivo_91/86.jpg
@@ -145,7 +145,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 259.828, y1: -1.172, x2: 328.171, y2: 35.088, iou: 0.82338
 
 Performing object detection on ---> data/custom/images/invivo_91/14.jpg 	
-inference_time: 0.032707929611206055s
+inference_time: 0.03333330154418945s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 252.114, y1: 28.957, x2: 370.629, y2: 106.119, obj_conf: 0.86155, cls_conf: 0.99958
 saved image plot with detected bboxes into ---> output/invivo_91/14.jpg
@@ -153,7 +153,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 210.097, y1: 15.976, x2: 275.485, y2: 58.548, iou: 0.75644
 
 Performing object detection on ---> data/custom/images/invivo_91/111.jpg 	
-inference_time: 0.036359310150146484s
+inference_time: 0.033693552017211914s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: -29.914, y1: 60.235, x2: 79.263, y2: 131.578, obj_conf: 0.92306, cls_conf: 0.99883
 	+ Label: vein, x1: 258.734, y1: 150.836, x2: 364.412, y2: 219.683, obj_conf: 0.90329, cls_conf: 0.99951
@@ -163,7 +163,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 213.750, y1: 83.220, x2: 272.055, y2: 121.205, iou: 0.73291
 
 Performing object detection on ---> data/custom/images/invivo_91/92.jpg 	
-inference_time: 0.03277707099914551s
+inference_time: 0.033392906188964844s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 355.937, y1: 1.144, x2: 482.705, y2: 72.021, obj_conf: 0.99285, cls_conf: 0.99996
 saved image plot with detected bboxes into ---> output/invivo_91/92.jpg
@@ -171,7 +171,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 267.379, y1: 0.631, x2: 337.320, y2: 39.736, iou: 0.85424
 
 Performing object detection on ---> data/custom/images/invivo_91/102.jpg 	
-inference_time: 0.032633304595947266s
+inference_time: 0.03335165977478027s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 152.130, y1: -0.574, x2: 251.566, y2: 52.387, obj_conf: 0.97137, cls_conf: 0.99974
 saved image plot with detected bboxes into ---> output/invivo_91/102.jpg
@@ -179,7 +179,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 154.934, y1: -0.317, x2: 209.795, y2: 28.903, iou: 0.73005
 
 Performing object detection on ---> data/custom/images/invivo_91/100.jpg 	
-inference_time: 0.0326533317565918s
+inference_time: 0.03333139419555664s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 71.373, y1: 0.713, x2: 200.824, y2: 70.637, obj_conf: 0.99260, cls_conf: 0.99995
 saved image plot with detected bboxes into ---> output/invivo_91/100.jpg
@@ -187,7 +187,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 110.378, y1: 0.393, x2: 181.799, y2: 38.972, iou: 0.85621
 
 Performing object detection on ---> data/custom/images/invivo_91/64.jpg 	
-inference_time: 0.03271222114562988s
+inference_time: 0.033419132232666016s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 61.726, y1: 17.218, x2: 195.230, y2: 100.255, obj_conf: 0.97281, cls_conf: 0.99988
 saved image plot with detected bboxes into ---> output/invivo_91/64.jpg
@@ -195,7 +195,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 105.055, y1: 9.500, x2: 178.713, y2: 55.313, iou: 0.82845
 
 Performing object detection on ---> data/custom/images/invivo_91/108.jpg 	
-inference_time: 0.0327610969543457s
+inference_time: 0.03337502479553223s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 165.654, y1: -1.729, x2: 261.075, y2: 48.686, obj_conf: 0.97591, cls_conf: 0.99972
 saved image plot with detected bboxes into ---> output/invivo_91/108.jpg
@@ -203,7 +203,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 162.395, y1: -0.954, x2: 215.041, y2: 26.861, iou: 0.71841
 
 Performing object detection on ---> data/custom/images/invivo_91/95.jpg 	
-inference_time: 0.03269839286804199s
+inference_time: 0.03337454795837402s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 97.174, y1: 3.181, x2: 221.879, y2: 70.144, obj_conf: 0.99336, cls_conf: 0.99997
 saved image plot with detected bboxes into ---> output/invivo_91/95.jpg
@@ -211,7 +211,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 124.613, y1: 1.755, x2: 193.416, y2: 38.700, iou: 0.89516
 
 Performing object detection on ---> data/custom/images/invivo_91/105.jpg 	
-inference_time: 0.03275132179260254s
+inference_time: 0.03339576721191406s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 126.760, y1: 0.067, x2: 236.386, y2: 57.306, obj_conf: 0.97856, cls_conf: 0.99988
 saved image plot with detected bboxes into ---> output/invivo_91/105.jpg
@@ -219,7 +219,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 140.937, y1: 0.037, x2: 201.420, y2: 31.617, iou: 0.87991
 
 Performing object detection on ---> data/custom/images/invivo_91/131.jpg 	
-inference_time: 0.032707929611206055s
+inference_time: 0.03336834907531738s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 231.772, y1: -1.566, x2: 335.506, y2: 52.768, obj_conf: 0.98583, cls_conf: 0.99985
 saved image plot with detected bboxes into ---> output/invivo_91/131.jpg
@@ -227,7 +227,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 198.874, y1: -0.864, x2: 256.107, y2: 29.113, iou: 0.79950
 
 Performing object detection on ---> data/custom/images/invivo_91/79.jpg 	
-inference_time: 0.03275179862976074s
+inference_time: 0.033385515213012695s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 181.010, y1: 8.933, x2: 320.411, y2: 97.129, obj_conf: 0.98513, cls_conf: 0.99995
 saved image plot with detected bboxes into ---> output/invivo_91/79.jpg
@@ -235,7 +235,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 170.868, y1: 4.928, x2: 247.779, y2: 53.589, iou: 0.86319
 
 Performing object detection on ---> data/custom/images/invivo_91/96.jpg 	
-inference_time: 0.032708168029785156s
+inference_time: 0.03341984748840332s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 35.361, y1: 0.029, x2: 172.243, y2: 73.391, obj_conf: 0.99661, cls_conf: 0.99999
 saved image plot with detected bboxes into ---> output/invivo_91/96.jpg
@@ -243,7 +243,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 90.509, y1: 0.016, x2: 166.030, y2: 40.492, iou: 0.81565
 
 Performing object detection on ---> data/custom/images/invivo_91/56.jpg 	
-inference_time: 0.032755136489868164s
+inference_time: 0.03334474563598633s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 193.241, y1: 26.892, x2: 336.378, y2: 125.000, obj_conf: 0.98984, cls_conf: 0.99981
 saved image plot with detected bboxes into ---> output/invivo_91/56.jpg
@@ -251,7 +251,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 177.616, y1: 14.837, x2: 256.588, y2: 68.965, iou: 0.85882
 
 Performing object detection on ---> data/custom/images/invivo_91/115.jpg 	
-inference_time: 0.03308701515197754s
+inference_time: 0.033746957778930664s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 277.704, y1: 95.950, x2: 397.753, y2: 180.149, obj_conf: 0.97661, cls_conf: 0.99986
 	+ Label: vein, x1: 363.901, y1: 135.904, x2: 483.318, y2: 210.626, obj_conf: 0.97401, cls_conf: 0.99985
@@ -261,7 +261,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 271.773, y1: 74.981, x2: 337.658, y2: 116.207, iou: 0.71637
 
 Performing object detection on ---> data/custom/images/invivo_91/45.jpg 	
-inference_time: 0.03268885612487793s
+inference_time: 0.038690805435180664s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 148.979, y1: 43.635, x2: 288.979, y2: 132.665, obj_conf: 0.97689, cls_conf: 0.99992
 saved image plot with detected bboxes into ---> output/invivo_91/45.jpg
@@ -269,7 +269,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 153.195, y1: 24.075, x2: 230.437, y2: 73.194, iou: 0.78205
 
 Performing object detection on ---> data/custom/images/invivo_91/129.jpg 	
-inference_time: 0.032703399658203125s
+inference_time: 0.03345346450805664s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 208.887, y1: -3.378, x2: 304.223, y2: 45.184, obj_conf: 0.93677, cls_conf: 0.99971
 saved image plot with detected bboxes into ---> output/invivo_91/129.jpg
@@ -277,7 +277,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 186.248, y1: -1.864, x2: 238.847, y2: 24.929, iou: 0.76477
 
 Performing object detection on ---> data/custom/images/invivo_91/133.jpg 	
-inference_time: 0.032708168029785156s
+inference_time: 0.033371686935424805s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 254.872, y1: -2.738, x2: 361.143, y2: 51.201, obj_conf: 0.98437, cls_conf: 0.99988
 saved image plot with detected bboxes into ---> output/invivo_91/133.jpg
@@ -285,7 +285,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 211.619, y1: -1.511, x2: 270.251, y2: 28.249, iou: 0.63903
 
 Performing object detection on ---> data/custom/images/invivo_91/69.jpg 	
-inference_time: 0.03271031379699707s
+inference_time: 0.03340458869934082s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 17.949, y1: 27.794, x2: 159.517, y2: 114.634, obj_conf: 0.99399, cls_conf: 0.99992
 saved image plot with detected bboxes into ---> output/invivo_91/69.jpg
@@ -293,7 +293,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 80.903, y1: 15.335, x2: 159.009, y2: 63.246, iou: 0.84143
 
 Performing object detection on ---> data/custom/images/invivo_91/87.jpg 	
-inference_time: 0.032698869705200195s
+inference_time: 0.0334014892578125s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 376.530, y1: -2.202, x2: 495.169, y2: 59.252, obj_conf: 0.98187, cls_conf: 0.99994
 saved image plot with detected bboxes into ---> output/invivo_91/87.jpg
@@ -301,7 +301,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 278.741, y1: -1.215, x2: 344.197, y2: 32.691, iou: 0.80883
 
 Performing object detection on ---> data/custom/images/invivo_91/159.jpg 	
-inference_time: 0.032714128494262695s
+inference_time: 0.033493995666503906s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 268.831, y1: 11.105, x2: 375.311, y2: 79.294, obj_conf: 0.94295, cls_conf: 0.99948
 saved image plot with detected bboxes into ---> output/invivo_91/159.jpg
@@ -309,7 +309,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 219.321, y1: 6.127, x2: 278.068, y2: 43.748, iou: 0.80789
 
 Performing object detection on ---> data/custom/images/invivo_91/70.jpg 	
-inference_time: 0.03271818161010742s
+inference_time: 0.03332114219665527s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 57.832, y1: 26.749, x2: 192.887, y2: 109.717, obj_conf: 0.99115, cls_conf: 0.99987
 saved image plot with detected bboxes into ---> output/invivo_91/70.jpg
@@ -317,7 +317,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 102.907, y1: 14.758, x2: 177.420, y2: 60.534, iou: 0.80386
 
 Performing object detection on ---> data/custom/images/invivo_91/91.jpg 	
-inference_time: 0.036683082580566406s
+inference_time: 0.033387184143066406s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 355.773, y1: 2.991, x2: 488.810, y2: 76.782, obj_conf: 0.99024, cls_conf: 0.99986
 saved image plot with detected bboxes into ---> output/invivo_91/91.jpg
@@ -325,7 +325,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 267.288, y1: 1.650, x2: 340.688, y2: 42.363, iou: 0.82721
 
 Performing object detection on ---> data/custom/images/invivo_91/128.jpg 	
-inference_time: 0.03279304504394531s
+inference_time: 0.033393144607543945s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 196.357, y1: -2.218, x2: 293.274, y2: 45.826, obj_conf: 0.96054, cls_conf: 0.99972
 saved image plot with detected bboxes into ---> output/invivo_91/128.jpg
@@ -333,7 +333,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 179.335, y1: -1.224, x2: 232.806, y2: 25.283, iou: 0.78247
 
 Performing object detection on ---> data/custom/images/invivo_91/24.jpg 	
-inference_time: 0.032689571380615234s
+inference_time: 0.033356666564941406s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 184.074, y1: 32.499, x2: 309.408, y2: 112.145, obj_conf: 0.97653, cls_conf: 0.99960
 saved image plot with detected bboxes into ---> output/invivo_91/24.jpg
@@ -341,7 +341,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 172.558, y1: 17.931, x2: 241.708, y2: 61.873, iou: 0.79550
 
 Performing object detection on ---> data/custom/images/invivo_91/110.jpg 	
-inference_time: 0.03271365165710449s
+inference_time: 0.03333783149719238s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 168.440, y1: -0.710, x2: 269.697, y2: 48.276, obj_conf: 0.96970, cls_conf: 0.99951
 saved image plot with detected bboxes into ---> output/invivo_91/110.jpg
@@ -349,7 +349,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 163.933, y1: -0.392, x2: 219.798, y2: 26.635, iou: 0.85274
 
 Performing object detection on ---> data/custom/images/invivo_91/127.jpg 	
-inference_time: 0.032700538635253906s
+inference_time: 0.033399105072021484s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 184.246, y1: -3.182, x2: 287.164, y2: 48.445, obj_conf: 0.97621, cls_conf: 0.99980
 saved image plot with detected bboxes into ---> output/invivo_91/127.jpg
@@ -357,7 +357,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 172.653, y1: -1.755, x2: 229.435, y2: 26.728, iou: 0.87578
 
 Performing object detection on ---> data/custom/images/invivo_91/135.jpg 	
-inference_time: 0.032697439193725586s
+inference_time: 0.03335833549499512s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 204.331, y1: -1.373, x2: 320.868, y2: 55.540, obj_conf: 0.98437, cls_conf: 0.99990
 saved image plot with detected bboxes into ---> output/invivo_91/135.jpg
@@ -365,7 +365,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 183.734, y1: -0.757, x2: 248.031, y2: 30.643, iou: 0.78036
 
 Performing object detection on ---> data/custom/images/invivo_91/88.jpg 	
-inference_time: 0.03276467323303223s
+inference_time: 0.03336048126220703s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 380.690, y1: -1.835, x2: 500.219, y2: 60.280, obj_conf: 0.98109, cls_conf: 0.99992
 saved image plot with detected bboxes into ---> output/invivo_91/88.jpg
@@ -373,7 +373,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 281.036, y1: -1.013, x2: 346.983, y2: 33.258, iou: 0.72569
 
 Performing object detection on ---> data/custom/images/invivo_91/84.jpg 	
-inference_time: 0.03270077705383301s
+inference_time: 0.03337669372558594s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 236.438, y1: -3.028, x2: 357.206, y2: 63.999, obj_conf: 0.98949, cls_conf: 0.99994
 saved image plot with detected bboxes into ---> output/invivo_91/84.jpg
@@ -381,7 +381,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 201.448, y1: -1.671, x2: 268.079, y2: 35.310, iou: 0.77033
 
 Performing object detection on ---> data/custom/images/invivo_91/151.jpg 	
-inference_time: 0.03269839286804199s
+inference_time: 0.03339648246765137s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 349.379, y1: 1.054, x2: 483.999, y2: 89.252, obj_conf: 0.98501, cls_conf: 0.99969
 saved image plot with detected bboxes into ---> output/invivo_91/151.jpg
@@ -389,7 +389,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 263.761, y1: 0.582, x2: 338.034, y2: 49.243, iou: 0.88179
 
 Performing object detection on ---> data/custom/images/invivo_91/4.jpg 	
-inference_time: 0.03270530700683594s
+inference_time: 0.0334625244140625s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 213.203, y1: 45.800, x2: 323.736, y2: 121.470, obj_conf: 0.96925, cls_conf: 0.99979
 saved image plot with detected bboxes into ---> output/invivo_91/4.jpg
@@ -397,7 +397,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 188.629, y1: 25.269, x2: 249.613, y2: 67.018, iou: 0.89066
 
 Performing object detection on ---> data/custom/images/invivo_91/132.jpg 	
-inference_time: 0.03268313407897949s
+inference_time: 0.03338932991027832s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 243.250, y1: -3.870, x2: 349.256, y2: 53.047, obj_conf: 0.98470, cls_conf: 0.99988
 saved image plot with detected bboxes into ---> output/invivo_91/132.jpg
@@ -405,7 +405,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 205.207, y1: -2.135, x2: 263.693, y2: 29.267, iou: 0.80807
 
 Performing object detection on ---> data/custom/images/invivo_91/61.jpg 	
-inference_time: 0.032700300216674805s
+inference_time: 0.03335690498352051s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 81.471, y1: 17.109, x2: 215.854, y2: 98.706, obj_conf: 0.97669, cls_conf: 0.99991
 saved image plot with detected bboxes into ---> output/invivo_91/61.jpg
@@ -413,7 +413,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 115.949, y1: 9.439, x2: 190.092, y2: 54.458, iou: 0.80742
 
 Performing object detection on ---> data/custom/images/invivo_91/153.jpg 	
-inference_time: 0.0327301025390625s
+inference_time: 0.03337216377258301s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 276.543, y1: 6.138, x2: 380.253, y2: 68.883, obj_conf: 0.94635, cls_conf: 0.99936
 saved image plot with detected bboxes into ---> output/invivo_91/153.jpg
@@ -421,7 +421,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 223.576, y1: 3.386, x2: 280.795, y2: 38.004, iou: 0.81373
 
 Performing object detection on ---> data/custom/images/invivo_91/89.jpg 	
-inference_time: 0.03269362449645996s
+inference_time: 0.03339385986328125s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 396.074, y1: -0.189, x2: 516.194, y2: 61.251, obj_conf: 0.97918, cls_conf: 0.99989
 saved image plot with detected bboxes into ---> output/invivo_91/89.jpg
@@ -429,7 +429,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 289.524, y1: -0.104, x2: 355.797, y2: 33.794, iou: 0.60170
 
 Performing object detection on ---> data/custom/images/invivo_91/30.jpg 	
-inference_time: 0.03271341323852539s
+inference_time: 0.03352093696594238s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 111.957, y1: 49.946, x2: 229.581, y2: 125.126, obj_conf: 0.96021, cls_conf: 0.99963
 saved image plot with detected bboxes into ---> output/invivo_91/30.jpg
@@ -437,7 +437,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 132.769, y1: 27.557, x2: 197.665, y2: 69.035, iou: 0.85010
 
 Performing object detection on ---> data/custom/images/invivo_91/154.jpg 	
-inference_time: 0.03269052505493164s
+inference_time: 0.03334188461303711s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 306.836, y1: 5.418, x2: 416.868, y2: 67.237, obj_conf: 0.97962, cls_conf: 0.99981
 saved image plot with detected bboxes into ---> output/invivo_91/154.jpg
@@ -445,7 +445,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 240.289, y1: 2.989, x2: 300.996, y2: 37.096, iou: 0.60777
 
 Performing object detection on ---> data/custom/images/invivo_91/124.jpg 	
-inference_time: 0.03271174430847168s
+inference_time: 0.03336906433105469s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 156.571, y1: -3.453, x2: 256.842, y2: 49.848, obj_conf: 0.98350, cls_conf: 0.99978
 saved image plot with detected bboxes into ---> output/invivo_91/124.jpg
@@ -453,7 +453,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 157.384, y1: -1.905, x2: 212.706, y2: 27.502, iou: 0.79603
 
 Performing object detection on ---> data/custom/images/invivo_91/113.jpg 	
-inference_time: 0.03308463096618652s
+inference_time: 0.03372049331665039s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 27.986, y1: 29.512, x2: 152.857, y2: 110.364, obj_conf: 0.97698, cls_conf: 0.99962
 	+ Label: vein, x1: 347.113, y1: 160.021, x2: 460.635, y2: 237.164, obj_conf: 0.95473, cls_conf: 0.99968
@@ -463,7 +463,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 262.511, y1: 88.288, x2: 325.143, y2: 130.849, iou: 0.82025
 
 Performing object detection on ---> data/custom/images/invivo_91/19.jpg 	
-inference_time: 0.032711029052734375s
+inference_time: 0.03336024284362793s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 276.536, y1: 41.771, x2: 404.295, y2: 124.321, obj_conf: 0.98536, cls_conf: 0.99993
 saved image plot with detected bboxes into ---> output/invivo_91/19.jpg
@@ -471,7 +471,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 223.572, y1: 23.046, x2: 294.059, y2: 68.591, iou: 0.82455
 
 Performing object detection on ---> data/custom/images/invivo_91/22.jpg 	
-inference_time: 0.03271651268005371s
+inference_time: 0.0333867073059082s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 223.851, y1: 31.714, x2: 344.595, y2: 111.714, obj_conf: 0.96744, cls_conf: 0.99981
 saved image plot with detected bboxes into ---> output/invivo_91/22.jpg
@@ -479,7 +479,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 194.504, y1: 17.497, x2: 261.121, y2: 61.635, iou: 0.75815
 
 Performing object detection on ---> data/custom/images/invivo_91/116.jpg 	
-inference_time: 0.033032894134521484s
+inference_time: 0.03370070457458496s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 375.551, y1: 125.894, x2: 490.099, y2: 206.499, obj_conf: 0.96604, cls_conf: 0.99973
 	+ Label: vein, x1: 292.514, y1: 93.409, x2: 411.276, y2: 180.109, obj_conf: 0.96009, cls_conf: 0.99972
@@ -489,7 +489,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 232.387, y1: 51.536, x2: 297.911, y2: 99.370, iou: 0.76022
 
 Performing object detection on ---> data/custom/images/invivo_91/55.jpg 	
-inference_time: 0.03721976280212402s
+inference_time: 0.0333859920501709s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 192.152, y1: 27.330, x2: 329.591, y2: 118.361, obj_conf: 0.99054, cls_conf: 0.99983
 saved image plot with detected bboxes into ---> output/invivo_91/55.jpg
@@ -497,7 +497,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 177.015, y1: 15.078, x2: 252.843, y2: 65.303, iou: 0.85032
 
 Performing object detection on ---> data/custom/images/invivo_91/104.jpg 	
-inference_time: 0.03278994560241699s
+inference_time: 0.03337550163269043s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 125.192, y1: 2.243, x2: 231.440, y2: 56.721, obj_conf: 0.96526, cls_conf: 0.99979
 saved image plot with detected bboxes into ---> output/invivo_91/104.jpg
@@ -505,11 +505,11 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 140.072, y1: 1.238, x2: 198.691, y2: 31.294, iou: 0.91545
 
 Performing object detection on ---> data/custom/images/invivo_91/3.jpg 	
-inference_time: 0.03219866752624512s
+inference_time: 0.03287696838378906s
 No veins detected on this image!
 
 Performing object detection on ---> data/custom/images/invivo_91/46.jpg 	
-inference_time: 0.032741546630859375s
+inference_time: 0.03337979316711426s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 186.845, y1: 33.735, x2: 337.242, y2: 129.990, obj_conf: 0.98479, cls_conf: 0.99996
 saved image plot with detected bboxes into ---> output/invivo_91/46.jpg
@@ -517,7 +517,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 174.087, y1: 18.612, x2: 257.065, y2: 71.719, iou: 0.81899
 
 Performing object detection on ---> data/custom/images/invivo_91/152.jpg 	
-inference_time: 0.03281998634338379s
+inference_time: 0.033425331115722656s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 248.987, y1: 5.093, x2: 369.114, y2: 77.514, obj_conf: 0.97676, cls_conf: 0.99991
 saved image plot with detected bboxes into ---> output/invivo_91/152.jpg
@@ -525,7 +525,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 208.372, y1: 2.810, x2: 274.649, y2: 42.767, iou: 0.80375
 
 Performing object detection on ---> data/custom/images/invivo_91/15.jpg 	
-inference_time: 0.032694339752197266s
+inference_time: 0.033460140228271484s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 272.154, y1: 29.391, x2: 384.954, y2: 104.650, obj_conf: 0.97163, cls_conf: 0.99956
 saved image plot with detected bboxes into ---> output/invivo_91/15.jpg
@@ -533,7 +533,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 221.154, y1: 16.216, x2: 283.388, y2: 57.738, iou: 0.84338
 
 Performing object detection on ---> data/custom/images/invivo_91/43.jpg 	
-inference_time: 0.03273963928222656s
+inference_time: 0.03338360786437988s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 135.896, y1: 22.234, x2: 279.834, y2: 126.411, obj_conf: 0.98664, cls_conf: 0.99977
 saved image plot with detected bboxes into ---> output/invivo_91/43.jpg
@@ -541,7 +541,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 145.977, y1: 12.267, x2: 225.391, y2: 69.744, iou: 0.86516
 
 Performing object detection on ---> data/custom/images/invivo_91/48.jpg 	
-inference_time: 0.03269672393798828s
+inference_time: 0.03336787223815918s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 272.601, y1: 40.035, x2: 417.221, y2: 127.424, obj_conf: 0.97973, cls_conf: 0.99994
 saved image plot with detected bboxes into ---> output/invivo_91/48.jpg
@@ -549,7 +549,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 221.400, y1: 22.089, x2: 301.191, y2: 70.303, iou: 0.86436
 
 Performing object detection on ---> data/custom/images/invivo_91/47.jpg 	
-inference_time: 0.03268575668334961s
+inference_time: 0.03339576721191406s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 235.530, y1: 28.536, x2: 373.128, y2: 118.968, obj_conf: 0.97422, cls_conf: 0.99952
 saved image plot with detected bboxes into ---> output/invivo_91/47.jpg
@@ -557,7 +557,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 200.947, y1: 15.744, x2: 276.864, y2: 65.638, iou: 0.71517
 
 Performing object detection on ---> data/custom/images/invivo_91/117.jpg 	
-inference_time: 0.033416748046875s
+inference_time: 0.03403472900390625s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 299.612, y1: 86.364, x2: 421.036, y2: 173.815, obj_conf: 0.96993, cls_conf: 0.99933
 	+ Label: vein, x1: 388.501, y1: 119.755, x2: 504.618, y2: 200.453, obj_conf: 0.96574, cls_conf: 0.99927
@@ -568,7 +568,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 285.346, y1: 66.072, x2: 349.410, y2: 110.595, iou: 0.71984
 
 Performing object detection on ---> data/custom/images/invivo_91/42.jpg 	
-inference_time: 0.03269314765930176s
+inference_time: 0.03335881233215332s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 127.250, y1: 29.968, x2: 266.440, y2: 126.004, obj_conf: 0.98321, cls_conf: 0.99994
 saved image plot with detected bboxes into ---> output/invivo_91/42.jpg
@@ -576,7 +576,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 141.207, y1: 16.534, x2: 218.001, y2: 69.519, iou: 0.81953
 
 Performing object detection on ---> data/custom/images/invivo_91/0.jpg 	
-inference_time: 0.03262639045715332s
+inference_time: 0.03339505195617676s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 157.758, y1: 39.270, x2: 263.975, y2: 124.294, obj_conf: 0.85832, cls_conf: 0.99909
 saved image plot with detected bboxes into ---> output/invivo_91/0.jpg
@@ -584,7 +584,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 158.039, y1: 21.666, x2: 216.641, y2: 68.576, iou: 0.83456
 
 Performing object detection on ---> data/custom/images/invivo_91/123.jpg 	
-inference_time: 0.03278374671936035s
+inference_time: 0.03339743614196777s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 162.470, y1: -2.530, x2: 258.793, y2: 48.624, obj_conf: 0.97759, cls_conf: 0.99972
 saved image plot with detected bboxes into ---> output/invivo_91/123.jpg
@@ -592,7 +592,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 160.638, y1: -1.396, x2: 213.782, y2: 26.827, iou: 0.80961
 
 Performing object detection on ---> data/custom/images/invivo_91/12.jpg 	
-inference_time: 0.032691001892089844s
+inference_time: 0.03786516189575195s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 248.265, y1: 29.894, x2: 366.901, y2: 105.083, obj_conf: 0.97647, cls_conf: 0.99979
 saved image plot with detected bboxes into ---> output/invivo_91/12.jpg
@@ -600,7 +600,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 207.974, y1: 16.493, x2: 273.428, y2: 57.977, iou: 0.80470
 
 Performing object detection on ---> data/custom/images/invivo_91/50.jpg 	
-inference_time: 0.032712697982788086s
+inference_time: 0.03344917297363281s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 245.209, y1: 20.293, x2: 387.965, y2: 110.615, obj_conf: 0.99130, cls_conf: 0.99998
 saved image plot with detected bboxes into ---> output/invivo_91/50.jpg
@@ -608,7 +608,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 206.288, y1: 11.196, x2: 285.050, y2: 61.029, iou: 0.83170
 
 Performing object detection on ---> data/custom/images/invivo_91/93.jpg 	
-inference_time: 0.0326693058013916s
+inference_time: 0.03337669372558594s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 226.413, y1: 5.209, x2: 339.844, y2: 64.404, obj_conf: 0.98002, cls_conf: 0.99981
 saved image plot with detected bboxes into ---> output/invivo_91/93.jpg
@@ -616,7 +616,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 195.917, y1: 2.874, x2: 258.500, y2: 35.533, iou: 0.78531
 
 Performing object detection on ---> data/custom/images/invivo_91/106.jpg 	
-inference_time: 0.03271818161010742s
+inference_time: 0.03338742256164551s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 127.649, y1: -1.838, x2: 233.654, y2: 53.781, obj_conf: 0.98621, cls_conf: 0.99987
 saved image plot with detected bboxes into ---> output/invivo_91/106.jpg
@@ -624,7 +624,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 141.427, y1: -1.014, x2: 199.912, y2: 29.672, iou: 0.75619
 
 Performing object detection on ---> data/custom/images/invivo_91/1.jpg 	
-inference_time: 0.032716989517211914s
+inference_time: 0.03339266777038574s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 202.008, y1: 47.622, x2: 319.244, y2: 121.806, obj_conf: 0.93314, cls_conf: 0.99965
 saved image plot with detected bboxes into ---> output/invivo_91/1.jpg
@@ -632,7 +632,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 182.453, y1: 26.274, x2: 247.135, y2: 67.203, iou: 0.72915
 
 Performing object detection on ---> data/custom/images/invivo_91/27.jpg 	
-inference_time: 0.03267097473144531s
+inference_time: 0.03341937065124512s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 127.778, y1: 37.241, x2: 247.323, y2: 111.329, obj_conf: 0.97584, cls_conf: 0.99956
 saved image plot with detected bboxes into ---> output/invivo_91/27.jpg
@@ -640,7 +640,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 141.498, y1: 20.547, x2: 207.454, y2: 61.423, iou: 0.75836
 
 Performing object detection on ---> data/custom/images/invivo_91/157.jpg 	
-inference_time: 0.032802581787109375s
+inference_time: 0.03340029716491699s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 332.986, y1: 4.313, x2: 452.224, y2: 72.490, obj_conf: 0.98845, cls_conf: 0.99992
 saved image plot with detected bboxes into ---> output/invivo_91/157.jpg
@@ -648,7 +648,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 254.716, y1: 2.379, x2: 320.503, y2: 39.995, iou: 0.55509
 
 Performing object detection on ---> data/custom/images/invivo_91/60.jpg 	
-inference_time: 0.03274130821228027s
+inference_time: 0.033371686935424805s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 217.894, y1: 19.081, x2: 354.714, y2: 108.745, obj_conf: 0.98508, cls_conf: 0.99990
 saved image plot with detected bboxes into ---> output/invivo_91/60.jpg
@@ -656,7 +656,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 191.217, y1: 10.528, x2: 266.704, y2: 59.997, iou: 0.72956
 
 Performing object detection on ---> data/custom/images/invivo_91/21.jpg 	
-inference_time: 0.03773856163024902s
+inference_time: 0.03347349166870117s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 207.280, y1: 30.692, x2: 328.937, y2: 110.172, obj_conf: 0.98408, cls_conf: 0.99971
 saved image plot with detected bboxes into ---> output/invivo_91/21.jpg
@@ -664,7 +664,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 185.361, y1: 16.933, x2: 252.482, y2: 60.785, iou: 0.88378
 
 Performing object detection on ---> data/custom/images/invivo_91/85.jpg 	
-inference_time: 0.03278493881225586s
+inference_time: 0.03336691856384277s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 293.773, y1: -2.140, x2: 414.826, y2: 61.231, obj_conf: 0.98742, cls_conf: 0.99995
 saved image plot with detected bboxes into ---> output/invivo_91/85.jpg
@@ -672,7 +672,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 233.081, y1: -1.181, x2: 299.870, y2: 33.783, iou: 0.72782
 
 Performing object detection on ---> data/custom/images/invivo_91/107.jpg 	
-inference_time: 0.0327458381652832s
+inference_time: 0.03340458869934082s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 145.556, y1: 0.095, x2: 252.777, y2: 54.021, obj_conf: 0.97418, cls_conf: 0.99980
 saved image plot with detected bboxes into ---> output/invivo_91/107.jpg
@@ -680,7 +680,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 151.307, y1: 0.052, x2: 210.463, y2: 29.805, iou: 0.78891
 
 Performing object detection on ---> data/custom/images/invivo_91/160.jpg 	
-inference_time: 0.03265547752380371s
+inference_time: 0.0333867073059082s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 276.604, y1: 8.437, x2: 386.626, y2: 77.392, obj_conf: 0.96457, cls_conf: 0.99954
 saved image plot with detected bboxes into ---> output/invivo_91/160.jpg
@@ -688,7 +688,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 223.609, y1: 4.655, x2: 284.311, y2: 42.699, iou: 0.65458
 
 Performing object detection on ---> data/custom/images/invivo_91/26.jpg 	
-inference_time: 0.03272199630737305s
+inference_time: 0.033373355865478516s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 160.969, y1: 34.133, x2: 286.176, y2: 118.867, obj_conf: 0.98643, cls_conf: 0.99991
 saved image plot with detected bboxes into ---> output/invivo_91/26.jpg
@@ -696,7 +696,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 159.810, y1: 18.832, x2: 228.890, y2: 65.582, iou: 0.72514
 
 Performing object detection on ---> data/custom/images/invivo_91/54.jpg 	
-inference_time: 0.03273272514343262s
+inference_time: 0.033469438552856445s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 183.168, y1: 28.211, x2: 320.560, y2: 117.618, obj_conf: 0.98299, cls_conf: 0.99989
 saved image plot with detected bboxes into ---> output/invivo_91/54.jpg
@@ -704,7 +704,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 172.058, y1: 15.564, x2: 247.861, y2: 64.893, iou: 0.78647
 
 Performing object detection on ---> data/custom/images/invivo_91/49.jpg 	
-inference_time: 0.03272509574890137s
+inference_time: 0.03340721130371094s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 271.879, y1: 17.602, x2: 418.236, y2: 110.914, obj_conf: 0.99188, cls_conf: 0.99998
 saved image plot with detected bboxes into ---> output/invivo_91/49.jpg
@@ -712,7 +712,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 221.002, y1: 9.711, x2: 301.751, y2: 61.194, iou: 0.89382
 
 Performing object detection on ---> data/custom/images/invivo_91/20.jpg 	
-inference_time: 0.03273940086364746s
+inference_time: 0.033486366271972656s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 274.701, y1: 49.714, x2: 399.835, y2: 128.339, obj_conf: 0.96724, cls_conf: 0.99977
 saved image plot with detected bboxes into ---> output/invivo_91/20.jpg
@@ -720,7 +720,7 @@ Showing image with bbox in detected image size - (416, 416)
 	+ Label: vein, x1: 222.559, y1: 27.428, x2: 291.599, y2: 70.808, iou: 0.83779
 
 Performing object detection on ---> data/custom/images/invivo_91/158.jpg 	
-inference_time: 0.03272509574890137s
+inference_time: 0.033350467681884766s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 263.502, y1: 6.644, x2: 375.389, y2: 76.636, obj_conf: 0.98443, cls_conf: 0.99984
 saved image plot with detected bboxes into ---> output/invivo_91/158.jpg
@@ -732,6 +732,6 @@ Using device: cuda
 Using model: checkpoints/invivo_91/yolov3_ckpt_34.pth
 Total samples: 90 detected samples: 89
 Precision: 0.989 Recall: 0.979 AP: 0.979 f1: 0.984 ap_class: [0]
-Total inference time: 4.52317s
-Average inference time: 0.05026s Average prediction confidence: 0.975 Average iou: 0.793
+Total inference time: 4.56973s
+Average inference time: 0.05077s Average prediction confidence: 0.975 Average iou: 0.793
 -----------------------
