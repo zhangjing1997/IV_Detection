@@ -275,19 +275,19 @@ Average centroid prediction error:
 #### Mar 24
 - finish the first version of my poster with the experiment results
 
-
 ### NEXT
 - modify two sub-projects' readme -> mainly describe usages
 
-### Future Work - UNet
-- 加augmentation
-- 尝试调整loss function
-- 加weight matrix以给边界上的点更高权重
-- consider downsampling image size to do prediction and rescale back for outputs
-- better visualization comparison: write util function to produce img/visualization comparison among input vs. label vs. prediction
+### Future Work
+- YOLO-lite can be even faster than YOLO base
+- UNet accuracy could be enhanced futher:
+  - add augmentation
+  - adjust loss function to assign more weights for pixels on edges
+  - consider downsampling image size to do prediction and rescale back for outputs -> tradeoff between improving speed and maintaing accuracy
+- consider designing a specified loss to directlt learn the target edge, which fits the end-to-end thoughts in deep learning.
 - **Post-Processing - Active Contour**:
   - find self-implemented active contour code on github, etc.
   - understand and try to modify them for our own use
   - if effective, use it to refine the vein edges on our segmentation(unet) and detection(yolo) methods to finalize a whole project demo.
-- **If necessary**, consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils -> show learning curve.
-- **If time allows**, consider designing a specified loss to directlt learn the target edge, which fits the end-to-end thoughts in deep learning.
+- consider using pytorch.tensorboard.utils to replace original tf.tensorboard utils -> show learning curve.
+- better visualization comparison: write util function to produce img/visualization comparison among input vs. label vs. prediction
