@@ -267,7 +267,7 @@ Average centroid prediction error:
 
 #### Mar 23
 - preliminarily built a ipynb to processing active contour based on detection result
-  - 调整active contour的参数，正确地逼近vein，必要的话，了解背后的原理和implementation
+  - adjust parameters given by skimage active contour api
   - 增加init的边界
     - 考虑用unet的predicted centroid，定一个半径。
   - 考虑change image brightness/contrast，来让vein更突出来

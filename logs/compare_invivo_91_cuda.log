@@ -3,28 +3,30 @@ Namespace(dataset_name='invivo_91', device='cuda', unet_ckpt='unet_ckpt_20.pth',
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/59.jpg ...
-inference_time: 1.6067805290222168s
+inference_time: 1.5281577110290527s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/59.jpg 	
-inference_time: 0.03367733955383301s
+inference_time: 0.030191898345947266s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 226.078, y1: 25.722, x2: 366.209, y2: 113.560, obj_conf: 0.99028, cls_conf: 0.99985
+	+ Label: vein, x1: 223.608, y1: 27.161, x2: 365.782, y2: 113.844, obj_conf: 0.99028, cls_conf: 0.99985
+
 centroids_target: [(299, 54)]
 centroids_unet: [(299, 68)]
-centroids_yolo: [(296, 69)]
+centroids_yolo: [(294, 70)]
 unet_target_errors: [14.0]
-yolo_target_errors: [15.297058540778355]
+yolo_target_errors: [16.76305461424021]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/98.jpg ...
-inference_time: 0.005273342132568359s
+inference_time: 0.005248308181762695s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/98.jpg 	
-inference_time: 0.0296781063079834s
+inference_time: 0.02669215202331543s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 43.299, y1: 1.357, x2: 174.589, y2: 71.861, obj_conf: 0.99516, cls_conf: 0.99997
 we got more or less segemented regions than target regions
+
 centroids_target: [(113, 32)]
 centroids_unet: []
 centroids_yolo: [(108, 36)]
@@ -34,12 +36,13 @@ yolo_target_errors: [6.4031242374328485]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/68.jpg ...
-inference_time: 0.005308389663696289s
+inference_time: 0.005224704742431641s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/68.jpg 	
-inference_time: 0.022765159606933594s
+inference_time: 0.02666926383972168s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 41.383, y1: 27.133, x2: 174.785, y2: 109.504, obj_conf: 0.98928, cls_conf: 0.99995
+
 centroids_target: [(113, 59)]
 centroids_unet: [(109, 61)]
 centroids_yolo: [(108, 68)]
@@ -49,43 +52,46 @@ yolo_target_errors: [10.295630140987]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/109.jpg ...
-inference_time: 0.005358695983886719s
+inference_time: 0.0052411556243896484s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/109.jpg 	
-inference_time: 0.023905038833618164s
+inference_time: 0.022695302963256836s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 162.461, y1: -2.711, x2: 258.528, y2: 46.649, obj_conf: 0.97070, cls_conf: 0.99936
+	+ Label: vein, x1: 160.513, y1: -2.900, x2: 256.597, y2: 47.461, obj_conf: 0.97070, cls_conf: 0.99936
+
 centroids_target: [(215, 18)]
 centroids_unet: [(215, 16)]
-centroids_yolo: [(210, 21)]
+centroids_yolo: [(208, 22)]
 unet_target_errors: [2.0]
-yolo_target_errors: [5.830951894845301]
+yolo_target_errors: [8.06225774829855]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/44.jpg ...
-inference_time: 0.005286216735839844s
+inference_time: 0.0052416324615478516s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/44.jpg 	
-inference_time: 0.02297830581665039s
+inference_time: 0.0229034423828125s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 146.815, y1: 37.460, x2: 298.063, y2: 133.355, obj_conf: 0.97388, cls_conf: 0.99991
+	+ Label: vein, x1: 147.847, y1: 34.466, x2: 295.787, y2: 133.290, obj_conf: 0.97388, cls_conf: 0.99991
+
 centroids_target: [(227, 81)]
 centroids_unet: [(228, 83)]
-centroids_yolo: [(222, 85)]
+centroids_yolo: [(221, 83)]
 unet_target_errors: [2.23606797749979]
-yolo_target_errors: [6.4031242374328485]
+yolo_target_errors: [6.324555320336759]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/101.jpg ...
-inference_time: 0.005274772644042969s
+inference_time: 0.0052204132080078125s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/101.jpg 	
-inference_time: 0.02373480796813965s
+inference_time: 0.027768373489379883s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 148.172, y1: 0.638, x2: 251.516, y2: 53.694, obj_conf: 0.95991, cls_conf: 0.99976
 we got more or less segemented regions than target regions
+
 centroids_target: [(204, 22)]
 centroids_unet: []
 centroids_yolo: [(199, 27)]
@@ -95,27 +101,29 @@ yolo_target_errors: [7.0710678118654755]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/122.jpg ...
-inference_time: 0.0052721500396728516s
+inference_time: 0.005207538604736328s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/122.jpg 	
-inference_time: 0.02364206314086914s
+inference_time: 0.024482011795043945s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 126.060, y1: -2.404, x2: 243.189, y2: 58.166, obj_conf: 0.98306, cls_conf: 0.99988
+	+ Label: vein, x1: 125.129, y1: -1.871, x2: 246.279, y2: 58.378, obj_conf: 0.98306, cls_conf: 0.99988
+
 centroids_target: [(187, 25)]
 centroids_unet: [(189, 23)]
-centroids_yolo: [(184, 27)]
+centroids_yolo: [(185, 28)]
 unet_target_errors: [2.8284271247461903]
 yolo_target_errors: [3.605551275463989]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/23.jpg ...
-inference_time: 0.005345344543457031s
+inference_time: 0.0054280757904052734s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/23.jpg 	
-inference_time: 0.023442983627319336s
+inference_time: 0.023148775100708008s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 207.596, y1: 32.225, x2: 333.109, y2: 110.263, obj_conf: 0.98744, cls_conf: 0.99978
+
 centroids_target: [(280, 68)]
 centroids_unet: [(274, 70)]
 centroids_yolo: [(270, 71)]
@@ -125,13 +133,14 @@ yolo_target_errors: [10.44030650891055]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/97.jpg ...
-inference_time: 0.005250453948974609s
+inference_time: 0.005239248275756836s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/97.jpg 	
-inference_time: 0.023147106170654297s
+inference_time: 0.022713661193847656s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 5.616, y1: -4.286, x2: 139.820, y2: 70.990, obj_conf: 0.99637, cls_conf: 0.99999
 we got more or less segemented regions than target regions
+
 centroids_target: [(72, 30)]
 centroids_unet: []
 centroids_yolo: [(72, 33)]
@@ -141,27 +150,29 @@ yolo_target_errors: [3.0]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/80.jpg ...
-inference_time: 0.005257606506347656s
+inference_time: 0.0052297115325927734s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/80.jpg 	
-inference_time: 0.022969484329223633s
+inference_time: 0.02271294593811035s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 172.577, y1: 8.311, x2: 306.091, y2: 93.912, obj_conf: 0.98199, cls_conf: 0.99965
+	+ Label: vein, x1: 175.312, y1: 9.347, x2: 312.462, y2: 94.699, obj_conf: 0.98199, cls_conf: 0.99965
+
 centroids_target: [(254, 41)]
 centroids_unet: [(253, 45)]
-centroids_yolo: [(239, 51)]
+centroids_yolo: [(243, 52)]
 unet_target_errors: [4.123105625617661]
-yolo_target_errors: [18.027756377319946]
+yolo_target_errors: [15.556349186104045]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/103.jpg ...
-inference_time: 0.00527191162109375s
+inference_time: 0.005227327346801758s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/103.jpg 	
-inference_time: 0.022936582565307617s
+inference_time: 0.022687673568725586s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 160.459, y1: 0.991, x2: 267.520, y2: 56.012, obj_conf: 0.97305, cls_conf: 0.99985
+
 centroids_target: [(219, 23)]
 centroids_unet: [(225, 24)]
 centroids_yolo: [(213, 28)]
@@ -171,12 +182,13 @@ yolo_target_errors: [7.810249675906654]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/18.jpg ...
-inference_time: 0.005267620086669922s
+inference_time: 0.00523829460144043s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/18.jpg 	
-inference_time: 0.022623300552368164s
+inference_time: 0.02282238006591797s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 246.890, y1: 34.237, x2: 366.178, y2: 117.327, obj_conf: 0.96879, cls_conf: 0.99973
+
 centroids_target: [(318, 73)]
 centroids_unet: [(317, 73)]
 centroids_yolo: [(306, 75)]
@@ -186,12 +198,13 @@ yolo_target_errors: [12.165525060596439]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/41.jpg ...
-inference_time: 0.005269527435302734s
+inference_time: 0.005233049392700195s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/41.jpg 	
-inference_time: 0.02278876304626465s
+inference_time: 0.023067712783813477s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 122.663, y1: 26.060, x2: 260.782, y2: 119.968, obj_conf: 0.97864, cls_conf: 0.99958
+
 centroids_target: [(200, 74)]
 centroids_unet: [(196, 74)]
 centroids_yolo: [(191, 73)]
@@ -201,12 +214,13 @@ yolo_target_errors: [9.055385138137417]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/99.jpg ...
-inference_time: 0.005293846130371094s
+inference_time: 0.005250215530395508s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/99.jpg 	
-inference_time: 0.02259993553161621s
+inference_time: 0.02164006233215332s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 94.897, y1: 1.106, x2: 227.147, y2: 70.847, obj_conf: 0.99438, cls_conf: 0.99997
+	+ Label: vein, x1: 96.529, y1: -1.139, x2: 227.144, y2: 71.157, obj_conf: 0.99438, cls_conf: 0.99997
+
 centroids_target: [(160, 32)]
 centroids_unet: [(159, 30)]
 centroids_yolo: [(161, 35)]
@@ -216,12 +230,13 @@ yolo_target_errors: [3.1622776601683795]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/90.jpg ...
-inference_time: 0.013124465942382812s
+inference_time: 0.0052301883697509766s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/90.jpg 	
-inference_time: 0.022840261459350586s
+inference_time: 0.022777795791625977s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 301.809, y1: -2.388, x2: 426.809, y2: 57.272, obj_conf: 0.99098, cls_conf: 0.99996
+
 centroids_target: [(370, 22)]
 centroids_unet: [(371, 23)]
 centroids_yolo: [(364, 27)]
@@ -231,12 +246,13 @@ yolo_target_errors: [7.810249675906654]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/125.jpg ...
-inference_time: 0.005309581756591797s
+inference_time: 0.005216121673583984s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/125.jpg 	
-inference_time: 0.023490428924560547s
+inference_time: 0.022841215133666992s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 165.556, y1: -2.075, x2: 258.152, y2: 46.579, obj_conf: 0.95564, cls_conf: 0.99933
+
 centroids_target: [(218, 17)]
 centroids_unet: [(220, 15)]
 centroids_yolo: [(211, 22)]
@@ -246,12 +262,13 @@ yolo_target_errors: [8.602325267042627]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/58.jpg ...
-inference_time: 0.005269527435302734s
+inference_time: 0.005229473114013672s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/58.jpg 	
-inference_time: 0.02461385726928711s
+inference_time: 0.023082733154296875s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 218.608, y1: 23.778, x2: 364.879, y2: 125.940, obj_conf: 0.98698, cls_conf: 0.99978
+
 centroids_target: [(296, 69)]
 centroids_unet: [(297, 78)]
 centroids_yolo: [(291, 74)]
@@ -261,13 +278,14 @@ yolo_target_errors: [7.0710678118654755]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/86.jpg ...
-inference_time: 0.005293607711791992s
+inference_time: 0.005309581756591797s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/86.jpg 	
-inference_time: 0.022875308990478516s
+inference_time: 0.023739337921142578s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 342.251, y1: -2.125, x2: 466.123, y2: 63.597, obj_conf: 0.98544, cls_conf: 0.99992
 we got more or less segemented regions than target regions
+
 centroids_target: [(406, 27)]
 centroids_unet: []
 centroids_yolo: [(404, 30)]
@@ -277,12 +295,13 @@ yolo_target_errors: [3.605551275463989]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/14.jpg ...
-inference_time: 0.005274295806884766s
+inference_time: 0.005217552185058594s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/14.jpg 	
-inference_time: 0.0228574275970459s
+inference_time: 0.02292943000793457s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 252.114, y1: 28.957, x2: 370.629, y2: 106.119, obj_conf: 0.86155, cls_conf: 0.99958
+
 centroids_target: [(326, 65)]
 centroids_unet: [(318, 67)]
 centroids_yolo: [(311, 67)]
@@ -292,30 +311,32 @@ yolo_target_errors: [15.132745950421556]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/111.jpg ...
-inference_time: 0.005293369293212891s
+inference_time: 0.005239009857177734s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/111.jpg 	
-inference_time: 0.02337932586669922s
+inference_time: 0.02432107925415039s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: -29.914, y1: 60.235, x2: 79.263, y2: 131.578, obj_conf: 0.92306, cls_conf: 0.99883
-	+ Label: vein, x1: 258.734, y1: 150.836, x2: 364.412, y2: 219.683, obj_conf: 0.90329, cls_conf: 0.99951
+	+ Label: vein, x1: -27.991, y1: 58.770, x2: 83.938, y2: 130.179, obj_conf: 0.92306, cls_conf: 0.99883
+	+ Label: vein, x1: 250.758, y1: 152.394, x2: 358.827, y2: 223.147, obj_conf: 0.90329, cls_conf: 0.99951
+	+ Label: vein, x1: 337.905, y1: 189.018, x2: 432.896, y2: 264.400, obj_conf: 0.84965, cls_conf: 0.99848
 we got more or less segemented regions than target regions
-we got more or less detectde bounding boxes than target regions
+
 centroids_target: [(39, 84), (305, 191), (386, 227)]
 centroids_unet: []
-centroids_yolo: []
+centroids_yolo: [(27, 94), (304, 187), (385, 226)]
 unet_target_errors: []
-yolo_target_errors: []
+yolo_target_errors: [15.620499351813308, 4.123105625617661, 1.4142135623730951]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/92.jpg ...
-inference_time: 0.005296468734741211s
+inference_time: 0.0052394866943359375s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/92.jpg 	
-inference_time: 0.023172855377197266s
+inference_time: 0.021800994873046875s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 355.937, y1: 1.144, x2: 482.705, y2: 72.021, obj_conf: 0.99285, cls_conf: 0.99996
+
 centroids_target: [(425, 36)]
 centroids_unet: [(424, 36)]
 centroids_yolo: [(419, 36)]
@@ -325,27 +346,29 @@ yolo_target_errors: [6.0]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/102.jpg ...
-inference_time: 0.005311489105224609s
+inference_time: 0.005239963531494141s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/102.jpg 	
-inference_time: 0.023687362670898438s
+inference_time: 0.02386307716369629s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 152.130, y1: -0.574, x2: 251.566, y2: 52.387, obj_conf: 0.97137, cls_conf: 0.99974
+	+ Label: vein, x1: 149.646, y1: 1.024, x2: 255.271, y2: 53.709, obj_conf: 0.97137, cls_conf: 0.99974
+
 centroids_target: [(210, 26)]
 centroids_unet: [(210, 21)]
-centroids_yolo: [(201, 25)]
+centroids_yolo: [(202, 27)]
 unet_target_errors: [5.0]
-yolo_target_errors: [9.055385138137417]
+yolo_target_errors: [8.06225774829855]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/100.jpg ...
-inference_time: 0.005352497100830078s
+inference_time: 0.005244016647338867s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/100.jpg 	
-inference_time: 0.02351665496826172s
+inference_time: 0.02283453941345215s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 71.373, y1: 0.713, x2: 200.824, y2: 70.637, obj_conf: 0.99260, cls_conf: 0.99995
+
 centroids_target: [(139, 32)]
 centroids_unet: [(142, 31)]
 centroids_yolo: [(136, 35)]
@@ -355,12 +378,13 @@ yolo_target_errors: [4.242640687119285]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/64.jpg ...
-inference_time: 0.005394697189331055s
+inference_time: 0.0052568912506103516s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/64.jpg 	
-inference_time: 0.02372455596923828s
+inference_time: 0.02318286895751953s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 61.726, y1: 17.218, x2: 195.230, y2: 100.255, obj_conf: 0.97281, cls_conf: 0.99988
+
 centroids_target: [(130, 52)]
 centroids_unet: [(130, 52)]
 centroids_yolo: [(128, 58)]
@@ -370,12 +394,13 @@ yolo_target_errors: [6.324555320336759]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/108.jpg ...
-inference_time: 0.0052814483642578125s
+inference_time: 0.00523686408996582s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/108.jpg 	
-inference_time: 0.02315497398376465s
+inference_time: 0.023203372955322266s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 165.654, y1: -1.729, x2: 261.075, y2: 48.686, obj_conf: 0.97591, cls_conf: 0.99972
+
 centroids_target: [(219, 21)]
 centroids_unet: [(221, 18)]
 centroids_yolo: [(213, 23)]
@@ -385,12 +410,13 @@ yolo_target_errors: [6.324555320336759]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/95.jpg ...
-inference_time: 0.005310535430908203s
+inference_time: 0.0052602291107177734s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/95.jpg 	
-inference_time: 0.022649049758911133s
+inference_time: 0.022999048233032227s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 97.174, y1: 3.181, x2: 221.879, y2: 70.144, obj_conf: 0.99336, cls_conf: 0.99997
+
 centroids_target: [(164, 32)]
 centroids_unet: [(165, 33)]
 centroids_yolo: [(159, 36)]
@@ -400,12 +426,13 @@ yolo_target_errors: [6.4031242374328485]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/105.jpg ...
-inference_time: 0.0053081512451171875s
+inference_time: 0.0052242279052734375s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/105.jpg 	
-inference_time: 0.022654056549072266s
+inference_time: 0.023726701736450195s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 126.760, y1: 0.067, x2: 236.386, y2: 57.306, obj_conf: 0.97856, cls_conf: 0.99988
+
 centroids_target: [(185, 24)]
 centroids_unet: [(184, 23)]
 centroids_yolo: [(181, 28)]
@@ -415,13 +442,14 @@ yolo_target_errors: [5.656854249492381]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/131.jpg ...
-inference_time: 0.005276203155517578s
+inference_time: 0.005237579345703125s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/131.jpg 	
-inference_time: 0.022522926330566406s
+inference_time: 0.02347087860107422s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 231.772, y1: -1.566, x2: 335.506, y2: 52.768, obj_conf: 0.98583, cls_conf: 0.99985
 we got more or less segemented regions than target regions
+
 centroids_target: [(288, 20)]
 centroids_unet: []
 centroids_yolo: [(283, 25)]
@@ -431,59 +459,63 @@ yolo_target_errors: [7.0710678118654755]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/79.jpg ...
-inference_time: 0.0053253173828125s
+inference_time: 0.005234241485595703s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/79.jpg 	
-inference_time: 0.02304816246032715s
+inference_time: 0.022639036178588867s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 181.010, y1: 8.933, x2: 320.411, y2: 97.129, obj_conf: 0.98513, cls_conf: 0.99995
+	+ Label: vein, x1: 181.115, y1: 11.046, x2: 321.811, y2: 96.343, obj_conf: 0.98513, cls_conf: 0.99995
+
 centroids_target: [(263, 45)]
 centroids_unet: [(261, 48)]
-centroids_yolo: [(250, 53)]
+centroids_yolo: [(251, 53)]
 unet_target_errors: [3.605551275463989]
-yolo_target_errors: [15.264337522473747]
+yolo_target_errors: [14.422205101855956]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/96.jpg ...
-inference_time: 0.005294084548950195s
+inference_time: 0.005259037017822266s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/96.jpg 	
-inference_time: 0.023087501525878906s
+inference_time: 0.022905588150024414s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 35.361, y1: 0.029, x2: 172.243, y2: 73.391, obj_conf: 0.99661, cls_conf: 0.99999
+	+ Label: vein, x1: 33.130, y1: 1.355, x2: 175.128, y2: 73.918, obj_conf: 0.99661, cls_conf: 0.99999
+
 centroids_target: [(112, 36)]
 centroids_unet: [(111, 34)]
-centroids_yolo: [(103, 36)]
+centroids_yolo: [(104, 37)]
 unet_target_errors: [2.23606797749979]
-yolo_target_errors: [9.0]
+yolo_target_errors: [8.06225774829855]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/56.jpg ...
-inference_time: 0.005275726318359375s
+inference_time: 0.005276203155517578s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/56.jpg 	
-inference_time: 0.044892072677612305s
+inference_time: 0.023164987564086914s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 193.241, y1: 26.892, x2: 336.378, y2: 125.000, obj_conf: 0.98984, cls_conf: 0.99981
+	+ Label: vein, x1: 192.567, y1: 25.203, x2: 335.148, y2: 124.905, obj_conf: 0.98984, cls_conf: 0.99981
+
 centroids_target: [(269, 71)]
 centroids_unet: [(270, 77)]
-centroids_yolo: [(264, 75)]
+centroids_yolo: [(263, 75)]
 unet_target_errors: [6.082762530298219]
-yolo_target_errors: [6.4031242374328485]
+yolo_target_errors: [7.211102550927978]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/115.jpg ...
-inference_time: 0.005304813385009766s
+inference_time: 0.0052297115325927734s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/115.jpg 	
-inference_time: 0.023166179656982422s
+inference_time: 0.024405479431152344s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 277.704, y1: 95.950, x2: 397.753, y2: 180.149, obj_conf: 0.97661, cls_conf: 0.99986
 	+ Label: vein, x1: 363.901, y1: 135.904, x2: 483.318, y2: 210.626, obj_conf: 0.97401, cls_conf: 0.99985
 we got more or less segemented regions than target regions
+
 centroids_target: [(345, 141), (435, 162)]
 centroids_unet: []
 centroids_yolo: [(337, 138), (423, 173)]
@@ -493,12 +525,13 @@ yolo_target_errors: [8.54400374531753, 16.278820596099706]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/45.jpg ...
-inference_time: 0.005312204360961914s
+inference_time: 0.005244016647338867s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/45.jpg 	
-inference_time: 0.023212909698486328s
+inference_time: 0.022765159606933594s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 148.979, y1: 43.635, x2: 288.979, y2: 132.665, obj_conf: 0.97689, cls_conf: 0.99992
+
 centroids_target: [(227, 81)]
 centroids_unet: [(225, 86)]
 centroids_yolo: [(218, 88)]
@@ -508,28 +541,30 @@ yolo_target_errors: [11.40175425099138]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/129.jpg ...
-inference_time: 0.0052928924560546875s
+inference_time: 0.005236387252807617s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/129.jpg 	
-inference_time: 0.02301192283630371s
+inference_time: 0.022619009017944336s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 208.887, y1: -3.378, x2: 304.223, y2: 45.184, obj_conf: 0.93677, cls_conf: 0.99971
+	+ Label: vein, x1: 205.475, y1: 0.402, x2: 298.390, y2: 44.193, obj_conf: 0.93677, cls_conf: 0.99971
 we got more or less segemented regions than target regions
+
 centroids_target: [(262, 14)]
 centroids_unet: []
-centroids_yolo: [(256, 20)]
+centroids_yolo: [(251, 22)]
 unet_target_errors: []
-yolo_target_errors: [8.48528137423857]
+yolo_target_errors: [13.601470508735444]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/133.jpg ...
-inference_time: 0.005276918411254883s
+inference_time: 0.005358695983886719s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/133.jpg 	
-inference_time: 0.023335933685302734s
+inference_time: 0.02310943603515625s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 254.872, y1: -2.738, x2: 361.143, y2: 51.201, obj_conf: 0.98437, cls_conf: 0.99988
+
 centroids_target: [(316, 22)]
 centroids_unet: [(316, 22)]
 centroids_yolo: [(308, 24)]
@@ -539,12 +574,13 @@ yolo_target_errors: [8.246211251235321]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/69.jpg ...
-inference_time: 0.005285739898681641s
+inference_time: 0.005227088928222656s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/69.jpg 	
-inference_time: 0.023862361907958984s
+inference_time: 0.023822784423828125s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 17.949, y1: 27.794, x2: 159.517, y2: 114.634, obj_conf: 0.99399, cls_conf: 0.99992
+
 centroids_target: [(97, 61)]
 centroids_unet: [(92, 65)]
 centroids_yolo: [(88, 71)]
@@ -554,13 +590,14 @@ yolo_target_errors: [13.45362404707371]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/87.jpg ...
-inference_time: 0.0053026676177978516s
+inference_time: 0.005340576171875s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/87.jpg 	
-inference_time: 0.023303508758544922s
+inference_time: 0.023801088333129883s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 376.530, y1: -2.202, x2: 495.169, y2: 59.252, obj_conf: 0.98187, cls_conf: 0.99994
 we got more or less segemented regions than target regions
+
 centroids_target: [(438, 24)]
 centroids_unet: []
 centroids_yolo: [(435, 28)]
@@ -570,12 +607,13 @@ yolo_target_errors: [5.0]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/159.jpg ...
-inference_time: 0.005265235900878906s
+inference_time: 0.00522923469543457s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/159.jpg 	
-inference_time: 0.023333311080932617s
+inference_time: 0.023181438446044922s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 268.831, y1: 11.105, x2: 375.311, y2: 79.294, obj_conf: 0.94295, cls_conf: 0.99948
+
 centroids_target: [(326, 46)]
 centroids_unet: [(318, 46)]
 centroids_yolo: [(322, 45)]
@@ -585,12 +623,13 @@ yolo_target_errors: [4.123105625617661]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/70.jpg ...
-inference_time: 0.0052759647369384766s
+inference_time: 0.005225658416748047s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/70.jpg 	
-inference_time: 0.023440122604370117s
+inference_time: 0.02281808853149414s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 57.832, y1: 26.749, x2: 192.887, y2: 109.717, obj_conf: 0.99115, cls_conf: 0.99987
+
 centroids_target: [(132, 63)]
 centroids_unet: [(128, 62)]
 centroids_yolo: [(125, 68)]
@@ -600,13 +639,14 @@ yolo_target_errors: [8.602325267042627]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/91.jpg ...
-inference_time: 0.005261659622192383s
+inference_time: 0.005271434783935547s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/91.jpg 	
-inference_time: 0.0233767032623291s
+inference_time: 0.022912025451660156s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 355.773, y1: 2.991, x2: 488.810, y2: 76.782, obj_conf: 0.99024, cls_conf: 0.99986
 we got more or less segemented regions than target regions
+
 centroids_target: [(423, 38)]
 centroids_unet: []
 centroids_yolo: [(422, 39)]
@@ -616,12 +656,13 @@ yolo_target_errors: [1.4142135623730951]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/128.jpg ...
-inference_time: 0.005309581756591797s
+inference_time: 0.005326747894287109s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/128.jpg 	
-inference_time: 0.02301931381225586s
+inference_time: 0.022543668746948242s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 196.357, y1: -2.218, x2: 293.274, y2: 45.826, obj_conf: 0.96054, cls_conf: 0.99972
+
 centroids_target: [(248, 12)]
 centroids_unet: [(246, 13)]
 centroids_yolo: [(244, 21)]
@@ -631,28 +672,30 @@ yolo_target_errors: [9.848857801796104]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/24.jpg ...
-inference_time: 0.005285501480102539s
+inference_time: 0.0052490234375s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/24.jpg 	
-inference_time: 0.02324652671813965s
+inference_time: 0.022850990295410156s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 184.074, y1: 32.499, x2: 309.408, y2: 112.145, obj_conf: 0.97653, cls_conf: 0.99960
+	+ Label: vein, x1: 185.560, y1: 33.225, x2: 312.097, y2: 112.200, obj_conf: 0.97653, cls_conf: 0.99960
+
 centroids_target: [(260, 70)]
 centroids_unet: [(259, 71)]
-centroids_yolo: [(246, 72)]
+centroids_yolo: [(248, 72)]
 unet_target_errors: [1.4142135623730951]
-yolo_target_errors: [14.142135623730951]
+yolo_target_errors: [12.165525060596439]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/110.jpg ...
-inference_time: 0.005280494689941406s
+inference_time: 0.005247831344604492s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/110.jpg 	
-inference_time: 0.023998022079467773s
+inference_time: 0.023174524307250977s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 168.440, y1: -0.710, x2: 269.697, y2: 48.276, obj_conf: 0.96970, cls_conf: 0.99951
 we got more or less segemented regions than target regions
+
 centroids_target: [(224, 16)]
 centroids_unet: []
 centroids_yolo: [(219, 23)]
@@ -662,12 +705,13 @@ yolo_target_errors: [8.602325267042627]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/127.jpg ...
-inference_time: 0.005413055419921875s
+inference_time: 0.005308628082275391s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/127.jpg 	
-inference_time: 0.02330636978149414s
+inference_time: 0.023382902145385742s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 184.246, y1: -3.182, x2: 287.164, y2: 48.445, obj_conf: 0.97621, cls_conf: 0.99980
+
 centroids_target: [(239, 16)]
 centroids_unet: [(238, 15)]
 centroids_yolo: [(235, 22)]
@@ -677,12 +721,13 @@ yolo_target_errors: [7.211102550927978]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/135.jpg ...
-inference_time: 0.005269765853881836s
+inference_time: 0.005199909210205078s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/135.jpg 	
-inference_time: 0.0233461856842041s
+inference_time: 0.02192997932434082s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 204.331, y1: -1.373, x2: 320.868, y2: 55.540, obj_conf: 0.98437, cls_conf: 0.99990
+
 centroids_target: [(263, 23)]
 centroids_unet: [(268, 24)]
 centroids_yolo: [(262, 27)]
@@ -692,12 +737,13 @@ yolo_target_errors: [4.123105625617661]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/88.jpg ...
-inference_time: 0.0052814483642578125s
+inference_time: 0.005282402038574219s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/88.jpg 	
-inference_time: 0.023663997650146484s
+inference_time: 0.02296900749206543s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 380.690, y1: -1.835, x2: 500.219, y2: 60.280, obj_conf: 0.98109, cls_conf: 0.99992
+
 centroids_target: [(445, 26)]
 centroids_unet: [(442, 26)]
 centroids_yolo: [(440, 29)]
@@ -707,13 +753,14 @@ yolo_target_errors: [5.830951894845301]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/84.jpg ...
-inference_time: 0.0052835941314697266s
+inference_time: 0.005215644836425781s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/84.jpg 	
-inference_time: 0.02299809455871582s
+inference_time: 0.023119211196899414s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 236.438, y1: -3.028, x2: 357.206, y2: 63.999, obj_conf: 0.98949, cls_conf: 0.99994
+	+ Label: vein, x1: 236.701, y1: -2.911, x2: 355.383, y2: 63.397, obj_conf: 0.98949, cls_conf: 0.99994
 we got more or less segemented regions than target regions
+
 centroids_target: [(296, 28)]
 centroids_unet: []
 centroids_yolo: [(296, 30)]
@@ -723,12 +770,13 @@ yolo_target_errors: [2.0]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/151.jpg ...
-inference_time: 0.0052831172943115234s
+inference_time: 0.010101079940795898s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/151.jpg 	
-inference_time: 0.02295398712158203s
+inference_time: 0.024402379989624023s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 349.379, y1: 1.054, x2: 483.999, y2: 89.252, obj_conf: 0.98501, cls_conf: 0.99969
+
 centroids_target: [(420, 43)]
 centroids_unet: [(415, 47)]
 centroids_yolo: [(416, 45)]
@@ -738,43 +786,46 @@ yolo_target_errors: [4.47213595499958]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/4.jpg ...
-inference_time: 0.005286455154418945s
+inference_time: 0.005242347717285156s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/4.jpg 	
-inference_time: 0.023826122283935547s
+inference_time: 0.023039817810058594s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 213.203, y1: 45.800, x2: 323.736, y2: 121.470, obj_conf: 0.96925, cls_conf: 0.99979
+	+ Label: vein, x1: 209.403, y1: 46.883, x2: 323.961, y2: 121.949, obj_conf: 0.96925, cls_conf: 0.99979
+
 centroids_target: [(276, 81)]
 centroids_unet: [(273, 80)]
-centroids_yolo: [(268, 83)]
+centroids_yolo: [(266, 84)]
 unet_target_errors: [3.1622776601683795]
-yolo_target_errors: [8.246211251235321]
+yolo_target_errors: [10.44030650891055]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/132.jpg ...
-inference_time: 0.0053327083587646484s
+inference_time: 0.0052297115325927734s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/132.jpg 	
-inference_time: 0.023679733276367188s
+inference_time: 0.022846460342407227s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 243.250, y1: -3.870, x2: 349.256, y2: 53.047, obj_conf: 0.98470, cls_conf: 0.99988
+	+ Label: vein, x1: 237.472, y1: -1.894, x2: 352.413, y2: 54.273, obj_conf: 0.98470, cls_conf: 0.99988
 we got more or less segemented regions than target regions
+
 centroids_target: [(298, 21)]
 centroids_unet: []
-centroids_yolo: [(296, 24)]
+centroids_yolo: [(294, 26)]
 unet_target_errors: []
-yolo_target_errors: [3.605551275463989]
+yolo_target_errors: [6.4031242374328485]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/61.jpg ...
-inference_time: 0.005299091339111328s
+inference_time: 0.005228996276855469s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/61.jpg 	
-inference_time: 0.02382659912109375s
+inference_time: 0.022914886474609375s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 81.471, y1: 17.109, x2: 215.854, y2: 98.706, obj_conf: 0.97669, cls_conf: 0.99991
+
 centroids_target: [(152, 47)]
 centroids_unet: [(152, 49)]
 centroids_yolo: [(148, 57)]
@@ -784,13 +835,14 @@ yolo_target_errors: [10.770329614269007]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/153.jpg ...
-inference_time: 0.0053064823150634766s
+inference_time: 0.005226612091064453s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/153.jpg 	
-inference_time: 0.023631572723388672s
+inference_time: 0.022979021072387695s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 276.543, y1: 6.138, x2: 380.253, y2: 68.883, obj_conf: 0.94635, cls_conf: 0.99936
 we got more or less segemented regions than target regions
+
 centroids_target: [(339, 37)]
 centroids_unet: []
 centroids_yolo: [(328, 37)]
@@ -800,27 +852,29 @@ yolo_target_errors: [11.0]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/89.jpg ...
-inference_time: 0.0052793025970458984s
+inference_time: 0.005229949951171875s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/89.jpg 	
-inference_time: 0.023807764053344727s
+inference_time: 0.023221969604492188s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 396.074, y1: -0.189, x2: 516.194, y2: 61.251, obj_conf: 0.97918, cls_conf: 0.99989
+	+ Label: vein, x1: 396.178, y1: 0.210, x2: 513.552, y2: 60.319, obj_conf: 0.97918, cls_conf: 0.99989
+
 centroids_target: [(451, 25)]
 centroids_unet: [(449, 25)]
-centroids_yolo: [(456, 30)]
+centroids_yolo: [(454, 30)]
 unet_target_errors: [2.0]
-yolo_target_errors: [7.0710678118654755]
+yolo_target_errors: [5.830951894845301]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/30.jpg ...
-inference_time: 0.005286693572998047s
+inference_time: 0.005225419998168945s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/30.jpg 	
-inference_time: 0.023284435272216797s
+inference_time: 0.0245819091796875s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 111.957, y1: 49.946, x2: 229.581, y2: 125.126, obj_conf: 0.96021, cls_conf: 0.99963
+
 centroids_target: [(175, 90)]
 centroids_unet: [(177, 87)]
 centroids_yolo: [(170, 87)]
@@ -830,13 +884,14 @@ yolo_target_errors: [5.830951894845301]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/154.jpg ...
-inference_time: 0.00531768798828125s
+inference_time: 0.005328655242919922s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/154.jpg 	
-inference_time: 0.023352384567260742s
+inference_time: 0.02333211898803711s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 306.836, y1: 5.418, x2: 416.868, y2: 67.237, obj_conf: 0.97962, cls_conf: 0.99981
 we got more or less segemented regions than target regions
+
 centroids_target: [(376, 38)]
 centroids_unet: []
 centroids_yolo: [(361, 36)]
@@ -846,12 +901,13 @@ yolo_target_errors: [15.132745950421556]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/124.jpg ...
-inference_time: 0.005368709564208984s
+inference_time: 0.005238533020019531s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/124.jpg 	
-inference_time: 0.023593902587890625s
+inference_time: 0.02300405502319336s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 156.571, y1: -3.453, x2: 256.842, y2: 49.848, obj_conf: 0.98350, cls_conf: 0.99978
+
 centroids_target: [(215, 17)]
 centroids_unet: [(211, 16)]
 centroids_yolo: [(206, 23)]
@@ -861,60 +917,64 @@ yolo_target_errors: [10.816653826391969]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/113.jpg ...
-inference_time: 0.0052945613861083984s
+inference_time: 0.005246400833129883s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/113.jpg 	
-inference_time: 0.02377796173095703s
+inference_time: 0.02305436134338379s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 27.986, y1: 29.512, x2: 152.857, y2: 110.364, obj_conf: 0.97698, cls_conf: 0.99962
+	+ Label: vein, x1: 26.823, y1: 30.861, x2: 151.815, y2: 110.790, obj_conf: 0.97698, cls_conf: 0.99962
 	+ Label: vein, x1: 347.113, y1: 160.021, x2: 460.635, y2: 237.164, obj_conf: 0.95473, cls_conf: 0.99968
 we got more or less segemented regions than target regions
+
 centroids_target: [(105, 64), (407, 194)]
 centroids_unet: []
-centroids_yolo: [(90, 69), (403, 198)]
+centroids_yolo: [(89, 70), (403, 198)]
 unet_target_errors: []
-yolo_target_errors: [15.811388300841896, 5.656854249492381]
+yolo_target_errors: [17.08800749063506, 5.656854249492381]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/19.jpg ...
-inference_time: 0.005293369293212891s
+inference_time: 0.00548553466796875s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/19.jpg 	
-inference_time: 0.022638559341430664s
+inference_time: 0.023143529891967773s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 276.536, y1: 41.771, x2: 404.295, y2: 124.321, obj_conf: 0.98536, cls_conf: 0.99993
+	+ Label: vein, x1: 274.771, y1: 42.853, x2: 403.781, y2: 124.904, obj_conf: 0.98536, cls_conf: 0.99993
+
 centroids_target: [(349, 80)]
 centroids_unet: [(349, 81)]
-centroids_yolo: [(340, 83)]
+centroids_yolo: [(339, 83)]
 unet_target_errors: [1.0]
-yolo_target_errors: [9.486832980505138]
+yolo_target_errors: [10.44030650891055]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/22.jpg ...
-inference_time: 0.005284547805786133s
+inference_time: 0.005231142044067383s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/22.jpg 	
-inference_time: 0.02322840690612793s
+inference_time: 0.023168087005615234s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 223.851, y1: 31.714, x2: 344.595, y2: 111.714, obj_conf: 0.96744, cls_conf: 0.99981
+	+ Label: vein, x1: 222.539, y1: 33.686, x2: 345.319, y2: 112.053, obj_conf: 0.96744, cls_conf: 0.99981
+
 centroids_target: [(284, 73)]
 centroids_unet: [(282, 73)]
-centroids_yolo: [(284, 71)]
+centroids_yolo: [(283, 72)]
 unet_target_errors: [2.0]
-yolo_target_errors: [2.0]
+yolo_target_errors: [1.4142135623730951]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/116.jpg ...
-inference_time: 0.00535130500793457s
+inference_time: 0.005236387252807617s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/116.jpg 	
-inference_time: 0.02363729476928711s
+inference_time: 0.024105548858642578s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 375.551, y1: 125.894, x2: 490.099, y2: 206.499, obj_conf: 0.96604, cls_conf: 0.99973
 	+ Label: vein, x1: 292.514, y1: 93.409, x2: 411.276, y2: 180.109, obj_conf: 0.96009, cls_conf: 0.99972
+
 centroids_target: [(351, 132), (438, 163)]
 centroids_unet: [(348, 146), (439, 169)]
 centroids_yolo: [(351, 136), (432, 166)]
@@ -924,56 +984,61 @@ yolo_target_errors: [4.0, 6.708203932499369]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/55.jpg ...
-inference_time: 0.005287647247314453s
+inference_time: 0.005253791809082031s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/55.jpg 	
-inference_time: 0.0217282772064209s
+inference_time: 0.02263331413269043s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 192.152, y1: 27.330, x2: 329.591, y2: 118.361, obj_conf: 0.99054, cls_conf: 0.99983
+	+ Label: vein, x1: 194.564, y1: 25.316, x2: 332.365, y2: 118.619, obj_conf: 0.99054, cls_conf: 0.99983
+
 centroids_target: [(270, 71)]
 centroids_unet: [(275, 74)]
-centroids_yolo: [(260, 72)]
+centroids_yolo: [(263, 71)]
 unet_target_errors: [5.830951894845301]
-yolo_target_errors: [10.04987562112089]
+yolo_target_errors: [7.0]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/104.jpg ...
-inference_time: 0.00531005859375s
+inference_time: 0.005239725112915039s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/104.jpg 	
-inference_time: 0.04356694221496582s
+inference_time: 0.02308821678161621s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 125.192, y1: 2.243, x2: 231.440, y2: 56.721, obj_conf: 0.96526, cls_conf: 0.99979
+	+ Label: vein, x1: 127.260, y1: 0.168, x2: 231.440, y2: 56.805, obj_conf: 0.96526, cls_conf: 0.99979
+
 centroids_target: [(180, 24)]
 centroids_unet: [(181, 22)]
-centroids_yolo: [(178, 29)]
+centroids_yolo: [(179, 28)]
 unet_target_errors: [2.23606797749979]
-yolo_target_errors: [5.385164807134504]
+yolo_target_errors: [4.123105625617661]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/3.jpg ...
-inference_time: 0.004483699798583984s
+inference_time: 0.005234479904174805s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/3.jpg 	
-inference_time: 0.022862911224365234s
-No veins detected on this image!
+inference_time: 0.023114442825317383s
+Saving image with bbox in original image size - (754, 494):
+	+ Label: vein, x1: 204.633, y1: 36.125, x2: 306.102, y2: 103.056, obj_conf: 0.84655, cls_conf: 0.99939
+
 centroids_target: [(259, 70)]
 centroids_unet: [(260, 70)]
-centroids_yolo: []
+centroids_yolo: [(255, 69)]
 unet_target_errors: [1.0]
-yolo_target_errors: []
+yolo_target_errors: [4.123105625617661]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/46.jpg ...
-inference_time: 0.005273580551147461s
+inference_time: 0.005261421203613281s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/46.jpg 	
-inference_time: 0.0231626033782959s
+inference_time: 0.023123502731323242s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 186.845, y1: 33.735, x2: 337.242, y2: 129.990, obj_conf: 0.98479, cls_conf: 0.99996
+
 centroids_target: [(272, 81)]
 centroids_unet: [(270, 82)]
 centroids_yolo: [(262, 81)]
@@ -983,12 +1048,13 @@ yolo_target_errors: [10.0]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/152.jpg ...
-inference_time: 0.0053026676177978516s
+inference_time: 0.005249977111816406s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/152.jpg 	
-inference_time: 0.023306608200073242s
+inference_time: 0.02328324317932129s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 248.987, y1: 5.093, x2: 369.114, y2: 77.514, obj_conf: 0.97676, cls_conf: 0.99991
+
 centroids_target: [(321, 40)]
 centroids_unet: [(315, 42)]
 centroids_yolo: [(309, 41)]
@@ -998,12 +1064,13 @@ yolo_target_errors: [12.041594578792296]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/15.jpg ...
-inference_time: 0.005321502685546875s
+inference_time: 0.005242824554443359s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/15.jpg 	
-inference_time: 0.02351212501525879s
+inference_time: 0.023372173309326172s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 272.154, y1: 29.391, x2: 384.954, y2: 104.650, obj_conf: 0.97163, cls_conf: 0.99956
+
 centroids_target: [(337, 63)]
 centroids_unet: [(339, 63)]
 centroids_yolo: [(328, 67)]
@@ -1013,13 +1080,14 @@ yolo_target_errors: [9.848857801796104]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/43.jpg ...
-inference_time: 0.005329132080078125s
+inference_time: 0.005247354507446289s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/43.jpg 	
-inference_time: 0.023243188858032227s
+inference_time: 0.02358865737915039s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 135.896, y1: 22.234, x2: 279.834, y2: 126.411, obj_conf: 0.98664, cls_conf: 0.99977
 we got more or less segemented regions than target regions
+
 centroids_target: [(215, 77)]
 centroids_unet: []
 centroids_yolo: [(207, 74)]
@@ -1029,27 +1097,29 @@ yolo_target_errors: [8.54400374531753]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/48.jpg ...
-inference_time: 0.005445003509521484s
+inference_time: 0.005232572555541992s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/48.jpg 	
-inference_time: 0.022764921188354492s
+inference_time: 0.02353811264038086s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 272.601, y1: 40.035, x2: 417.221, y2: 127.424, obj_conf: 0.97973, cls_conf: 0.99994
+	+ Label: vein, x1: 274.029, y1: 38.159, x2: 416.989, y2: 127.957, obj_conf: 0.97973, cls_conf: 0.99994
+
 centroids_target: [(352, 74)]
 centroids_unet: [(353, 76)]
-centroids_yolo: [(344, 83)]
+centroids_yolo: [(345, 83)]
 unet_target_errors: [2.23606797749979]
-yolo_target_errors: [12.041594578792296]
+yolo_target_errors: [11.40175425099138]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/47.jpg ...
-inference_time: 0.005312681198120117s
+inference_time: 0.005234956741333008s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/47.jpg 	
-inference_time: 0.02278923988342285s
+inference_time: 0.023330211639404297s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 235.530, y1: 28.536, x2: 373.128, y2: 118.968, obj_conf: 0.97422, cls_conf: 0.99952
+
 centroids_target: [(316, 71)]
 centroids_unet: [(311, 82)]
 centroids_yolo: [(304, 73)]
@@ -1059,16 +1129,17 @@ yolo_target_errors: [12.165525060596439]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/117.jpg ...
-inference_time: 0.0053195953369140625s
+inference_time: 0.00522613525390625s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/117.jpg 	
-inference_time: 0.02392435073852539s
+inference_time: 0.022051334381103516s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 299.612, y1: 86.364, x2: 421.036, y2: 173.815, obj_conf: 0.96993, cls_conf: 0.99933
 	+ Label: vein, x1: 388.501, y1: 119.755, x2: 504.618, y2: 200.453, obj_conf: 0.96574, cls_conf: 0.99927
 	+ Label: vein, x1: 15.349, y1: 14.264, x2: 115.349, y2: 84.724, obj_conf: 0.87980, cls_conf: 0.99828
 we got more or less segemented regions than target regions
 we got more or less detectde bounding boxes than target regions
+
 centroids_target: [(359, 130), (452, 157)]
 centroids_unet: []
 centroids_yolo: []
@@ -1078,12 +1149,13 @@ yolo_target_errors: []
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/42.jpg ...
-inference_time: 0.005324363708496094s
+inference_time: 0.0052242279052734375s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/42.jpg 	
-inference_time: 0.023260116577148438s
+inference_time: 0.023177146911621094s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 127.250, y1: 29.968, x2: 266.440, y2: 126.004, obj_conf: 0.98321, cls_conf: 0.99994
+
 centroids_target: [(204, 76)]
 centroids_unet: [(204, 76)]
 centroids_yolo: [(196, 77)]
@@ -1093,43 +1165,46 @@ yolo_target_errors: [8.06225774829855]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/0.jpg ...
-inference_time: 0.005286216735839844s
+inference_time: 0.005236148834228516s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/0.jpg 	
-inference_time: 0.023426532745361328s
+inference_time: 0.022792816162109375s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 157.758, y1: 39.270, x2: 263.975, y2: 124.294, obj_conf: 0.85832, cls_conf: 0.99909
+	+ Label: vein, x1: 150.501, y1: 49.433, x2: 262.130, y2: 127.810, obj_conf: 0.85832, cls_conf: 0.99909
 we got more or less segemented regions than target regions
+
 centroids_target: [(212, 81)]
 centroids_unet: []
-centroids_yolo: [(210, 81)]
+centroids_yolo: [(206, 88)]
 unet_target_errors: []
-yolo_target_errors: [2.0]
+yolo_target_errors: [9.219544457292887]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/123.jpg ...
-inference_time: 0.005221843719482422s
+inference_time: 0.005230903625488281s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/123.jpg 	
-inference_time: 0.023528337478637695s
+inference_time: 0.022948265075683594s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 162.470, y1: -2.530, x2: 258.793, y2: 48.624, obj_conf: 0.97759, cls_conf: 0.99972
+	+ Label: vein, x1: 160.345, y1: -2.939, x2: 257.189, y2: 49.755, obj_conf: 0.97759, cls_conf: 0.99972
+
 centroids_target: [(218, 17)]
 centroids_unet: [(215, 17)]
-centroids_yolo: [(210, 23)]
+centroids_yolo: [(208, 23)]
 unet_target_errors: [3.0]
-yolo_target_errors: [10.0]
+yolo_target_errors: [11.661903789690601]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/12.jpg ...
-inference_time: 0.0055904388427734375s
+inference_time: 0.005228519439697266s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/12.jpg 	
-inference_time: 0.023319244384765625s
+inference_time: 0.023104190826416016s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 248.265, y1: 29.894, x2: 366.901, y2: 105.083, obj_conf: 0.97647, cls_conf: 0.99979
+
 centroids_target: [(315, 64)]
 centroids_unet: [(314, 62)]
 centroids_yolo: [(307, 67)]
@@ -1139,12 +1214,13 @@ yolo_target_errors: [8.54400374531753]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/50.jpg ...
-inference_time: 0.005270242691040039s
+inference_time: 0.005325794219970703s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/50.jpg 	
-inference_time: 0.02337813377380371s
+inference_time: 0.02093648910522461s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 245.209, y1: 20.293, x2: 387.965, y2: 110.615, obj_conf: 0.99130, cls_conf: 0.99998
+
 centroids_target: [(326, 62)]
 centroids_unet: [(325, 63)]
 centroids_yolo: [(316, 65)]
@@ -1154,13 +1230,14 @@ yolo_target_errors: [10.44030650891055]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/93.jpg ...
-inference_time: 0.005269765853881836s
+inference_time: 0.005251646041870117s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/93.jpg 	
-inference_time: 0.023793935775756836s
+inference_time: 0.023006916046142578s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 226.413, y1: 5.209, x2: 339.844, y2: 64.404, obj_conf: 0.98002, cls_conf: 0.99981
 we got more or less segemented regions than target regions
+
 centroids_target: [(290, 27)]
 centroids_unet: []
 centroids_yolo: [(283, 34)]
@@ -1170,27 +1247,29 @@ yolo_target_errors: [9.899494936611665]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/106.jpg ...
-inference_time: 0.005278348922729492s
+inference_time: 0.005223512649536133s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/106.jpg 	
-inference_time: 0.02343153953552246s
+inference_time: 0.02338433265686035s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 127.649, y1: -1.838, x2: 233.654, y2: 53.781, obj_conf: 0.98621, cls_conf: 0.99987
+	+ Label: vein, x1: 125.462, y1: -1.218, x2: 235.746, y2: 54.487, obj_conf: 0.98621, cls_conf: 0.99987
+
 centroids_target: [(189, 21)]
 centroids_unet: [(184, 20)]
-centroids_yolo: [(180, 25)]
+centroids_yolo: [(180, 26)]
 unet_target_errors: [5.0990195135927845]
-yolo_target_errors: [9.848857801796104]
+yolo_target_errors: [10.295630140987]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/1.jpg ...
-inference_time: 0.005320310592651367s
+inference_time: 0.005226850509643555s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/1.jpg 	
-inference_time: 0.039388179779052734s
+inference_time: 0.023606061935424805s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 202.008, y1: 47.622, x2: 319.244, y2: 121.806, obj_conf: 0.93314, cls_conf: 0.99965
+	+ Label: vein, x1: 202.660, y1: 46.978, x2: 317.823, y2: 121.849, obj_conf: 0.93314, cls_conf: 0.99965
+
 centroids_target: [(260, 84)]
 centroids_unet: [(270, 81)]
 centroids_yolo: [(260, 84)]
@@ -1200,13 +1279,14 @@ yolo_target_errors: [0.0]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/27.jpg ...
-inference_time: 0.005334615707397461s
+inference_time: 0.0052411556243896484s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/27.jpg 	
-inference_time: 0.023129940032958984s
+inference_time: 0.02347588539123535s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 127.778, y1: 37.241, x2: 247.323, y2: 111.329, obj_conf: 0.97584, cls_conf: 0.99956
 we got more or less segemented regions than target regions
+
 centroids_target: [(190, 79)]
 centroids_unet: []
 centroids_yolo: [(187, 74)]
@@ -1216,28 +1296,30 @@ yolo_target_errors: [5.830951894845301]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/157.jpg ...
-inference_time: 0.0052700042724609375s
+inference_time: 0.0052471160888671875s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/157.jpg 	
-inference_time: 0.02312445640563965s
+inference_time: 0.023874521255493164s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 332.986, y1: 4.313, x2: 452.224, y2: 72.490, obj_conf: 0.98845, cls_conf: 0.99992
+	+ Label: vein, x1: 332.953, y1: 4.329, x2: 455.294, y2: 73.814, obj_conf: 0.98845, cls_conf: 0.99992
 we got more or less segemented regions than target regions
+
 centroids_target: [(401, 41)]
 centroids_unet: []
-centroids_yolo: [(392, 38)]
+centroids_yolo: [(394, 39)]
 unet_target_errors: []
-yolo_target_errors: [9.486832980505138]
+yolo_target_errors: [7.280109889280518]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/60.jpg ...
-inference_time: 0.005283355712890625s
+inference_time: 0.00526118278503418s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/60.jpg 	
-inference_time: 0.022928953170776367s
+inference_time: 0.023710966110229492s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 217.894, y1: 19.081, x2: 354.714, y2: 108.745, obj_conf: 0.98508, cls_conf: 0.99990
+
 centroids_target: [(289, 53)]
 centroids_unet: [(295, 72)]
 centroids_yolo: [(286, 63)]
@@ -1247,12 +1329,13 @@ yolo_target_errors: [10.44030650891055]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/21.jpg ...
-inference_time: 0.005386829376220703s
+inference_time: 0.005230426788330078s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/21.jpg 	
-inference_time: 0.02298426628112793s
+inference_time: 0.023590803146362305s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 207.280, y1: 30.692, x2: 328.937, y2: 110.172, obj_conf: 0.98408, cls_conf: 0.99971
+
 centroids_target: [(273, 74)]
 centroids_unet: [(272, 73)]
 centroids_yolo: [(268, 70)]
@@ -1262,12 +1345,13 @@ yolo_target_errors: [6.4031242374328485]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/85.jpg ...
-inference_time: 0.005566835403442383s
+inference_time: 0.005225419998168945s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/85.jpg 	
-inference_time: 0.02325606346130371s
+inference_time: 0.024117469787597656s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 293.773, y1: -2.140, x2: 414.826, y2: 61.231, obj_conf: 0.98742, cls_conf: 0.99995
+
 centroids_target: [(358, 25)]
 centroids_unet: [(359, 26)]
 centroids_yolo: [(354, 29)]
@@ -1277,12 +1361,13 @@ yolo_target_errors: [5.656854249492381]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/107.jpg ...
-inference_time: 0.0052831172943115234s
+inference_time: 0.005258083343505859s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/107.jpg 	
-inference_time: 0.023404598236083984s
+inference_time: 0.02379012107849121s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 145.556, y1: 0.095, x2: 252.777, y2: 54.021, obj_conf: 0.97418, cls_conf: 0.99980
+
 centroids_target: [(206, 21)]
 centroids_unet: [(203, 20)]
 centroids_yolo: [(199, 27)]
@@ -1292,27 +1377,29 @@ yolo_target_errors: [9.219544457292887]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/160.jpg ...
-inference_time: 0.0052700042724609375s
+inference_time: 0.005366086959838867s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/160.jpg 	
-inference_time: 0.0234525203704834s
+inference_time: 0.02374887466430664s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 276.604, y1: 8.437, x2: 386.626, y2: 77.392, obj_conf: 0.96457, cls_conf: 0.99954
+	+ Label: vein, x1: 277.240, y1: 8.003, x2: 387.839, y2: 78.221, obj_conf: 0.96457, cls_conf: 0.99954
+
 centroids_target: [(339, 46)]
 centroids_unet: [(335, 45)]
-centroids_yolo: [(331, 42)]
+centroids_yolo: [(332, 43)]
 unet_target_errors: [4.123105625617661]
-yolo_target_errors: [8.94427190999916]
+yolo_target_errors: [7.615773105863909]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/26.jpg ...
-inference_time: 0.0053179264068603516s
+inference_time: 0.005237579345703125s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/26.jpg 	
-inference_time: 0.023130416870117188s
+inference_time: 0.02478933334350586s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 160.969, y1: 34.133, x2: 286.176, y2: 118.867, obj_conf: 0.98643, cls_conf: 0.99991
+
 centroids_target: [(225, 78)]
 centroids_unet: [(227, 78)]
 centroids_yolo: [(223, 76)]
@@ -1322,12 +1409,13 @@ yolo_target_errors: [2.8284271247461903]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/54.jpg ...
-inference_time: 0.0052874088287353516s
+inference_time: 0.005326986312866211s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/54.jpg 	
-inference_time: 0.02336740493774414s
+inference_time: 0.023287057876586914s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 183.168, y1: 28.211, x2: 320.560, y2: 117.618, obj_conf: 0.98299, cls_conf: 0.99989
+
 centroids_target: [(254, 66)]
 centroids_unet: [(261, 75)]
 centroids_yolo: [(251, 72)]
@@ -1337,27 +1425,29 @@ yolo_target_errors: [6.708203932499369]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/49.jpg ...
-inference_time: 0.005461215972900391s
+inference_time: 0.005250692367553711s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/49.jpg 	
-inference_time: 0.023107528686523438s
+inference_time: 0.023404598236083984s
 Saving image with bbox in original image size - (754, 494):
-	+ Label: vein, x1: 271.879, y1: 17.602, x2: 418.236, y2: 110.914, obj_conf: 0.99188, cls_conf: 0.99998
+	+ Label: vein, x1: 270.471, y1: 18.296, x2: 414.419, y2: 110.764, obj_conf: 0.99188, cls_conf: 0.99998
+
 centroids_target: [(350, 64)]
 centroids_unet: [(349, 62)]
-centroids_yolo: [(345, 64)]
+centroids_yolo: [(342, 64)]
 unet_target_errors: [2.23606797749979]
-yolo_target_errors: [5.0]
+yolo_target_errors: [8.0]
 
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/20.jpg ...
-inference_time: 0.005297660827636719s
+inference_time: 0.005238533020019531s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/20.jpg 	
-inference_time: 0.025464773178100586s
+inference_time: 0.023512601852416992s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 274.701, y1: 49.714, x2: 399.835, y2: 128.339, obj_conf: 0.96724, cls_conf: 0.99977
+
 centroids_target: [(344, 79)]
 centroids_unet: [(349, 84)]
 centroids_yolo: [(337, 89)]
@@ -1367,12 +1457,13 @@ yolo_target_errors: [12.206555615733702]
 ----------------------
 
 Performing segmentation on ---> UNet/data/imgs/invivo_91/158.jpg ...
-inference_time: 0.005305767059326172s
+inference_time: 0.005235195159912109s
 
 Performing object detection on ---> UNet/data/imgs/invivo_91/158.jpg 	
-inference_time: 0.023197412490844727s
+inference_time: 0.023831605911254883s
 Saving image with bbox in original image size - (754, 494):
 	+ Label: vein, x1: 263.502, y1: 6.644, x2: 375.389, y2: 76.636, obj_conf: 0.98443, cls_conf: 0.99984
+
 centroids_target: [(328, 45)]
 centroids_unet: [(326, 45)]
 centroids_yolo: [(319, 41)]
@@ -1386,9 +1477,16 @@ Total samples: 90
 Model Weights: 
 	- unet: UNet/checkpoints/invivo_91/unet_ckpt_20.pth
 	- yolo: YOLOv3/checkpoints/invivo_91/yolov3_ckpt_34.pth
+outliers_unet:
+[(0, 14.0), (43, 14.317821063276353), (52, 12.083045973594572), (59, 19.924858845171276)]
+outliers_yolo:
+[(0, 16.76305461424021), (34, 16.278820596099706), (59, 17.08800749063506), (81, 0.0)]
 Average prediction speed/time (s): 
-	- unet: 0.0232
-	- yolo: 0.0241
+	- unet: 0.0222
+	- yolo: 0.0234
 Average centroid prediction error: 
-	- unet: 4.12972
-	- yolo: 8.08504
+	- unet: 4.21770
+	- yolo: 8.17806
+Outliers ratio of centroid prediction errors: 
+	- unet: 4/69 = 0.05797
+	- yolo: 4/94 = 0.04255

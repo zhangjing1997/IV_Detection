@@ -43,7 +43,7 @@ def findOutliers(data, threshold):
     data_mean, data_std = statistics.mean(data), statistics.stdev(data)
     cut_off = data_std * threshold
     lower, upper = data_mean - cut_off, data_mean + cut_off
-    outliers = [x for x in data if x < lower or x > upper]
+    outliers = [(i, x) for i, x in enumerate(data) if x < lower or x > upper]
 
     return outliers
 
@@ -156,7 +156,7 @@ if __name__ == "__main__":
         # prediction
         print('\n----------------------')
         mask, inference_time_segment = segment_img(img_path, model_unet, device, scale_factor=1.0, out_threshold=0.5)
-        _, detections_rescaled, inference_time_detect = detect_img(img_path, model_yolo, device, 416, classes, conf_thres=0.85, nms_thres=0.35, output_dir='', save_plot=False)
+        _, detections_rescaled, inference_time_detect = detect_img(img_path, model_yolo, device, 416, classes, conf_thres=0.825, nms_thres=0.4, output_dir='', save_plot=False)
         unet_infer_time_list.append(inference_time_segment)
         yolo_infer_time_list.append(inference_time_detect)
 
@@ -193,6 +193,10 @@ if __name__ == "__main__":
     print(f'Model Weights: ')
     print(f'\t- unet: {unet_path}')
     print(f'\t- yolo: {yolo_path}')
+    print('outliers_unet:')
+    print(outliers_unet)
+    print('outliers_yolo:')
+    print(outliers_yolo)
     print(f'Average prediction speed/time (s): ')
     print('\t- unet: {:.4f}'.format(statistics.mean(unet_infer_time_list)))
     print('\t- yolo: {:.4f}'.format(statistics.mean(yolo_infer_time_list)))
@@ -200,5 +204,5 @@ if __name__ == "__main__":
     print('\t- unet: {:.5f}'.format(statistics.mean(unet_target_errors_list)))
     print('\t- yolo: {:.5f}'.format(statistics.mean(yolo_target_errors_list)))
     print('Outliers ratio of centroid prediction errors: ')
-    print('\t- unet: {:.5f}'.format(outliers_unet_ratio))
-    print('\t- yolo: {:.5f}'.format(outliers_yolo_ratio))
+    print('\t- unet: {}/{} = {:.5f}'.format(len(outliers_unet), len(unet_target_errors_list), outliers_unet_ratio))
+    print('\t- yolo: {}/{} = {:.5f}'.format(len(outliers_yolo), len(yolo_target_errors_list), outliers_yolo_ratio))

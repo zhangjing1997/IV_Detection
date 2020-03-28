@@ -34,7 +34,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 #     if bbox:
 #         return im.crop(bbox)
 
-def plot_img_and_bbox(img_path, detections, detect_size, class_names, output_dir, save_plot=True):
+def plot_img_and_bbox(img_path, detections, detect_size, classes, output_dir, save_plot=True):
     img_input = Image.open(img_path) # pil image
     img = np.array(img_input) # numpy array
 
@@ -50,7 +50,7 @@ def plot_img_and_bbox(img_path, detections, detect_size, class_names, output_dir
         print(f"Saving image with bbox in original image size - {img.shape[:2]}:")
         for x1, y1, x2, y2, obj_conf, cls_conf, cls_pred in detections:
             print("\t+ Label: %s, x1: %.3f, y1: %.3f, x2: %.3f, y2: %.3f, obj_conf: %.5f, cls_conf: %.5f" % 
-                (class_names[int(cls_pred)], x1, y1, x2, y2, obj_conf.item(), cls_conf.item()))
+                (classes[int(cls_pred)], x1, y1, x2, y2, obj_conf.item(), cls_conf.item()))
             x1_draw = max(x1, 1)
             y1_draw = max(y1, 1)
             x2_draw = min(x2, img.shape[1] - 1)
@@ -60,10 +60,10 @@ def plot_img_and_bbox(img_path, detections, detect_size, class_names, output_dir
             bbox = patches.Rectangle((x1_draw, y1_draw), x2_draw - x1_draw, y2_draw - y1_draw, linewidth=2, edgecolor=color, facecolor="none")
             ax.add_patch(bbox)
             # add label
-            # if x1 > 0:
-            #     plt.text(x1, y1, s=class_names[int(cls_pred)], color="white", verticalalignment="bottom", horizontalalignment='left', bbox={"color": color, "pad": 0})
-            # elif x2 < img.shape[1]:
-            #     plt.text(x2, y2, s=class_names[int(cls_pred)], color="white", verticalalignment="top", horizontalalignment='right', bbox={"color": color, "pad": 0})
+            if x2 >= img.shape[1]:
+                plt.text(x1, y2, s=classes[int(cls_pred)], color="white", verticalalignment="top", horizontalalignment='left', bbox={"color": color, "pad": 0})
+            else:
+                plt.text(x2, y2, s=classes[int(cls_pred)], color="white", verticalalignment="top", horizontalalignment='right', bbox={"color": color, "pad": 0})
         
         plt.axis("off")
         plt.gca().xaxis.set_major_locator(NullLocator())
@@ -135,8 +135,8 @@ if __name__ == "__main__":
     
     parser.add_argument("--img_size", type=int, default=416, help="size of each image dimension")
     parser.add_argument("--iou_thres", type=float, default=0.5, help="iou threshold required to qualify as detected")
-    parser.add_argument("--conf_thres", type=float, default=0.85, help="object confidence threshold")
-    parser.add_argument("--nms_thres", type=float, default=0.35, help="iou thresshold for non-maximum suppression")
+    parser.add_argument("--conf_thres", type=float, default=0.825, help="object confidence threshold")
+    parser.add_argument("--nms_thres", type=float, default=0.4, help="iou thresshold for non-maximum suppression")
 
     opt = parser.parse_args()
 
