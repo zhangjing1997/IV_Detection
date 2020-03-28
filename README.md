@@ -13,6 +13,52 @@ The images look like the following one because the deoxygenated haemoglobin in v
 <img src="./assets/sample_invivo.jpg" alt="drawing" height="40%" width="40%"/>
 </p>
 
+## Usage
+### Compare UNet and YOLOv3
+```
+# on Phantom_20 Dataset
+python3 compare.py --dataset_name phantom_20 --unet_ckpt unet_ckpt_26.pth --yolo_ckpt yolov3_ckpt_38.pth --device cuda 
+
+# on Invivo_91 Dataset
+python3 compare.py --dataset_name invivo_91 --unet_ckpt unet_ckpt_20.pth --yolo_ckpt yolov3_ckpt_34.pth --device cuda
+```
+
+### UNet Usage
+```
+# change into UNet directory
+cd UNet
+
+# train on Phantom_20 Dataset -> logs saved in 'logs/train/phantom_20_30ep_1bs.log'
+python3 train.py --dataset_name phantom_20 --epochs 30 --learning_rate 0.001 --down_scale 1.0 --valid_ratio 0.2
+
+# train on Invivo_91 Dataset -> logs saved in 'logs/train/invivo_91_30ep_1bs.log'
+python3 train.py --dataset_name invivo_91 --epochs 30 --learning_rate 0.001 --down_scale 1.0 --valid_ratio 0.2 
+
+# evaluate on Phantom_20 -> logs saved in 'logs/segment/phantom_20_unet_ckpt_26.log'
+python3 segment.py --dataset_name phantom_20 --weights_path checkpoints/phantom_20/unet_ckpt_26.pth --save_results 1
+
+# evaluate on Invivo_91 Dataset -> logs saved in 'logs/segment/invivo_91_unet_ckpt_20.log'
+python3 segment.py --dataset_name invivo_91 --weights_path checkpoints/invivo_91/unet_ckpt_20.pth --save_results 1 
+```
+
+### YOLOv3 Usage
+```
+# change into YOLOv3 directory
+cd YOLOv3
+
+# train on Phantom_20 Dataset -> logs saved in 'logs/train/phantom_20_40ep_1bs.log'
+python3 train.py --dataset_name phantom_20 --epochs 40 --batch_size 1 
+
+# train on Invivo_91 Dataset -> logs saved in 'logs/train/invivo_91_40ep_1bs.log'
+python3 train.py --dataset_name invivo_91 --epochs 40 --batch_size 4
+
+# evaluate on Phantom_20 Dataset -> logs saved in 'logs/detect/phantom_20_yolov3_ckpt_38.log'
+python3 detect.py --dataset_name phantom_20 --image_folder data/custom/images/phantom_20 --weights_path checkpoints/phantom_20/yolov3_ckpt_38.pth --save_plot 1 --device cuda
+
+# evaluate on Invivo_91 Dataset -> logs saved in 'logs/detect/invivo_91_yolov3_ckpt_34.log'
+python3 detect.py --dataset_name invivo_91 --image_folder data/custom/images/invivo_91 --weights_path checkpoints/invivo_91/yolov3_ckpt_34.pth --save_plot 1 --device cuda
+```
+
 
 ## Segmentation - UNet
 <p align="center"> <img src="./assets/demo_unet_phantom_20.png" alt="drawing" height="80%" width="80%"/> </p>
@@ -154,20 +200,6 @@ Average centroid prediction error:
 ## Progress & Notes
 [Mid-term Report](https://docs.google.com/presentation/d/1ixdv6zaCGtkkfqN84M2ob_LZV4D6BFkfnUIeEUIfd7A/edit?usp=sharing)
 
-修改意见：
-- 介绍segmentation的网络结构时，放一个sample input和sample output
-- segmentation results visualization可以用如下形式：
-  ```
-              human_label  
-            /              \
-  input_img                   overlapped image (two color layers showing direct differernce)
-            \              / 
-              predicte_img
-  ```
-- add mathematical functions 添加数学公式
-- yolo的regression思想最好也通过简单的visualization来展现
-
-
 #### Jan 30
 - labelled the `phantom_20` dataset of 20 samples
 - go over the original code and adapt into our dataset or situation
@@ -275,7 +307,8 @@ Average centroid prediction error:
 #### Mar 24
 - finish the first version of my poster with the experiment results
 
-### NEXT
+### Mar 28
+- describe the whole project pipeline
 - modify two sub-projects' readme -> mainly describe usages
 
 ### Future Work
