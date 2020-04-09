@@ -1,0 +1,59 @@
+Namespace(dataset_name='invivo_test', device='cuda', output_dir='output', unet_ckpt='invivo_91/unet_ckpt_20.pth', yolo_ckpt='invivo_91/yolov3_ckpt_34.pth')
+
+----------------------
+
+Performing segmentation on ---> DATA/invivo_test/imgs/44.jpg ...
+inference_time: 0.9403514862060547s
+saved predicted mask to ---> output/unet_segmentation/invivo_test/44.jpg
+
+Performing object detection on ---> DATA/invivo_test/imgs/44.jpg 	
+inference_time: 0.03146982192993164s
+No veins detected on this image!
+
+----------------------
+
+Performing segmentation on ---> DATA/invivo_test/imgs/33.jpg ...
+inference_time: 0.002637624740600586s
+saved predicted mask to ---> output/unet_segmentation/invivo_test/33.jpg
+
+Performing object detection on ---> DATA/invivo_test/imgs/33.jpg 	
+inference_time: 0.0233004093170166s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 295.220, y1: 48.166, x2: 414.313, y2: 122.860, obj_conf: 0.94335, cls_conf: 0.99946
+saved image plot with detected bboxes into ---> output/yolo_detection/invivo_test/33.jpg
+
+----------------------
+
+Performing segmentation on ---> DATA/invivo_test/imgs/22.jpg ...
+inference_time: 0.002695322036743164s
+saved predicted mask to ---> output/unet_segmentation/invivo_test/22.jpg
+
+Performing object detection on ---> DATA/invivo_test/imgs/22.jpg 	
+inference_time: 0.022843360900878906s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 249.793, y1: 33.895, x2: 365.054, y2: 109.419, obj_conf: 0.97507, cls_conf: 0.99966
+saved image plot with detected bboxes into ---> output/yolo_detection/invivo_test/22.jpg
+
+----------------------
+
+Performing segmentation on ---> DATA/invivo_test/imgs/55.jpg ...
+inference_time: 0.002703428268432617s
+saved predicted mask to ---> output/unet_segmentation/invivo_test/55.jpg
+
+Performing object detection on ---> DATA/invivo_test/imgs/55.jpg 	
+inference_time: 0.023092269897460938s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 197.384, y1: 38.734, x2: 338.938, y2: 133.591, obj_conf: 0.98287, cls_conf: 0.99994
+saved image plot with detected bboxes into ---> output/yolo_detection/invivo_test/55.jpg
+
+----------------------
+
+Performing segmentation on ---> DATA/invivo_test/imgs/11.jpg ...
+inference_time: 0.002708911895751953s
+saved predicted mask to ---> output/unet_segmentation/invivo_test/11.jpg
+
+Performing object detection on ---> DATA/invivo_test/imgs/11.jpg 	
+inference_time: 0.023018360137939453s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 283.082, y1: 61.200, x2: 394.037, y2: 133.365, obj_conf: 0.94317, cls_conf: 0.99951
+saved image plot with detected bboxes into ---> output/yolo_detection/invivo_test/11.jpg

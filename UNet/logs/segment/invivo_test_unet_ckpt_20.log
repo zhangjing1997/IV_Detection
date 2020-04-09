@@ -1,0 +1,33 @@
+Namespace(dataset_name='invivo_test', device='cuda', image_folder='data/imgs', mask_threshold=0.5, output_dir='output', save_results=1, scale=1.0, viz=0, weights_path='checkpoints/invivo_91/unet_ckpt_20.pth')
+
+Performing segmentation on ---> data/imgs/invivo_test/44.jpg ...
+inference_time: 0.9815573692321777s
+validation_score (dice_coeff): 0.9457579255104065
+saved predicted mask to ---> output/invivo_test/44.jpg
+
+Performing segmentation on ---> data/imgs/invivo_test/33.jpg ...
+inference_time: 0.0026307106018066406s
+validation_score (dice_coeff): 0.9792097210884094
+saved predicted mask to ---> output/invivo_test/33.jpg
+
+Performing segmentation on ---> data/imgs/invivo_test/22.jpg ...
+inference_time: 0.0026035308837890625s
+validation_score (dice_coeff): 0.9921258687973022
+saved predicted mask to ---> output/invivo_test/22.jpg
+
+Performing segmentation on ---> data/imgs/invivo_test/55.jpg ...
+inference_time: 0.0026051998138427734s
+validation_score (dice_coeff): 0.9819551706314087
+saved predicted mask to ---> output/invivo_test/55.jpg
+
+Performing segmentation on ---> data/imgs/invivo_test/11.jpg ...
+inference_time: 0.0025959014892578125s
+validation_score (dice_coeff): 0.986743688583374
+saved predicted mask to ---> output/invivo_test/11.jpg
+
+----- UNet Performance Summary on invivo_test -----
+Using device: cuda
+Using model: checkpoints/invivo_91/unet_ckpt_20.pth
+Total samples: 5
+Total inference time: 0.99199s 	 Average inference time: 0.19840s 	 Average val score: 0.977
+-----------------------

@@ -187,8 +187,8 @@ if __name__ == "__main__":
 
         # validation score computation
         sample_metrics += get_batch_statistics(detections_list, targets, iou_threshold=opt.iou_thres)
-        ious = sample_metrics[-1][-1]
         if detections_list[0] is not None:
+            ious = sample_metrics[-1][-1]
             count += 1
             print(f'Showing image with bbox in detected image size - ({opt.img_size}, {opt.img_size})')
             conf_list = []

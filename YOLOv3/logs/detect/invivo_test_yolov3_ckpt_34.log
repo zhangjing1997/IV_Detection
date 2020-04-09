@@ -1,0 +1,46 @@
+Namespace(class_path='data/custom/classes.names', conf_thres=0.825, dataset_name='invivo_test', device='cuda', image_folder='data/custom/images/invivo_test', img_size=416, iou_thres=0.5, model_def='config/yolov3-custom.cfg', nms_thres=0.4, output_dir='output', save_plot=1, weights_path='checkpoints/invivo_91/yolov3_ckpt_34.pth')
+
+Performing object detection on ---> data/custom/images/invivo_test/44.jpg 	
+inference_time: 1.0092430114746094s
+No veins detected on this image!
+
+Performing object detection on ---> data/custom/images/invivo_test/33.jpg 	
+inference_time: 0.03323030471801758s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 295.220, y1: 48.166, x2: 414.313, y2: 122.860, obj_conf: 0.94335, cls_conf: 0.99946
+saved image plot with detected bboxes into ---> output/invivo_test/33.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 198.594, y1: 26.365, x2: 263.782, y2: 67.250, iou: 0.27682
+
+Performing object detection on ---> data/custom/images/invivo_test/22.jpg 	
+inference_time: 0.03186821937561035s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 249.793, y1: 33.895, x2: 365.054, y2: 109.419, obj_conf: 0.97507, cls_conf: 0.99966
+saved image plot with detected bboxes into ---> output/invivo_test/22.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 173.729, y1: 18.553, x2: 236.819, y2: 59.892, iou: 0.24776
+
+Performing object detection on ---> data/custom/images/invivo_test/55.jpg 	
+inference_time: 0.031922340393066406s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 197.384, y1: 38.734, x2: 338.938, y2: 133.591, obj_conf: 0.98287, cls_conf: 0.99994
+saved image plot with detected bboxes into ---> output/invivo_test/55.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 145.042, y1: 21.202, x2: 222.524, y2: 73.123, iou: 0.31658
+
+Performing object detection on ---> data/custom/images/invivo_test/11.jpg 	
+inference_time: 0.03201794624328613s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 283.082, y1: 61.200, x2: 394.037, y2: 133.365, obj_conf: 0.94317, cls_conf: 0.99951
+saved image plot with detected bboxes into ---> output/invivo_test/11.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 191.950, y1: 33.499, x2: 252.683, y2: 73.000, iou: 0.28420
+
+----- YOLOv3 Performance Summary on invivo_test -----
+Using device: cuda
+Using model: checkpoints/invivo_91/yolov3_ckpt_34.pth
+Total samples: 5 detected samples: 4
+Precision: 0.000 Recall: 0.000 AP: 0.000 f1: 0.000 ap_class: [0]
+Total inference time: 1.13828s
+Average inference time: 0.22766s Average prediction confidence: 0.961 Average iou: 0.281
+-----------------------

@@ -121,7 +121,7 @@ if __name__ == "__main__":
     parser.add_argument("--device", type=str, default="cuda", help="specify device: cuda or cpu")
     opt = parser.parse_args()
 
-    logfile = 'logs/compare' + '_' + opt.dataset_name + '_' + opt.device + '.log'
+    logfile = 'logs/compare/compare' + '_' + opt.dataset_name + '_' + opt.device + '.log'
     sys.stdout = Logger(logfile)
     print(opt)
 
@@ -132,12 +132,12 @@ if __name__ == "__main__":
     device = torch.device(opt.device)
     classes = ['vein']
 
-    unet_path = 'UNet/checkpoints/' + opt.dataset_name + '/' + opt.unet_ckpt
+    unet_path = 'UNet/checkpoints/' + opt.unet_ckpt
     model_unet = UNet(n_channels=1, n_classes=1).to(device=device)
     model_unet.load_state_dict(torch.load(unet_path)['state_dict'])
     model_unet.eval()
 
-    yolo_path = 'YOLOv3/checkpoints/' + opt.dataset_name + '/' + opt.yolo_ckpt
+    yolo_path = 'YOLOv3/checkpoints/' + opt.yolo_ckpt
     model_yolo = Darknet('YOLOv3/config/yolov3-custom.cfg', img_size=416).to(device=device)
     model_yolo.load_state_dict(torch.load(yolo_path))
     model_yolo.eval()

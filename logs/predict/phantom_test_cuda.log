@@ -1,0 +1,15 @@
+Namespace(dataset_name='phantom_test', device='cuda', output_dir='output', unet_ckpt='phantom_20/unet_ckpt_26.pth', yolo_ckpt='phantom_20/yolov3_ckpt_38.pth')
+
+----------------------
+
+Performing segmentation on ---> DATA/phantom_test/imgs/Phantom.jpg ...
+inference_time: 0.9397122859954834s
+saved predicted mask to ---> output/unet_segmentation/phantom_test/Phantom.jpg
+
+Performing object detection on ---> DATA/phantom_test/imgs/Phantom.jpg 	
+inference_time: 0.03085160255432129s
+Saving image with bbox in original image size - (747, 504):
+	+ Label: vein, x1: 56.427, y1: 207.735, x2: 162.458, y2: 289.329, obj_conf: 0.97399, cls_conf: 0.99985
+	+ Label: vein, x1: 236.742, y1: 241.131, x2: 343.939, y2: 325.968, obj_conf: 0.96608, cls_conf: 0.99983
+	+ Label: vein, x1: 429.959, y1: 145.527, x2: 502.979, y2: 236.601, obj_conf: 0.95905, cls_conf: 0.99953
+saved image plot with detected bboxes into ---> output/yolo_detection/phantom_test/Phantom.jpg

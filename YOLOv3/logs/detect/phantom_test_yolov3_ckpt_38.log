@@ -1,0 +1,22 @@
+Namespace(class_path='data/custom/classes.names', conf_thres=0.825, dataset_name='phantom_test', device='cuda', image_folder='data/custom/images/phantom_test', img_size=416, iou_thres=0.5, model_def='config/yolov3-custom.cfg', nms_thres=0.4, output_dir='output', save_plot=1, weights_path='checkpoints/phantom_20/yolov3_ckpt_38.pth')
+
+Performing object detection on ---> data/custom/images/phantom_test/Phantom.jpg	
+inference_time: 1.3213679790496826s
+Saving image with bbox in original image size - (747, 504):
+	+ Label: vein, x1: 56.427, y1: 207.735, x2: 162.458, y2: 289.329, obj_conf: 0.97399, cls_conf: 0.99985
+	+ Label: vein, x1: 236.742, y1: 241.131, x2: 343.939, y2: 325.968, obj_conf: 0.96608, cls_conf: 0.99983
+	+ Label: vein, x1: 429.959, y1: 145.527, x2: 502.979, y2: 236.601, obj_conf: 0.95905, cls_conf: 0.99953
+saved image plot with detected bboxes into ---> output/phantom_test/Phantom.jpg
+Showing image with bbox in detected image size - (416, 416)
+	+ Label: vein, x1: 98.424, y1: 115.686, x2: 157.472, y2: 161.126, iou: 0.75973
+	+ Label: vein, x1: 198.841, y1: 134.284, x2: 258.537, y2: 181.530, iou: 0.73193
+	+ Label: vein, x1: 306.442, y1: 81.043, x2: 347.106, y2: 131.762, iou: 0.74436
+
+----- YOLOv3 Performance Summary on phantom_test -----
+Using device: cuda
+Using model: checkpoints/phantom_20/yolov3_ckpt_38.pth
+Total samples: 1 detected samples: 1
+Precision: 1.000 Recall: 1.000 AP: 1.000 f1: 1.000 ap_class: [0]
+Total inference time: 1.32137s
+Average inference time: 1.32137s Average prediction confidence: 0.966 Average iou: 0.745
+-----------------------

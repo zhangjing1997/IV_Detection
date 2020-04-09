@@ -1,0 +1,101 @@
+Namespace(dataset_name='invivo_test', device='cuda', unet_ckpt='invivo_91/unet_ckpt_20.pth', yolo_ckpt='invivo_91/yolov3_ckpt_34.pth')
+
+----------------------
+
+Performing segmentation on ---> UNet/data/imgs/invivo_test/44.jpg ...
+inference_time: 0.9587173461914062s
+
+Performing object detection on ---> UNet/data/imgs/invivo_test/44.jpg 	
+inference_time: 0.0327601432800293s
+No veins detected on this image!
+
+centroids_target: [(431, 82)]
+centroids_unet: [(394, 82)]
+centroids_yolo: []
+unet_target_errors: [37.0]
+yolo_target_errors: []
+
+----------------------
+
+Performing segmentation on ---> UNet/data/imgs/invivo_test/33.jpg ...
+inference_time: 0.0031609535217285156s
+
+Performing object detection on ---> UNet/data/imgs/invivo_test/33.jpg 	
+inference_time: 0.02290797233581543s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 295.220, y1: 48.166, x2: 414.313, y2: 122.860, obj_conf: 0.94335, cls_conf: 0.99946
+
+centroids_target: [(350, 87)]
+centroids_unet: [(350, 85)]
+centroids_yolo: [(354, 85)]
+unet_target_errors: [2.0]
+yolo_target_errors: [4.47213595499958]
+
+----------------------
+
+Performing segmentation on ---> UNet/data/imgs/invivo_test/22.jpg ...
+inference_time: 0.0032820701599121094s
+
+Performing object detection on ---> UNet/data/imgs/invivo_test/22.jpg 	
+inference_time: 0.022898435592651367s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 249.793, y1: 33.895, x2: 365.054, y2: 109.419, obj_conf: 0.97507, cls_conf: 0.99966
+
+centroids_target: [(308, 70)]
+centroids_unet: [(310, 68)]
+centroids_yolo: [(307, 71)]
+unet_target_errors: [2.8284271247461903]
+yolo_target_errors: [1.4142135623730951]
+
+----------------------
+
+Performing segmentation on ---> UNet/data/imgs/invivo_test/55.jpg ...
+inference_time: 0.003237009048461914s
+
+Performing object detection on ---> UNet/data/imgs/invivo_test/55.jpg 	
+inference_time: 0.022466421127319336s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 197.384, y1: 38.734, x2: 338.938, y2: 133.591, obj_conf: 0.98287, cls_conf: 0.99994
+
+centroids_target: [(278, 86)]
+centroids_unet: [(274, 86)]
+centroids_yolo: [(268, 86)]
+unet_target_errors: [4.0]
+yolo_target_errors: [10.0]
+
+----------------------
+
+Performing segmentation on ---> UNet/data/imgs/invivo_test/11.jpg ...
+inference_time: 0.0033826828002929688s
+
+Performing object detection on ---> UNet/data/imgs/invivo_test/11.jpg 	
+inference_time: 0.023190021514892578s
+Saving image with bbox in original image size - (760, 622):
+	+ Label: vein, x1: 283.082, y1: 61.200, x2: 394.037, y2: 133.365, obj_conf: 0.94317, cls_conf: 0.99951
+
+centroids_target: [(342, 96)]
+centroids_unet: [(347, 94)]
+centroids_yolo: [(338, 97)]
+unet_target_errors: [5.385164807134504]
+yolo_target_errors: [4.123105625617661]
+
+======== Summary ==========
+Using device: cuda
+Dataset - invivo_test: UNet/data/imgs/invivo_test
+Total samples: 5
+Model Weights: 
+	- unet: UNet/checkpoints/invivo_91/unet_ckpt_20.pth
+	- yolo: YOLOv3/checkpoints/invivo_91/yolov3_ckpt_34.pth
+outliers_unet:
+[]
+outliers_yolo:
+[]
+Average prediction speed/time (s): 
+	- unet: 0.1944
+	- yolo: 0.0248
+Average centroid prediction error: 
+	- unet: 10.24272
+	- yolo: 5.00236
+Outliers ratio of centroid prediction errors: 
+	- unet: 0/5 = 0.00000
+	- yolo: 0/4 = 0.00000
