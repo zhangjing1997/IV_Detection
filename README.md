@@ -13,6 +13,11 @@ The images look like the following one because the deoxygenated haemoglobin in v
 <img src="./assets/sample_invivo.jpg" alt="drawing" height="40%" width="40%"/>
 </p>
 
+## Finalized Report
+- [My Electronic Poster](https://drive.google.com/file/d/1xfgJIwcRJLCwg30pOhPS2wmR3FOP3YY3/view?usp=sharing)
+- [My Google Slides for Presentation](https://docs.google.com/presentation/d/1srU58Y94kzwBmecqLSXA7lpShtbDUoe3M8rOsFBSBgU/edit?usp=sharing)
+- [My Presentation Video](https://drive.google.com/file/d/1wV3t6hs-jKWGxzud4la9QOtjT9J85162/view?usp=sharing)
+
 ## Usage
 ### If you have a dataset with labels to train and evaluate
 #### Prepare Dataset
